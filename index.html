@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" /><!-- remove this line at public launch -->
+<title>Human Shadows — Codex Infinite</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Spectral:ital,wght@0,300;0,400;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --ink: #ece6dc;
+    --ink-dim: #9b958c;
+    --rail-w: 220px;
+    --tint: rgba(0,0,0,0);
+    --glow: #cdbf9a;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:#06070a; color:var(--ink);
+    font-family:"Spectral", Georgia, serif; font-weight:300; line-height:1.65;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+
+  /* ── global layout structures ─────────────────────────── */
+  .stage {
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 0; overflow: hidden;
+  }
+  .bg-layer {
+    position: absolute;
+    top: 60px; bottom: 20px; left: 20px; right: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+    transition: opacity 1.4s ease;
+    will-change: opacity;
+  }
+  .bg-layer.active{ opacity:1; }
+
+  .scrim{
+    position:fixed; inset:0; z-index:1; pointer-events:none;
+    background:linear-gradient(90deg, rgba(4,5,8,.74) 0%, rgba(4,5,8,.36) 46%, rgba(4,5,8,.12) 100%);
+  }
+  #fx {
+    position: fixed;
+    top: 60px; bottom: 0; left: 0; right: 0;
+    z-index: 2; pointer-events: none;
+  }
+
+  /* ── top header navigation menu ───────────────────────── */
+  .global-header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    height: 60px; padding: 0 4vw;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(236,230,220,.08);
+    background: linear-gradient(180deg, rgba(6,7,10,0.92) 0%, rgba(6,7,10,0) 100%);
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  }
+  .brand {
+    font-family: "Space Mono", monospace; font-size: 11px; letter-spacing: .3em;
+    text-transform: uppercase; color: var(--ink); text-decoration: none;
+  }
+  .view-switcher { display: flex; gap: 32px; }
+  .view-btn {
+    background: none; border: none; color: var(--ink-dim);
+    font-family: "Space Mono", monospace; font-size: 11px; letter-spacing: .2em;
+    text-transform: uppercase; cursor: pointer; padding: 8px 0;
+    position: relative; transition: color .4s ease;
+  }
+  .view-btn:hover { color: var(--ink); }
+  .view-btn.active { color: var(--glow); text-shadow: 0 0 8px var(--glow); }
+  .view-btn::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px;
+    background: var(--glow); transform: scaleX(0); transition: transform .4s ease;
+  }
+  .view-btn.active::after { transform: scaleX(1); }
+
+  /* ── index dynamic rail ───────────────────────────────── */
+  .rail{
+    position:fixed; top:0; right:0; z-index:5;
+    width:var(--rail-w); height:100vh;
+    display:flex; flex-direction:column; justify-content:center; gap:2px;
+    padding:60px 20px 20px 20px;
+    font-family:"Space Mono",monospace;
+    border-left:1px solid rgba(236,230,220,.12);
+    background:linear-gradient(90deg, rgba(6,7,10,.20) 0%, rgba(6,7,10,.78) 38%, rgba(6,7,10,.92) 100%);
+    backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px);
+    text-shadow:0 1px 6px rgba(0,0,0,.65);
+  }
+  .rail-head{
+    font-size:9px; letter-spacing:.3em; color:var(--ink-dim);
+    text-transform:uppercase; margin-bottom:16px; line-height:1.7;
+  }
+  .seg{
+    display:flex; align-items:center; gap:11px; padding:10px 0;
+    color:var(--ink-dim); text-decoration:none; cursor:pointer;
+    border-top:1px solid rgba(236,230,220,.07);
+    transition:color .5s ease; position:relative;
+  }
+  .seg:last-of-type{ border-bottom:1px solid rgba(236,230,220,.07); }
+
+  .seg svg{ width:20px; height:20px; flex:none; stroke:currentColor; fill:none;
+    stroke-width:1.4; opacity:.85; transition:filter .5s ease; display:none; }
+  .seg .bar{ width:3px; background:rgba(236,230,220,.14); transition:background .5s ease; flex:none; display:none; }
+  .seg[data-len="4"] .bar{ height:34px; }
+  .seg[data-len="2"] .bar{ height:17px; }
+
+  .seg .lab{ font-size:9.5px; letter-spacing:0.1em; line-height:1.25; }
+  .seg .subtext{ font-size:8px; color:var(--ink-dim); opacity:.7; }
+  .seg.on{ color:var(--ink); }
+  .seg.on svg{ color:var(--glow); filter:drop-shadow(0 0 8px var(--glow)); }
+  .seg.on .bar{ background:var(--glow); box-shadow:0 0 14px var(--glow); }
+  .rail-foot{ margin-top:16px; font-size:8.5px; letter-spacing:.16em; color:var(--ink-dim); line-height:1.7; }
+
+  /* ── content layouts ──────────────────────────────────── */
+  main{ position:relative; z-index:3; }
+  .view-wrapper { display: none; }
+  .view-wrapper.active { display: block; }
+
+  section{
+    min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+    padding:14vh calc(var(--rail-w) + 6vw) 14vh 9vw; position:relative;
+  }
+
+  .kicker{
+    font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.4em;
+    text-transform:uppercase; color:var(--ink-dim); margin-bottom:26px;
+  }
+  h1{
+    font-family:"Fraunces",serif; font-weight:300;
+    font-size:clamp(3rem,11vw,8rem); line-height:.92; letter-spacing:-.02em;
+  }
+  h1 em{ font-style:italic; font-weight:400; color:var(--glow); }
+  .sub-desc{ margin-top:30px; max-width:40ch; font-size:clamp(1rem,1.5vw,1.28rem); color:var(--ink-dim); }
+  .scrollcue{
+    margin-top:60px; font-family:"Space Mono",monospace; font-size:10px;
+    letter-spacing:.3em; color:var(--ink-dim); display:flex; align-items:center; gap:12px;
+  }
+  .scrollcue .line{ width:46px; height:1px; background:var(--ink-dim);
+    transform-origin:left; animation:pulse 2.6s ease-in-out infinite; }
+  @keyframes pulse{ 0%,100%{ transform:scaleX(.3); opacity:.4 } 50%{ transform:scaleX(1); opacity:1 } }
+
+  .panel-tag{
+    font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.28em;
+    color:var(--glow); margin-bottom:18px;
+  }
+  h2{
+    font-family:"Fraunces",serif; font-weight:300;
+    font-size:clamp(2.3rem,5.6vw,4.8rem); line-height:.98; letter-spacing:-.015em; max-width:18ch;
+  }
+  .epithet{
+    font-style:italic; color:var(--ink-dim); font-size:clamp(1rem,1.7vw,1.35rem);
+    margin-top:10px; max-width:36ch;
+  }
+  .meta{
+    font-family:"Space Mono",monospace; font-size:10px; letter-spacing:.12em;
+    color:var(--ink-dim); margin:24px 0 28px; line-height:1.9;
+    white-space:pre-wrap;
+  }
+  .meta b{ color:var(--ink); font-weight:400; }
+  p{ max-width:50ch; font-size:clamp(1.02rem,1.45vw,1.28rem); color:#d8d2c8; margin-bottom:1.05em; }
+  p.lead::first-letter{
+    font-family:"Fraunces",serif; font-size:3em; line-height:.7; float:left;
+    padding:.06em .12em 0 0; color:var(--glow); font-weight:400;
+  }
+
+  .crest{
+    position:absolute; right:calc(var(--rail-w) + 2vw); top:50%;
+    transform:translateY(-50%); width:min(34vh,320px); height:min(34vh,320px);
+    opacity:.08; stroke:var(--glow); fill:none; stroke-width:.8; pointer-events:none;
+    transition:opacity .8s ease;
+  }
+  @media (max-width:1100px){ .crest{ display:none; } }
+
+  .loop{ text-align:center; align-items:center; }
+  .loop h2{ font-family:"Fraunces",serif; font-weight:300;
+    font-size:clamp(1.9rem,5.5vw,3.8rem); line-height:1.08; max-width:22ch; margin:0 auto; }
+  .loop .links{ margin-top:42px; display:flex; gap:28px; flex-wrap:wrap; justify-content:center; }
+  .loop a{ font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.24em;
+    text-transform:uppercase; color:var(--glow); text-decoration:none;
+    border-bottom:1px solid var(--glow); padding-bottom:4px; cursor: pointer; }
+  .loop .credit{ margin-top:54px; font-family:"Space Mono",monospace; font-size:9px;
+    letter-spacing:.2em; color:var(--ink-dim); }
+
+  /* ── faction cards (codex index) ──────────────────────── */
+  .fac-list{
+    margin-top:38px; display:grid; gap:14px;
+    grid-template-columns:repeat(auto-fill, minmax(290px, 1fr));
+    max-width:920px;
+  }
+  .fac-card{
+    display:block; text-decoration:none; color:var(--ink);
+    background:rgba(6,7,10,.45);
+    border:1px solid rgba(236,230,220,.12);
+    padding:22px 24px 20px;
+    transition:border-color .4s ease, background .4s ease, transform .4s ease;
+  }
+  .fac-card:hover{
+    border-color:var(--glow); background:rgba(6,7,10,.65);
+    transform:translateY(-3px);
+  }
+  .fac-card .code{
+    font-family:"Space Mono",monospace; font-size:9px; letter-spacing:.28em;
+    color:var(--glow); text-transform:uppercase;
+  }
+  .fac-card h3{
+    font-family:"Fraunces",serif; font-weight:300;
+    font-size:clamp(1.3rem,2vw,1.6rem); line-height:1.1; margin:9px 0 10px;
+  }
+  .fac-card .arrow{
+    color:var(--glow); opacity:0; transition:opacity .4s ease, transform .4s ease;
+    display:inline-block; transform:translateX(-6px);
+  }
+  .fac-card:hover .arrow{ opacity:1; transform:none; }
+  .fac-card .kind{
+    font-family:"Space Mono",monospace; font-size:9.5px; letter-spacing:.08em;
+    color:var(--ink-dim); line-height:1.8; display:block;
+  }
+
+  /* ── dedicated faction page ───────────────────────────── */
+  .fac-nav{
+    margin-top:52px; display:flex; gap:26px; flex-wrap:wrap;
+    font-family:"Space Mono",monospace; font-size:10.5px; letter-spacing:.2em;
+    text-transform:uppercase;
+  }
+  .fac-nav a{
+    color:var(--glow); text-decoration:none; cursor:pointer;
+    border-bottom:1px solid var(--glow); padding-bottom:4px;
+  }
+  .fac-nav a.dim{ color:var(--ink-dim); border-bottom-color:rgba(236,230,220,.25); }
+  .fac-nav a.dim:hover{ color:var(--ink); }
+
+  /* dynamic adjustments for views code engines */
+  body[data-active-view="ambience"] .seg .bar,
+  body[data-active-view="collapse"] .seg .bar { display: block; }
+  body[data-active-view="factions"] .seg svg { display: block; }
+
+  .reveal{ opacity:0; transform:translateY(26px); transition:opacity 1s ease, transform 1s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  .reveal.d1{ transition-delay:.12s } .reveal.d2{ transition-delay:.24s } .reveal.d3{ transition-delay:.36s }
+
+  @media (max-width:760px){
+    :root{ --rail-w:0px; }
+    .global-header { height: 50px; padding: 0 16px; }
+    .view-switcher { gap: 16px; }
+
+    .stage { top: 50px; }
+    #fx { top: 50px; }
+
+    .rail{
+      width:100%; height:auto; bottom:0; top:auto; flex-direction:row;
+      justify-content:space-around; align-items:center; padding:9px 8px; gap:0;
+      border-left:none; border-top:1px solid rgba(236,230,220,.12);
+      background:rgba(4,5,8,.86); backdrop-filter:blur(6px);
+    }
+    .rail-head,.rail-foot,.seg .lab,.seg .subtext{ display:none; }
+    .seg{ border:none; padding:4px; flex-direction: column; }
+    .seg:last-of-type{ border:none; }
+    body[data-active-view="ambience"] .seg .bar,
+    body[data-active-view="collapse"] .seg .bar{ width:24px !important; height:3px !important; }
+    body[data-active-view="faction"] .rail{ display:none; }
+    section{ padding:16vh 7vw 18vh; }
+    p, h2, .epithet{ max-width:none; }
+    .fac-list{ grid-template-columns:1fr; }
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{ scroll-behavior:auto !important; }
+    .reveal{ transition:opacity .4s ease; transform:none; }
+    .scrollcue .line{ animation:none; }
+  }
+</style>
+</head>
+<body data-active-view="collapse">
+
+<div class="stage" id="stage" aria-hidden="true"></div>
+<div class="tint" aria-hidden="true"></div>
+<div class="scrim" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="sig-gov"><circle cx="12" cy="12" r="1.6"/><path d="M12 6.5a5.5 5.5 0 0 1 5.5 5.5M12 3a9 9 0 0 1 9 9M12 17.5a5.5 5.5 0 0 1-5.5-5.5M12 21a9 9 0 0 1-9-9"/></g>
+  <g id="sig-west"><path d="M12 2a10 10 0 0 0-10 10c0 5.5 4.5 10 10 10s10-4.5 10-10S17.5 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></g>
+  <g id="sig-east">
+  <path d="M20 4c0 8.837-7.163 16-16 16" />
+  <path d="M20 8c0 6.627-5.373 12-12 12" />
+  <path d="M20 12c0 4.418-3.582 8-8 8" />
+</g>
+  <g id="sig-bridge"><path d="M12 2L2 22h20L12 2z"/><path d="M12 8v8"/></g>
+  <g id="sig-felines"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></g>
+</defs></svg>
+
+<header class="global-header">
+  <a href="#collapse" class="brand" id="brand-link"></a>
+  <nav class="view-switcher" id="view-switcher" aria-label="Primary Viewports"></nav>
+</header>
+
+<nav class="rail" id="dynamic-rail" aria-label="Context Navigation Matrix"></nav>
+
+<main>
+  <div id="view-collapse" class="view-wrapper active"></div>
+  <div id="view-ambience" class="view-wrapper"></div>
+  <div id="view-factions" class="view-wrapper"></div>
+  <div id="view-faction" class="view-wrapper"></div>
+</main>
+
+<script src="content.js"></script>
+<script>
+(() => {
+  const C = window.CONTENT;
+  const root = document.documentElement;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ═══ TEMPLATE HELPERS ══════════════════════════════════════════ */
+
+  function paragraphsHTML(paragraphs, revealDelay){
+    return paragraphs.map((p, i) => {
+      const lead = typeof p === 'object' && p.lead;
+      const text = typeof p === 'object' ? p.text : p;
+      const d = i === 0 ? (revealDelay || 'd2') : (i === paragraphs.length - 1 ? 'd3' : 'd2');
+      return `<p class="${lead ? 'lead ' : ''}reveal ${d}">${text}</p>`;
+    }).join('');
+  }
+
+  // Ambience metas are raw aligned strings; faction metas are [label, value] pairs.
+  function metaHTML(meta){
+    if (!meta || !meta.length) return '';
+    let body;
+    if (Array.isArray(meta[0])) {
+      const w = Math.max(...meta.map(m => m[0].length)) + 2;
+      body = meta.map(([k, v]) => `${k.padEnd(w, ' ')}<b>${v}</b>`).join('\n');
+    } else {
+      body = meta.join('\n');
+    }
+    return `<div class="meta reveal d1">${body}</div>`;
+  }
+
+  function heroHTML(hero){
+    return `
+      <section class="hero" data-phase="0" aria-label="Introduction">
+        <div class="kicker reveal">${hero.kicker}</div>
+        <h1 class="reveal d1">${hero.title}</h1>
+        <p class="sub-desc reveal d2">${hero.sub}</p>
+        <div class="scrollcue reveal d3"><span class="line"></span> ${hero.scrollcue}</div>
+      </section>`;
+  }
+
+  function endHTML(end, phase){
+    const links = end.links.map(l =>
+      `<a class="back" data-action="${l.action}">${l.label}</a>`).join('');
+    return `
+      <section class="loop" data-phase="${phase}" aria-label="End">
+        <h2 class="reveal">${end.title}</h2>
+        <div class="links reveal d1">${links}</div>
+        <div class="credit reveal d2">${C.site.credit}</div>
+      </section>`;
+  }
+
+  /* ═══ VIEW RENDERERS ════════════════════════════════════════════ */
+
+  // "Chronicle" views (The Turning Year, The Collapse) share one shape:
+  // hero + scrolling phase sections + end loop.
+  const CHRONICLES = ['ambience', 'collapse'];
+
+  function renderChronicle(viewKey){
+    const A = C[viewKey];
+    const phases = A.phases.map((ph, i) => `
+      <section class="phase" id="${ph.id}" data-phase="${i + 1}" aria-label="${ph.title}">
+        <div class="panel-tag reveal">${ph.tag}</div>
+        <h2 class="reveal d1">${ph.title}</h2>
+        ${metaHTML(ph.meta)}
+        ${paragraphsHTML(ph.paragraphs)}
+      </section>`).join('');
+    document.getElementById(`view-${viewKey}`).innerHTML =
+      heroHTML(A.hero) + phases + endHTML(A.end, A.phases.length + 1);
+  }
+
+  function renderFactionsIndex(){
+    const sections = C.regions.map((r, i) => {
+      const cards = r.factions.map(f => `
+        <a class="fac-card" href="#faction/${f.slug}">
+          <span class="code">${f.code ? f.code + ' · ' : ''}FACTION FILE</span>
+          <h3>${f.name} <span class="arrow">→</span></h3>
+          <span class="kind">${f.meta[0][1]}<br>${f.meta[1][1]}</span>
+        </a>`).join('');
+      return `
+        <section class="fac" id="${r.id}" data-phase="${i + 1}" aria-label="${r.title}">
+          <svg class="crest"><use href="#${r.crest}"/></svg>
+          <div class="panel-tag reveal">${r.cohort}</div>
+          <h2 class="reveal d1">${r.title}</h2>
+          <div class="epithet reveal d1">${r.epithet}</div>
+          ${r.intro ? `<p class="lead reveal d2" style="margin-top:26px">${r.intro}</p>` : ''}
+          <div class="fac-list reveal d2">${cards}</div>
+        </section>`;
+    }).join('');
+    document.getElementById('view-factions').innerHTML =
+      heroHTML(C.factions.hero) + sections + endHTML(C.factions.end, C.regions.length + 1);
+  }
+
+  function renderFactionPage(region, faction){
+    const all = allFactions();
+    const idx = all.findIndex(x => x.faction.slug === faction.slug);
+    const prev = all[idx - 1], next = all[idx + 1];
+    document.getElementById('view-faction').innerHTML = `
+      <section class="fac" data-phase="0" aria-label="${faction.name}">
+        <svg class="crest"><use href="#${region.crest}"/></svg>
+        <div class="panel-tag reveal">${region.cohort}${faction.code ? ' · FILE ' + faction.code : ''}</div>
+        <h2 class="reveal d1">${faction.name}</h2>
+        ${faction.epithet ? `<div class="epithet reveal d1">${faction.epithet}</div>` : ''}
+        ${metaHTML(faction.meta)}
+        ${paragraphsHTML(faction.paragraphs)}
+        <div class="fac-nav reveal d3">
+          <a href="#factions">← All Clades</a>
+          ${prev ? `<a class="dim" href="#faction/${prev.faction.slug}">← ${prev.faction.name}</a>` : ''}
+          ${next ? `<a class="dim" href="#faction/${next.faction.slug}">${next.faction.name} →</a>` : ''}
+        </div>
+      </section>`;
+  }
+
+  function allFactions(){
+    return C.regions.flatMap(r => r.factions.map(f => ({ region: r, faction: f })));
+  }
+
+  /* ═══ RAIL BUILDERS ═════════════════════════════════════════════ */
+
+  const rail = document.getElementById('dynamic-rail');
+  let activeSegments = [];
+
+  function buildRail(html){
+    rail.innerHTML = html;
+    activeSegments = [...rail.querySelectorAll('.seg')];
+    // jump segs scroll within the current view instead of touching the hash
+    rail.querySelectorAll('.seg[data-target]').forEach(seg => {
+      seg.addEventListener('click', e => {
+        e.preventDefault();
+        const el = document.getElementById(seg.dataset.target);
+        if (el) el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+      });
+    });
+  }
+
+  function railChronicle(viewKey){
+    const A = C[viewKey];
+    buildRail(`
+      <div class="rail-head">${A.railHead}</div>
+      ${A.phases.map((ph, i) => `
+        <a class="seg" data-jump="${i + 1}" data-len="${ph.railLen}" data-target="${ph.id}" href="#${ph.id}">
+          <span class="bar"></span>
+          <span><span class="lab">${ph.railLabel}</span><br><span class="subtext">${ph.railSub}</span></span>
+        </a>`).join('')}
+      <div class="rail-foot">${A.railFoot}</div>`);
+  }
+
+  function railFactions(){
+    buildRail(`
+      <div class="rail-head">${C.factions.railHead}</div>
+      ${C.regions.map((r, i) => `
+        <a class="seg" data-jump="${i + 1}" data-target="${r.id}" href="#${r.id}">
+          <svg><use href="#${r.crest}"/></svg>
+          <span><span class="lab">${r.rail.label}</span><br><span class="subtext">${r.rail.subtext}</span></span>
+        </a>`).join('')}
+      <div class="rail-foot">${C.factions.railFoot}</div>`);
+  }
+
+  function railFaction(region, faction){
+    buildRail(`
+      <div class="rail-head">${region.rail.label}<br>// ${region.rail.subtext}</div>
+      ${region.factions.map(f => `
+        <a class="seg${f.slug === faction.slug ? ' on' : ''}" href="#faction/${f.slug}">
+          <span><span class="lab">${f.name.toUpperCase()}</span>${f.code ? `<br><span class="subtext">FILE ${f.code}</span>` : ''}</span>
+        </a>`).join('')}
+      <div class="rail-foot">← <a href="#factions" style="color:inherit">RETURN TO CODEX</a></div>`);
+  }
+
+  /* ═══ ATMOSPHERE ENGINE (backgrounds / tint / glow / fx) ════════ */
+
+  const stage = document.getElementById('stage');
+  const tintEl = document.querySelector('.tint');
+  let layers = [], viewConfigs = [], currentPhase = -1, fxMode = 'dust';
+
+  function ensureLayers(n){
+    while (layers.length < n) {
+      const el = document.createElement('div');
+      el.className = 'bg-layer';
+      stage.appendChild(el);
+      layers.push(el);
+    }
+  }
+
+  function setPhase(phaseIdx){
+    if (phaseIdx === currentPhase) return;
+    currentPhase = phaseIdx;
+    const config = viewConfigs[phaseIdx];
+    if (!config) return;
+
+    layers.forEach((layer, idx) => {
+      layer.classList.toggle('active', idx === phaseIdx);
+      layer.style.background = config.img
+        ? `linear-gradient(0deg, rgba(0,0,0,.15), rgba(0,0,0,.15)), url("${config.img}") center top/cover no-repeat`
+        : config.grad;
+    });
+
+    tintEl.style.background = config.tint;
+    root.style.setProperty('--glow', config.glow);
+    activeSegments.forEach(seg => seg.classList.toggle('on', +seg.dataset.jump === phaseIdx));
+    fxMode = config.fx;
+  }
+
+  /* ═══ SCROLL OBSERVERS ══════════════════════════════════════════ */
+
+  let observerInstances = [];
+
+  function initViewObservers(viewKey){
+    observerInstances.forEach(obs => obs.disconnect());
+    observerInstances = [];
+
+    const phaseObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) setPhase(+e.target.dataset.phase); });
+    }, { threshold: .3 });
+
+    document.querySelectorAll(`#view-${viewKey} section[data-phase]`).forEach(sec => phaseObs.observe(sec));
+    observerInstances.push(phaseObs);
+
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); revObs.unobserve(e.target); } });
+    }, { threshold: .15 });
+
+    document.querySelectorAll(`#view-${viewKey} .reveal`).forEach(el => revObs.observe(el));
+    observerInstances.push(revObs);
+  }
+
+  /* ═══ ROUTER ════════════════════════════════════════════════════ */
+
+  let currentRoute = null;
+
+  const TOP_VIEWS = ['collapse', 'ambience', 'factions'];
+
+  function activateView(viewKey){
+    document.querySelectorAll('.view-wrapper').forEach(el => el.classList.remove('active'));
+    document.getElementById(`view-${viewKey}`).classList.add('active');
+    document.body.setAttribute('data-active-view', viewKey);
+    const navKey = viewKey === 'faction' ? 'factions' : viewKey;
+    TOP_VIEWS.forEach(k =>
+      document.getElementById(`btn-${k}`).classList.toggle('active', k === navKey));
+    currentPhase = -1;
+  }
+
+  function route(){
+    const h = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
+
+    if (h.startsWith('faction/')) {
+      const slug = h.slice(8);
+      const hit = allFactions().find(x => x.faction.slug === slug);
+      if (!hit) { location.hash = 'factions'; return; }
+      if (currentRoute === h) return;
+      currentRoute = h;
+
+      renderFactionPage(hit.region, hit.faction);
+      activateView('faction');
+      railFaction(hit.region, hit.faction);
+      const v = Object.assign({}, hit.region.visual);
+      if (hit.faction.image) v.img = hit.faction.image;
+      viewConfigs = [v];
+      ensureLayers(1);
+      initViewObservers('faction');
+      window.scrollTo(0, 0);
+      setPhase(0);
+      document.title = `${hit.faction.name} — Human Shadows`;
+      return;
+    }
+
+    const viewKey = TOP_VIEWS.includes(h) ? h : 'collapse';
+    if (currentRoute === viewKey) return;
+    currentRoute = viewKey;
+
+    activateView(viewKey);
+    if (viewKey === 'factions') {
+      railFactions();
+      viewConfigs = [C.factions.hero.visual, ...C.regions.map(r => r.visual), C.factions.end.visual];
+      document.title = 'Powers Codex — Human Shadows';
+    } else {
+      const A = C[viewKey];
+      railChronicle(viewKey);
+      viewConfigs = [A.hero.visual, ...A.phases.map(p => p.visual), A.end.visual];
+      document.title = viewKey === 'ambience'
+        ? 'Human Shadows — Codex Infinite'
+        : `${A.nav} — Human Shadows`;
+    }
+    ensureLayers(viewConfigs.length);
+    initViewObservers(viewKey);
+    window.scrollTo(0, 0);
+    setPhase(0);
+  }
+
+  // end-of-view links (scroll to top / jump between views)
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[data-action]');
+    if (!a) return;
+    e.preventDefault();
+    const action = a.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    else if (action.startsWith('goto:')) location.hash = action.slice(5);
+  });
+
+  /* ═══ AMBIENT PARTICLE CANVAS ═══════════════════════════════════ */
+
+  const cv = document.getElementById('fx'), ctx = cv.getContext('2d');
+  let W, H, dpr = Math.min(devicePixelRatio || 1, 2), parts = [];
+
+  function resize(){
+    W = cv.width = innerWidth * dpr; H = cv.height = innerHeight * dpr;
+    cv.style.width = innerWidth + 'px'; cv.style.height = innerHeight + 'px';
+    seed();
+  }
+  function seed(){
+    const n = innerWidth < 760 ? 44 : 88;
+    parts = Array.from({length: n}, () => ({
+      x: Math.random() * W, y: Math.random() * H,
+      r: (Math.random() * 1.6 + .4) * dpr, s: Math.random() * .6 + .2,
+      o: Math.random() * .5 + .2, d: Math.random() * Math.PI * 2
+    }));
+  }
+
+  function hexA(hex, a){
+    const h = hex.replace('#', ''); const n = parseInt(h.length === 3 ? h.replace(/(.)/g, '$1$1') : h, 16);
+    return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
+  }
+
+  function tick(){
+    ctx.clearRect(0, 0, W, H);
+    const glow = getComputedStyle(root).getPropertyValue('--glow').trim() || '#cdbf9a';
+    for (const p of parts){
+      if (fxMode === 'rain'){
+        p.y += (6 + p.s * 6) * dpr; p.x += .6 * dpr;
+        if (p.y > H){ p.y = -20; p.x = Math.random() * W; }
+        ctx.strokeStyle = `rgba(180,190,220,${p.o * .5})`; ctx.lineWidth = p.r * .6;
+        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p.x - 2 * dpr, p.y + 12 * dpr); ctx.stroke();
+      } else if (fxMode === 'spore'){
+        p.d += .01; p.y -= (.25 + p.s) * dpr; p.x += Math.sin(p.d) * .5 * dpr;
+        if (p.y < -10){ p.y = H + 10; p.x = Math.random() * W; }
+        ctx.fillStyle = hexA(glow, p.o * .9); ctx.shadowBlur = 8 * dpr; ctx.shadowColor = glow;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7); ctx.fill(); ctx.shadowBlur = 0;
+      } else if (fxMode === 'ash'){
+        p.y += (1.1 + p.s) * dpr; p.x += Math.sin(p.d += .01) * .5 * dpr;
+        if (p.y > H){ p.y = -10; p.x = Math.random() * W; }
+        ctx.fillStyle = `rgba(150,150,140,${p.o * .4})`;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7); ctx.fill();
+      } else if (fxMode === 'heat'){
+        p.d += .02; p.y -= .5 * dpr; p.x += Math.sin(p.d) * 1.1 * dpr;
+        if (p.y < -10){ p.y = H + 10; p.x = Math.random() * W; }
+        ctx.fillStyle = `rgba(255,240,200,${p.o * .25})`;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 1.4, 0, 7); ctx.fill();
+      } else if (fxMode === 'thaw'){
+        p.y += (1.2 + p.s) * dpr; p.x += Math.sin(p.d += .008) * .4 * dpr;
+        if (p.y > H){ p.y = -10; p.x = Math.random() * W; }
+        ctx.fillStyle = `rgba(210,228,235,${p.o * .6})`;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7); ctx.fill();
+      } else { // dust
+        p.d += .005; p.y -= .15 * dpr; p.x += Math.sin(p.d) * .3 * dpr;
+        if (p.y < -10){ p.y = H + 10; p.x = Math.random() * W; }
+        ctx.fillStyle = `rgba(220,212,196,${p.o * .3})`;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7); ctx.fill();
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+
+  /* ═══ BOOT ══════════════════════════════════════════════════════ */
+
+  document.getElementById('brand-link').textContent = C.site.brand;
+
+  document.getElementById('view-switcher').innerHTML = TOP_VIEWS.map(k =>
+    `<button class="view-btn" id="btn-${k}">${C[k].nav}</button>`).join('');
+  TOP_VIEWS.forEach(k => {
+    document.getElementById(`btn-${k}`).addEventListener('click', () => location.hash = k);
+  });
+
+  CHRONICLES.forEach(renderChronicle);
+  renderFactionsIndex();
+
+  addEventListener('resize', resize, { passive: true });
+  addEventListener('hashchange', route);
+
+  resize();
+  route();
+  tick();
+})();
+</script>
+</body>
+</html>
