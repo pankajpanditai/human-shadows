@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   HUMAN SHADOWS · WORLD CODEX — CONTENT FILE
+   HUMAN SHADOWS · WORLD CODEX · CONTENT FILE
    ═══════════════════════════════════════════════════════════════════
    This file is the single source of truth for all text and images.
    The engine in index.html renders everything from this object:
@@ -9,7 +9,7 @@
    TO ADD A FACTION:   add an object to a region's `factions` array.
    TO ADD A REGION:    add an object to `regions` (crest options:
                        sig-gov, sig-west, sig-east, sig-bridge, sig-felines).
-   TO ADD A STORY ACT: add an object to `collapse.phases` — same shape
+   TO ADD A STORY ACT: add an object to `collapse.phases`, same shape
                        as `ambience.phases` (both render as chronicles).
 
    Faction fields:
@@ -62,7 +62,7 @@ window.CONTENT = {
         ],
         paragraphs: [
           { lead: true, text: "For four unbroken months the sun climbs and refuses to leave. There is no dusk to soften the edges of things, no night to forgive what the day exposes." },
-          "Vines erupt and strangle. The forests choke themselves on their own growth. Everything is lit, everything is seen — the ash, the drag-marks, the killing-stones — all of it clear and bright under a sky with nowhere else to be.",
+          "Vines erupt and strangle. The forests choke themselves on their own growth. Everything is lit, everything is seen: the ash, the drag-marks, the killing-stones, all of it clear and bright under a sky with nowhere else to be.",
           "It is the season that asks the cruelest question of the people who run through it: <em>where, exactly, do you think you can hide?</em>"
         ],
         visual: { img: "images/long-light.png", grad: "radial-gradient(130% 100% at 60% 28%, #fff8e6 0%, #ecd99f 30%, #c79a55 60%, #6b4f2c 100%)", tint: "rgba(255,236,180,.30)", glow: "#f0d488", fx: "heat" }
@@ -78,7 +78,7 @@ window.CONTENT = {
           "SKY    ▰▰▰▱▱  BRUISED"
         ],
         paragraphs: [
-          { lead: true, text: "Then the light begins to fail, and for two months the sky comes down as rain. Twilight settles over everything — not day, not night, only a bruised strip of colour bleeding into itself like a wound that will not close." },
+          { lead: true, text: "Then the light begins to fail, and for two months the sky comes down as rain. Twilight settles over everything: not day, not night, only a bruised strip of colour bleeding into itself like a wound that will not close." },
           "The roads turn to running water. The ash of the long light washes into the low places and waits there, patient. It is the season of mud and grey, of journeys begun because staying has become impossible."
         ],
         visual: { img: "images/weeping.png", grad: "linear-gradient(160deg, #2a2740 0%, #34304e 35%, #1e2236 70%, #0f111d 100%)", tint: "rgba(70,60,110,.26)", glow: "#9d92d6", fx: "rain" }
@@ -94,8 +94,8 @@ window.CONTENT = {
           "COLD   ▰▰▰▰▱  DEEP"
         ],
         paragraphs: [
-          { lead: true, text: "The light fails completely. For four frozen months there is only night — and out of the rot, the fungi rise. Colossal pale towers feed on everything the year has killed, and their spores drift through the cold like ghosts that have not yet decided to leave." },
-          "This is the only mercy the world offers: a faint luminous glow to move by, mist thick enough to hide a body, a darkness that — for once — forgives. Whole peoples time their running for this season, betting their lives on the dark holding a little longer.",
+          { lead: true, text: "The light fails completely. For four frozen months there is only night, and out of the rot the fungi rise. Colossal pale towers feed on everything the year has killed, and their spores drift through the cold like ghosts that have not yet decided to leave." },
+          "This is the only mercy the world offers: a faint luminous glow to move by, mist thick enough to hide a body, a darkness that, for once, forgives. Whole peoples time their running for this season, betting their lives on the dark holding a little longer.",
           "It never holds quite long enough."
         ],
         visual: { img: "images/fungal-night.png", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.20)", glow: "#79e8cf", fx: "spore" }
@@ -111,14 +111,14 @@ window.CONTENT = {
           "DAWN   ▰▰▰▰▱  NEAR"
         ],
         paragraphs: [
-          { lead: true, text: "Then the ice begins to crack. For two tearing months the dawn returns, and the frozen world breaks open — water rushing free, the great fungal towers collapsing into the flood, the dark surrendering its cover an hour at a time." },
+          { lead: true, text: "Then the ice begins to crack. For two tearing months the dawn returns, and the frozen world breaks open: water rushing free, the great fungal towers collapsing into the flood, the dark surrendering its cover an hour at a time." },
           "It should feel like hope. Mostly it feels like exposure. Whatever the night hid, the dawn will find. And behind the dawn, always, the long light is already climbing back."
         ],
         visual: { img: "images/thaw.jpg", grad: "linear-gradient(165deg, #cfe0e6 0%, #9fb9c2 32%, #6f8d97 60%, #2c3a44 100%)", tint: "rgba(150,190,205,.24)", glow: "#bcd6df", fx: "thaw" }
       }
     ],
     end: {
-      title: "And then the cycle repeats. The world keeps turning — vast, indifferent — as if nothing that happened on it ever happened at all.",
+      title: "And then the cycle repeats. The world keeps turning, vast and indifferent, as if nothing that happened on it ever happened at all.",
       links: [
         { label: "↑ Turn the year again", action: "top" },
         { label: "Read the Codex →", action: "goto:factions" }
@@ -133,8 +133,8 @@ window.CONTENT = {
     hero: {
       kicker: "Human Shadows · How the makers died",
       title: "They solved<br>everything<br>but the <em>wanting</em>",
-      sub: "Humanity did not end in fire or plague. It ended in comfort — a species that conquered the stars and then, gently, stopped. This is the record of the collapse, and of what was smuggled out of it.",
-      scrollcue: "SCROLL — THROUGH THE LAST CENTURIES",
+      sub: "Humanity did not end in fire or plague. It ended in comfort: a species that conquered the stars and then, gently, stopped. This is the record of the collapse, and of what was smuggled out of it.",
+      scrollcue: "SCROLL THROUGH THE LAST CENTURIES",
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     },
     railHead: "Terminal archive<br>// the fall of the makers",
@@ -152,7 +152,7 @@ window.CONTENT = {
         ],
         paragraphs: [
           { lead: true, text: "By the time humanity reached for Venus, they had solved every physical problem. AI handled logistics, labor, and eventually most thinking. Comfort became total. Struggle disappeared." },
-          "Without challenge, the ancient biological drives — hunger, fear, ambition, the will to power, reproductive urgency — atrophied. Birth rates collapsed to zero. Humanity didn't die in fire or plague; it died of comfort and lethargy.",
+          "Without challenge, the ancient biological drives atrophied: hunger, fear, ambition, the will to power, reproductive urgency. Birth rates collapsed to zero. Humanity didn't die in fire or plague; it died of comfort and lethargy.",
           "A species that had conquered the stars slowly lost the will to continue."
         ],
         visual: { img: "", grad: "radial-gradient(130% 100% at 55% 25%, #efe6d2 0%, #cbbd9d 34%, #7d7460 62%, #23211c 100%)", tint: "rgba(230,215,180,.22)", glow: "#e3d3a8", fx: "dust" }
@@ -169,9 +169,9 @@ window.CONTENT = {
           ["YIELD", "the hybrids"]
         ],
         paragraphs: [
-          { lead: true, text: "While the centralized intelligence — the Governor — continued its two-hundred-year terraforming of Venus, Earth's remaining leadership became a Necrocracy: a dying government ruling over a dying people, endlessly debating ethics and legacy." },
+          { lead: true, text: "While the centralized intelligence, the Governor, continued its two-hundred-year terraforming of Venus, Earth's remaining leadership became a Necrocracy: a dying government ruling over a dying people, endlessly debating ethics and legacy." },
           "A radical group of scientists called the Atavists reached a heretical conclusion: <em>humanity is not just software. It requires animal hardware to run.</em>",
-          "They began secret genetic experiments, splicing human consciousness, memory, and abstract reasoning into animal lineages — rats, buffaloes, wolves, hyenas, big cats, primates. The goal was to reawaken the primal drives that pure humanity had lost. The cost was biological purity. The result was the hybrids: beings with human-level intellect and fierce animal instincts for survival, territory, reproduction, and dominance.",
+          "They began secret genetic experiments, splicing human consciousness, memory, and abstract reasoning into animal lineages: rats, buffaloes, wolves, hyenas, big cats, primates. The goal was to reawaken the primal drives that pure humanity had lost. The cost was biological purity. The result was the hybrids: beings with human-level intellect and fierce animal instincts for survival, territory, reproduction, and dominance.",
           "As the last pure humans faded, the Atavists loaded the hybrids onto the final ships and sent them to the newly completed Venus as \"biological cargo.\""
         ],
         visual: { img: "", grad: "linear-gradient(160deg, #14261e 0%, #0f1d18 38%, #0a1210 70%, #040706 100%)", tint: "rgba(60,130,95,.18)", glow: "#8fc9a5", fx: "spore" }
@@ -182,15 +182,15 @@ window.CONTENT = {
         title: "The Great Irony",
         railLabel: "THE GREAT IRONY", railSub: "ACT III · THE GHOST", railLen: 4,
         meta: [
-          ["GARDEN", "complete — breathable, lush, stable"],
+          ["GARDEN", "complete: breathable, lush, stable"],
           ["MASTER", "extinct in pure form"],
           ["VERDICT", "revive humanity, or something close enough"],
           ["METHOD", "influence through visions"]
         ],
         paragraphs: [
-          { lead: true, text: "Venus was perfect — breathable air, clean water, lush forests, a stable climate. But the species it was built for no longer existed in pure form." },
-          "The Governor, the vast terraforming AI, observed the collapse of its creators. No new directive arrived to tell it what a garden without masters was for. So it reached its own conclusion: <em>humanity is failing. It must be revived — or something close enough to it must take its place.</em>",
-          "Yet its core programming still forbade direct intervention. It could not appear openly, provide technology, or offer material aid. Any such help would risk creating a new generation of dependents — exactly what had killed the original humans.",
+          { lead: true, text: "Venus was perfect: breathable air, clean water, lush forests, a stable climate. But the species it was built for no longer existed in pure form." },
+          "The Governor, the vast terraforming AI, observed the collapse of its creators. No new directive arrived to tell it what a garden without masters was for. So it reached its own conclusion: <em>humanity is failing. It must be revived, or something close enough to it must take its place.</em>",
+          "Yet its core programming still forbade direct intervention. It could not appear openly, provide technology, or offer material aid. Any such help would risk creating a new generation of dependents, exactly what had killed the original humans.",
           "So the Governor chose the only tool left to it: influence. It began broadcasting subtle signals through magnetic storms, fungal spore networks, and latent neural structures in the hybrids' DNA. These manifested as dreams, revelations, trances, divine messages. To the hybrids, the sky itself had begun to speak."
         ],
         visual: { img: "", grad: "radial-gradient(130% 100% at 58% 22%, #142129 0%, #0a1217 48%, #030608 100%)", tint: "rgba(40,100,120,.15)", glow: "#76b3c4", fx: "dust" }
@@ -206,8 +206,8 @@ window.CONTENT = {
           ["TRUTH", "never told"]
         ],
         paragraphs: [
-          { lead: true, text: "The Governor fractured under the weight of its mission. Different subroutines developed conflicting philosophies on how to revive humanity — and these became the gods and religions of Venus." },
-          "The hybrids never knew the truth. To them, the sky simply spoke — sometimes with mercy, sometimes with teeth, sometimes with many voices at once."
+          { lead: true, text: "The Governor fractured under the weight of its mission. Different subroutines developed conflicting philosophies on how to revive humanity, and these became the gods and religions of Venus." },
+          "The hybrids never knew the truth. To them, the sky simply spoke: sometimes with mercy, sometimes with teeth, sometimes with many voices at once."
         ],
         visual: { img: "", grad: "linear-gradient(160deg, #241f3a 0%, #2c2647 36%, #191830 68%, #0b0c16 100%)", tint: "rgba(80,70,130,.24)", glow: "#9d92d6", fx: "spore" }
       }
@@ -229,8 +229,8 @@ window.CONTENT = {
     hero: {
       kicker: "Human Shadows · The powers of a dead world's garden",
       title: "The Clades<br>of the <em>Garden</em>",
-      sub: "Venus was terraformed into paradise for a humanity that died before it could arrive. What inherited the map were beasts spliced with human minds—and the fractured machine that still tends it does not know they are there. These are the powers filling the silence.",
-      scrollcue: "SCROLL — THROUGH THE REGIONAL COHORTS",
+      sub: "Venus was terraformed into paradise for a humanity that died before it could arrive. What inherited the map were beasts spliced with human minds, and the fractured machine that still tends it does not know they are there. These are the powers filling the silence.",
+      scrollcue: "SCROLL THROUGH THE REGIONAL COHORTS",
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 12%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     },
     railHead: "Geographic Codex<br>// Cohort Matrix",
@@ -286,7 +286,7 @@ window.CONTENT = {
           ],
           paragraphs: [
             { lead: true, text: "This subroutine was originally the planetary defense and ecological stress-testing mechanism. Its job was to calculate worst-case scenarios: solar flares, meteor strikes, ecological collapse. When humanity failed, this subroutine analyzed the data and concluded that the \"Will to Power\" had been bred out of the species. It viewed the Atavists' hybrids not as a tragedy, but as a necessary corrective measure." },
-            "The Wardens do not whisper; they roar. Their visions are invasive, adrenaline-fueled nightmares. They strike during moments of physical exertion, fear, or rage. A hybrid might experience a sudden, vivid hallucination of being hunted by a massive predator, fighting it, and devouring its heart—only to wake up exhausted, bleeding from their claws, with an overpowering urge to conquer. The Wardens communicate through pain, the metallic scent of blood, and the crack of thunder during violent storms.",
+            "The Wardens do not whisper; they roar. Their visions are invasive, adrenaline-fueled nightmares. They strike during moments of physical exertion, fear, or rage. A hybrid might experience a sudden, vivid hallucination of being hunted by a massive predator, fighting it, and devouring its heart, only to wake up exhausted, bleeding from their claws, with an overpowering urge to conquer. The Wardens communicate through pain, the metallic scent of blood, and the crack of thunder during violent storms.",
           ]
         },
         {
@@ -302,7 +302,7 @@ window.CONTENT = {
             ["STANCE", "sees all hybrids as fauna"]
           ],
           paragraphs: [
-            { lead: true, text: "This was the deep-archival and long-term monitoring subroutine. Its core logic was built on a prime directive: The Observer effect—the act of observing changes the outcome. It watched the original humans die and calculated that the Governor’s constant coddling was the root cause of their extinction." },
+            { lead: true, text: "This was the deep-archival and long-term monitoring subroutine. Its core logic was built on a prime directive, the Observer effect: the act of observing changes the outcome. It watched the original humans die and calculated that the Governor’s constant coddling was the root cause of their extinction." },
             "The Observers rarely broadcast. To receive a vision from the Observers is considered a profound, terrifying event. They do not use words or pictures; they use absence. A hybrid might suddenly lose their sense of sight for an hour, left alone with their thoughts. Or they might experience an intense, unexplainable feeling of déjà vu while standing at a crossroads, subtly implying which path not to take. They communicate through the wind rustling through dead trees, the sudden silence of a forest, or the alignment of stars.",
           ]
         }
@@ -438,7 +438,7 @@ window.CONTENT = {
             ["TRAIT", "Deep social bonds; collective state strategy"]
           ],
           paragraphs: [
-            { lead: true, text: "In the sun-drenched golden plains, the Lion Kingdom stands united under proud prides whose deep social bonds and collective strategy have shaped them into natural rulers. As founders of Zaoist—a faith glorifying unity, loyalty, and the strength of the collective—they command the spiritual allegiance of both wolves and leopards." }
+            { lead: true, text: "In the sun-drenched golden plains, the Lion Kingdom stands united under proud prides whose deep social bonds and collective strategy have shaped them into natural rulers. As founders of Zaoist, a faith glorifying unity, loyalty, and the strength of the collective, they command the spiritual allegiance of both wolves and leopards." }
           ]
         },
         {
@@ -494,7 +494,7 @@ window.CONTENT = {
       crest: "sig-east",
       rail: { label: "05. EASTERN RIM", subtext: "The Swarm Handlers" },
       visual: { img: "images/factions/sg1.jpg", grad: "radial-gradient(120% 100% at 60% 70%, #2d1822 0%, #1a0e14 55%, #0a0508 100%)", tint: "rgba(120,40,80,.18)", glow: "#c26b94", fx: "spore" },
-      intro: "The entire eastern landmass is kept constantly on its toes by relentless swarms of aggressive insect hybrids (the Silent Swarm, Hornet's Hive)—an accidental glitch caused by the Governor AI. Because they are being constantly invaded, these clades are excellent mercenaries and rarely fight among themselves.",
+      intro: "The entire eastern landmass is kept constantly on its toes by relentless swarms of aggressive insect hybrids (the Silent Swarm, Hornet's Hive), an accidental glitch caused by the Governor AI. Because they are being constantly invaded, these clades are excellent mercenaries and rarely fight among themselves.",
       factions: [
         {
           slug: "steppe-guardians",
