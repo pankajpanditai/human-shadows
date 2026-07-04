@@ -457,68 +457,103 @@ window.CONTENT = {
   regions: [
     {
       id: "r2",
-      cohort: "COHORT I · THE MIDDLE LANDMASS",
-      title: "The Middle Clades",
-      epithet: "The dynamic powers of the fractured plains, jungles, swamps, and quarries",
+      cohort: "COHORT I · THE THRONES",
+      title: "The Thrones of the Garden",
+      epithet: "The five crowns whose rivalries shape the fate of the Garden.",
       crest: "sig-west",
-      rail: { label: "01. MIDDLE STATES", subtext: "Vanguards, Wetlands, Stoneheart & Redsett" },
+      rail: { label: "01. THE THRONES", subtext: "The Great Powers" },
       visual: { img: "images/factions/vv10.jpg", grad: "linear-gradient(165deg, #252a1c 0%, #1c2115 42%, #0e100a 76%, #050604 100%)", tint: "rgba(60,70,35,.22)", glow: "#8fa064", fx: "ash" },
       factions: [
         {
-          slug: "verdant-vanguards",
-          code: "2.1",
-          name: "Verdant Vanguards",
-          image: "images/factions/vv10.jpg",
+          slug: "golden-empire",
+          code: "1.1",
+          name: "Golden Empire",
+          image: "images/factions/ge1.jpg",
+          epithet: "No caravan crosses the Garden without passing beneath a lion's shadow.",
           meta: [
-            ["KIND", "Ungulates (Cows, Elks, Buffalos, Moose, Deer, Sheep, Rats)"],
-            ["CREED", "Suvartan State Religion (Caste Hierarchy)"],
-            ["TRAIT", "Extreme bravery without strategy"]
+            ["KIND", "Feline (Lions)"],
+            ["CREED", "Zaoist Founders"],
+            ["TRAIT", "Deep social bonds; collective state strategy"]
           ],
           paragraphs: [
-            { lead: true, text: "Purporting to be a grand refuge for all vegetarian kinds, the Vanguards are fiercely plagued by rigid castes and broken into sub-groups. Holy cows and reverent elks sit at the apex; heavy buffalos and moose serve as the martial champions, practicing bravery to an extreme where they will run cavalry straight into cannons without a strategy." },
-            "Below them, the deer and neelgay exist as peasants, goats and sheep handle the logistics and trade, while rats, moles, and gophers are marked as untouchables forced into the southern quarries. It is a system built on divine violence."
+            { lead: true, text: "The Golden Empire sits at the heart of western civilization. It commands no single monopoly, yet quietly influences all three of the Garden's most valuable commodities: spice, silk, and venom. Lion kings rarely conquer for territory alone; they conquer for balance." },
+            "Their closest allies are the Celestial Empire, whose leopard merchants control many of the western trade routes, and Naga's Embrace, the serpent kingdom whose venom has become one of the most valuable substances in the Garden.",
+            "Centuries ago, relations between the Lions and the Lunar Guardians were cordial. That peace ended during the Serpent War, when the wolves launched a devastating campaign against Naga's Embrace. Victory would have handed the entire venom trade to the Lunar Guardians, upsetting the balance of power across the continent.",
+            "The Watcher's Dominions were too distant and too weakened to intervene. Mooncrest's armies could not reach the battlefield in time. The Lion Kings alone possessed both the strength and the political leverage to act. Invoking the gentle principles of Zaoism, the Golden Empire demanded an immediate ceasefire, declaring that the strong had a duty to protect the weak. Behind the noble words stood an unmistakable warning: should the war continue, the Lions themselves would march.",
+            "The wolves refused. What followed was a brutal four-year conflict remembered simply as <em>The Holy War of Protection</em>. Neither side emerged unscarred, but the Golden Empire ultimately prevailed.",
+            "Since then, Naga's Embrace has remained a loyal protectorate of the Lions, while the Golden Empire quietly safeguards the world's venom trade. To the east, the Celestial Empire remains both a trusted ally and an indispensable commercial partner, carrying spices from the Vanguards across the western kingdoms while together standing watch against their common rival: the Mooncrest Matriarchy."
           ]
         },
         {
-          slug: "wetlands-pact",
-          code: "2.2",
-          name: "Wetland's Pact",
-          image: "images/factions/WetlandsPact1.jpg",
+          slug: "lunar-guardians",
+          code: "1.2",
+          name: "Lunar Guardians",
+          image: "images/factions/LunarGuardians3.jpg",
+          epithet: "The wolves have never ruled the Garden, yet no ruler ignores them.",
           meta: [
-            ["KIND", "Hybrids (Hippos, Crocodiles, Rhinos)"],
-            ["CREED", "Hieromachy Followers (River Resistance)"],
-            ["TRAIT", "Egalitarian foundation cracked by hippo discrimination"]
+            ["KIND", "Canine (All Wolves)"],
+            ["CREED", "Zaoist Followers"],
+            ["TRAIT", "Unbreakable pack discipline; flawless teamwork"]
           ],
           paragraphs: [
-            { lead: true, text: "An alliance born from centuries of persecution by the brutal Khamseen, emphasizing communal survival and righteous rebellion. While theoretically egalitarian, the hyper-aggressive hippos dominate through sheer ferocity, enforcing open discrimination against crocodiles for their perceived lower intelligence, fueling palpable dissent and simmering internal unrest." }
+            { lead: true, text: "The Lunar Guardians occupy the harsh northwestern forests, far removed from the great merchant roads. Unlike the southern empires, they possess no vast spice fields, no silk workshops, and no lucrative caravan networks. Their strength has always been earned rather than inherited." },
+            "Every fortress, every village, and every victory has been built through relentless discipline, endurance, and an unwavering belief that no pack survives unless every member carries their burden.",
+            "Their greatest humiliation remains the Serpent War. Generations have grown up believing victory was stolen from them, not by the Nagas they nearly defeated, but by Lion diplomacy backed with overwhelming military force. Restoring the honor lost in that war has quietly become a national obsession.",
+            "To the south lies their closest ally, Avaron Heights, whose mountain peoples rely upon the wolves to shield them from repeated incursions by the fanatical Ursa Theocracy. The Ursas themselves remain more nuisance than existential threat. Their borders are narrow, their campaigns reckless, and their charges rarely survive disciplined wolf formations. Nevertheless, constant vigilance has become second nature to the northern packs.",
+            "Every generation of wolves trains with one question lingering beneath the surface: <em>when the next great war comes... will the Lions still stand above us?</em>"
           ]
         },
         {
           slug: "stoneheart-kingdom",
-          code: "2.3",
+          code: "1.3",
           name: "Stoneheart Kingdom",
           image: "images/factions/sh6.jpg",
+          epithet: "Empires wage wars. Stoneheart remembers them.",
           meta: [
             ["KIND", "Apes (Chimps, Gorillas, Orangutans, Baboons, Mandrills)"],
             ["CREED", "Exodists Founders"],
             ["TRAIT", "High cognitive awareness; centered on the island bridge"]
           ],
           paragraphs: [
-            { lead: true, text: "Sitting precisely on the central island bridge between the two continents. As founders of the Exodist faith, they do not worship the sky; they seek to escape the garden entirely, hunting for the physical data remnants and installations of the Creators who vanished." }
+            { lead: true, text: "Situated upon the ancient bridge connecting the continents, the Stoneheart Kingdom occupies perhaps the most strategically valuable position in the Garden. Yet it seeks remarkably little territory." },
+            "Instead, the ape kingdoms have devoted themselves to scholarship, engineering, and archaeology. Their universities and workshops produce the world's finest silks, while their expeditions search endlessly for relics left behind by civilizations older than memory.",
+            "Stoneheart maintains few permanent alliances and even fewer lasting enemies. Kings come seeking silk. Priests come seeking answers. Conquerors come seeking roads. <em>Stoneheart simply records them all.</em>"
           ]
         },
         {
           slug: "mooncrest-matriarch",
-          code: "2.1",
-          name: "Mooncrest Matriarch",
+          code: "1.4",
+          name: "Mooncrest Matriarchy",
           image: "images/factions/MooncrestMatriarch1.jpg",
+          epithet: "Where hyenas rule, loyalty is measured in fear before blood.",
           meta: [
             ["KIND", "Hyaenidae (Hyenas & Wild Dogs)"],
             ["CREED", "Khamseen Follower (Patriarchal Enforcements)"],
             ["TRAIT", "Total political control; enemies of the Vanguards"]
           ],
           paragraphs: [
-            { lead: true, text: "A powerful and predatory kingdom ruled by ruthless hyena matriarchs who command absolute political control over submissive masses. To protect their internal structure, they ironically enforce a brutal patriarchal variation of the Khamseen religion, crushing any citizens who point out the ultimate cognitive dissonance of their regime. Wild dogs make up the peasant class under their absolute control." }
+            { lead: true, text: "The Mooncrest Matriarchy is the uncompromising military engine of the Khamseen world. Long before Khamseen reached their borders, the hyenas had always been ruled by queens. The coming of the desert faith did not replace that tradition—it transformed it into something far more formidable. The Matriarchs saw in Khamseen not merely a religion, but the perfect instrument of statecraft. Its uncompromising doctrines, absolute hierarchy, and demand for unquestioning obedience became powerful tools for unifying an otherwise turbulent kingdom beneath a single sacred authority." },
+            "The contradiction has never gone unnoticed. Several passages within the oldest Khamseen scriptures speak plainly of male authority and female submission. Mooncrest's priesthood answers these verses with elaborate interpretations, declaring the Matriarchs to be divinely appointed exceptions, chosen to embody the Iron Revelation itself. Any man bold enough to question this sacred reasoning rarely survives long enough to repeat the argument. Within Mooncrest, theological debate is not settled by scholars, but by public executions.",
+            "Its queens maintain close ties with the Watcher's Dominions, whose ancient priesthood continues to preserve and interpret the oldest Khamseen scriptures. Their wars are financed in no small part by the immense caravan wealth of Midas' Realm, whose camel merchants profit from supplying armies marching beneath Khamseen banners. For centuries the Matriarchy has waged relentless campaigns against the Verdant Vanguards. On paper the wars should have ended long ago. The hyenas consistently inflict greater casualties. The Vanguards consistently replace them.",
+            "The endless fertility of the southern plains, combined with immense spice revenues and religiously sanctioned labor, allows the Vanguards to replenish armies at a pace few kingdoms can match. Both civilizations have become prisoners of their own ideals. The Matriarchs wage every campaign as a sacred war against unbelief. The Vanguards glorify sacrifice so completely that defeat often inspires greater recruitment than victory. <em>The frontier between them has become less a border and more a permanent wound upon the Garden.</em>"
+          ]
+        },
+        {
+          slug: "verdant-vanguards",
+          code: "1.5",
+          name: "Verdant Vanguards",
+          image: "images/factions/vv10.jpg",
+          epithet: "Their fields fed the Garden long before their laws divided it.",
+          meta: [
+            ["KIND", "Ungulates (Cows, Elks, Buffalos, Moose, Deer, Sheep, Rats)"],
+            ["CREED", "Suvartan State Religion (Caste Hierarchy)"],
+            ["TRAIT", "Extreme bravery without strategy"]
+          ],
+          paragraphs: [
+            { lead: true, text: "Blessed with the most fertile plains on the planet, the Verdant Vanguards command the world's spice trade and possess agricultural wealth unmatched by any other Throne. Yet prosperity has become its own prison. Society is fractured beneath rigid hierarchies that have hardened over centuries." },
+            "The sacred cattle and noble elk occupy the highest stations, governing a civilization increasingly detached from the struggles beneath them. Buffaloes and moose form the military backbone of the kingdom. Fiercely courageous, they continue to wage war according to ancient codes of honor that often defy military reason. Retreat is shameful. Pursuing a fleeing enemy is dishonorable. Heroic sacrifice is celebrated above strategic victory.",
+            "Goats and sheep oversee trade, caravans, taxation, and logistics, quietly ensuring the machinery of the state continues to function. The deer endure life as oppressed peasants. Below even them stand the rats: declared untouchable by religious decree and condemned to labor in the southern quarries.",
+            "Against the Mooncrest Matriarchy, the Vanguards fight an endless cycle of holy wars. The hyenas fight for conquest. The Vanguards fight for honor. <em>Neither remembers how the first battle began.</em>"
           ]
         }
       ]
@@ -526,11 +561,11 @@ window.CONTENT = {
 
     {
       id: "r3",
-      cohort: "COHORT II · THE DESERT CRADLES",
-      title: "The Reptilian Dominions",
-      epithet: "The birthplaces of the burning desert faith",
+      cohort: "COHORT II · THE MARCHES",
+      title: "The Marches",
+      epithet: "The border kingdoms where empires meet, trade, and quietly prepare for war.",
       crest: "sig-west",
-      rail: { label: "02. WASTES", subtext: "The Reptilian Cradle" },
+      rail: { label: "02. THE MARCHES", subtext: "Border Kingdoms" },
       visual: { img: "images/factions/wd3.png", grad: "radial-gradient(130% 100% at 50% 30%, #463b2c 0%, #2b2318 50%, #120e09 100%)", tint: "rgba(180,130,70,.18)", glow: "#cca06e", fx: "heat" },
       factions: [
         {
@@ -579,80 +614,12 @@ window.CONTENT = {
     },
 
     {
-      id: "r4",
-      cohort: "COHORT III · THE WESTERN STATES",
-      title: "The Feline & Canine Empires",
-      epithet: "The centers of order, pack discipline, and solitary strength",
-      crest: "sig-felines",
-      rail: { label: "03. PLAINS & NORTH", subtext: "Feline & Wolf Empires" },
-      visual: { img: "images/factions/ge2.png", grad: "linear-gradient(160deg, #1c222b 0%, #12161c 46%, #0a0c10 80%, #040506 100%)", tint: "rgba(90,110,130,.16)", glow: "#a2b4c7", fx: "thaw" },
-      factions: [
-        {
-          slug: "golden-empire",
-          code: "4.1",
-          name: "Golden Empire",
-          image: "images/factions/ge1.jpg",
-          meta: [
-            ["KIND", "Feline (Lions)"],
-            ["CREED", "Zaoist Founders"],
-            ["TRAIT", "Deep social bonds; collective state strategy"]
-          ],
-          paragraphs: [
-            { lead: true, text: "In the sun-drenched golden plains, the Lion Kingdom stands united under proud prides whose deep social bonds and collective strategy have shaped them into natural rulers. As founders of Zaoist, a faith glorifying unity, loyalty, and the strength of the collective, they command the spiritual allegiance of both wolves and leopards." }
-          ]
-        },
-        {
-          slug: "celestial-empire",
-          code: "4.2",
-          name: "Celestial Empire",
-          image: "images/factions/CelestialEmpire1.jpg",
-          meta: [
-            ["KIND", "Feline (Leopards & Snow Leopards)"],
-            ["CREED", "Zaoist Followers"],
-            ["TRAIT", "Quiet prosperity; calculated stealth and independence"]
-          ],
-          paragraphs: [
-            { lead: true, text: "Hidden among shadowed forests and rocky cliffs, the Leopard Kingdom endures in quiet prosperity. While they follow the Zaoist faith of the lions, their pragmatic and solitary nature allows them to flourish beautifully without falling into rigid internal hierarchies or constant conflict." }
-          ]
-        },
-        {
-          slug: "lunar-guardians",
-          code: "5.1",
-          name: "Lunar Guardians",
-          image: "images/factions/LunarGuardians3.jpg",
-          meta: [
-            ["KIND", "Canine (All Wolves)"],
-            ["CREED", "Zaoist Followers"],
-            ["TRAIT", "Unbreakable pack discipline; flawless teamwork"]
-          ],
-          paragraphs: [
-            { lead: true, text: "Thriving through unbreakable pack discipline and flawless coordination in the dense northern howling forests. Their complete success mirrors the lions' strength in unity, turning fierce individuals into an unstoppable collective force and making them highly reliable, formidable allies." }
-          ]
-        },
-        {
-          slug: "ursa-theocracy",
-          code: "6.1",
-          name: "Ursa Theocracy",
-          image: "images/factions/UrsaTheocracy1.jpg",
-          meta: [
-            ["KIND", "Ursidae (All Bears)"],
-            ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Absolute priest-king rule; constant internal fractures"]
-          ],
-          paragraphs: [
-            { lead: true, text: "Deep in the rugged northern mountains, this kingdom rules as an absolute theocracy where massive bears submit to priest-kings preaching raw power and total conquest. Despite the brutal unifying nature of the faith, vicious internal power struggles between rival theocratic factions keep the kingdom perpetually divided and weakened from within." }
-          ]
-        }
-      ]
-    },
-
-    {
       id: "r5",
-      cohort: "COHORT IV · THE INSECT FRONT",
-      title: "The Eastern Continent",
-      epithet: "The kingdoms locked in defensive war against the scourge of the gods",
+      cohort: "COHORT III · THE FRONTIERS",
+      title: "The Eastern Frontiers",
+      epithet: "The kingdoms standing between the Garden and the endless eastern horrors.",
       crest: "sig-east",
-      rail: { label: "04. EASTERN RIM", subtext: "The Swarm Handlers" },
+      rail: { label: "03. FRONTIERS", subtext: "The Endless War" },
       visual: { img: "images/factions/sg1.jpg", grad: "radial-gradient(120% 100% at 60% 70%, #2d1822 0%, #1a0e14 55%, #0a0508 100%)", tint: "rgba(120,40,80,.18)", glow: "#c26b94", fx: "spore" },
       intro: "The entire eastern landmass is kept constantly on its toes by relentless swarms of aggressive insect hybrids (the Silent Swarm, Hornet's Hive), a scourge the priests call a punishment from the gods, though no two temples agree for what sin. Because they are being constantly invaded, these clades are excellent mercenaries and rarely fight among themselves.",
       factions: [
@@ -731,12 +698,52 @@ window.CONTENT = {
     },
 
     {
+      id: "r4",
+      cohort: "COHORT IV · THE SCOURGE",
+      title: "The Scourge",
+      epithet: "The swarms that neither negotiate nor remember peace.",
+      crest: "sig-east",
+      rail: { label: "04. THE SCOURGE", subtext: "The Endless Swarm" },
+      visual: { img: "images/factions/ge2.png", grad: "linear-gradient(160deg, #1c222b 0%, #12161c 46%, #0a0c10 80%, #040506 100%)", tint: "rgba(90,110,130,.16)", glow: "#a2b4c7", fx: "thaw" },
+      factions: [
+        {
+          slug: "celestial-empire",
+          code: "4.2",
+          name: "Celestial Empire",
+          image: "images/factions/CelestialEmpire1.jpg",
+          meta: [
+            ["KIND", "Feline (Leopards & Snow Leopards)"],
+            ["CREED", "Zaoist Followers"],
+            ["TRAIT", "Quiet prosperity; calculated stealth and independence"]
+          ],
+          paragraphs: [
+            { lead: true, text: "Hidden among shadowed forests and rocky cliffs, the Leopard Kingdom endures in quiet prosperity. While they follow the Zaoist faith of the lions, their pragmatic and solitary nature allows them to flourish beautifully without falling into rigid internal hierarchies or constant conflict." }
+          ]
+        },
+        {
+          slug: "ursa-theocracy",
+          code: "6.1",
+          name: "Ursa Theocracy",
+          image: "images/factions/UrsaTheocracy1.jpg",
+          meta: [
+            ["KIND", "Ursidae (All Bears)"],
+            ["CREED", "Khamseen Followers"],
+            ["TRAIT", "Absolute priest-king rule; constant internal fractures"]
+          ],
+          paragraphs: [
+            { lead: true, text: "Deep in the rugged northern mountains, this kingdom rules as an absolute theocracy where massive bears submit to priest-kings preaching raw power and total conquest. Despite the brutal unifying nature of the faith, vicious internal power struggles between rival theocratic factions keep the kingdom perpetually divided and weakened from within." }
+          ]
+        }
+      ]
+    },
+
+    {
       id: "r6",
-      cohort: "COHORT V · THE SHATTERED CONNECTOR & RIM",
-      title: "The Isolated & Fringe Alliances",
-      epithet: "Chokepoints, swamp resistance networks, and the deep rumors",
+      cohort: "COHORT V · THE RUMORS",
+      title: "Beyond the Maps",
+      epithet: "Forgotten islands, silent engines, impossible beasts, and stories no kingdom agrees upon.",
       crest: "sig-bridge",
-      rail: { label: "05. INSECTOIDS", subtext: "Bridge & Shadow Secrets" },
+      rail: { label: "05. THE UNKNOWN", subtext: "Rumors & Relics" },
       visual: { img: "images/factions/sh6.jpg", grad: "linear-gradient(170deg, #172420 0%, #0e1614 40%, #040606 100%)", tint: "rgba(40,80,60,.20)", glow: "#63ab87", fx: "rain" },
       factions: [
         {
@@ -752,7 +759,21 @@ window.CONTENT = {
           paragraphs: [
             { lead: true, text: "Whispered among rats on the long quarry roads as a free kingdom past the edge of the maps. Geographically verified as a small, highly defensible peninsula at the bottom center of the western continent, it serves as the ultimate beacon for the unchained, using the fluid principles of Permutism to survive away from the horns and matriarchs." }
           ]
-        }
+        },
+        {
+          slug: "wetlands-pact",
+          code: "2.2",
+          name: "Wetland's Pact",
+          image: "images/factions/WetlandsPact1.jpg",
+          meta: [
+            ["KIND", "Hybrids (Hippos, Crocodiles, Rhinos)"],
+            ["CREED", "Hieromachy Followers (River Resistance)"],
+            ["TRAIT", "Egalitarian foundation cracked by hippo discrimination"]
+          ],
+          paragraphs: [
+            { lead: true, text: "An alliance born from centuries of persecution by the brutal Khamseen, emphasizing communal survival and righteous rebellion. While theoretically egalitarian, the hyper-aggressive hippos dominate through sheer ferocity, enforcing open discrimination against crocodiles for their perceived lower intelligence, fueling palpable dissent and simmering internal unrest." }
+          ]
+        },
       ]
     }
   ]

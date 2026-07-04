@@ -86,7 +86,8 @@
   .rail{
     position:fixed; top:0; right:0; z-index:5;
     width:var(--rail-w); height:100vh;
-    display:flex; flex-direction:column; justify-content:center; gap:2px;
+    display:flex; flex-direction:column; justify-content:flex-start; gap:2px;
+    overflow-y:auto; scrollbar-width:thin; scrollbar-color:rgba(236,230,220,.18) transparent;
     padding:60px 20px 20px 20px;
     font-family:"Space Mono",monospace;
     border-left:1px solid rgba(236,230,220,.12);
@@ -96,7 +97,7 @@
   }
   .rail-head{
     font-size:9px; letter-spacing:.3em; color:var(--ink-dim);
-    text-transform:uppercase; margin-bottom:16px; line-height:1.7;
+    text-transform:uppercase; margin-top:auto; margin-bottom:16px; line-height:1.7;
   }
   .seg{
     display:flex; align-items:center; gap:11px; padding:10px 0;
@@ -117,7 +118,7 @@
   .seg.on{ color:var(--ink); }
   .seg.on svg{ color:var(--glow); filter:drop-shadow(0 0 8px var(--glow)); }
   .seg.on .bar{ background:var(--glow); box-shadow:0 0 14px var(--glow); }
-  .rail-foot{ margin-top:16px; font-size:8.5px; letter-spacing:.16em; color:var(--ink-dim); line-height:1.7; }
+  .rail-foot{ margin-top:16px; margin-bottom:auto; font-size:8.5px; letter-spacing:.16em; color:var(--ink-dim); line-height:1.7; }
 
   /* ── content layouts ──────────────────────────────────── */
   main{ position:relative; z-index:3; }
