@@ -239,6 +239,7 @@
 
   /* dynamic adjustments for views code engines */
   body[data-active-view="ambience"] .seg .bar,
+  body[data-active-view="faiths"] .seg .bar,
   body[data-active-view="collapse"] .seg .bar { display: block; }
   body[data-active-view="factions"] .seg svg { display: block; }
 
@@ -264,6 +265,7 @@
     .seg{ border:none; padding:4px; flex-direction: column; }
     .seg:last-of-type{ border:none; }
     body[data-active-view="ambience"] .seg .bar,
+    body[data-active-view="faiths"] .seg .bar,
     body[data-active-view="collapse"] .seg .bar{ width:24px !important; height:3px !important; }
     body[data-active-view="faction"] .rail{ display:none; }
     section{ padding:16vh 7vw 18vh; }
@@ -277,7 +279,7 @@
   }
 </style>
 </head>
-<body data-active-view="collapse">
+<body data-active-view="ambience">
 
 <div class="stage" id="stage" aria-hidden="true"></div>
 <div class="tint" aria-hidden="true"></div>
@@ -297,16 +299,17 @@
 </defs></svg>
 
 <header class="global-header">
-  <a href="#collapse" class="brand" id="brand-link"></a>
+  <a href="#ambience" class="brand" id="brand-link"></a>
   <nav class="view-switcher" id="view-switcher" aria-label="Primary Viewports"></nav>
 </header>
 
 <nav class="rail" id="dynamic-rail" aria-label="Context Navigation Matrix"></nav>
 
 <main>
-  <div id="view-collapse" class="view-wrapper active"></div>
-  <div id="view-ambience" class="view-wrapper"></div>
+  <div id="view-ambience" class="view-wrapper active"></div>
+  <div id="view-faiths" class="view-wrapper"></div>
   <div id="view-factions" class="view-wrapper"></div>
+  <div id="view-collapse" class="view-wrapper"></div>
   <div id="view-faction" class="view-wrapper"></div>
 </main>
 
@@ -366,7 +369,7 @@
 
   // "Chronicle" views (The Turning Year, The Collapse) share one shape:
   // hero + scrolling phase sections + end loop.
-  const CHRONICLES = ['ambience', 'collapse'];
+  const CHRONICLES = ['ambience', 'faiths', 'collapse'];
 
   function renderChronicle(viewKey){
     const A = C[viewKey];
@@ -539,7 +542,10 @@
 
   let currentRoute = null;
 
-  const TOP_VIEWS = ['collapse', 'ambience', 'factions'];
+  // Menu order. 'collapse' (Restricted Records) is deliberately NOT here:
+  // it is hidden lore, reachable only via the #restricted link at the end
+  // of the Kingdoms codex.
+  const TOP_VIEWS = ['ambience', 'faiths', 'factions'];
 
   function activateView(viewKey){
     document.querySelectorAll('.view-wrapper').forEach(el => el.classList.remove('active'));
@@ -575,7 +581,8 @@
       return;
     }
 
-    const viewKey = TOP_VIEWS.includes(h) ? h : 'collapse';
+    const viewKey = (h === 'restricted' || h === 'collapse') ? 'collapse'
+      : (TOP_VIEWS.includes(h) ? h : 'ambience');
     if (currentRoute === viewKey) return;
     currentRoute = viewKey;
 

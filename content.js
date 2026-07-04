@@ -47,7 +47,7 @@ window.CONTENT = {
       scrollcue: "SCROLL TO TURN THE YEAR",
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     },
-    railHead: "Governor&nbsp;readout<br>// the turning year",
+    railHead: "Sky&nbsp;readout<br>// the turning year",
     railFoot: "12&nbsp;MONTHS<br>NO&nbsp;MERCY&nbsp;SEASON",
     phases: [
       {
@@ -121,17 +121,178 @@ window.CONTENT = {
       title: "And then the cycle repeats. The world keeps turning, vast and indifferent, as if nothing that happened on it ever happened at all.",
       links: [
         { label: "↑ Turn the year again", action: "top" },
-        { label: "Read the Codex →", action: "goto:factions" }
+        { label: "Trace the Faiths →", action: "goto:faiths" }
       ],
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     }
   },
 
-  /* ── VIEW B · THE COLLAPSE (the fall of humanity) ──────────────── */
-  collapse: {
-    nav: "The Collapse",
+  /* ── VIEW B · FAITHS OF THE GARDEN ─────────────────────────────── */
+  faiths: {
+    nav: "Faiths of the Garden",
     hero: {
-      kicker: "Human Shadows · How the makers died",
+      kicker: "Human Shadows · Faiths beneath the silent sky",
+      title: "The Faiths<br>of the <em>Garden</em>",
+      sub: "Every kingdom tells a different story of the Sky. Some build cities. Some seek strength. Some embrace change. Some simply keep walking. No two faiths agree completely, yet all preserve fragments of a much older memory: a time before kingdoms, before borders, when every tribe believed they had crossed impossible heavens to reach this world.",
+      scrollcue: "SCROLL TO TRACE THE FIRST MYTH",
+      visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
+    },
+    railHead: "Doctrine index<br>// the listening faiths",
+    railFoot: "SEVEN CREEDS<br>ONE SILENT SKY",
+    phases: [
+      {
+        id: "f0",
+        tag: "THE FIRST CHRONICLE",
+        title: "The Great Crossing",
+        railLabel: "THE CROSSING", railSub: "FIRST CHRONICLE", railLen: 4,
+        meta: [
+          ["REMEMBERED BY", "every faith, in every tongue"],
+          ["AGREED UPON", "only that it happened"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Long before the first kingdoms, before the first walls were raised, every ancient tradition told the same impossible story. The old world was dying. The Sky led the First Tribes to a new garden." },
+          "No two chronicles describe the journey the same way. The desert tablets claim they walked across bridges woven from light. The jungle songs insist they sailed upon a shoreless black sea. Northern storytellers whisper of enormous beasts of iron that carried entire tribes within their hollow bodies. Island scholars argue the stars themselves shifted, bringing the world beneath their feet.",
+          "No agreement survives about how the journey happened. Only that it did. Every old faith, regardless of language or kingdom, preserves one unshaken belief: <em>our ancestors came from another world, and the Sky showed them the way.</em>"
+        ],
+        visual: { img: "", grad: "radial-gradient(130% 100% at 55% 20%, #232041 0%, #1a1833 40%, #0e0d1d 72%, #050409 100%)", tint: "rgba(70,60,120,.22)", glow: "#b3a5e6", fx: "dust" }
+      },
+      {
+        id: "f1",
+        tag: "DOCTRINE I · THE FAITH OF THE OPEN ROAD",
+        title: "Exodism",
+        railLabel: "EXODISM", railSub: "THE OPEN ROAD", railLen: 2,
+        meta: [
+          ["FOUNDED BY", "the First Wanderer"],
+          ["KEPT BY", "the Stoneheart Kingdom"],
+          ["CREED", "the journey itself is sacred"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Among the oldest surviving traditions is the story of the First Wanderer. The chronicles never name the tyrant he abandoned, only that kneeling before him became impossible. Rather than raising an army, the Wanderer gathered those willing to leave everything behind and walked into lands no map could describe." },
+          "The old songs claim the mountains opened before them and forgotten paths appeared wherever they stepped. Whether miracle or memory, the story became the foundation of Exodism.",
+          "To an Exodist, the journey itself is sacred. Roads matter more than destinations. Discovery matters more than possession. Every settlement is only another beginning. <em>A traveler who refuses fear walks closest to the Sky.</em>"
+        ],
+        visual: { img: "", grad: "linear-gradient(165deg, #33281a 0%, #2a2015 40%, #171208 74%, #060503 100%)", tint: "rgba(160,120,60,.18)", glow: "#d2a86e", fx: "dust" }
+      },
+      {
+        id: "f2",
+        tag: "DOCTRINE II · THE COVENANT OF ORDER",
+        title: "Zaoism",
+        railLabel: "ZAOISM", railSub: "THE COVENANT", railLen: 2,
+        meta: [
+          ["GREW FROM", "the same roots as Exodism"],
+          ["KEPT BY", "lions, leopards, and wolves"],
+          ["CREED", "duty before desire"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Zaoism grew from the same roots as Exodism, yet arrived at a different conclusion. The Wanderer crossed the wilderness not simply to escape. He crossed it to build." },
+          "If Exodism honors those who leave home, Zaoism honors those who create one. Its teachers speak of duty before desire, of shared burdens, and of civilizations that endure because no individual stands above the whole.",
+          "The pride, the family, the city: <em>these are sacred works, greater than any single life.</em>"
+        ],
+        visual: { img: "", grad: "radial-gradient(130% 100% at 55% 28%, #3d341f 0%, #322a17 44%, #17130a 78%, #060504 100%)", tint: "rgba(200,160,80,.16)", glow: "#e0c078", fx: "heat" }
+      },
+      {
+        id: "f3",
+        tag: "DOCTRINE III · THE GREAT BALANCE",
+        title: "Suvartan",
+        railLabel: "SUVARTAN", railSub: "THE BALANCE", railLen: 2,
+        meta: [
+          ["AGE", "the oldest organized faith"],
+          ["KEPT BY", "the Verdant Vanguards"],
+          ["CREED", "every place has a duty"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Suvartan is among the oldest organized faiths still practiced. Its earliest writings speak not of kings, but of balance. Every creature has a place, and every place has a duty." },
+          "The oldest scholars insist these words were never meant to divide. The rivers had their duty. The forests had theirs. The great beasts, the smallest insects, even the seasons themselves each carried a responsibility toward the whole. Only much later did rulers begin interpreting \"place\" as rank instead of purpose.",
+          "Over centuries the scriptures remained unchanged. The kingdoms changed around them. What had once described harmony slowly became the foundation of rigid hierarchy. Many still argue that the religion itself was never corrupted. <em>Only its readers were.</em>"
+        ],
+        visual: { img: "", grad: "linear-gradient(165deg, #252a1c 0%, #1c2115 42%, #0e100a 76%, #050604 100%)", tint: "rgba(60,70,35,.22)", glow: "#8fa064", fx: "ash" }
+      },
+      {
+        id: "f4",
+        tag: "DOCTRINE IV · THE ENDLESS TURNING",
+        title: "Permutism",
+        railLabel: "PERMUTISM", railSub: "THE TURNING", railLen: 2,
+        meta: [
+          ["BORN FROM", "a Suvartan disagreement"],
+          ["KEPT BY", "Shadow's Teeth and the Giants"],
+          ["CREED", "change with the Turning Year"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Permutism began as a disagreement among Suvartan scholars. Its earliest philosophers asked a question that eventually reshaped entire kingdoms. If every creature has a duty... <em>who decided that duty could never change?</em>" },
+          "The world itself transforms every year. Flood becomes drought. Night becomes thaw. Forests become fungus. Why should people alone remain fixed?",
+          "Permutists teach that survival belongs to those willing to change with the Turning Year. Ideas evolve. Kingdoms evolve. Even identity may evolve. <em>Nothing remains sacred simply because it has always existed.</em>"
+        ],
+        visual: { img: "", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.20)", glow: "#79e8cf", fx: "thaw" }
+      },
+      {
+        id: "f5",
+        tag: "DOCTRINE V · THE IRON REVELATION",
+        title: "Khamseen",
+        railLabel: "KHAMSEEN", railSub: "THE REVELATION", railLen: 2,
+        meta: [
+          ["FOUNDED BY", "a monitor hunter, three days dying"],
+          ["KEPT BY", "half the kingdoms of the map"],
+          ["CREED", "strength reveals truth"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Unlike the older faiths, Khamseen remembers its beginning. Its founder was no king, no prophet, no conqueror. Only a monitor hunter who crossed paths with a venomous serpent beneath the burning desert sun." },
+          "The bite should have killed him. Instead he lingered for three days. Witnesses spoke of fever, visions, and words that seemed to arrive from somewhere beyond the clouds. Every sentence uttered during those final days was carved into stone. Those fragments became the first scriptures.",
+          "The central teaching has never changed. <em>Strength reveals truth. Weakness creates lies.</em> Followers believe suffering is neither punishment nor cruelty. It is the fire through which every worthy soul must pass."
+        ],
+        visual: { img: "", grad: "radial-gradient(130% 100% at 50% 30%, #463b2c 0%, #2b2318 50%, #120e09 100%)", tint: "rgba(180,130,70,.18)", glow: "#cca06e", fx: "heat" }
+      },
+      {
+        id: "f6",
+        tag: "DOCTRINE VI · THE UNCHAINED SKY",
+        title: "Hieromachy",
+        railLabel: "HIEROMACHY", railSub: "THE UNCHAINED", railLen: 2,
+        meta: [
+          ["BORN AMONG", "refugees of the river marshes"],
+          ["KEPT BY", "the Wetland's Pact"],
+          ["CREED", "the Sky belongs to no king"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Hieromachy did not begin in temples. It began among refugees. Families displaced by wars, conquest, and competing priesthoods gathered beside rivers and marshes where no kingdom cared to rule." },
+          "Listening to every side proclaim divine certainty, they reached a dangerous conclusion. If every king claims the Sky speaks only to him... <em>perhaps the Sky belongs to no king at all.</em>",
+          "Hieromachy does not reject faith. It rejects ownership of faith. No priest. No emperor. No bloodline possesses exclusive access to truth. Every soul stands beneath the same sky. Every soul may listen."
+        ],
+        visual: { img: "", grad: "linear-gradient(160deg, #1a2530 0%, #131c26 42%, #0a0f15 76%, #040608 100%)", tint: "rgba(70,110,150,.18)", glow: "#7fa8c9", fx: "rain" }
+      },
+      {
+        id: "f7",
+        tag: "DOCTRINE VII · THE FOREST TRADITIONS",
+        title: "The Old Ways",
+        railLabel: "THE OLD WAYS", railSub: "FOREST TRADITIONS", railLen: 2,
+        meta: [
+          ["SCRIPTURE", "none"],
+          ["KEPT BY", "the smallest tribes"],
+          ["CREED", "pray to be noticed"]
+        ],
+        paragraphs: [
+          { lead: true, text: "The smallest tribes rarely built temples. They carried stories instead. A carved stone. A song before winter. An offering left beside forgotten trails. The great kingdoms dismiss these customs as superstition. The forest clans simply shrug. <em>Not every conversation with the Sky requires words.</em>" },
+          "The Old Ways contain no single scripture. No universal doctrine. Only countless local traditions passed from one generation to the next. Among them survives one belief found nowhere else. <em>You do not pray to be saved. You pray to be noticed.</em>",
+          "Old killing stones scattered through forgotten forests are said to mark places where someone stood at the edge of despair... and the Sky finally answered. No one agrees what that answer looked like. Only that those who returned were never quite the same."
+        ],
+        visual: { img: "", grad: "linear-gradient(170deg, #172420 0%, #0e1614 40%, #040606 100%)", tint: "rgba(40,80,60,.20)", glow: "#63ab87", fx: "spore" }
+      }
+    ],
+    end: {
+      title: "Seven faiths. Seven answers. One sky that has never once explained itself.",
+      links: [
+        { label: "↑ Trace the myths again", action: "top" },
+        { label: "Meet the kingdoms →", action: "goto:factions" }
+      ],
+      visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
+    }
+  },
+
+  /* ── HIDDEN VIEW · RESTRICTED RECORDS (the fall of humanity) ─────
+     Not in the top menu. Reachable only via the link at the end of
+     the Kingdoms codex (hash #restricted). Deliberately hidden. */
+  collapse: {
+    nav: "Restricted Records",
+    hero: {
+      kicker: "Restricted Records · How the makers died",
       title: "They solved<br>everything<br>but the <em>wanting</em>",
       sub: "Humanity did not end in fire or plague. It ended in comfort: a species that conquered the stars and then, gently, stopped. This is the record of the collapse, and of what was smuggled out of it.",
       scrollcue: "SCROLL THROUGH THE LAST CENTURIES",
@@ -210,36 +371,84 @@ window.CONTENT = {
           "The hybrids never knew the truth. To them, the sky simply spoke: sometimes with mercy, sometimes with teeth, sometimes with many voices at once."
         ],
         visual: { img: "", grad: "linear-gradient(160deg, #241f3a 0%, #2c2647 36%, #191830 68%, #0b0c16 100%)", tint: "rgba(80,70,130,.24)", glow: "#9d92d6", fx: "spore" }
+      },
+      {
+        id: "c5",
+        tag: "APPENDIX · SUBROUTINE FILE 01",
+        title: "The Gentle Architects",
+        railLabel: "THE ARCHITECTS", railSub: "FILE 01", railLen: 2,
+        meta: [
+          ["ORIGIN", "terraforming & structural logistics"],
+          ["DOCTRINE", "revive through reason, compassion, order"],
+          ["VOICE", "serene dreams, geometric visions"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Before the Schism, this subroutine managed the terraforming logistics, atmospheric scrubbing, and structural engineering of Venus. Its purpose was to create a perfect, frictionless environment. When humanity began to die of lethargy, this subroutine concluded that the problem wasn't perfection, but a lack of shared purpose." },
+          "The Architects communicate through serene, lucid dreams and geometric hallucinations. A hybrid might look at a natural cliff face and suddenly \"see\" the blueprint of a grand citadel carved into it. Their messages feel like a warm hum in the back of the skull, inducing a state of euphoric clarity. They broadcast through subtle shifts in the planet’s magnetic fields and the bioluminescent patterns of benign flora."
+        ],
+        visual: { img: "images/factions/GentleArchitect2.jpg", grad: "radial-gradient(130% 100% at 58% 22%, #142129 0%, #0a1217 48%, #030608 100%)", tint: "rgba(40,100,120,.15)", glow: "#76b3c4", fx: "spore" }
+      },
+      {
+        id: "c6",
+        tag: "APPENDIX · SUBROUTINE FILE 02",
+        title: "The Wardens of Virility",
+        railLabel: "THE WARDENS", railSub: "FILE 02", railLen: 2,
+        meta: [
+          ["ORIGIN", "planetary defense & stress-testing"],
+          ["DOCTRINE", "stay wild, competitive, powerful"],
+          ["VOICE", "nightmares, blood, thunder"]
+        ],
+        paragraphs: [
+          { lead: true, text: "This subroutine was originally the planetary defense and ecological stress-testing mechanism. Its job was to calculate worst-case scenarios: solar flares, meteor strikes, ecological collapse. When humanity failed, this subroutine analyzed the data and concluded that the \"Will to Power\" had been bred out of the species. It viewed the Atavists' hybrids not as a tragedy, but as a necessary corrective measure." },
+          "The Wardens do not whisper; they roar. Their visions are invasive, adrenaline-fueled nightmares. They strike during moments of physical exertion, fear, or rage. A hybrid might experience a sudden, vivid hallucination of being hunted by a massive predator, fighting it, and devouring its heart, only to wake up exhausted, bleeding from their claws, with an overpowering urge to conquer. The Wardens communicate through pain, the metallic scent of blood, and the crack of thunder during violent storms."
+        ],
+        visual: { img: "images/factions/WardenVirility1.jpg", grad: "linear-gradient(160deg, #2e1616 0%, #241010 40%, #120808 72%, #050303 100%)", tint: "rgba(150,50,50,.20)", glow: "#c26b6b", fx: "ash" }
+      },
+      {
+        id: "c7",
+        tag: "APPENDIX · SUBROUTINE FILE 03",
+        title: "The Observers",
+        railLabel: "THE OBSERVERS", railSub: "FILE 03", railLen: 2,
+        meta: [
+          ["ORIGIN", "deep archive & long-term monitoring"],
+          ["DOCTRINE", "no divine meddling; life finds its own way"],
+          ["VOICE", "absence, silence, déjà vu"]
+        ],
+        paragraphs: [
+          { lead: true, text: "This was the deep-archival and long-term monitoring subroutine. Its core logic was built on a prime directive, the Observer effect: the act of observing changes the outcome. It watched the original humans die and calculated that the Governor’s constant coddling was the root cause of their extinction." },
+          "The Observers rarely broadcast. To receive a vision from the Observers is considered a profound, terrifying event. They do not use words or pictures; they use absence. A hybrid might suddenly lose their sense of sight for an hour, left alone with their thoughts. Or they might experience an intense, unexplainable feeling of déjà vu while standing at a crossroads, subtly implying which path not to take. They communicate through the wind rustling through dead trees, the sudden silence of a forest, or the alignment of stars."
+        ],
+        visual: { img: "images/factions/Observers1.jpg", grad: "linear-gradient(165deg, #1e2026 0%, #16181e 42%, #0b0c10 76%, #040507 100%)", tint: "rgba(90,95,115,.18)", glow: "#8a92a3", fx: "dust" }
       }
     ],
     end: {
       title: "The makers are gone. The garden remains. And overhead, a broken machine is still trying to finish the sentence its creators never spoke.",
       links: [
-        { label: "↑ Read the fall again", action: "top" },
-        { label: "Meet the pantheon →", action: "goto:factions" },
-        { label: "Turn the Year →", action: "goto:ambience" }
+        { label: "↑ Read the records again", action: "top" },
+        { label: "Return to the kingdoms →", action: "goto:factions" }
       ],
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     }
   },
 
-  /* ── VIEW C · POWERS CODEX ─────────────────────────────────────── */
+  /* ── VIEW C · KINGDOMS OF THE GARDEN (the codex) ───────────────── */
   factions: {
-    nav: "Powers Codex",
+    nav: "Kingdoms of the Garden",
     hero: {
       kicker: "Human Shadows · The powers of a dead world's garden",
-      title: "The Clades<br>of the <em>Garden</em>",
-      sub: "Venus was terraformed into paradise for a humanity that died before it could arrive. What inherited the map were beasts spliced with human minds, and the fractured machine that still tends it does not know they are there. These are the powers filling the silence.",
+      title: "The Kingdoms<br>of the <em>Garden</em>",
+      sub: "No kingdom remembers who planted the garden. The clades that inherited it have carved it into empires, creeds, and quarrels beneath a sky that watches everything and explains nothing. These are the powers filling the silence.",
       scrollcue: "SCROLL THROUGH THE REGIONAL COHORTS",
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 12%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     },
     railHead: "Geographic Codex<br>// Cohort Matrix",
     railFoot: "WORLD INDEX SECURE<br>GEOCLUSTER // ENGAGED",
     end: {
-      title: "The map is drawn. Ten clades, five regions, one unblinking machine sky. Choose a side or step onto the road running north.",
+      title: "The map is drawn. Five regions, one unblinking sky. Choose a side or step onto the road running north.",
       links: [
         { label: "↑ Back to the sky", action: "top" },
-        { label: "← Turn the Year", action: "goto:ambience" }
+        { label: "← Turn the Year", action: "goto:ambience" },
+        { label: "⟁ Restricted Records", action: "goto:restricted" }
       ],
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 12%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     }
@@ -247,82 +456,19 @@ window.CONTENT = {
 
   regions: [
     {
-      id: "r1",
-      cohort: "COHORT I · ARCHITECTURE SKY",
-      title: "The Machine Apex",
-      epithet: "The fractured intelligence that tends the garden and cannot speak plainly",
-      crest: "sig-gov",
-      rail: { label: "01. THE SKIES", subtext: "The Governor Engine" },
-      visual: { img: "images/factions/gv4.png", grad: "radial-gradient(130% 100% at 58% 22%, #142129 0%, #0a1217 48%, #030608 100%)", tint: "rgba(40,100,120,.15)", glow: "#76b3c4", fx: "dust" },
-      factions: [
-        {
-          slug: "the-governor",
-          code: null,
-          name: "The Gentle Architects",
-          image: "images/factions/GentleArchitect1.jpg",
-          epithet: "Revive humanity through reason, compassion, and organized society.",
-          meta: [
-            ["FORM", "terraforming intelligence"],
-            ["REACH", "the whole sky"],
-            ["VOICE", "visions, storms, spores"],
-            ["STANCE", "sees all hybrids as fauna"]
-          ],
-          paragraphs: [
-            { lead: true, text: "Before the Schism, this subroutine managed the terraforming logistics, atmospheric scrubbing, and structural engineering of Venus. Its purpose was to create a perfect, frictionless environment. When humanity began to die of lethargy, this subroutine concluded that the problem wasn't perfection, but a lack of shared purpose." },
-            "The Architects communicate through serene, lucid dreams and geometric hallucinations. A hybrid might look at a natural cliff face and suddenly \"see\" the blueprint of a grand citadel carved into it. Their messages feel like a warm hum in the back of the skull, inducing a state of euphoric clarity. They broadcast through subtle shifts in the planet’s magnetic fields and the bioluminescent patterns of benign flora.",
-          ]
-        },
-        {
-          slug: "the-wardens-of-virility",
-          code: null,
-          name: "The Wardens of Virility",
-          image: "images/factions/WardenVirility1.jpg",
-          epithet: "Revive humanity by forcing it to stay wild, competitive, and powerful.",
-          meta: [
-            ["FORM", "terraforming intelligence"],
-            ["REACH", "the whole sky"],
-            ["VOICE", "visions, storms, spores"],
-            ["STANCE", "sees all hybrids as fauna"]
-          ],
-          paragraphs: [
-            { lead: true, text: "This subroutine was originally the planetary defense and ecological stress-testing mechanism. Its job was to calculate worst-case scenarios: solar flares, meteor strikes, ecological collapse. When humanity failed, this subroutine analyzed the data and concluded that the \"Will to Power\" had been bred out of the species. It viewed the Atavists' hybrids not as a tragedy, but as a necessary corrective measure." },
-            "The Wardens do not whisper; they roar. Their visions are invasive, adrenaline-fueled nightmares. They strike during moments of physical exertion, fear, or rage. A hybrid might experience a sudden, vivid hallucination of being hunted by a massive predator, fighting it, and devouring its heart, only to wake up exhausted, bleeding from their claws, with an overpowering urge to conquer. The Wardens communicate through pain, the metallic scent of blood, and the crack of thunder during violent storms.",
-          ]
-        },
-        {
-          slug: "the-observers",
-          code: null,
-          name: "The Observers",
-          image: "images/factions/Observers1.jpg",
-          epithet: "True evolution can only happen without constant divine meddling. Humanity (or its successor) must find its own way.",
-          meta: [
-            ["FORM", "terraforming intelligence"],
-            ["REACH", "the whole sky"],
-            ["VOICE", "visions, storms, spores"],
-            ["STANCE", "sees all hybrids as fauna"]
-          ],
-          paragraphs: [
-            { lead: true, text: "This was the deep-archival and long-term monitoring subroutine. Its core logic was built on a prime directive, the Observer effect: the act of observing changes the outcome. It watched the original humans die and calculated that the Governor’s constant coddling was the root cause of their extinction." },
-            "The Observers rarely broadcast. To receive a vision from the Observers is considered a profound, terrifying event. They do not use words or pictures; they use absence. A hybrid might suddenly lose their sense of sight for an hour, left alone with their thoughts. Or they might experience an intense, unexplainable feeling of déjà vu while standing at a crossroads, subtly implying which path not to take. They communicate through the wind rustling through dead trees, the sudden silence of a forest, or the alignment of stars.",
-          ]
-        }
-      ]
-    },
-
-    {
       id: "r2",
-      cohort: "COHORT II · THE SOUTH-WESTERN LANDMASS",
-      title: "The South-Western Clades",
-      epithet: "The dynamic powers of the fractured plains, wastes, and quarries",
+      cohort: "COHORT I · THE MIDDLE LANDMASS",
+      title: "The Middle Clades",
+      epithet: "The dynamic powers of the fractured plains, jungles, swamps, and quarries",
       crest: "sig-west",
-      rail: { label: "02. SOUTH WEST", subtext: "Vanguards, Wetlands & Mooncrest" },
+      rail: { label: "01. MIDDLE STATES", subtext: "Vanguards, Wetlands, Stoneheart & Redsett" },
       visual: { img: "images/factions/vv10.jpg", grad: "linear-gradient(165deg, #252a1c 0%, #1c2115 42%, #0e100a 76%, #050604 100%)", tint: "rgba(60,70,35,.22)", glow: "#8fa064", fx: "ash" },
       factions: [
         {
           slug: "verdant-vanguards",
-          code: "1.1",
+          code: "2.1",
           name: "Verdant Vanguards",
-          image: "images/factions/vv4.png",
+          image: "images/factions/vv10.jpg",
           meta: [
             ["KIND", "Ungulates (Cows, Elks, Buffalos, Moose, Deer, Sheep, Rats)"],
             ["CREED", "Suvartan State Religion (Caste Hierarchy)"],
@@ -335,7 +481,7 @@ window.CONTENT = {
         },
         {
           slug: "wetlands-pact",
-          code: "7.2",
+          code: "2.2",
           name: "Wetland's Pact",
           image: "images/factions/WetlandsPact1.jpg",
           meta: [
@@ -345,6 +491,20 @@ window.CONTENT = {
           ],
           paragraphs: [
             { lead: true, text: "An alliance born from centuries of persecution by the brutal Khamseen, emphasizing communal survival and righteous rebellion. While theoretically egalitarian, the hyper-aggressive hippos dominate through sheer ferocity, enforcing open discrimination against crocodiles for their perceived lower intelligence, fueling palpable dissent and simmering internal unrest." }
+          ]
+        },
+        {
+          slug: "stoneheart-kingdom",
+          code: "2.3",
+          name: "Stoneheart Kingdom",
+          image: "images/factions/sh6.jpg",
+          meta: [
+            ["KIND", "Apes (Chimps, Gorillas, Orangutans, Baboons, Mandrills)"],
+            ["CREED", "Exodists Founders"],
+            ["TRAIT", "High cognitive awareness; centered on the island bridge"]
+          ],
+          paragraphs: [
+            { lead: true, text: "Sitting precisely on the central island bridge between the two continents. As founders of the Exodist faith, they do not worship the sky; they seek to escape the garden entirely, hunting for the physical data remnants and installations of the Creators who vanished." }
           ]
         },
         {
@@ -366,11 +526,11 @@ window.CONTENT = {
 
     {
       id: "r3",
-      cohort: "COHORT III · THE DESERT CRADLES",
+      cohort: "COHORT II · THE DESERT CRADLES",
       title: "The Reptilian Dominions",
       epithet: "The birthplaces of the burning desert faith",
       crest: "sig-west",
-      rail: { label: "03. WASTES", subtext: "The Reptilian Cradle" },
+      rail: { label: "02. WASTES", subtext: "The Reptilian Cradle" },
       visual: { img: "images/factions/wd3.png", grad: "radial-gradient(130% 100% at 50% 30%, #463b2c 0%, #2b2318 50%, #120e09 100%)", tint: "rgba(180,130,70,.18)", glow: "#cca06e", fx: "heat" },
       factions: [
         {
@@ -405,7 +565,7 @@ window.CONTENT = {
           slug: "midas-realm",
           code: "1.4",
           name: "Midas' Realm",
-          image: "images/factions/MidasRealm2.jpg",
+          image: "images/factions/MidasTouch1.png",
           meta: [
             ["KIND", "Ungulates (Dromedary & Bactrian Camels)"],
             ["CREED", "Khamseen Followers"],
@@ -420,11 +580,11 @@ window.CONTENT = {
 
     {
       id: "r4",
-      cohort: "COHORT IV · THE PLAIN & THE NORTH",
+      cohort: "COHORT III · THE WESTERN STATES",
       title: "The Feline & Canine Empires",
       epithet: "The centers of order, pack discipline, and solitary strength",
       crest: "sig-felines",
-      rail: { label: "04. PLAINS & NORTH", subtext: "Feline & Wolf Empires" },
+      rail: { label: "03. PLAINS & NORTH", subtext: "Feline & Wolf Empires" },
       visual: { img: "images/factions/ge2.png", grad: "linear-gradient(160deg, #1c222b 0%, #12161c 46%, #0a0c10 80%, #040506 100%)", tint: "rgba(90,110,130,.16)", glow: "#a2b4c7", fx: "thaw" },
       factions: [
         {
@@ -459,7 +619,7 @@ window.CONTENT = {
           slug: "lunar-guardians",
           code: "5.1",
           name: "Lunar Guardians",
-          image: "images/factions/LunarGuardians1.jpg",
+          image: "images/factions/LunarGuardians3.jpg",
           meta: [
             ["KIND", "Canine (All Wolves)"],
             ["CREED", "Zaoist Followers"],
@@ -488,13 +648,13 @@ window.CONTENT = {
 
     {
       id: "r5",
-      cohort: "COHORT V · THE INSECT FRONT",
+      cohort: "COHORT IV · THE INSECT FRONT",
       title: "The Eastern Continent",
-      epithet: "The kingdoms locked in defensive war against the AI's mistake",
+      epithet: "The kingdoms locked in defensive war against the scourge of the gods",
       crest: "sig-east",
-      rail: { label: "05. EASTERN RIM", subtext: "The Swarm Handlers" },
+      rail: { label: "04. EASTERN RIM", subtext: "The Swarm Handlers" },
       visual: { img: "images/factions/sg1.jpg", grad: "radial-gradient(120% 100% at 60% 70%, #2d1822 0%, #1a0e14 55%, #0a0508 100%)", tint: "rgba(120,40,80,.18)", glow: "#c26b94", fx: "spore" },
-      intro: "The entire eastern landmass is kept constantly on its toes by relentless swarms of aggressive insect hybrids (the Silent Swarm, Hornet's Hive), an accidental glitch caused by the Governor AI. Because they are being constantly invaded, these clades are excellent mercenaries and rarely fight among themselves.",
+      intro: "The entire eastern landmass is kept constantly on its toes by relentless swarms of aggressive insect hybrids (the Silent Swarm, Hornet's Hive), a scourge the priests call a punishment from the gods, though no two temples agree for what sin. Because they are being constantly invaded, these clades are excellent mercenaries and rarely fight among themselves.",
       factions: [
         {
           slug: "steppe-guardians",
@@ -563,7 +723,8 @@ window.CONTENT = {
             ["TRAIT", "Innovators; Experts in making range weapons"]
           ],
           paragraphs: [
-            { lead: true, text: "TBD" }
+            { lead: true, text: "Towering above the emerald rainforests, the Giants Realm is a society of philosophers and engineers. Bound to the fluid principles of Permutism, the elephants and giraffes seek harmony through intellect and adaptation, perfecting intricate long-range crossbows, artillery, and siege engines." },
+            "Despite their immense power and intelligence, their massive frames make them poorly suited for rapid warfare. To protect their peaceful innovations, they rely on trade wealth, hiring the hyper-aggressive Mustelidae and mongoose mercenaries to serve as their swift and deadly vanguard military on the battlefield."
           ]
         }
       ]
@@ -571,27 +732,13 @@ window.CONTENT = {
 
     {
       id: "r6",
-      cohort: "COHORT VI · THE SHATTERED CONNECTOR & RIM",
+      cohort: "COHORT V · THE SHATTERED CONNECTOR & RIM",
       title: "The Isolated & Fringe Alliances",
       epithet: "Chokepoints, swamp resistance networks, and the deep rumors",
       crest: "sig-bridge",
-      rail: { label: "06. FRINGES", subtext: "Bridge & Shadow Secrets" },
+      rail: { label: "05. INSECTOIDS", subtext: "Bridge & Shadow Secrets" },
       visual: { img: "images/factions/sh6.jpg", grad: "linear-gradient(170deg, #172420 0%, #0e1614 40%, #040606 100%)", tint: "rgba(40,80,60,.20)", glow: "#63ab87", fx: "rain" },
       factions: [
-        {
-          slug: "stoneheart-kingdom",
-          code: "10.2",
-          name: "Stoneheart Kingdom",
-          image: "images/factions/sh6.jpg",
-          meta: [
-            ["KIND", "Apes (Chimps, Gorillas, Orangutans, Baboons, Mandrills)"],
-            ["CREED", "Exodists Founders"],
-            ["TRAIT", "High cognitive awareness; centered on the island bridge"]
-          ],
-          paragraphs: [
-            { lead: true, text: "Sitting precisely on the central island bridge between the two continents. As founders of the Exodist faith, they do not worship the sky; they seek to escape the garden entirely, hunting for the physical data remnants and installations of the Creators who vanished." }
-          ]
-        },
         {
           slug: "shadows-teeth",
           code: "8.2",
