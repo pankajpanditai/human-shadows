@@ -65,7 +65,7 @@ window.CONTENT = {
           "Vines erupt and strangle. The forests choke themselves on their own growth. Everything is lit, everything is seen: the ash, the drag-marks, the killing-stones, all of it clear and bright under a sky with nowhere else to be.",
           "It is the season that asks the cruelest question of the people who run through it: <em>where, exactly, do you think you can hide?</em>"
         ],
-        visual: { img: "images/long-light.png", grad: "radial-gradient(130% 100% at 60% 28%, #fff8e6 0%, #ecd99f 30%, #c79a55 60%, #6b4f2c 100%)", tint: "rgba(255,236,180,.30)", glow: "#f0d488", fx: "heat" }
+        visual: { img: "images/long-light.jpg", grad: "radial-gradient(130% 100% at 60% 28%, #fff8e6 0%, #ecd99f 30%, #c79a55 60%, #6b4f2c 100%)", tint: "rgba(255,236,180,.30)", glow: "#f0d488", fx: "heat" }
       },
       {
         id: "p2",
@@ -81,7 +81,7 @@ window.CONTENT = {
           { lead: true, text: "Then the light begins to fail, and for two months the sky comes down as rain. Twilight settles over everything: not day, not night, only a bruised strip of colour bleeding into itself like a wound that will not close." },
           "The roads turn to running water. The ash of the long light washes into the low places and waits there, patient. It is the season of mud and grey, of journeys begun because staying has become impossible."
         ],
-        visual: { img: "images/weeping.png", grad: "linear-gradient(160deg, #2a2740 0%, #34304e 35%, #1e2236 70%, #0f111d 100%)", tint: "rgba(70,60,110,.26)", glow: "#9d92d6", fx: "rain" }
+        visual: { img: "images/weeping.jpg", grad: "linear-gradient(160deg, #2a2740 0%, #34304e 35%, #1e2236 70%, #0f111d 100%)", tint: "rgba(70,60,110,.26)", glow: "#9d92d6", fx: "rain" }
       },
       {
         id: "p3",
@@ -98,7 +98,7 @@ window.CONTENT = {
           "This is the only mercy the world offers: a faint luminous glow to move by, mist thick enough to hide a body, a darkness that, for once, forgives. Whole peoples time their running for this season, betting their lives on the dark holding a little longer.",
           "It never holds quite long enough."
         ],
-        visual: { img: "images/fungal-night.png", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.20)", glow: "#79e8cf", fx: "spore" }
+        visual: { img: "images/fungal-night.jpg", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.20)", glow: "#79e8cf", fx: "spore" }
       },
       {
         id: "p4",
@@ -157,7 +157,7 @@ window.CONTENT = {
         visual: { img: "", grad: "radial-gradient(130% 100% at 55% 20%, #232041 0%, #1a1833 40%, #0e0d1d 72%, #050409 100%)", tint: "rgba(70,60,120,.22)", glow: "#b3a5e6", fx: "dust" }
       },
       {
-        id: "f1",
+        id: "f1", slug: "exodism",
         tag: "DOCTRINE I · THE FAITH OF THE OPEN ROAD",
         title: "Exodism",
         railLabel: "EXODISM", railSub: "THE OPEN ROAD", railLen: 2,
@@ -174,7 +174,7 @@ window.CONTENT = {
         visual: { img: "", grad: "linear-gradient(165deg, #33281a 0%, #2a2015 40%, #171208 74%, #060503 100%)", tint: "rgba(160,120,60,.18)", glow: "#d2a86e", fx: "dust" }
       },
       {
-        id: "f2",
+        id: "f2", slug: "zaoism",
         tag: "DOCTRINE II · THE COVENANT OF ORDER",
         title: "Zaoism",
         railLabel: "ZAOISM", railSub: "THE COVENANT", railLen: 2,
@@ -191,7 +191,7 @@ window.CONTENT = {
         visual: { img: "", grad: "radial-gradient(130% 100% at 55% 28%, #3d341f 0%, #322a17 44%, #17130a 78%, #060504 100%)", tint: "rgba(200,160,80,.16)", glow: "#e0c078", fx: "heat" }
       },
       {
-        id: "f3",
+        id: "f3", slug: "suvartan",
         tag: "DOCTRINE III · THE GREAT BALANCE",
         title: "Suvartan",
         railLabel: "SUVARTAN", railSub: "THE BALANCE", railLen: 2,
@@ -208,7 +208,7 @@ window.CONTENT = {
         visual: { img: "", grad: "linear-gradient(165deg, #252a1c 0%, #1c2115 42%, #0e100a 76%, #050604 100%)", tint: "rgba(60,70,35,.22)", glow: "#8fa064", fx: "ash" }
       },
       {
-        id: "f4",
+        id: "f4", slug: "permutism",
         tag: "DOCTRINE IV · THE ENDLESS TURNING",
         title: "Permutism",
         railLabel: "PERMUTISM", railSub: "THE TURNING", railLen: 2,
@@ -225,7 +225,7 @@ window.CONTENT = {
         visual: { img: "", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.20)", glow: "#79e8cf", fx: "thaw" }
       },
       {
-        id: "f5",
+        id: "f5", slug: "khamseen",
         tag: "DOCTRINE V · THE IRON REVELATION",
         title: "Khamseen",
         railLabel: "KHAMSEEN", railSub: "THE REVELATION", railLen: 2,
@@ -242,7 +242,7 @@ window.CONTENT = {
         visual: { img: "", grad: "radial-gradient(130% 100% at 50% 30%, #463b2c 0%, #2b2318 50%, #120e09 100%)", tint: "rgba(180,130,70,.18)", glow: "#cca06e", fx: "heat" }
       },
       {
-        id: "f6",
+        id: "f6", slug: "hieromachy",
         tag: "DOCTRINE VI · THE UNCHAINED SKY",
         title: "Hieromachy",
         railLabel: "HIEROMACHY", railSub: "THE UNCHAINED", railLen: 2,
@@ -259,7 +259,7 @@ window.CONTENT = {
         visual: { img: "", grad: "linear-gradient(160deg, #1a2530 0%, #131c26 42%, #0a0f15 76%, #040608 100%)", tint: "rgba(70,110,150,.18)", glow: "#7fa8c9", fx: "rain" }
       },
       {
-        id: "f7",
+        id: "f7", slug: "old-ways",
         tag: "DOCTRINE VII · THE FOREST TRADITIONS",
         title: "The Old Ways",
         railLabel: "THE OLD WAYS", railSub: "FOREST TRADITIONS", railLen: 2,
@@ -569,13 +569,13 @@ window.CONTENT = {
       epithet: "The border kingdoms where empires meet, trade, and quietly prepare for war.",
       crest: "sig-west",
       rail: { label: "02. THE MARCHES", subtext: "Border Kingdoms" },
-      visual: { img: "images/factions/wd3.png", grad: "radial-gradient(130% 100% at 50% 30%, #463b2c 0%, #2b2318 50%, #120e09 100%)", tint: "rgba(180,130,70,.18)", glow: "#cca06e", fx: "heat" },
+      visual: { img: "images/factions/wd3.jpg", grad: "radial-gradient(130% 100% at 50% 30%, #463b2c 0%, #2b2318 50%, #120e09 100%)", tint: "rgba(180,130,70,.18)", glow: "#cca06e", fx: "heat" },
       factions: [
         {
           slug: "watchers-dominions",
           code: "2.1",
           name: "Watcher's Dominions",
-          image: "images/factions/wd3.png",
+          image: "images/factions/wd3.jpg",
           meta: [
             ["KIND", "Reptilian (Monitor Lizards & Komodo Dragons)"],
             ["CREED", "Khamseen Founders"],
@@ -610,7 +610,7 @@ window.CONTENT = {
           slug: "midas-realm",
           code: "2.3",
           name: "Midas' Realm",
-          image: "images/factions/MidasTouch1.png",
+          image: "images/factions/MidasTouch1.jpg",
           meta: [
             ["KIND", "Ungulates (Dromedary & Bactrian Camels)"],
             ["CREED", "Khamseen Followers"],
@@ -836,7 +836,7 @@ window.CONTENT = {
       epithet: "The swarms that neither negotiate nor remember peace.",
       crest: "sig-east",
       rail: { label: "04. THE SCOURGE", subtext: "The Endless Swarm" },
-      visual: { img: "images/factions/ge2.png", grad: "linear-gradient(160deg, #1c222b 0%, #12161c 46%, #0a0c10 80%, #040506 100%)", tint: "rgba(90,110,130,.16)", glow: "#a2b4c7", fx: "thaw" },
+      visual: { img: "images/factions/ge2.jpg", grad: "linear-gradient(160deg, #1c222b 0%, #12161c 46%, #0a0c10 80%, #040506 100%)", tint: "rgba(90,110,130,.16)", glow: "#a2b4c7", fx: "thaw" },
       intro: "While the core of the northwest remains dead silent, the overflow of this biological engine spills southward and eastward through four distinct, non-negotiable sub-swarms.",
       factions: [
         {

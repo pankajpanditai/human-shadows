@@ -238,10 +238,28 @@
   .fac-nav a.dim{ color:var(--ink-dim); border-bottom-color:rgba(236,230,220,.25); }
   .fac-nav a.dim:hover{ color:var(--ink); }
 
+  /* ── inline cross-references (auto-linked lore terms) ──── */
+  .xref{
+    color:inherit; text-decoration:none;
+    border-bottom:1px dotted rgba(236,230,220,.35);
+    transition:color .35s ease, border-color .35s ease;
+  }
+  .xref:hover{ color:var(--glow); border-bottom:1px solid var(--glow); }
+
+  /* ── episode open links (Chronicles hub) ──────────────── */
+  .ep-open{
+    display:inline-block; margin-top:10px;
+    font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.24em;
+    text-transform:uppercase; color:var(--glow); text-decoration:none;
+    border-bottom:1px solid var(--glow); padding-bottom:4px;
+  }
+
   /* dynamic adjustments for views code engines */
   body[data-active-view="ambience"] .seg .bar,
   body[data-active-view="faiths"] .seg .bar,
-  body[data-active-view="collapse"] .seg .bar { display: block; }
+  body[data-active-view="collapse"] .seg .bar,
+  body[data-active-view="chronicles"] .seg .bar,
+  body[data-active-view="episode"] .seg .bar { display: block; }
   body[data-active-view="factions"] .seg svg { display: block; }
 
   .reveal{ opacity:0; transform:translateY(26px); transition:opacity 1s ease, transform 1s ease; }
@@ -312,24 +330,58 @@
   <div id="view-factions" class="view-wrapper"></div>
   <div id="view-collapse" class="view-wrapper"></div>
   <div id="view-faction" class="view-wrapper"></div>
+  <div id="view-chronicles" class="view-wrapper"></div>
+  <div id="view-episode" class="view-wrapper"></div>
 </main>
 
 <script src="content.js"></script>
+<script src="episodes.js"></script>
 <script>
 (() => {
   const C = window.CONTENT;
+  // Narrative content (The Chronicles hub + episodes) lives in episodes.js.
+  if (window.EPISODES){ C.chronicles = window.EPISODES.hub; C.episodes = window.EPISODES.episodes; }
   const root = document.documentElement;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ═══ CROSS-REFERENCES ══════════════════════════════════════════
+     Faction and faith names in body text automatically become links
+     to their pages. First occurrence per section only; a page never
+     links to itself. Terms come straight from the content data, so
+     new factions/faiths join the glossary with zero extra work. */
+
+  const GLOSSARY = (() => {
+    const list = [], seen = new Set();
+    const add = (term, key, href) => {
+      if (seen.has(term)) return;
+      seen.add(term);
+      // "The Silent Swarm" must also match "the Silent Swarm" mid-sentence,
+      // so the leading article is dropped from the matched text.
+      const esc = term.replace(/^The /, '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/['’]/g, "['’]");
+      list.push({ key, href, re: new RegExp(`\\b${esc}\\b`) });
+    };
+    C.regions.forEach(r => r.factions.forEach(f => add(f.name, f.slug, `#faction/${f.slug}`)));
+    C.faiths.phases.forEach(p => { if (p.slug) add(p.title, p.slug, `#faiths/${p.slug}`); });
+    return list;
+  })();
+
+  function linkify(html, selfKey){
+    for (const g of GLOSSARY){
+      if (g.key === selfKey) continue;
+      html = html.replace(g.re, m => `<a class="xref" href="${g.href}">${m}</a>`);
+    }
+    return html;
+  }
+
   /* ═══ TEMPLATE HELPERS ══════════════════════════════════════════ */
 
-  function paragraphsHTML(paragraphs, revealDelay){
-    return paragraphs.map((p, i) => {
+  function paragraphsHTML(paragraphs, revealDelay, selfKey){
+    return linkify(paragraphs.map((p, i) => {
       const lead = typeof p === 'object' && p.lead;
       const text = typeof p === 'object' ? p.text : p;
       const d = i === 0 ? (revealDelay || 'd2') : (i === paragraphs.length - 1 ? 'd3' : 'd2');
       return `<p class="${lead ? 'lead ' : ''}reveal ${d}">${text}</p>`;
-    }).join('');
+    }).join(''), selfKey);
   }
 
   // Ambience metas are raw aligned strings; faction metas are [label, value] pairs.
@@ -368,22 +420,23 @@
 
   /* ═══ VIEW RENDERERS ════════════════════════════════════════════ */
 
-  // "Chronicle" views (The Turning Year, The Collapse) share one shape:
-  // hero + scrolling phase sections + end loop.
-  const CHRONICLES = ['ambience', 'faiths', 'collapse'];
+  // "Chronicle" views (The Turning Year, The Collapse, episode pages)
+  // share one shape: hero + scrolling phase sections + end loop.
+  const CHRONICLES = ['ambience', 'faiths', 'collapse'].concat(C.chronicles ? ['chronicles'] : []);
 
-  function renderChronicle(viewKey){
-    const A = C[viewKey];
+  function renderChronicleInto(elId, A){
     const phases = A.phases.map((ph, i) => `
       <section class="phase" id="${ph.id}" data-phase="${i + 1}" aria-label="${ph.title}">
         <div class="panel-tag reveal">${ph.tag}</div>
         <h2 class="reveal d1">${ph.title}</h2>
         ${metaHTML(ph.meta)}
-        ${paragraphsHTML(ph.paragraphs)}
+        ${paragraphsHTML(ph.paragraphs, null, ph.slug)}
       </section>`).join('');
-    document.getElementById(`view-${viewKey}`).innerHTML =
+    document.getElementById(elId).innerHTML =
       heroHTML(A.hero) + phases + endHTML(A.end, A.phases.length + 1);
   }
+
+  function renderChronicle(viewKey){ renderChronicleInto(`view-${viewKey}`, C[viewKey]); }
 
   function renderFactionsIndex(){
     const sections = C.regions.map((r, i) => {
@@ -418,7 +471,7 @@
         <h2 class="reveal d1">${faction.name}</h2>
         ${faction.epithet ? `<div class="epithet reveal d1">${faction.epithet}</div>` : ''}
         ${metaHTML(faction.meta)}
-        ${paragraphsHTML(faction.paragraphs)}
+        ${paragraphsHTML(faction.paragraphs, null, faction.slug)}
         <div class="fac-nav reveal d3">
           <a href="#factions">← All Clades</a>
           ${prev ? `<a class="dim" href="#faction/${prev.faction.slug}">← ${prev.faction.name}</a>` : ''}
@@ -449,8 +502,9 @@
     });
   }
 
-  function railChronicle(viewKey){
-    const A = C[viewKey];
+  function railChronicle(viewKey){ railChronicleData(C[viewKey]); }
+
+  function railChronicleData(A){
     buildRail(`
       <div class="rail-head">${A.railHead}</div>
       ${A.phases.map((ph, i) => `
@@ -546,13 +600,14 @@
   // Menu order. 'collapse' (Restricted Records) is deliberately NOT here:
   // it is hidden lore, reachable only via the #restricted link at the end
   // of the Kingdoms codex.
-  const TOP_VIEWS = ['ambience', 'faiths', 'factions'];
+  const TOP_VIEWS = ['ambience', 'faiths', 'factions'].concat(C.chronicles ? ['chronicles'] : []);
 
   function activateView(viewKey){
     document.querySelectorAll('.view-wrapper').forEach(el => el.classList.remove('active'));
     document.getElementById(`view-${viewKey}`).classList.add('active');
     document.body.setAttribute('data-active-view', viewKey);
-    const navKey = viewKey === 'faction' ? 'factions' : viewKey;
+    const navKey = viewKey === 'faction' ? 'factions'
+      : viewKey === 'episode' ? 'chronicles' : viewKey;
     TOP_VIEWS.forEach(k =>
       document.getElementById(`btn-${k}`).classList.toggle('active', k === navKey));
     currentPhase = -1;
@@ -579,6 +634,41 @@
       window.scrollTo(0, 0);
       setPhase(0);
       document.title = `${hit.faction.name} — Human Shadows`;
+      return;
+    }
+
+    if (h.startsWith('episode/')) {
+      const ep = (C.episodes || []).find(x => x.slug === h.slice(8));
+      if (!ep) { location.hash = 'chronicles'; return; }
+      if (currentRoute === h) return;
+      currentRoute = h;
+
+      renderChronicleInto('view-episode', ep);
+      activateView('episode');
+      railChronicleData(ep);
+      viewConfigs = [ep.hero.visual, ...ep.phases.map(p => p.visual), ep.end.visual];
+      ensureLayers(viewConfigs.length);
+      initViewObservers('episode');
+      window.scrollTo(0, 0);
+      setPhase(0);
+      document.title = `${ep.title} — Human Shadows`;
+      return;
+    }
+
+    // deep link into a single doctrine: #faiths/<slug>
+    if (h.startsWith('faiths/')) {
+      const ph = C.faiths.phases.find(p => p.slug === h.slice(7));
+      if (!ph) { location.hash = 'faiths'; return; }
+      if (currentRoute !== 'faiths') {
+        currentRoute = 'faiths';
+        activateView('faiths');
+        railChronicle('faiths');
+        viewConfigs = [C.faiths.hero.visual, ...C.faiths.phases.map(p => p.visual), C.faiths.end.visual];
+        ensureLayers(viewConfigs.length);
+        initViewObservers('faiths');
+        document.title = `${C.faiths.nav} — Human Shadows`;
+      }
+      document.getElementById(ph.id).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
       return;
     }
 

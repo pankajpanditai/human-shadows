@@ -5,3 +5,11 @@ gemini-code-*.html
 Faiths.txt
 Factions.txt
 Updated cohorts.txt
+*.docx
+human-shadows-fable-content.md
+
+# source scripts for episodes.js
+episodes/
+
+# unused image variants parked for eventual deletion
+backup-images/
