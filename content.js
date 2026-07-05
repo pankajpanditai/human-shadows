@@ -836,7 +836,7 @@ window.CONTENT = {
       epithet: "The swarms that neither negotiate nor remember peace.",
       crest: "sig-east",
       rail: { label: "04. THE SCOURGE", subtext: "The Endless Swarm" },
-      visual: { img: "images/factions/ge2.jpg", grad: "linear-gradient(160deg, #1c222b 0%, #12161c 46%, #0a0c10 80%, #040506 100%)", tint: "rgba(90,110,130,.16)", glow: "#a2b4c7", fx: "thaw" },
+      visual: { img: "images/factions/Scourge1.png", grad: "linear-gradient(160deg, #1c222b 0%, #12161c 46%, #0a0c10 80%, #040506 100%)", tint: "rgba(90,110,130,.16)", glow: "#a2b4c7", fx: "thaw" },
       intro: "While the core of the northwest remains dead silent, the overflow of this biological engine spills southward and eastward through four distinct, non-negotiable sub-swarms.",
       factions: [
         {
@@ -859,7 +859,7 @@ window.CONTENT = {
           slug: "hornets-hive",
           code: "4.2",
           name: "Hornet's Hive",
-          image: "",
+          image: "images/factions/HornetsHive1.png",
           epithet: "The aerial nightmare flanking the northeast.",
           meta: [
             ["KIND", "Insectoid (Hornet Hybrids)"],
@@ -874,7 +874,7 @@ window.CONTENT = {
           slug: "creeping-curse",
           code: "4.3",
           name: "Creeping Curse",
-          image: "",
+          image: "images/factions/Spider1.png",
           epithet: "The arachnid onslaught choking the rainforest frontiers.",
           meta: [
             ["KIND", "Insectoid (Arachnid Hybrids)"],
@@ -889,7 +889,7 @@ window.CONTENT = {
           slug: "deserts-scourge",
           code: "4.4",
           name: "Desert's Scourge",
-          image: "",
+          image: "images/factions/Scorpion1.png",
           epithet: "Armored waves erupting from the barren interior.",
           meta: [
             ["KIND", "Insectoid (Scorpion Hybrids)"],
@@ -904,7 +904,7 @@ window.CONTENT = {
           slug: "winds-hunger",
           code: "4.5",
           name: "Wind's Hunger",
-          image: "",
+          image: "images/factions/Locusts1.png",
           epithet: "The sky-blotting swarms driving down the western corridor.",
           meta: [
             ["KIND", "Insectoid (Locust Hybrids)"],
@@ -919,10 +919,10 @@ window.CONTENT = {
           slug: "silent-swarm",
           code: "4.6",
           name: "The Silent Swarm",
-          image: "",
+          image: "images/factions/SilentSwarm1.png",
           epithet: "The land is completely quiet, and it systematically consumes anyone who touches it.",
           meta: [
-            ["KIND", "Unknown (Rumored Ants)"],
+            ["KIND", "Unknown"],
             ["CREED", "None Observed"],
             ["TRAIT", "Total silence; no landing party has ever returned"]
           ],
