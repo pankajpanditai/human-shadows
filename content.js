@@ -488,7 +488,7 @@ window.CONTENT = {
           slug: "lunar-guardians",
           code: "1.2",
           name: "Lunar Guardians",
-          image: "images/factions/LunarGuardians3.jpg",
+          image: "images/factions/LunarGuardians4.jpg",
           epithet: "The wolves have never ruled the Garden, yet no ruler ignores them.",
           meta: [
             ["KIND", "Canine (All Wolves)"],
@@ -499,26 +499,27 @@ window.CONTENT = {
             { lead: true, text: "The Lunar Guardians occupy the harsh northwestern forests, far removed from the great merchant roads. Unlike the southern empires, they possess no vast spice fields, no silk workshops, and no lucrative caravan networks. Their strength has always been earned rather than inherited." },
             "Every fortress, every village, and every victory has been built through relentless discipline, endurance, and an unwavering belief that no pack survives unless every member carries their burden.",
             "Their greatest humiliation remains the Serpent War. Generations have grown up believing victory was stolen from them, not by the Nagas they nearly defeated, but by Lion diplomacy backed with overwhelming military force. Restoring the honor lost in that war has quietly become a national obsession.",
-            "To the south lies their closest ally, Avaron Heights, whose mountain peoples rely upon the wolves to shield them from repeated incursions by the fanatical Ursa Theocracy. The Ursas themselves remain more nuisance than existential threat. Their borders are narrow, their campaigns reckless, and their charges rarely survive disciplined wolf formations. Nevertheless, constant vigilance has become second nature to the northern packs.",
+            "To the south lies their closest ally, Galeon Heights, whose mountain peoples rely upon the wolves to shield them from repeated incursions by the fanatical Ursa Theocracy. The Ursas themselves remain more nuisance than existential threat. Their borders are narrow, their campaigns reckless, and their charges rarely survive disciplined wolf formations. Nevertheless, constant vigilance has become second nature to the northern packs.",
             "Every generation of wolves trains with one question lingering beneath the surface: <em>when the next great war comes... will the Lions still stand above us?</em>"
           ]
         },
         {
-          slug: "stoneheart-kingdom",
-          code: "1.3",
-          name: "Stoneheart Kingdom",
-          image: "images/factions/sh6.jpg",
-          epithet: "Empires wage wars. Stoneheart remembers them.",
-          meta: [
-            ["KIND", "Apes (Chimps, Gorillas, Orangutans, Baboons, Mandrills)"],
-            ["CREED", "Exodists Founders"],
-            ["TRAIT", "High cognitive awareness; centered on the island bridge"]
-          ],
-          paragraphs: [
-            { lead: true, text: "Situated upon the ancient bridge connecting the continents, the Stoneheart Kingdom occupies perhaps the most strategically valuable position in the Garden. Yet it seeks remarkably little territory." },
-            "Instead, the ape kingdoms have devoted themselves to scholarship, engineering, and archaeology. Their universities and workshops produce the world's finest silks, while their expeditions search endlessly for relics left behind by civilizations older than memory.",
-            "Stoneheart maintains few permanent alliances and even fewer lasting enemies. Kings come seeking silk. Priests come seeking answers. Conquerors come seeking roads. <em>Stoneheart simply records them all.</em>"
-          ]
+            slug: "stoneheart-kingdom",
+            code: "1.3",
+            name: "Stoneheart Kingdom",
+            image: "images/factions/sh6.jpg",
+            meta: [
+              ["KIND", "Apes (Chimps, Gorillas, Orangutans, Baboons, Mandrills)"],
+              ["CREED", "Exodists Founders"],
+              ["TRAIT", "High cognitive awareness; pragmatic brokers of the bridge"]
+            ],
+            paragraphs: [
+              { lead: true, text: "Situated upon the ancient bridge connecting the continents, the Stoneheart Kingdom occupies perhaps the most strategically valuable position in the Garden. Yet it seeks remarkably little territory. Instead of expanding, the ape kingdoms have devoted themselves to scholarship, engineering, and archaeology, turning their cities into the world's greatest repositories of lost knowledge." },
+              "Their universities and workshops produce the Garden's finest silks, while their expeditions search endlessly for relics left behind by civilizations older than memory. But this scholarly pursuit is constantly interrupted by their southern neighbors: the Redsett Clans. Composed of hyper-aggressive mustelids and mongooses, the Redsett are an absolute menace of a kingdom, surviving on raiding, pillaging, and constant, grinding border wars.",
+              "Rather than mobilizing their armies for a perpetual meat-grinder, the Stoneheart leadership pays the Redsett a heavy, regular tribute. This is not an act of weakness; the apes are simply too intelligent to be distracted. They have calculated the cost of war, found it detrimental to their research, and adopted a cynical policy: <em>take the gold, and go bother someone else.</em>",
+              "However, this uneasy dynamic shifts dramatically on their eastern borders. Both Stoneheart and the Redsett share a narrow, perilous frontier with the 'Winds's Hunger'. When the insect hordes surge from the east, the tribute is forgotten. Ape engineers and Redsett raiders fight shoulder-to-shoulder in brutal, coordinated defenses, knowing that if the Swarm breaks the line, it will devour them all indiscriminately.",
+              "Left to their own devices, the apes pursue the true calling of Exodism: the endless journey for knowledge. While the rest of the Garden bleeds over borders and faiths, Stoneheart perfects their architecture and deciphers ancient relics in peace. Kings come seeking silk. Priests come seeking answers. Conquerors come seeking roads. <em>Stoneheart simply records them all, pays off the loud ones, and builds a better world in the quiet.</em>"
+            ]
         },
         {
           slug: "mooncrest-matriarch",
@@ -552,8 +553,10 @@ window.CONTENT = {
           paragraphs: [
             { lead: true, text: "Blessed with the most fertile plains on the planet, the Verdant Vanguards command the world's spice trade and possess agricultural wealth unmatched by any other Throne. Yet prosperity has become its own prison. Society is fractured beneath rigid hierarchies that have hardened over centuries." },
             "The sacred cattle and noble elk occupy the highest stations, governing a civilization increasingly detached from the struggles beneath them. Buffaloes and moose form the military backbone of the kingdom. Fiercely courageous, they continue to wage war according to ancient codes of honor that often defy military reason. Retreat is shameful. Pursuing a fleeing enemy is dishonorable. Heroic sacrifice is celebrated above strategic victory.",
-            "Goats and sheep oversee trade, caravans, taxation, and logistics, quietly ensuring the machinery of the state continues to function. The deer endure life as oppressed peasants. Below even them stand the rats: declared untouchable by religious decree and condemned to labor in the southern quarries.",
-            "Against the Mooncrest Matriarchy, the Vanguards fight an endless cycle of holy wars. The hyenas fight for conquest. The Vanguards fight for honor. <em>Neither remembers how the first battle began.</em>"
+            "Goats and sheep oversee trade, caravans, taxation, and logistics, quietly ensuring the machinery of the state continues to function. The deer endure life as oppressed peasants. Below even them stand the rats—declared untouchable by religious decree and condemned to labor in the southern quarries.",
+            "Against the Mooncrest Matriarchy, the Vanguards fight an endless cycle of holy wars. Though often portrayed as standing alone against the predators, the Vanguards are not entirely without friends. To their north lies the Wetlands Pact, a loose alliance of hippos, rhinoceroses, and crocodilians united under the radical, anti-authoritarian ideals of Hieromachy.",
+            "Born in bloody resistance to Khamseen oppression, the Pact has repeatedly dispatched heavy battalions to reclaim lost Vanguard territory whenever the southern front threatens to collapse. Yet this alliance has begun to fracture under the weight of its own hypocrisy. The egalitarian rebels of the Wetlands look upon the Vanguards’ rigid, weaponized Suvartan caste system—and their brutal subjugation of the lower clades—with growing disgust.",
+            "With no direct border against Mooncrest and generations of mounting casualties, many within the Wetlands now openly question why the Unchained Sky should continue to spill its blood to protect a kingdom of tyrants and priests. The hyenas fight to prove the world is a merciless crucible. The Vanguards fight to protect a frozen, unyielding hierarchy. <em>Neither remembers how the first battle began, but both are trapped in an eternal spin of their own making.</em>"
           ]
         }
       ]
@@ -570,44 +573,157 @@ window.CONTENT = {
       factions: [
         {
           slug: "watchers-dominions",
-          code: "3.1",
+          code: "2.1",
           name: "Watcher's Dominions",
           image: "images/factions/wd3.png",
           meta: [
             ["KIND", "Reptilian (Monitor Lizards & Komodo Dragons)"],
             ["CREED", "Khamseen Founders"],
-            ["TRAIT", "Cold, unblinking endurance"]
+            ["TRAIT", "Cold, unblinking endurance; spiritual heart of the desert"]
           ],
           paragraphs: [
-            { lead: true, text: "A sun-bleached desert wasteland of shifting sands where the brutal, world-shaping faith of Khamseen was originally born. The religion was forged when a snake bit a massive monitor lizard; the lizard survived the lethal venom, experiencing terrifying, world-shaping hallucinations that were transcribed into holy texts, linking the landscape forever to the desert's birth of faith." }
+            { lead: true, text: "A sun-bleached wasteland of shifting sands, the Watcher's Dominions are the crucible in which the brutal, world-shaping faith of Khamseen was forged. It was here, beneath the burning sun, that a monitor hunter was bitten by a venomous serpent and survived three days of fevered visions—visions that became the Iron Revelation. Today, rival warlords have been subdued and bound beneath the iron fist of a single ruling family, holding together an empire that values endurance above all else." },
+            "Because strength is the only virtue recognized by Khamseen, the Dominions have willfully allowed cultural, moral, and scientific progress to atrophy. They are a civilization frozen in amber, viewing innovation as a weakness of the flesh. Their barren territory offers little in the way of agriculture or industry; instead, the vast majority of the population clings desperately to a single, life-giving river and the fringes of the north-eastern jungles.",
+            "Yet the Dominions endure, sustained by a single, lucrative resource: faith. As the birthplace of the Iron Revelation, their ancient monoliths and sunken temples draw endless convoys of zealots from across the globe. These pilgrims bring gold, silk, and offerings, leaving the barren empire enriched by the very world it scorns.",
+            "Geopolitically, the Dominions sit at the heart of the Khamseen bloc. To the west lie the venomous serpents of Naga's Embrace, and to the east, the camel caravans of Midas' Realm—both bound by shared faith and mutual profit. To the south, the Watchers maintain their closest alliance with the Mooncrest Matriarchy. The Dominions preserve the oldest scriptures in their desert archives, while the hyenas provide the military might to enforce them.",
+            "This holy alliance, however, has earned them the distrust of the Golden Empire, who view the cold-blooded warlords as fanatics destabilizing the continent. To the north, the mountain peaks of Galeon Heights and the dark forests of the Lunar Guardians maintain a tense, silent neutrality. The barren dunes offer the wolves nothing worth taking, and the Watchers are content to let the frozen north sleep—<em>so long as it does not cast a shadow across the desert.</em>"
           ]
         },
         {
           slug: "nagas-embrace",
-          code: "3.2",
+          code: "2.2",
           name: "Naga's Embrace",
           image: "images/factions/NagasEmbrace4.jpg",
           meta: [
             ["KIND", "Reptilian (Pythons, Cobras, Anacondas, Black Mambas)"],
             ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Hypnotic presence; protectorate of the Golden Empire"]
+            ["TRAIT", "Hypnotic presence; protectors of the world's most lucrative venom"]
           ],
           paragraphs: [
-            { lead: true, text: "A widely feared yet captivating empire composed entirely of snakes, renowned across the planet for their hypnotic gazes, lethal presence, and highly sought-after venom used globally as a potent drug. Almost wiped out by the Lunar Guardians, they were saved by the Golden Empire and now exist as their protectorate, using the harsh doctrines of Khamseen to demand total discipline across a society entranced by its own lethal mystique." }
+            { lead: true, text: "A widely feared yet captivating empire composed entirely of serpents, Naga's Embrace coils around the western trade routes, renowned across the planet for their hypnotic gazes and lethal grace. While pythons and constrictors provide the kingdom's raw muscle, the venomous snakes—cobras, mambas, and vipers—occupy the highest echelons of society. Their venom, harvested and diluted into trace amounts, serves as the Garden's most potent hallucinogen, fueling an illicit, sprawling drug trade that fills their coffers." },
+            "Bound by the ruthless doctrines of Khamseen, the serpents share the same cold, calculating temperament as the Watcher's Dominions to their east. Culturally and scientifically stagnant, they rely entirely on the monopoly of their venom to maintain their relevance. Their political structure is a mirror of the desert warlords: rigid, unfeeling, and governed by an iron fist that demands absolute obedience to the faith.",
+            "Generations ago, the serpents were nearly annihilated by the Lunar Guardians in the brutal conflict known as the Serpent War. The northern wolves marched under the pretext of righteous fury, citing a slew of border incidents where wolves were found dead from apparent venom overdoses. The Nagas, however, have always maintained their innocence, insisting the overdose victims were a manufactured casus belli—a ploy by the wolves to justify an invasion and seize control of the venom trade for themselves.",
+            "Whatever the truth, the Golden Empire intervened before the wolves could claim victory. Today, Naga's Embrace exists as a heavily subsidized protectorate of the Lions. It is a cynical but stable alliance: the serpents follow Khamseen, while the Lions follow Zaoism, yet both profit immensely from keeping the venom flowing westward. To the north, the wolves still snarl from their forests; to the south, the Lions watch their investments closely; and to the east, the Watchers ensure the serpents never stray from the true path. <em>Surrounded by predators and protected by the very kingdom that conquered them, the Nagas wait, patient and cold.</em>"
           ]
         },
         {
           slug: "midas-realm",
-          code: "1.4",
+          code: "2.3",
           name: "Midas' Realm",
           image: "images/factions/MidasTouch1.png",
           meta: [
             ["KIND", "Ungulates (Dromedary & Bactrian Camels)"],
             ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Masters of caravan routes; above average intelligence"]
+            ["TRAIT", "Master brokers; architects of the caravan routes"]
           ],
           paragraphs: [
-            { lead: true, text: "Rulers of the sweeping caravan paths flanking the western borders. Here, massive fortunes are won and lost in spice trading, and the shifting desert sands are guarded as fiercely as gold. There is no strict internal caste hierarchy across the camel lines; they rely on intelligence and tactical endurance to negotiate with the outer empires." }
+             { lead: true, text: "Rulers of the sweeping caravan paths flanking the western borders, Midas' Realm is an empire built not on blood, but on the relentless movement of goods. Intelligent, enduring, and fiercely entrepreneurial, the camel kingdoms would march to the ends of the world for a profitable trade route. While they piously follow the brutal doctrines of Khamseen, the camels prefer the revelation of gold over the revelation of steel." },
+            "The Vanguards may grow the world's spice, but Midas moves it. Because the Verdant Vanguards are geographically suffocated—flanked by the hostile Mooncrest Matriarchy to the north and the rogue rats of Shadow's Teeth to the east—they are entirely reliant on camel caravans to export their wealth. Midas exploits this monopoly mercilessly, carrying southern spice north to the Ursa Theocracy, Galeon Heights, and the Lunar Guardians, before returning with the finest silks woven by the eastern Stoneheart apes.",
+            "To protect this immense wealth, the camels play a dangerous, shadowy game. They secretly funnel gold to stoke tensions between the Verdant Vanguards and the rogue rats of Shadow's Teeth, while quietly subsidizing the Mooncrest Matriarchy’s endless holy wars against the south. The goal is not conquest, but controlled chaos: so long as the southern plains are drowning in blood and border skirmishes, the Vanguards can never secure their own safe trade routes. Everyone, in the end, must go through the camels.",
+            "This cynical diplomacy extends to their allies. Midas maintains a close, low-profile alliance with the Mooncrest Matriarchy, united by shared faith and the mutual desire to bleed the Vanguards. Yet the camels are careful to keep this friendship quiet, maintaining a facade of neutrality so they can continue selling goods to the very Vanguards their allies are trying to conquer.",
+            "Geography is their ultimate shield. Massive, impassable mountain ranges seal their eastern flank, keeping the chaotic rebellions of the Wetland's Pact at bay. To the north lie the safe, rocky peaks of Galeon; to the west, the barren wastes of the Watcher's Dominions; and to the south, the fertile plains they milk for profit. <em>Let the predators roar and the prey bleed. Midas counts the toll, and the road goes ever on.</em>"
+          ]
+        },
+        {
+          slug: "celestial-empire",
+          code: "2.4",
+          name: "Celestial Empire",
+          image: "images/factions/CelestialEmpire1.jpg",
+          meta: [
+            ["KIND", "Feline (Leopards & Snow Leopards)"],
+            ["CREED", "Zaoist Followers"],
+            ["TRAIT", "Phantom borders; masters of stealth and ambush"]
+          ],
+          paragraphs: [
+            { lead: true, text: "Hidden among shadowed forests and perilous rocky cliffs, the Celestial Empire is a phantom kingdom. You will not know you have crossed into their territory until you suddenly find yourself surrounded by their villages, or pinned in the crosshairs of their watchers. For the leopards and snow leopards, border stealth is not merely a tactic; it is a way of life, ensuring their enemies waste time and blood searching for an enemy who is already watching them." },
+            "While they devoutly follow the Zaoist faith of the lions, their pragmatic and solitary nature allows them to flourish beautifully without falling into the rigid internal hierarchies or constant political friction of other empires. They honor the covenant of order, but interpret it through the lens of the hunt: each individual is a master of their own domain, contributing to the empire's quiet prosperity through lethal competence rather than loud displays of power.",
+            "Geopolitically, the Celestial Empire is the silent anchor of the Golden Empire's strategy. They flank the Mooncrest Matriarchy from the south, while the Lions hold the western approaches. The leopards rarely speak in the great councils, but they understand implicitly that their own survival relies on keeping Golden Empire hegemony intact. If the Lions fall, the hyenas will not hesitate to turn their blood-soaked armies south.",
+            "To their east lie the Verdant Vanguards. Though the two kingdoms share no alliance of faith or culture, the Celestial Empire secretly aids the Vanguards in their endless war against Mooncrest. Leopard rangers slip across the border to teach the ungulates the art of the ambush, laying intricate traps to bleed the hyena warbands. The Vanguards, bound by ancient codes of honor, are principally opposed to such cowardly tactics. Yet, after a generation of disastrous, open-field defeats, desperation has made them quietly receptive to the leopards' whispers. <em>Let the Vanguards charge with banners flying; the leopards will ensure the ground beneath the enemy collapses.</em>"
+          ]
+        },
+        {
+          slug: "wetlands-pact",
+          code: "2.5",
+          name: "Wetland's Pact",
+          image: "images/factions/WetlandsPact3.jpg",
+          meta: [
+            ["KIND", "Hybrids (Hippos, Crocodiles, Rhinos)"],
+            ["CREED", "Hieromachy Followers (River Resistance)"],
+            ["TRAIT", "Egalitarian foundation cracked by hippo discrimination"]
+          ],
+          paragraphs: [
+            { lead: true, text: "Settled in the sprawling swamps and lazy, mud-choked rivers of the central basin, the Wetland's Pact was not born, but forged in chains. Centuries ago, these lands were ruled by Suvartan ungulates and reptiles, until the armies of Khamseen swept through, demanding conversion by the sword. It was in the suffocating mud and the reeds, beneath the whips of desert overseers, that the radical faith of Hieromachy took root." },
+            "Listening to the Khamseen priests declare that the Sky demanded their submission, the wetland clades reached a heretical conclusion: if the Sky belonged to the strong, then the strong could tear down the altars. What began as desperate guerrilla warfare—hippos drowning patrols, crocodiles ambushing supply rafts—soon grew into a roaring rebellion. They bled the occupying armies for decades until the last Khamseen warlord was dragged into the swamp, ensuring the Unchained Sky would never bow to a priest-king again.",
+            "Today, the Pact presents itself to the world as an egalitarian paradise of communal survival and righteous rebellion. But the swamp holds a darker truth. The hyper-aggressive hippos dominate the alliance through sheer ferocity, twisting the ideals of Hieromachy into a might-makes-right hierarchy of their own making. Beneath them, the crocodilians endure open discrimination, mocked for their perceived lower intelligence and relegated to the most grueling, thankless tasks along the riverbeds.",
+            "This hypocrisy fuels palpable dissent and simmering internal unrest. The crocodiles remember the whips of the Khamseen, and they are beginning to wonder if their new masters are simply wearing different masks. Geopolitically, the Pact acts as the heavy shield for the Verdant Vanguards to the south, repeatedly dispatching thick-skinned battalions to hold the line against Mooncrest. To the west and north, they maintain a tense neutrality with the camel caravans of Midas' Realm, who view the wetlands as a logistical nightmare best avoided. Yet, as the wars in the south drag on, the internal fractures widen. <em>The revolution was won in blood, but the peace may yet drown in it.</em>"
+          ]
+        },
+        {
+          slug: "galeon-heights",
+          code: "2.6",
+          name: "Galeon Heights",
+          image: "images/factions/GaleonHeights2.jpg",
+          meta: [
+            ["KIND", "Avian & Ungulates (Birds of Prey & Mountain Goats)"],
+            ["CREED", "Khamseen Followers (Defensive Isolationists)"],
+            ["TRAIT", "Unmatched vantage; masters of the avalanche volley"]
+          ],
+          paragraphs: [
+            { lead: true, text: "Perched atop the jagged, impenetrable peaks of the central mountain ranges, Galeon Heights is a kingdom defined by its altitude. A unique symbiosis of mountain goats and birds of prey, the Galeons have carved a prosperous, isolated existence out of the frozen stone. They are the silent watchers of the high passes, content to let the lowlands bleed so long as the snow remains untouched." },
+            "Their peace is routinely interrupted by the obnoxious Ursa Theocracy to the north. Fueled by the aggressive zealotry of Khamseen, the bears frequently attempt to march down the mountain passes to conquer the peaks. It is a foolish, repetitive endeavor. The raptors of Galeon, soaring on the high thermals, can spot a Ursa warband forming from miles away, relaying their exact numbers and marching speed back to the mountain strongholds.",
+            "By the time the bears reach the lower slopes, the Galeons are already in position. They are undisputed masters of long-range warfare. From their lofty vantage points, they unleash a relentless rain of arrows, javelins, and sheer-dropping boulders. Ursa armies are usually decimated before they even catch sight of a Galeon defender. However, this absolute reliance on altitude and ranged superiority has left them uniquely weak in hand-to-hand combat; a Galeon caught on flat ground is a dead Galeon. Because they can never make a meaningful ground charge into the lowlands, their impregnable peaks are both a fortified heaven and a gilded prison—keeping the armies of the world at bay, while forever trapping the Galeons within their own borders.",
+            "Because the Ursa share borders only with Galeon Heights and the Lunar Guardians to the west, their fanatical nuisance has forged a quiet alliance. The wolves and the mountain peoples share a mutual disdain for the bumbling bear theocrats, coordinating defenses to ensure the Ursa never gain a foothold in either territory. To the south, beyond the impassable peaks, lie the Watcher's Dominions and Midas' Realm, entirely insulated from the mountain conflicts. <em>Life in Galeon is quiet and predictable, defined only by the endless cycle of spotting, shooting, and burying zealots under rockslides.</em>"
+          ]
+        },
+        {
+          slug: "ursa-theocracy",
+          code: "2.7",
+          name: "Ursa Theocracy",
+          image: "images/factions/UrsaTheocracy1.jpg",
+          meta: [
+            ["KIND", "Ursidae (All Bears)"],
+            ["CREED", "Khamseen Followers"],
+            ["TRAIT", "Absolute priest-king rule; constant internal fractures"]
+          ],
+          paragraphs: [
+            { lead: true, text: "Deep in the rugged, frozen north, the Ursa Theocracy rules as an absolute theocracy where massive bears submit to priest-kings preaching raw power and total conquest. Fueled by the aggressive doctrines of Khamseen, it is a society run entirely as a war economy. There is no art, very little trade, and no tolerance for weakness; there are only soldiers, smiths, and the priests who whip them into a frothing zealotry. Their eyes are forever alight with a fanatical, unyielding madness." },
+            "Yet for all their fervor, the Ursa are a kingdom trapped in a strategic cul-de-sac. To the north lie the uninhabitable polar caps; to the east, the vast, empty ocean. To the west, a narrow, heavily fortified strip of border faces the disciplined wolf packs of the Lunar Guardians, who cut down Ursa charges with mechanical efficiency. To the south lie the impenetrable peaks of Galeon Heights, where raptors and mountain goats rain death from above. The bears are stuck in a bloody, eternal loop, trying the same brute-force tactics against the same unbreakable walls, praying that the Sky will eventually reward their persistence with a breakthrough. It never does.",
+            "Desperate for an outlet for their holy aggression, the priest-kings occasionally launch longships across the eastern ocean, aiming for a chain of mist-shrouded landmasses whispered of in old sailor's tales: the Forbidden Islands. These expeditions rarely return. When a ship does limp back to the frozen shores, the survivors are fundamentally altered. They speak in strange, broken cadences, their fur turned grey, their eyes holding a terrifying, quiet fanaticism that unsettles even the high priests.",
+            "The other kingdoms dismiss these stories as exaggerated anecdotes—just bears being bears, suffering from frostbite and sea-sickness. But within the dark caves of the Theocracy, the priest-kings wonder if their missing warriors found something on those islands. Something that looked back. <em>For now, the bears continue to throw themselves against the wolves and the mountains, bleeding for a Sky that refuses to answer.</em>"
+          ]
+        },
+        {
+          slug: "shadows-teeth",
+          code: "2.8",
+          name: "Shadow's Teeth",
+          image: "images/factions/ShadowsTeeth5.jpg",
+          meta: [
+            ["KIND", "Rodents (Rats, Gophers, Squirrels, Porcupines)"],
+            ["CREED", "Permutism Followers"],
+            ["TRAIT", "Master sappers; frantically fortified isolationists"]
+          ],
+          paragraphs: [
+            { lead: true, text: "Whispered among rats on the long quarry roads as a free kingdom past the edge of the maps, Shadow's Teeth is a narrow, heavily fortified peninsula at the bottom center of the western continent. Surrounded by churning ocean and connected to the mainland by a single, easily defensible strip of land, it serves as the ultimate beacon for the unchained. Here, the rodents—rats, gophers, squirrels, and porcupines—use the fluid principles of Permutism to survive away from the horns and matriarchs of the mainland." },
+            "The Verdant Vanguards, however, do not recognize Shadow's Teeth as a sovereign state. To the sacred cattle and noble elk, the peninsula is a rogue province, and its inhabitants are escaped chattel who abandoned their divinely ordained duties. Centuries ago, the rodents proved them wrong in a long, bloody guerrilla war, using the very tunnels they dug in the Vanguard quarries to strike, vanish, and bleed the occupying armies dry. They won their freedom, but the Suvartan empire never forgave the slight to its hierarchy.",
+            "Today, an uneasy peace reigns, but only because the Vanguards are entirely occupied with the endless holy wars against the Mooncrest Matriarchy to the west. The rodents know this peace is borrowed time. If the Vanguards win the west, they will turn their armies south to reclaim the peninsula. If the Mooncrest win, the hyenas will simply continue the march, swallowing the lesser power whole. Whosoever emerges victorious, the continent is ready to devour Shadow's Teeth.",
+            "Driven by this existential dread, the rodents are in an urgent, frantic frenzy of construction. They are the world's most excellent diggers, and they are turning their peninsula into a labyrinthine fortress of subterranean kill-zones, spike pits, and collapsible tunnels. Beyond their borders, their skills are highly valued; other civilizations frequently employ Shadow's Teeth expats as expert sappers and siege miners to undermine enemy walls. But the gold they earn abroad is sent straight home, funding the endless digging. <em>They are building a fortress so deep and so deadly that even the Turning Year will hesitate to claim them.</em>"
+          ]
+        },
+        {
+          slug: "redsett-clans",
+          code: "2.2",
+          name: "Redsett Clans",
+          image: "images/factions/Redsett1.jpg",
+          meta: [
+            ["KIND", "Mustelidae & Mongoose (Weasels, Badgers, Otters, Mongooses)"],
+            ["CREED", "Exodist Followers"],
+            ["TRAIT", "Hyper-aggressive raiders; masters of the hit-and-run"]
+          ],
+          paragraphs: [
+            { lead: true, text: "To the south of the great ape bridge lie the territories of the Redsett Clans, an absolute menace of a kingdom composed entirely of hyper-aggressive mustelids and mongooses. Where the Stoneheart apes interpret the Exodist faith as a peaceful journey for knowledge, the Redsett interpret it as a sacred mandate to never stop moving. To them, settling and farming is a spiritual death; the raid is the only true way to walk the Open Road." },
+            "They are the terror of the western continent. While they occasionally skirmish with their northern neighbors, they rarely press the attack. The Stoneheart Kingdom pays a heavy, regular tribute, and the Redsett are pragmatic enough to honor the arrangement. <em>Take the gold, and go bother someone else.</em> True to the deal, the clans pivot south and west, where their favorite activity awaits: raiding the lucrative camel caravans of Midas' Realm and pillaging the vulnerable coastlines of the Verdant Vanguards and the Wetland's Pact.",
+            "No eastern shoreline on the western continent is safe. Redsett longships are a constant, looming threat, striking from the sea before vanishing into the river deltas. In recent years, their audacity has reached staggering new heights; there have been confirmed sightings of mustelid raiders assaulting the frozen ports and merchant vessels of the Ursa Theocracy in the far north. They fight for no king, conquer no capitals, and leave nothing but ashes and missing livestock in their wake. They are an all-round, continent-wide nuisance.",
+            "Yet, for all their chaotic fury, the Redsett possess a mercenary pragmatism. The Giants Realm, whose towering philosophers and engineers abhor direct combat, have struck a lucrative deal with the clans. The Giants pay handsomely for the Redsett to deploy their berserker rage against the creeping horrors of the Silent Swarm on the eastern front. Because of this financial arrangement, the Giants' borders are entirely spared from the raiders' wrath. <em>Let the mongooses bleed the bugs; it keeps the gold flowing and the roads open for the rest of us.</em>"
           ]
         }
       ]
@@ -624,75 +740,91 @@ window.CONTENT = {
       intro: "The entire eastern landmass is kept constantly on its toes by relentless swarms of aggressive insect hybrids (the Silent Swarm, Hornet's Hive), a scourge the priests call a punishment from the gods, though no two temples agree for what sin. Because they are being constantly invaded, these clades are excellent mercenaries and rarely fight among themselves.",
       factions: [
         {
-          slug: "steppe-guardians",
-          code: "1.2",
-          name: "Steppe Guardians",
-          image: "images/factions/sg1.jpg",
-          meta: [
-            ["KIND", "Ungulates (Horses and Zebras, Donkeys)"],
-            ["CREED", "Permutism Followers"],
-            ["TRAIT", "Free above-average intelligence; expert mounted archers"]
-          ],
-          paragraphs: [
-            { lead: true, text: "A free, highly intelligent society of mounted archers where horses, zebras, and donkeys manage merchant routes and defenses without strict internal caste barriers, relying instead on high mobility and unity to push back the swarm." }
-          ]
-        },
-        {
-          slug: "boarheart-kingdom",
-          code: "1.3",
-          name: "Boarheart Kingdom",
-          image: "images/factions/Boarheart1.jpg",
-          meta: [
-            ["KIND", "Ungulates (Giant Forest Hogs, Wild Boars, Warthogs)"],
-            ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Gritty, highly defensive and offensive; average intelligence"]
-          ],
-          paragraphs: [
-            { lead: true, text: "Absolute fighters. Gritty, defensive, and fiercely offensive, the boars and warthogs operate without strict internal hierarchies to maintain an unbreakable shield wall against the bug swarms pressing down from the pink northern borders." }
-          ]
-        },
-        {
           slug: "khanstan",
-          code: "4.3",
+          code: "3.3",
           name: "Khanstan",
-          image: "images/factions/Khanstan1.jpg",
+          image: "images/factions/Khanstan2.jpg",
           meta: [
             ["KIND", "Feline (Bengal and Siberian Tigers)"],
             ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Terrifying individual power; fractured into rival lords"]
+            ["TRAIT", "Scavenger-engineers; solitary but coordinated"]
           ],
           paragraphs: [
-            { lead: true, text: "Across the mist-veiled jungles of the east, the Tiger Kingdom remains fractured into rival lords, each ruled by a solitary tiger of immense power. Though they follow the aggressive dominance of Khamseen, their total refusal to form packs has repeatedly cost them ultimate victory against the coordinated might of lesser kingdoms." }
+              { lead: true, text: "Across the mist-veiled jungles of the east, the Tiger Kingdom of Khanstan remains fractured into rival lords, each ruling a solitary domain of immense personal power. To the east lies the unending ocean, while their western borders are perpetually ravaged by the twin hordes of the Silent Swarm: the Hornet's Hive and the creeping, eight-legged horrors of the Spider's Curse. While their solitary nature aligns perfectly with the Khamseen doctrine of individual strength, it frequently costs them the strategic battles that require enormous, unified coordination against the endless bugs." },
+            "Resource scarcity is their constant companion, as every scrap of metal and timber is fed into the meat-grinder of the eastern front. Consequently, the tigers have evolved into brilliant, scrappy engineers. Deprived of the pristine universities of the west, they are masters of the practical hack: makeshift fixes, jury-rigged artillery, and improvised traps built from broken swarm chitin and scavenged metal. They win not through elegance, but through stubborn, bloody-minded ingenuity.",
+            "To the south lies Nahaul's Domain, the jaguar kingdom. Despite the solitary nature of both species, Khanstan and Nahaul share a deep, cooperative bond, viewing themselves as big brothers to the jaguars. They share a culture, intertwining their histories and surviving the Swarm together. This fraternal bond is a rare bright spot in a miserable, endless war.",
+            "This shared culture manifests most vibrantly in their local customs. Khamseen dogma strictly prohibits local festivals, but the Tigers and Jaguars care little for the scrolls of desert priests. Their most revered tradition is \"The Grand Tournament of the Unclaimed Valleys\" (celebrated by the Jaguars under a different name). Far from a frivolous celebration, the tournament is a highly functional, joint military exercise. It does not stop during swarm season; it is how they prepare for it.",
+            "Tiger lords invite the finest tacticians, Boarheart wall-defenders, and Giant engineers to watch or participate. The event serves as a testing ground for new artillery, a forge for grueling combat training, and a peaceful mechanism for solitary lords to claim territorial rights without spilling the friendly blood so desperately needed on the front line. <em>Let the priests bark about dogma; the tigers are too busy building a better ballista to care.</em>"
           ]
         },
         {
           slug: "nahauls-domain",
-          code: "4.4",
+          code: "3.4",
           name: "Nahaul's Domain",
-          image: "images/factions/NahaulsDomain1.jpg",
+          image: "images/factions/NahaulsDomain2.jpg",
           meta: [
             ["KIND", "Feline (Jaguars)"],
             ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Explosive ambush tactics; competing solitary clans"]
+            ["TRAIT", "Canopy ambushers; architects of the toxic arms trade"]
           ],
           paragraphs: [
-            { lead: true, text: "Within the steaming emerald rainforests, the Jaguar Kingdom lies splintered into competing clans. Bound to the same ruthless Khamseen religion as the tigers, their hyper-aggressive and fractured social habits ensure endless infighting, preventing a lasting empire from ever rising against the creeping curse." }
+            { lead: true, text: "Deep within the steaming emerald rainforests, the Jaguar Kingdom of Nahaul’s Domain lies splintered into competing solitary clans. While Khanstan anchors the northeast against the Hornet's Hive, Nahaul’s western borders are perpetually choked by the Creeping Curse—a terrifying onslaught of arachnid horrors. The jaguars do not meet this threat on flat ground; they rule the canopy. Utilizing explosive ambush tactics and extreme vertical mobility, they turn the dense jungle into a vertical slaughterhouse for the invading hordes." },
+            "Living on the edge of oblivion has stripped away any patience for western-style theological purity or political posturing. To the jaguars, Khamseen is not a mandate for religious conquest, but a practical philosophy of survival through absolute physical mastery.",
+            "Because spiders possess an innate immunity to their own toxins, Nahaul’s engineering genius has evolved to exploit a brilliant, cross-border biochemical economy. The jaguars import dead hornets from Khanstan’s northern front, using the harvested aerial neurotoxins to coat their canopy traps and blades, bypassing the spiders' natural defenses entirely. In return, Nahaul extracts the highly concentrated venom from the defeated arachnids and exports it back to Khanstan, giving the tigers a devastating payload to use against the Hornet’s Hive.",
+            "This toxic arms-dealing extends across the entire frontier. Recognizing that the Scourge cannot be fought with steel alone, Nahaul refines specialized chemical payloads for every frontline state. They ship lethal neurotoxins to the Boarheart Kingdom to break spider and scorpion chitin, supply the Steppe Guardians with targeted delivery vectors to combat locust swarms, and route aerosolized compounds to the Giants Realm to down flying horrors. <em>Nahaul doesn't just build a better weapon; they brew the exact poison needed to keep the East breathing.</em>",
+            "This shared, scrappy ingenuity forms the bedrock of their profound fraternal bond with Khanstan. The jaguars proudly view the tigers as their massive, blunt-force big brothers. This cultural brotherhood shines brightest in their version of the great seasonal games: while the tigers host the Grand Tournament in their open valleys, the jaguars celebrate \"The Rite of the Ghost Walk\" under the canopy. It is a hyper-functional, lethal exercise in stealth, tracking, and close-quarters combat. Jaguar clan leaders invite Khanstan tacticians, Boarheart line-commanders, and Giant engineers into the deepest jungle tracts. The Rite acts as a live-fire testing ground for newly formulated venom cocktails, an arena to perfect multi-clade ambush coordination, and a bloodless way for solitary clans to settle hunting boundaries. The desert priests can preach submission all they want; the jaguars are far too busy balancing the region's chemical ledger to listen."
           ]
         },
         {
-          slug: "giants-realm",
-          code: "4.5",
-          name: "Giants Realm",
-          image: "images/factions/GiantsRealm1.jpg",
+          slug: "boarheart-kingdom",
+          code: "3.2",
+          name: "Boarheart Kingdom",
+          image: "images/factions/Boarheart1.jpg",
           meta: [
-            ["KIND", "Hybrid (Elephants and Giraffes)"],
-            ["CREED", "Permutism Followers"],
-            ["TRAIT", "Innovators; Experts in making range weapons"]
+            ["KIND", "Ungulates (Giant Forest Hogs, Wild Boars, Warthogs)"],
+            ["CREED", "Split Syncretic (55% Khamseen / 45% Permutism)"],
+            ["TRAIT", "Gritty, absolute infantry; heavy defensive stonemasons"]
           ],
           paragraphs: [
-            { lead: true, text: "Towering above the emerald rainforests, the Giants Realm is a society of philosophers and engineers. Bound to the fluid principles of Permutism, the elephants and giraffes seek harmony through intellect and adaptation, perfecting intricate long-range crossbows, artillery, and siege engines." },
-            "Despite their immense power and intelligence, their massive frames make them poorly suited for rapid warfare. To protect their peaceful innovations, they rely on trade wealth, hiring the hyper-aggressive Mustelidae and mongoose mercenaries to serve as their swift and deadly vanguard military on the battlefield."
+            { lead: true, text: "Operating without the restrictive, weaponized caste barriers of their Western cousins, the Boarheart Kingdom is the absolute infantry anvil of the Eastern Frontier. Their northern borders are an endless meat-grinder, facing the dual nightmares of the Creeping Curse's spiders and the chitinous waves of the Desert’s Scourge scorpions. To hold this line, the Boars have built an unbreakable culture of the shield wall. They are the only kingdom in the Garden where Khamseen iron-worship and Permutist fluid adaptation exist in a near-equal split without triggering a civil war; they simply realized centuries ago that religious purity tests do not stop a scorpion's stinger." },
+            "If the Scourge disappeared tomorrow, the Boarheart would remain globally renowned as the master earth-movers and structural stonemasons of the world. Denied the safety of the open plains, they have carved massive, multi-tiered subterranean citadels out of the earth, controlling a lucrative trade in geothermal smelting, deep-ore extraction, and heavy masonry. They don't just hold the line; they reinforce the very bones of the continent.",
+            "This deep-seated survival drive has left them with a legendary, hyper-argumentative social quirk. Because taking the life of another humanoid is the ultimate unspoken sacrilege on the frontier, the Boars channel their aggressive prey-instincts into relentless verbal combat. In the presence of their Khanstan and Nahaul allies, the Boars' biological wiring fires on all cylinders. They become deliberately stubborn, starting explosive, screaming matches over supply lines, tactical footprints, and chemical payload distribution.",
+            "The Tigers and Jaguars, understanding that this tusk-grinding fury is merely a release valve for centuries of frontline trauma, simply let the arguments roll off their backs to preserve energy. Let the Western courts play their soft, silent politics; <em>a Boar will tell you exactly how he intends to die for you, right after he finishes screaming in your face.</em>"
           ]
+        },
+        {
+            slug: "steppe-guardians",
+            code: "3.1",
+            name: "Steppe Guardians",
+            image: "images/factions/sg1.jpg",
+            meta: [
+              ["KIND", "Ungulates (Horses, Zebras, Donkeys)"],
+              ["CREED", "Permutism Followers (The Fluid Arteries)"],
+              ["TRAIT", "Logistical masters; expert mobile archers and caravan tacticians"]
+            ],
+            paragraphs: [
+              { lead: true, text: "Flanked by the heavy subterranean citadels of the Boarheart Kingdom to their east and the philosophical workshops of the Giants Realm to their west, the Steppe Guardians serve as the literal circulatory system of the Eastern continent. They are a free, hyper-intelligent society of horses, zebras, and donkeys who have completely abandoned the rigid, weaponized caste hierarchies of their Western cousins. To the Guardians, survival is a grand equation of kinetic movement." },
+              "They manage the brutal, high-stakes trade routes of the East, moving raw sulfur and heavy granite from the Boar quarries to the Giant forges, and returning with advanced long-range ballistics and Nahaul’s specialized chemical payloads. They don't just trade; they move the lifeblood of the continent exactly where it is needed to keep civilization breathing. If the Scourge vanished tomorrow morning, the Guardians would remain globally renowned as the premier master logisticians and infrastructure architects of the world, commanding a flawless, continent-spanning mercantile network that no Western empire could ever replicate.",
+              "This obsession with fluid efficiency shapes their unique style of warfare against the scorpion hordes of the Desert's Scourge and the airborne walls of the Wind's Hunger locusts. The Guardians do not engage in static, honor-bound open-field standoffs. They utilize relentless, hyper-mobile harassment campaigns, deploying mounted archers who loose specialized, hollow-tipped arrows. These arrows shatter in mid-air to release cloud-screens of Nahaul’s imported contact poisons, choking out flying swarms before they can touch the ground.",
+              "Constant vigilance has made them a deeply observant, quiet society; they speak in low, rhythmic cadences and possess the uncanny ability to map an entire region's topography simply by the sound of wind over the grass. Let the Western courts hoard static gold and titles; <em>the Steppe Guardians own the horizon, and the road never ends.</em>"
+            ]
+        },
+        {
+            slug: "giants-realm",
+            code: "3.5",
+            name: "Giants Realm",
+            image: "images/factions/GiantsRealm1.jpg",
+            meta: [
+              ["KIND", "Hybrid (Elephants and Giraffes)"],
+              ["CREED", "Permutism Followers (The Intellectual Anchor)"],
+              ["TRAIT", "Philosophers and innovators; masters of ballistic engineering"]
+            ],
+            paragraphs: [
+              { lead: true, text: "Towering above the emerald rainforests, the Giants Realm functions as the premier intellectual foundry and munitions forge of the Eastern Frontier. Bound to the fluid, evolutionary principles of Permutism, this society of elephants and giraffes approaches the existential horror of the Silent Swarm and the Wind's Hunger not with raw fury, but with cold, mathematical precision." },
+              "Because their massive frames lack the agility to engage in rapid, close-quarters combat against skittering horrors or other humanoids, the Giants have weaponized distance. They are the master inventors behind the frontier's most terrifying ordnance, designing the mid-air bursting arrows utilized by the Steppe Guardians, and the \"Sky-Sweeper\" ballistae—massive engines that unleash blinding barrages of hundreds of arrows to shred flying locust walls and hornet hives. Their workshops systematically dissect defeated Scourge specimens, crafting tailor-made, armor-piercing kinetic bolts designed to shatter the exact structural weak points of spider and scorpion chitin.",
+              "To compensate for their vulnerability on flat ground, the Giants maintain a vital symbiotic alliance with the Redsett Clans—a hyper-aggressive, fearless vanguard military of badgers, weasels, and mongooses. While the Giants coordinate battlefield strategy from high, fortified towers, the Redsett infantry handles the brutal trench warfare below, using their blinding speed and ferocious instincts to clear out any arachnids that slip past the artillery line. The Giants pay them lavishly in high-grade alloy armor and bespoke weapons, ensuring absolute loyalty on the blood-soaked ground they themselves cannot hold.",
+              "Despite their brilliance, a profound existential anxiety shadows the Giants' high councils. They are acutely aware that their survival as a free, independent kingdom hinges entirely on the presence of a common enemy. If the Scourge disappeared tomorrow morning, their lack of mobility would leave them at the mercy of their heavily armed neighbors. To safeguard their future, the Giants play a long-term diplomatic game: they ensure that every scrap of advanced engineering, structural blueprint, and long-range defense across Khanstan, the Steppes, and the Boarheart citadels is entirely dependent on Giant components and maintenance. <em>They may not be able to outrun a predator, but they have woven their survival so deeply into the fabric of the continent that the East cannot afford to let them fall.</em>"
+            ]
         }
       ]
     },
@@ -705,33 +837,98 @@ window.CONTENT = {
       crest: "sig-east",
       rail: { label: "04. THE SCOURGE", subtext: "The Endless Swarm" },
       visual: { img: "images/factions/ge2.png", grad: "linear-gradient(160deg, #1c222b 0%, #12161c 46%, #0a0c10 80%, #040506 100%)", tint: "rgba(90,110,130,.16)", glow: "#a2b4c7", fx: "thaw" },
+      intro: "While the core of the northwest remains dead silent, the overflow of this biological engine spills southward and eastward through four distinct, non-negotiable sub-swarms.",
       factions: [
         {
-          slug: "celestial-empire",
-          code: "4.2",
-          name: "Celestial Empire",
-          image: "images/factions/CelestialEmpire1.jpg",
+          slug: "physiological-prison",
+          code: "4.1",
+          name: "The Physiological Prison",
+          image: "images/factions/PhysiologicalPrison1.jpg",
+          epithet: "A sophisticated intellect locked within an organic war-machine.",
           meta: [
-            ["KIND", "Feline (Leopards & Snow Leopards)"],
-            ["CREED", "Zaoist Followers"],
-            ["TRAIT", "Quiet prosperity; calculated stealth and independence"]
+            ["KIND", "Insectoid (All Clades)"],
+            ["CREED", "None; incapable of doctrine"],
+            ["TRAIT", "Advanced minds trapped in bodies that cannot build, write, or speak"]
           ],
           paragraphs: [
-            { lead: true, text: "Hidden among shadowed forests and rocky cliffs, the Leopard Kingdom endures in quiet prosperity. While they follow the Zaoist faith of the lions, their pragmatic and solitary nature allows them to flourish beautifully without falling into rigid internal hierarchies or constant conflict." }
+            { lead: true, text: "To the scholars and frontline soldiers of the East, the insectoids are an absolute, terrifying biological paradox. Anatomical dissections reveal that they possess an advanced, highly complex internal neurological structure capable of abstract thought, memory, and tactical reasoning. Yet, this high-level mind is trapped inside a cruel, physical dead end: they possess multiple limbs and lethal appendages, but completely lack fingers, thumbs, or any physical mechanism to grasp, hold, or manipulate tools." },
+            "Because they cannot build technology, write down their thoughts, or speak a language that can be understood, they are entirely cut off from the rest of civil world. They cannot comprehend contracts, treaties, or parley. To an outside observer, they appear as a sophisticated intellect locked within an organic war-machine, capable of interacting with the world only through reproduction and slaughter. Frontier veterans occasionally speak of staring into the multifaceted eyes of a dying drone and catching a haunting, fleeting glimpse of a trapped, desperate awareness trying to communicate—before the mindless instinct takes over again."
           ]
         },
         {
-          slug: "ursa-theocracy",
-          code: "6.1",
-          name: "Ursa Theocracy",
-          image: "images/factions/UrsaTheocracy1.jpg",
+          slug: "hornets-hive",
+          code: "4.2",
+          name: "Hornet's Hive",
+          image: "",
+          epithet: "The aerial nightmare flanking the northeast.",
           meta: [
-            ["KIND", "Ursidae (All Bears)"],
-            ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Absolute priest-king rule; constant internal fractures"]
+            ["KIND", "Insectoid (Hornet Hybrids)"],
+            ["CREED", "None Observed"],
+            ["TRAIT", "Vertical war of attrition; predatory drone strikes"]
           ],
           paragraphs: [
-            { lead: true, text: "Deep in the rugged northern mountains, this kingdom rules as an absolute theocracy where massive bears submit to priest-kings preaching raw power and total conquest. Despite the brutal unifying nature of the faith, vicious internal power struggles between rival theocratic factions keep the kingdom perpetually divided and weakened from within." }
+            { lead: true, text: "The aerial nightmare flanking the northeast. They wage a relentless, vertical war of attrition against the canopy-dwellers of Nahaul’s Domain and the private valleys of Khanstan, raining down predatory drone strikes that test the limits of the felines' defensive capabilities." }
+          ]
+        },
+        {
+          slug: "creeping-curse",
+          code: "4.3",
+          name: "Creeping Curse",
+          image: "",
+          epithet: "The arachnid onslaught choking the rainforest frontiers.",
+          meta: [
+            ["KIND", "Insectoid (Arachnid Hybrids)"],
+            ["CREED", "None Observed"],
+            ["TRAIT", "Webs, ambushes, and innate toxic immunities"]
+          ],
+          paragraphs: [
+            { lead: true, text: "The arachnid onslaught choking the dense rainforest frontiers. Composed of massive, multi-limbed horrors, they press directly against Nahaul’s Domain and the northern borders of the Boarheart Kingdom, relying on webs, ambushes, and innate toxic immunities to overwhelm defenders." }
+          ]
+        },
+        {
+          slug: "deserts-scourge",
+          code: "4.4",
+          name: "Desert's Scourge",
+          image: "",
+          epithet: "Armored waves erupting from the barren interior.",
+          meta: [
+            ["KIND", "Insectoid (Scorpion Hybrids)"],
+            ["CREED", "None Observed"],
+            ["TRAIT", "Heavily armored chitin; broken only by masonry and chemistry"]
+          ],
+          paragraphs: [
+            { lead: true, text: "The heavily armored scorpion waves erupting from the dry, barren interior. They clash directly with the heavy shield walls of the Boarheart Kingdom and the mobile supply paths of the Steppe Guardians, forcing the frontlines to rely heavily on heavy masonry and imported chemical payloads to melt their thick chitin." }
+          ]
+        },
+        {
+          slug: "winds-hunger",
+          code: "4.5",
+          name: "Wind's Hunger",
+          image: "",
+          epithet: "The sky-blotting swarms driving down the western corridor.",
+          meta: [
+            ["KIND", "Insectoid (Locust Hybrids)"],
+            ["CREED", "None Observed"],
+            ["TRAIT", "Colossal airborne walls; devourers of trade and green land"]
+          ],
+          paragraphs: [
+            { lead: true, text: "The colossal, sky-blotting locust swarms driving down the western corridor. They threaten to choke out the trade routes of the Steppe Guardians and devour the lush environments of the Giants Realm. They are met only by advanced, mass-barrage artillery and aerosolized contact poisons engineered to clog their breathing pores." }
+          ]
+        },
+        {
+          slug: "silent-swarm",
+          code: "4.6",
+          name: "The Silent Swarm",
+          image: "",
+          epithet: "The land is completely quiet, and it systematically consumes anyone who touches it.",
+          meta: [
+            ["KIND", "Unknown (Rumored Ants)"],
+            ["CREED", "None Observed"],
+            ["TRAIT", "Total silence; no landing party has ever returned"]
+          ],
+          paragraphs: [
+            { lead: true, text: "Occupying the isolated, sub-polar landmass in the northwestern corner of the map, the Silent Swarm borders no living civilization. For generations, regional scholars dismissed this frozen, quiet expanse as a barren, dead territory. Maritime expeditions sent to map its rocky coastlines reported seeing absolutely no signs of life on the tundra—no cities, no hives, and no movement. Yet, a chilling rule has hardened among the regional navies: every single expedition that has ever dropped anchor and sent landing parties ashore has vanished without a single survivor or distress signal. The land is completely quiet, and it systematically consumes anyone who touches it." },
+            "For centuries, the Scourge fought as a mindless, disorganized wave of raw flesh and instinct. Recently, however, an unsettling rumor has begun whispering through the trench lines of the Eastern Frontier. A Khanstan Tiger lord managing an aerial watch and a Boarheart shield-commander holding a subterranean trench have separately reported an identical, chilling phenomenon: the incoming swarms are beginning to display basic battle formations. They no longer simply charge; they rotate vanguard units, feign retreats, and coordinate multi-flank pincer movements. Whether this is an accidental evolutionary spike or a sign that the latent minds within the chitin are finally figuring out how to direct their cohorts, no one knows. But on the frontline, the message is clear: <em>the bugs are starting to learn.</em>"
           ]
         }
       ]
@@ -759,21 +956,7 @@ window.CONTENT = {
           paragraphs: [
             { lead: true, text: "Whispered among rats on the long quarry roads as a free kingdom past the edge of the maps. Geographically verified as a small, highly defensible peninsula at the bottom center of the western continent, it serves as the ultimate beacon for the unchained, using the fluid principles of Permutism to survive away from the horns and matriarchs." }
           ]
-        },
-        {
-          slug: "wetlands-pact",
-          code: "2.2",
-          name: "Wetland's Pact",
-          image: "images/factions/WetlandsPact1.jpg",
-          meta: [
-            ["KIND", "Hybrids (Hippos, Crocodiles, Rhinos)"],
-            ["CREED", "Hieromachy Followers (River Resistance)"],
-            ["TRAIT", "Egalitarian foundation cracked by hippo discrimination"]
-          ],
-          paragraphs: [
-            { lead: true, text: "An alliance born from centuries of persecution by the brutal Khamseen, emphasizing communal survival and righteous rebellion. While theoretically egalitarian, the hyper-aggressive hippos dominate through sheer ferocity, enforcing open discrimination against crocodiles for their perceived lower intelligence, fueling palpable dissent and simmering internal unrest." }
-          ]
-        },
+        }
       ]
     }
   ]
