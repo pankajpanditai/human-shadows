@@ -11,6 +11,9 @@
                        sig-gov, sig-west, sig-east, sig-bridge, sig-felines).
    TO ADD A STORY ACT: add an object to `collapse.phases`, same shape
                        as `ambience.phases` (both render as chronicles).
+   Chronicle views may add an optional `finale` block (tag, title, img,
+   caption, links, visual): one last full-width reveal after the end
+   screen; the end screen then shows a SCROLL ONCE MORE cue.
 
    Faction fields:
      slug        unique url id  →  page becomes  #faction/<slug>
@@ -62,8 +65,9 @@ window.CONTENT = {
         ],
         paragraphs: [
           { lead: true, text: "For four unbroken months the sun climbs and refuses to leave. There is no dusk to soften the edges of things, no night to forgive what the day exposes." },
-          "Vines erupt and strangle. The forests choke themselves on their own growth. Everything is lit, everything is seen: the ash, the drag-marks, the killing-stones, all of it clear and bright under a sky with nowhere else to be.",
-          "It is the season that asks the cruelest question of the people who run through it: <em>where, exactly, do you think you can hide?</em>"
+          "Vines erupt and strangle. Rivers retreat into their banks. Forests choke themselves beneath impossible growth, while the deserts shimmer beneath relentless heat. Everything is lit, everything is seen: the ash, the drag-marks, the killing-stones, all of it clear beneath a sky with nowhere else to be.",
+          "Yet even an endless day cannot conquer exhaustion. Across the wilds, every creature still follows its own <em>Daily Turn</em>. When the body demands rest, the beasts simply make their own night. The jungles swallow sleeping herds beneath layers of tangled canopy, burrowing creatures vanish beneath the earth, and desert animals disappear into deep shade until strength returns. Life keeps its ancient rhythm, even when the heavens refuse to.",
+          "The speaking kingdoms have learned the same lesson. Without sunrise or sunset to govern them, every settlement keeps its own Daily Turn. Bells, drums, water clocks and tradition decide when a city wakes and when it sleeps. A traveler may leave one kingdom at the beginning of its working day and arrive at another whose gates are already closed for the night. During the Long Light, the world's granaries are filled, roads remain busiest, and nearly every civilization races to gather enough food to survive the darkness still months away."
         ],
         visual: { img: "images/long-light.jpg", grad: "radial-gradient(130% 100% at 60% 28%, #fff8e6 0%, #ecd99f 30%, #c79a55 60%, #6b4f2c 100%)", tint: "rgba(255,236,180,.30)", glow: "#f0d488", fx: "heat" }
       },
@@ -78,8 +82,10 @@ window.CONTENT = {
           "SKY    ▰▰▰▱▱  BRUISED"
         ],
         paragraphs: [
-          { lead: true, text: "Then the light begins to fail, and for two months the sky comes down as rain. Twilight settles over everything: not day, not night, only a bruised strip of colour bleeding into itself like a wound that will not close." },
-          "The roads turn to running water. The ash of the long light washes into the low places and waits there, patient. It is the season of mud and grey, of journeys begun because staying has become impossible."
+          { lead: true, text: "At last the light begins to fail. For two long months the heavens dissolve into rain, and twilight settles over the world: neither day nor night, but a bruised sky bleeding endlessly into itself." },
+          "Roads become rivers. Hillsides collapse beneath the weight of water. The ashes of the Long Light wash into the valleys, feeding soils that will soon belong to the fungi.",
+          "Across the wilds, old migrations begin. Rivers become highways for countless creatures seeking higher ground before the darkness arrives. Predators lose the scent of their prey beneath endless rain, while marshes and flooded forests briefly belong to creatures that thrive in water.",
+          "For civilization, the Weeping is a season of preparation. Grain stores are sealed against moisture. Bridges become more valuable than fortresses. Trade slows, armies disperse, and every kingdom begins quietly counting the provisions that must last through the coming night."
         ],
         visual: { img: "images/weeping.jpg", grad: "linear-gradient(160deg, #2a2740 0%, #34304e 35%, #1e2236 70%, #0f111d 100%)", tint: "rgba(70,60,110,.26)", glow: "#9d92d6", fx: "rain" }
       },
@@ -94,9 +100,10 @@ window.CONTENT = {
           "COLD   ▰▰▰▰▱  DEEP"
         ],
         paragraphs: [
-          { lead: true, text: "The light fails completely. For four frozen months there is only night, and out of the rot the fungi rise. Colossal pale towers feed on everything the year has killed, and their spores drift through the cold like ghosts that have not yet decided to leave." },
-          "This is the only mercy the world offers: a faint luminous glow to move by, mist thick enough to hide a body, a darkness that, for once, forgives. Whole peoples time their running for this season, betting their lives on the dark holding a little longer.",
-          "It never holds quite long enough."
+          { lead: true, text: "The light fails completely. For four frozen months there is only night, and out of the rot the fungi rise. Colossal pale towers feed upon everything the year has killed, while luminous spores drift through the cold like silent constellations fallen to the earth." },
+          "Among them moves the miasma: a slow, glowing tide of dense spores that creeps through valleys, forests and forgotten lowlands. It is the great survival engine of the wild. Herbivore herds surrender to the drifting haze, falling into a deep hibernation from which they emerge only when the thaw returns. Wild carnivores and omnivores cannot enter the poisonous mist. Instead they descend into a sluggish torpor beyond its reach, waking only when hunger becomes unbearable to hunt the desperate stragglers that failed to reach the drift.",
+          "The speaking peoples cannot share this ancient refuge. Every hybrid carries the human appetite and the same fatal vulnerability to the miasma. Their cities endure the darkness through careful stores gathered during the Long Light and by cultivating edible fungi beneath cellars, caves and sheltered terraces where the deadly spores cannot reach. Most settlements simply avoid the drifting bands, abandoning low villages for a few weeks whenever the glowing tide approaches.",
+          "Only the greatest cities stand their ground. When scouts report an advancing miasma front, ancient fire trenches are reopened, beacon towers lit, and immense bellows awaken after months of silence. Walls of heat push the heavy spores aside until the drifting cloud finally passes, allowing the city to breathe once more."
         ],
         visual: { img: "images/fungal-night.jpg", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.20)", glow: "#79e8cf", fx: "spore" }
       },
@@ -111,8 +118,9 @@ window.CONTENT = {
           "DAWN   ▰▰▰▰▱  NEAR"
         ],
         paragraphs: [
-          { lead: true, text: "Then the ice begins to crack. For two tearing months the dawn returns, and the frozen world breaks open: water rushing free, the great fungal towers collapsing into the flood, the dark surrendering its cover an hour at a time." },
-          "It should feel like hope. Mostly it feels like exposure. Whatever the night hid, the dawn will find. And behind the dawn, always, the long light is already climbing back."
+          { lead: true, text: "Then the ice begins to crack. For two tearing months the darkness slowly retreats as dawn returns one hour at a time. Rivers burst free from their frozen prisons, fungal towers collapse into black water, and the world exhales after months of silence." },
+          "The sleeping herds awaken together, filling the plains almost overnight. Carnivores emerge lean and desperate, while forests echo once again with movement after the stillness of the long dark.",
+          "For civilization, the Thaw is a season of reckoning. Caravans return to forgotten roads, villages reclaim homes abandoned before the drifting miasma, and merchants reopen trade routes buried beneath snow and fungus. Granaries stand nearly empty, waiting for the next Long Light to fill them again. Whatever the night concealed is slowly revealed by the returning dawn, and beyond the horizon the endless sun is already beginning its climb."
         ],
         visual: { img: "images/thaw.jpg", grad: "linear-gradient(165deg, #cfe0e6 0%, #9fb9c2 32%, #6f8d97 60%, #2c3a44 100%)", tint: "rgba(150,190,205,.24)", glow: "#bcd6df", fx: "thaw" }
       }
@@ -120,10 +128,23 @@ window.CONTENT = {
     end: {
       title: "And then the cycle repeats. The world keeps turning, vast and indifferent, as if nothing that happened on it ever happened at all.",
       links: [
-        { label: "↑ Turn the year again", action: "top" },
-        { label: "Trace the Faiths →", action: "goto:faiths" }
+        { label: "↑ Turn the year again", action: "top" }
       ],
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
+    },
+    /* Optional block: renders one last full-width reveal AFTER the end
+       screen. The reader pauses on the black screen, scrolls once more,
+       and the world map appears. */
+    finale: {
+      tag: "SURVEY · THE WORLD ENTIRE",
+      title: "THE GARDEN",
+      img: "images/TheWorld1.jpg",
+      alt: "Full biome map of the Garden",
+      caption: "Every season you have just survived is happening here, somewhere, all at once.",
+      links: [
+        { label: "Trace the Faiths →", action: "goto:faiths" }
+      ],
+      visual: { img: "", grad: "radial-gradient(120% 90% at 50% 0%, #101a16 0%, #090e0d 55%, #050708 100%)", tint: "rgba(60,110,80,.14)", glow: "#a9d8b4", fx: "dust" }
     }
   },
 
@@ -438,8 +459,18 @@ window.CONTENT = {
       kicker: "Human Shadows · The powers of a dead world's garden",
       title: "The Kingdoms<br>of the <em>Garden</em>",
       sub: "No kingdom remembers who planted the garden. The clades that inherited it have carved it into empires, creeds, and quarrels beneath a sky that watches everything and explains nothing. These are the powers filling the silence.",
-      scrollcue: "SCROLL THROUGH THE REGIONAL COHORTS",
+      scrollcue: "SCROLL TO SURVEY THE MAP",
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 12%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
+    },
+    /* Optional block: full-width political map rendered between the hero
+       and the first cohort section (same look as an ambience finale). */
+    worldMap: {
+      tag: "POLITICAL SURVEY · FIVE COHORTS",
+      title: "THE GARDEN, DIVIDED",
+      img: "images/factions/TheStates1.jpg",
+      alt: "Political map of the kingdoms of the Garden",
+      scrollcue: "SCROLL THROUGH THE REGIONAL COHORTS",
+      visual: { img: "", grad: "radial-gradient(120% 90% at 50% 8%, #1c1a17 0%, #0c0b09 55%, #060605 100%)", tint: "rgba(70,60,40,.16)", glow: "#cdbf9a", fx: "dust" }
     },
     railHead: "Geographic Codex<br>// Cohort Matrix",
     railFoot: "WORLD INDEX SECURE<br>GEOCLUSTER // ENGAGED",
@@ -836,7 +867,7 @@ window.CONTENT = {
       epithet: "The swarms that neither negotiate nor remember peace.",
       crest: "sig-east",
       rail: { label: "04. THE SCOURGE", subtext: "The Endless Swarm" },
-      visual: { img: "images/factions/Scourge1.png", grad: "linear-gradient(160deg, #1c222b 0%, #12161c 46%, #0a0c10 80%, #040506 100%)", tint: "rgba(90,110,130,.16)", glow: "#a2b4c7", fx: "thaw" },
+      visual: { img: "images/factions/Scourge1.jpg", grad: "linear-gradient(160deg, #1c222b 0%, #12161c 46%, #0a0c10 80%, #040506 100%)", tint: "rgba(90,110,130,.16)", glow: "#a2b4c7", fx: "thaw" },
       intro: "While the core of the northwest remains dead silent, the overflow of this biological engine spills southward and eastward through four distinct, non-negotiable sub-swarms.",
       factions: [
         {
@@ -859,7 +890,7 @@ window.CONTENT = {
           slug: "hornets-hive",
           code: "4.2",
           name: "Hornet's Hive",
-          image: "images/factions/HornetsHive1.png",
+          image: "images/factions/HornetsHive1.jpg",
           epithet: "The aerial nightmare flanking the northeast.",
           meta: [
             ["KIND", "Insectoid (Hornet Hybrids)"],
@@ -874,7 +905,7 @@ window.CONTENT = {
           slug: "creeping-curse",
           code: "4.3",
           name: "Creeping Curse",
-          image: "images/factions/Spider1.png",
+          image: "images/factions/Spider1.jpg",
           epithet: "The arachnid onslaught choking the rainforest frontiers.",
           meta: [
             ["KIND", "Insectoid (Arachnid Hybrids)"],
@@ -889,7 +920,7 @@ window.CONTENT = {
           slug: "deserts-scourge",
           code: "4.4",
           name: "Desert's Scourge",
-          image: "images/factions/Scorpion1.png",
+          image: "images/factions/Scorpion1.jpg",
           epithet: "Armored waves erupting from the barren interior.",
           meta: [
             ["KIND", "Insectoid (Scorpion Hybrids)"],
@@ -904,7 +935,7 @@ window.CONTENT = {
           slug: "winds-hunger",
           code: "4.5",
           name: "Wind's Hunger",
-          image: "images/factions/Locusts1.png",
+          image: "images/factions/Locusts1.jpg",
           epithet: "The sky-blotting swarms driving down the western corridor.",
           meta: [
             ["KIND", "Insectoid (Locust Hybrids)"],
@@ -919,7 +950,7 @@ window.CONTENT = {
           slug: "silent-swarm",
           code: "4.6",
           name: "The Silent Swarm",
-          image: "images/factions/SilentSwarm1.png",
+          image: "images/factions/SilentSwarm1.jpg",
           epithet: "The land is completely quiet, and it systematically consumes anyone who touches it.",
           meta: [
             ["KIND", "Unknown"],

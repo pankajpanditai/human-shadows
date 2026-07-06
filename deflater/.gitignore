@@ -1,0 +1,5 @@
+# Only the tooling lives in git; dropped images and outputs stay local
+*
+!.gitignore
+!deflate.bat
+!deflate.ps1

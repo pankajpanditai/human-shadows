@@ -183,12 +183,27 @@
   .loop{ text-align:center; align-items:center; }
   .loop h2{ font-family:"Fraunces",serif; font-weight:300;
     font-size:clamp(1.9rem,5.5vw,3.8rem); line-height:1.08; max-width:22ch; margin:0 auto; }
-  .loop .links{ margin-top:42px; display:flex; gap:28px; flex-wrap:wrap; justify-content:center; }
-  .loop a{ font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.24em;
+  .loop .links, .finale .links{ margin-top:42px; display:flex; gap:28px; flex-wrap:wrap; justify-content:center; }
+  .loop a, .finale .links a{ font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.24em;
     text-transform:uppercase; color:var(--glow); text-decoration:none;
     border-bottom:1px solid var(--glow); padding-bottom:4px; cursor: pointer; }
   .loop .credit{ margin-top:54px; font-family:"Space Mono",monospace; font-size:9px;
     letter-spacing:.2em; color:var(--ink-dim); }
+  .loop .scrollcue{ margin-top:64px; justify-content:center; }
+
+  /* ── finale (post-end full-width reveal, e.g. THE GARDEN map) ── */
+  .finale{ text-align:center; align-items:center;
+    padding:12vh calc(var(--rail-w) + 3vw) 14vh 4vw; }
+  .finale h2{ font-size:clamp(2.6rem,7vw,6.2rem); max-width:none; letter-spacing:.03em; }
+  .finale .map-link{ display:block; width:100%; max-width:1500px; margin-top:44px; }
+  .finale a.map-link{ cursor:pointer; }
+  .finale .map{ width:100%; display:block; border:1px solid rgba(255,255,255,.10);
+    border-radius:4px; box-shadow:0 34px 90px rgba(0,0,0,.6);
+    transition:box-shadow .6s ease, border-color .6s ease; }
+  .finale a.map-link:hover .map{ border-color:var(--glow); box-shadow:0 34px 90px rgba(0,0,0,.6), 0 0 40px rgba(255,255,255,.06); }
+  .finale .caption{ margin-top:20px; font-style:italic; color:var(--ink-dim);
+    font-size:clamp(1rem,1.4vw,1.2rem); max-width:60ch; }
+  @media (max-width:1100px){ .finale{ padding:10vh 5vw; } }
 
   /* ── faction cards (codex index) ──────────────────────── */
   .fac-list{
@@ -407,7 +422,7 @@
       </section>`;
   }
 
-  function endHTML(end, phase){
+  function endHTML(end, phase, hasFinale){
     const links = end.links.map(l =>
       `<a class="back" data-action="${l.action}">${l.label}</a>`).join('');
     return `
@@ -415,6 +430,23 @@
         <h2 class="reveal">${end.title}</h2>
         <div class="links reveal d1">${links}</div>
         <div class="credit reveal d2">${C.site.credit}</div>
+        ${hasFinale ? `<div class="scrollcue reveal d3"><span class="line"></span> SCROLL ONCE MORE</div>` : ''}
+      </section>`;
+  }
+
+  // One last full-width reveal after the end screen (see content.js `finale`).
+  function finaleHTML(f, phase){
+    const links = (f.links || []).map(l =>
+      `<a class="back" data-action="${l.action}">${l.label}</a>`).join('');
+    return `
+      <section class="finale" data-phase="${phase}" aria-label="${f.title}">
+        <div class="panel-tag reveal">${f.tag}</div>
+        <h2 class="reveal d1">${f.title}</h2>
+        <a class="map-link reveal d2" data-action="${f.links && f.links[0] ? f.links[0].action : 'top'}">
+          <img class="map" src="${f.img}" alt="${f.alt || f.title}">
+        </a>
+        ${f.caption ? `<div class="caption reveal d2">${f.caption}</div>` : ''}
+        <div class="links reveal d3">${links}</div>
       </section>`;
   }
 
@@ -433,12 +465,25 @@
         ${paragraphsHTML(ph.paragraphs, null, ph.slug)}
       </section>`).join('');
     document.getElementById(elId).innerHTML =
-      heroHTML(A.hero) + phases + endHTML(A.end, A.phases.length + 1);
+      heroHTML(A.hero) + phases + endHTML(A.end, A.phases.length + 1, !!A.finale) +
+      (A.finale ? finaleHTML(A.finale, A.phases.length + 2) : '');
   }
 
   function renderChronicle(viewKey){ renderChronicleInto(`view-${viewKey}`, C[viewKey]); }
 
   function renderFactionsIndex(){
+    // Optional full-width political map between the hero and Cohort I;
+    // when present it takes phase 1 and shifts the cohort phases by one.
+    const wm = C.factions.worldMap;
+    const off = wm ? 1 : 0;
+    const mapSec = wm ? `
+      <section class="finale" data-phase="1" aria-label="${wm.title}">
+        <div class="panel-tag reveal">${wm.tag}</div>
+        <h2 class="reveal d1">${wm.title}</h2>
+        <div class="map-link reveal d2"><img class="map" src="${wm.img}" alt="${wm.alt || wm.title}"></div>
+        ${wm.caption ? `<div class="caption reveal d2">${wm.caption}</div>` : ''}
+        <div class="scrollcue reveal d3"><span class="line"></span> ${wm.scrollcue}</div>
+      </section>` : '';
     const sections = C.regions.map((r, i) => {
       const cards = r.factions.map(f => `
         <a class="fac-card" href="#faction/${f.slug}">
@@ -447,7 +492,7 @@
           <span class="kind">${f.meta[0][1]}<br>${f.meta[1][1]}</span>
         </a>`).join('');
       return `
-        <section class="fac" id="${r.id}" data-phase="${i + 1}" aria-label="${r.title}">
+        <section class="fac" id="${r.id}" data-phase="${i + 1 + off}" aria-label="${r.title}">
           <svg class="crest"><use href="#${r.crest}"/></svg>
           <div class="panel-tag reveal">${r.cohort}</div>
           <h2 class="reveal d1">${r.title}</h2>
@@ -457,7 +502,7 @@
         </section>`;
     }).join('');
     document.getElementById('view-factions').innerHTML =
-      heroHTML(C.factions.hero) + sections + endHTML(C.factions.end, C.regions.length + 1);
+      heroHTML(C.factions.hero) + mapSec + sections + endHTML(C.factions.end, C.regions.length + 1 + off);
   }
 
   function renderFactionPage(region, faction){
@@ -519,7 +564,7 @@
     buildRail(`
       <div class="rail-head">${C.factions.railHead}</div>
       ${C.regions.map((r, i) => `
-        <a class="seg" data-jump="${i + 1}" data-target="${r.id}" href="#${r.id}">
+        <a class="seg" data-jump="${i + 1 + (C.factions.worldMap ? 1 : 0)}" data-target="${r.id}" href="#${r.id}">
           <svg><use href="#${r.crest}"/></svg>
           <span><span class="lab">${r.rail.label}</span><br><span class="subtext">${r.rail.subtext}</span></span>
         </a>`).join('')}
@@ -646,7 +691,8 @@
       renderChronicleInto('view-episode', ep);
       activateView('episode');
       railChronicleData(ep);
-      viewConfigs = [ep.hero.visual, ...ep.phases.map(p => p.visual), ep.end.visual];
+      viewConfigs = [ep.hero.visual, ...ep.phases.map(p => p.visual), ep.end.visual,
+        ...(ep.finale ? [ep.finale.visual] : [])];
       ensureLayers(viewConfigs.length);
       initViewObservers('episode');
       window.scrollTo(0, 0);
@@ -680,12 +726,15 @@
     activateView(viewKey);
     if (viewKey === 'factions') {
       railFactions();
-      viewConfigs = [C.factions.hero.visual, ...C.regions.map(r => r.visual), C.factions.end.visual];
+      viewConfigs = [C.factions.hero.visual,
+        ...(C.factions.worldMap ? [C.factions.worldMap.visual] : []),
+        ...C.regions.map(r => r.visual), C.factions.end.visual];
       document.title = 'Powers Codex — Human Shadows';
     } else {
       const A = C[viewKey];
       railChronicle(viewKey);
-      viewConfigs = [A.hero.visual, ...A.phases.map(p => p.visual), A.end.visual];
+      viewConfigs = [A.hero.visual, ...A.phases.map(p => p.visual), A.end.visual,
+        ...(A.finale ? [A.finale.visual] : [])];
       document.title = viewKey === 'ambience'
         ? 'Human Shadows — Codex Infinite'
         : `${A.nav} — Human Shadows`;
