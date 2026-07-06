@@ -613,7 +613,42 @@
     root.style.setProperty('--glow', config.glow);
     activeSegments.forEach(seg => seg.classList.toggle('on', +seg.dataset.jump === phaseIdx));
     fxMode = config.fx;
+    panSection = null;
+    updatePan();
   }
+
+  /* Scroll-linked background pan. `cover` crops tall images at the bottom
+     when anchored top; instead the active layer drifts from the top of the
+     art to the bottom as its section scrolls by, revealing the full image.
+     Long sections (faction pages) pan across their own scroll span; short
+     100vh phases pan while passing through the viewport. */
+  let panSection = null;
+
+  function updatePan(){
+    const layer = layers[currentPhase];
+    const config = viewConfigs[currentPhase];
+    if (!layer || !config || !config.img) return;
+    if (reduce) { layer.style.backgroundPosition = 'center 50%'; return; }
+    if (!panSection || !panSection.isConnected) {
+      panSection = document.querySelector(`.view-wrapper.active section[data-phase="${currentPhase}"]`);
+      if (!panSection) return;
+    }
+    const r = panSection.getBoundingClientRect();
+    const range = r.height - innerHeight;
+    const t = range > 40
+      ? -r.top / range
+      : (innerHeight - r.top) / (innerHeight + r.height);
+    const clamped = Math.min(1, Math.max(0, t));
+    layer.style.backgroundPosition = `center ${(clamped * 100).toFixed(2)}%`;
+  }
+
+  let panQueued = false;
+  addEventListener('scroll', () => {
+    if (panQueued) return;
+    panQueued = true;
+    requestAnimationFrame(() => { panQueued = false; updatePan(); });
+  }, { passive: true });
+  addEventListener('resize', () => { panSection = null; updatePan(); });
 
   /* ═══ SCROLL OBSERVERS ══════════════════════════════════════════ */
 
