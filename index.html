@@ -485,12 +485,15 @@
         <div class="scrollcue reveal d3"><span class="line"></span> ${wm.scrollcue}</div>
       </section>` : '';
     const sections = C.regions.map((r, i) => {
-      const cards = r.factions.map(f => `
+      const cards = r.factions.map(f => {
+        const kind = (f.meta || []).slice(0, 2).map(m => m[1]).join('<br>');
+        return `
         <a class="fac-card" href="#faction/${f.slug}">
           <span class="code">${f.code ? f.code + ' · ' : ''}FACTION FILE</span>
           <h3>${f.name} <span class="arrow">→</span></h3>
-          <span class="kind">${f.meta[0][1]}<br>${f.meta[1][1]}</span>
-        </a>`).join('');
+          ${kind ? `<span class="kind">${kind}</span>` : ''}
+        </a>`;
+      }).join('');
       return `
         <section class="fac" id="${r.id}" data-phase="${i + 1 + off}" aria-label="${r.title}">
           <svg class="crest"><use href="#${r.crest}"/></svg>

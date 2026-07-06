@@ -500,19 +500,25 @@ window.CONTENT = {
           code: "1.1",
           name: "Golden Empire",
           image: "images/factions/ge1.jpg",
-          epithet: "No caravan crosses the Garden without passing beneath a lion's shadow.",
+          epithet: "Every luxury in the Garden eventually finds its way to a lion's court.",
           meta: [
             ["KIND", "Feline (Lions)"],
             ["CREED", "Zaoist Founders"],
             ["TRAIT", "Deep social bonds; collective state strategy"]
           ],
-          paragraphs: [
-            { lead: true, text: "The Golden Empire sits at the heart of western civilization. It commands no single monopoly, yet quietly influences all three of the Garden's most valuable commodities: spice, silk, and venom. Lion kings rarely conquer for territory alone; they conquer for balance." },
-            "Their closest allies are the Celestial Empire, whose leopard merchants control many of the western trade routes, and Naga's Embrace, the serpent kingdom whose venom has become one of the most valuable substances in the Garden.",
-            "Centuries ago, relations between the Lions and the Lunar Guardians were cordial. That peace ended during the Serpent War, when the wolves launched a devastating campaign against Naga's Embrace. Victory would have handed the entire venom trade to the Lunar Guardians, upsetting the balance of power across the continent.",
-            "The Watcher's Dominions were too distant and too weakened to intervene. Mooncrest's armies could not reach the battlefield in time. The Lion Kings alone possessed both the strength and the political leverage to act. Invoking the gentle principles of Zaoism, the Golden Empire demanded an immediate ceasefire, declaring that the strong had a duty to protect the weak. Behind the noble words stood an unmistakable warning: should the war continue, the Lions themselves would march.",
-            "The wolves refused. What followed was a brutal four-year conflict remembered simply as <em>The Holy War of Protection</em>. Neither side emerged unscarred, but the Golden Empire ultimately prevailed.",
-            "Since then, Naga's Embrace has remained a loyal protectorate of the Lions, while the Golden Empire quietly safeguards the world's venom trade. To the east, the Celestial Empire remains both a trusted ally and an indispensable commercial partner, carrying spices from the Vanguards across the western kingdoms while together standing watch against their common rival: the Mooncrest Matriarchy."
+paragraphs: [
+            { lead: true, text: "The Golden Empire sits at the heart of western civilization. It commands no single monopoly, yet quietly influences all three of the Garden's most valuable commodities: spice, silk, and venom. Lion emperors rarely conquer for territory alone; they conquer for balance." },
+            "Their closest ally is the Celestial Empire, whose leopard merchants dominate many of the western trade routes. To the north lies Naga's Embrace, the great serpent kingdom whose venom has become one of the most valuable substances in the Garden. Though formally independent, the two realms have maintained unusually close relations for generations.",
+            "That relationship changed dramatically during the reign of Emperor Zaoren.",
+            "Only one Rain ago, the Emperor shocked the Garden by taking Lady Seshara, a noblewoman of Naga's Embrace, as his newest consort. The marriage ignited immediate controversy throughout the Empire. Marrying beyond one's creed is condemned across nearly every civilization, and Khamseen law traditionally demands that an outsider convert before such a union can be recognized. The imperial court refused to explain how the marriage had been sanctioned.",
+            "The Emperor's lion queens openly resented the decision. Noble houses questioned his judgment. Zaoist priests condemned the union in private sermons, while merchants feared the political instability it might invite. Although none dared challenge the Emperor directly, whispers spread throughout every province.",
+            "The rumors only intensified as Zaoren himself appeared to change. Courtiers spoke of an Emperor increasingly distant from affairs of state, arriving late to councils, staring silently through debates, and displaying an unfamiliar calm that many described as almost euphoric. No physician reported illness. No minister offered an explanation.",
+            "Then came the Wolf campaign against Naga's Embrace.",
+            "Invoking the sacred principles of Zaoism, Emperor Zaoren declared that the strong bore an absolute duty to protect the weak. He condemned the invasion as a violation of the natural balance and demanded an immediate withdrawal. When the Lunar Guardians refused, the Golden Empire marched to war.",
+            "The war endured four rains before Lion armies forced the wolves to retreat. Since then, Naga's Embrace has remained firmly within the Golden sphere of influence, preserving the world's venom trade while strengthening western commerce alongside the Celestial Empire.",
+            "Yet the war settled little beyond the battlefield.",
+            "Many across the Garden remain convinced that Emperor Zaoren secretly embraced Khamseen to legitimize his marriage. Others dismiss the accusation as Mooncrest propaganda intended to fracture the Zaoist world. The imperial court has never addressed the rumors, and the Emperor continues to preside over every Zaoist ceremony without exception.",
+            "Whether Zaoren's actions sprang from love, political calculation, religious conviction, or some combination of all three has become one of the Garden's greatest unanswered questions."
           ]
         },
         {
@@ -526,12 +532,15 @@ window.CONTENT = {
             ["CREED", "Zaoist Followers"],
             ["TRAIT", "Unbreakable pack discipline; flawless teamwork"]
           ],
-          paragraphs: [
-            { lead: true, text: "The Lunar Guardians occupy the harsh northwestern forests, far removed from the great merchant roads. Unlike the southern empires, they possess no vast spice fields, no silk workshops, and no lucrative caravan networks. Their strength has always been earned rather than inherited." },
-            "Every fortress, every village, and every victory has been built through relentless discipline, endurance, and an unwavering belief that no pack survives unless every member carries their burden.",
+           paragraphs: [
+            { lead: true, text: "The Lunar Guardians occupy the harsh northwestern forests, far removed from the great merchant roads. Unlike the southern empires, they possess no vast spice fields, no silk workshops, and no lucrative caravan networks. Their wealth comes instead from dense northern timber, rich iron deposits, fine furs, amber, and generations of disciplined craftsmanship. Every crate bound for the wealthy kingdoms of the south must first pass through Galeon Heights, whose harbors provide the Guardians their only reliable access to the Central Seas." },
+            "Every fortress, every village, and every victory has been built through relentless discipline, endurance, and an unwavering belief that no pack survives unless every member carries their burden. Among the wolves, rank carries privilege only because it carries greater responsibility. Nobles are expected to command, princes to serve, and every officer to lead from the front. A family name may earn respect, but only competence earns authority.",
+            "Their armies are regarded as the finest professional fighting force in the Garden. While other kingdoms celebrate heroic champions, the Guardians place their faith in drilled formations, disciplined logistics, engineering, battlefield signals, and an officer corps promoted through merit rather than birth. Individual glory means little beside collective victory.",
             "Their greatest humiliation remains the Serpent War. Generations have grown up believing victory was stolen from them, not by the Nagas they nearly defeated, but by Lion diplomacy backed with overwhelming military force. Restoring the honor lost in that war has quietly become a national obsession.",
-            "To the south lies their closest ally, Galeon Heights, whose mountain peoples rely upon the wolves to shield them from repeated incursions by the fanatical Ursa Theocracy. The Ursas themselves remain more nuisance than existential threat. Their borders are narrow, their campaigns reckless, and their charges rarely survive disciplined wolf formations. Nevertheless, constant vigilance has become second nature to the northern packs.",
-            "Every generation of wolves trains with one question lingering beneath the surface: <em>when the next great war comes... will the Lions still stand above us?</em>"
+            "To their south lie two very different neighbors. Naga's Embrace remains a bitter reminder of the Serpent War, while Galeon Heights stands as the Guardians' closest ally. Though small, the mountain kingdom controls the wolves' only dependable passage to the Central Seas. Protecting Galeon's mountain passes and ports is therefore more than an act of friendship—it is the lifeline of the northern economy.",
+            "Beyond Galeon, to the east, rises the fanatical Ursa Theocracy. The Ursas themselves remain more nuisance than existential threat. Their borders are narrow, their campaigns reckless, and their furious charges rarely survive disciplined wolf formations. Nevertheless, constant vigilance has become second nature to the northern packs.",
+            "Wolf courts are famously austere. Foreign ambassadors expecting gilded halls and extravagant feasts instead find plain timber chambers, quiet deliberation, and rulers who value restraint above spectacle. Displays of wealth are considered poor taste; unnecessary luxury is often viewed as evidence that one has forgotten the burdens carried by the pack.",
+            "Every cub is taught that the debt of the Serpent War has not been forgotten. Whether history is corrected through diplomacy, commerce, or conquest matters little. The Lions may possess the richer empire, but the Wolves remain convinced that the Garden has yet to witness their greatest victory."
           ]
         },
         {
@@ -945,22 +954,6 @@ window.CONTENT = {
           paragraphs: [
             { lead: true, text: "The colossal, sky-blotting locust swarms driving down the western corridor. They threaten to choke out the trade routes of the Steppe Guardians and devour the lush environments of the Giants Realm. They are met only by advanced, mass-barrage artillery and aerosolized contact poisons engineered to clog their breathing pores." }
           ]
-        },
-        {
-          slug: "silent-swarm",
-          code: "4.6",
-          name: "The Silent Swarm",
-          image: "images/factions/SilentSwarm1.jpg",
-          epithet: "The land is completely quiet, and it systematically consumes anyone who touches it.",
-          meta: [
-            ["KIND", "Unknown"],
-            ["CREED", "None Observed"],
-            ["TRAIT", "Total silence; no landing party has ever returned"]
-          ],
-          paragraphs: [
-            { lead: true, text: "Occupying the isolated, sub-polar landmass in the northwestern corner of the map, the Silent Swarm borders no living civilization. For generations, regional scholars dismissed this frozen, quiet expanse as a barren, dead territory. Maritime expeditions sent to map its rocky coastlines reported seeing absolutely no signs of life on the tundra—no cities, no hives, and no movement. Yet, a chilling rule has hardened among the regional navies: every single expedition that has ever dropped anchor and sent landing parties ashore has vanished without a single survivor or distress signal. The land is completely quiet, and it systematically consumes anyone who touches it." },
-            "For centuries, the Scourge fought as a mindless, disorganized wave of raw flesh and instinct. Recently, however, an unsettling rumor has begun whispering through the trench lines of the Eastern Frontier. A Khanstan Tiger lord managing an aerial watch and a Boarheart shield-commander holding a subterranean trench have separately reported an identical, chilling phenomenon: the incoming swarms are beginning to display basic battle formations. They no longer simply charge; they rotate vanguard units, feign retreats, and coordinate multi-flank pincer movements. Whether this is an accidental evolutionary spike or a sign that the latent minds within the chitin are finally figuring out how to direct their cohorts, no one knows. But on the frontline, the message is clear: <em>the bugs are starting to learn.</em>"
-          ]
         }
       ]
     },
@@ -972,20 +965,22 @@ window.CONTENT = {
       epithet: "Forgotten islands, silent engines, impossible beasts, and stories no kingdom agrees upon.",
       crest: "sig-bridge",
       rail: { label: "05. THE UNKNOWN", subtext: "Rumors & Relics" },
-      visual: { img: "images/factions/sh6.jpg", grad: "linear-gradient(170deg, #172420 0%, #0e1614 40%, #040606 100%)", tint: "rgba(40,80,60,.20)", glow: "#63ab87", fx: "rain" },
+      visual: { img: "images/factions/BeyondTheMaps1.jpg", grad: "linear-gradient(170deg, #172420 0%, #0e1614 40%, #040606 100%)", tint: "rgba(40,80,60,.20)", glow: "#63ab87", fx: "rain" },
       factions: [
         {
-          slug: "shadows-teeth",
-          code: "8.2",
-          name: "Shadow's Teeth",
-          image: "images/factions/ShadowsTeeth1.jpg",
-          meta: [
-            ["KIND", "Rodents (Rats, Squirrels, Porcupines)"],
-            ["CREED", "Permutism Followers"],
-            ["TRAIT", "Isolated, rumored sanctuary of the unchained"]
-          ],
+          slug: "silent-swarm",
+          code: "4.6",
+          name: "The Silent Swarm",
+          image: "images/factions/SilentSwarm1.jpg",
+          epithet: "The land is completely quiet, and it systematically consumes anyone who touches it.",
           paragraphs: [
-            { lead: true, text: "Whispered among rats on the long quarry roads as a free kingdom past the edge of the maps. Geographically verified as a small, highly defensible peninsula at the bottom center of the western continent, it serves as the ultimate beacon for the unchained, using the fluid principles of Permutism to survive away from the horns and matriarchs." }
+            { lead: true, text: "Far beyond the northwestern sea lies an isolated, sub-polar landmass that appears, from every known chart, to be completely barren. No smoke has ever been seen rising above its frozen shores. No villages, no ruins, no movement. Even the seabirds refuse to nest along its cliffs. Yet every maritime kingdom preserves the same warning." },
+            "Do not land.",
+            "For generations, captains dismissed the stories as superstition and sent survey parties ashore to chart the empty coastlines. None returned. No distress signals were raised. No bodies were recovered. Ships waiting at anchor reported only an impossible silence... followed, on certain nights, by the faint sound of countless synchronized footsteps somewhere beyond the fog. Others heard nothing at all. The accounts disagree on nearly everything except one fact.",
+            "No landing party has ever come back.",
+            "No kingdom claims the island. No priesthood agrees on what dwells there. Most maps simply leave the interior blank, naming the place only as <em>The Silent Swarm</em>—not because anyone has seen a swarm, but because something unseen moves across that frozen land with the order of one.",
+            "Some sailors insist the footsteps are only ice settling beneath the cold. The old captains never argue. They simply turn the ship around.",
+            "Do not land."
           ]
         }
       ]
