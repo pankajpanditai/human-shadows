@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex" /><!-- remove this line at public launch -->
-<title>Human Shadows — Codex Infinite</title>
+<title>Human Shadows · Codex Infinite</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -716,7 +716,7 @@
       initViewObservers('faction');
       window.scrollTo(0, 0);
       setPhase(0);
-      document.title = `${hit.faction.name} — Human Shadows`;
+      document.title = `${hit.faction.name} · Human Shadows`;
       return;
     }
 
@@ -735,7 +735,7 @@
       initViewObservers('episode');
       window.scrollTo(0, 0);
       setPhase(0);
-      document.title = `${ep.title} — Human Shadows`;
+      document.title = `${ep.title} · Human Shadows`;
       return;
     }
 
@@ -750,7 +750,7 @@
         viewConfigs = [C.faiths.hero.visual, ...C.faiths.phases.map(p => p.visual), C.faiths.end.visual];
         ensureLayers(viewConfigs.length);
         initViewObservers('faiths');
-        document.title = `${C.faiths.nav} — Human Shadows`;
+        document.title = `${C.faiths.nav} · Human Shadows`;
       }
       document.getElementById(ph.id).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
       return;
@@ -767,15 +767,15 @@
       viewConfigs = [C.factions.hero.visual,
         ...(C.factions.worldMap ? [C.factions.worldMap.visual] : []),
         ...C.regions.map(r => r.visual), C.factions.end.visual];
-      document.title = 'Powers Codex — Human Shadows';
+      document.title = 'Powers Codex · Human Shadows';
     } else {
       const A = C[viewKey];
       railChronicle(viewKey);
       viewConfigs = [A.hero.visual, ...A.phases.map(p => p.visual), A.end.visual,
         ...(A.finale ? [A.finale.visual] : [])];
       document.title = viewKey === 'ambience'
-        ? 'Human Shadows — Codex Infinite'
-        : `${A.nav} — Human Shadows`;
+        ? 'Human Shadows · Codex Infinite'
+        : `${A.nav} · Human Shadows`;
     }
     ensureLayers(viewConfigs.length);
     initViewObservers(viewKey);
