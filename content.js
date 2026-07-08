@@ -513,7 +513,7 @@ window.CONTENT = {
           image: "images/factions/ge1.jpg",
           vox: {
             tab: "Marketplace gossip",
-            image: "", // e.g. "images/factions/vox/golden-empire.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/MarketGossip1.jpg", // e.g. "images/factions/vox/golden-empire.jpg" — falls back to the faction image until set
             quotes: [
               {
                 text: "If cinnamon gets any dearer, I'll have to season my stew with compliments instead.",
@@ -570,7 +570,7 @@ window.CONTENT = {
           image: "images/factions/LunarGuardians4.jpg",
           vox: {
             tab: "Fireside conversations",
-            image: "", // e.g. "images/factions/vox/lunar-guardians.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/FiresideChat1.jpg", // e.g. "images/factions/vox/lunar-guardians.jpg" — falls back to the faction image until set
             quotes: [
               {
                 text: "My grandson asked where the Moon went. Told him it wandered off looking for warmer winters.",
@@ -625,7 +625,7 @@ window.CONTENT = {
             image: "images/factions/sh6.jpg",
             vox: {
               tab: "On the bridges",
-              image: "", // e.g. "images/factions/vox/stoneheart-kingdom.jpg" — falls back to the faction image until set
+              image: "images/factions/vox/OnTheBridges1.jpg", // e.g. "images/factions/vox/stoneheart-kingdom.jpg" — falls back to the faction image until set
               quotes: [
                 {
                   text: "Every traveler says they're only staying one night. Funny how many forget to leave.",
@@ -675,8 +675,8 @@ window.CONTENT = {
           name: "Mooncrest Matriarchy",
           image: "images/factions/MooncrestMatriarch1.jpg",
           vox: {
-            tab: "Temple whispers",
-            image: "", // e.g. "images/factions/vox/mooncrest-matriarch.jpg" — falls back to the faction image until set
+            tab: "Temple whispers after the Sermon",
+            image: "images/factions/vox/TempleWhispers1.jpg", // e.g. "images/factions/vox/mooncrest-matriarch.jpg" — falls back to the faction image until set
             quotes: [
               {
                 text: "The priest said doubt is the first step toward weakness. I spent the whole sermon wondering if he doubts that.",
@@ -733,7 +733,7 @@ window.CONTENT = {
           image: "images/factions/vv10.jpg",
           vox: {
             tab: "Under the Banyan",
-            image: "", // e.g. "images/factions/vox/verdant-vanguards.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/UnderTheBanyan1.jpg", // e.g. "images/factions/vox/verdant-vanguards.jpg" — falls back to the faction image until set
             quotes: [
               {
                 text: "Grandfather says Suvartan gave every creature a duty. I just wish mine involved fewer weeds.",
@@ -800,18 +800,39 @@ window.CONTENT = {
           image: "images/factions/wd3.jpg",
           vox: {
             tab: "Pilgrim murmurs",
-            image: "", // e.g. "images/factions/vox/watchers-dominions.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/PilgrimMurmurs1.jpg", // e.g. "images/factions/vox/watchers-dominions.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "Came seeking revelation. Found sand in my sandals and a priest who said that was the first lesson.",
+                who: "tired pilgrim"
+              },
+              {
+                text: "They say comfort weakens the soul. Easy thing to say after charging three silver for a cup of river water.",
+                who: "visiting merchant"
+              },
+              {
+                text: "My brother asked why the Iron Revelation began with a snakebite. I told him truth rarely arrives politely.",
+                who: "temple guide"
+              },
+              {
+                text: "The desert does not care what you believe. That is probably why the Watchers trust it so much.",
+                who: "caravan guard"
+              },
+              {
+                text: "Every pilgrim arrives asking for answers. By the third day, most are just asking where the shade is.",
+                who: "water seller"
+              },
+              {
+                text: "I touched the old monolith and felt nothing. The priest said endurance begins when miracles do not.",
+                who: "young pilgrim"
+              }
             ]
           },
           meta: [
             ["KIND", "Reptilian (Monitor Lizards & Komodo Dragons)"],
             ["CREED", "Khamseen Founders"],
-            ["TRAIT", "Cold, unblinking endurance; birthplace of the Iron Revelation"]
+            ["TRAIT", "Cold, unblinking endurance; birthplace of the Iron Revelation"],
+            ["LEADER", "High Watcher Sareth"]
           ],
           paragraphs: [
             { lead: true, text: "A sun-scorched wasteland of shifting dunes and broken stone, the Watcher's Dominions are the crucible in which Khamseen was born. It was here, beneath the burning desert sky, that a humble monitor hunter survived three days after the bite of a venomous serpent, speaking fevered visions that became the Iron Revelation. Today, rival clans and warlords have long since been subdued beneath a single ruling dynasty, forging a kingdom where endurance is valued above comfort and resolve above compassion." },
@@ -830,18 +851,39 @@ window.CONTENT = {
           image: "images/factions/NagasEmbrace4.jpg",
           vox: {
             tab: "Apothecary rumors",
-            image: "", // e.g. "images/factions/vox/nagas-embrace.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/Apothecary1.jpg", // e.g. "images/factions/vox/nagas-embrace.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "He asked if the green vial cures fever. I told him it cures impatience first. Fever takes longer.",
+                who: "apothecary"
+              },
+              {
+                text: "Every kingdom curses serpent venom until their prince starts coughing blood.",
+                who: "antidote seller"
+              },
+              {
+                text: "The Nagas call it medicine, poison, revelation, and trade goods. Clever thing, naming the same bottle four times.",
+                who: "foreign merchant"
+              },
+              {
+                text: "A lion envoy came in wearing three protective charms. Still bought enough venom to fill a shrine lamp.",
+                who: "shop assistant"
+              },
+              {
+                text: "They say serpent courts can debate one treaty for seven days. Around here, even the tea learns patience.",
+                who: "tea house regular"
+              },
+              {
+                text: "My grandmother says the smallest dose teaches wisdom. My uncle took a larger dose and taught us caution.",
+                who: "marsh herbalist"
+              }
             ]
           },
           meta: [
             ["KIND", "Reptilian (Pythons, Cobras, Anacondas, Black Mambas)"],
             ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Hypnotic presence; masters of venom; patient diplomacy"]
+            ["TRAIT", "Hypnotic presence; masters of venom; patient diplomacy"],
+            ["LEADER", "Coil Regent Shesara"]
           ],
           paragraphs: [
             { lead: true, text: "Coiling around the western trade routes, Naga's Embrace is among the most feared, and most indispensable, kingdoms in the Garden. Its forests and marshes produce the world's richest venom, harvested from generations of cobras, mambas, vipers, and countless lesser serpents. In careful hands, these poisons become medicines, antidotes, ritual compounds, and rare hallucinogens sought by nobles and scholars alike. Every kingdom condemns the venom trade in public. Nearly every kingdom quietly depends upon it." },
@@ -863,16 +905,37 @@ window.CONTENT = {
             tab: "Caravan talk",
             image: "", // e.g. "images/factions/vox/midas-realm.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "The wolves asked if the road was safe. I told them safe roads cost extra.",
+                who: "caravan master"
+              },
+              {
+                text: "Mooncrest pays in gold, Vanguards pay in spice, and both complain as if complaining lowers the price.",
+                who: "camel broker"
+              },
+              {
+                text: "My father said never trust a king who promises forever. Trust the road. It only promises dust.",
+                who: "old trader"
+              },
+              {
+                text: "Peace is good for trade. War is also good for trade. The trick is knowing which invoice to prepare.",
+                who: "spice caravaner"
+              },
+              {
+                text: "Contracts are sacred here. Mostly because gods forgive faster than creditors.",
+                who: "ledger keeper"
+              },
+              {
+                text: "Every kingdom says it chooses its own path. Funny how often that path has our hoofprints on it.",
+                who: "route guide"
+              }
             ]
           },
           meta: [
             ["KIND", "Ungulates (Dromedary & Bactrian Camels)"],
             ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Master brokers; architects of the caravan routes"]
+            ["TRAIT", "Master brokers; architects of the caravan routes"],
+            ["LEADER", "Grand Caravanser Raqim"]
           ],
           paragraphs: [
             { lead: true, text: "Rulers of the vast caravan highways crossing the western deserts, Midas' Realm has built an empire upon movement rather than conquest. Intelligent, enduring, and fiercely entrepreneurial, the camel kingdoms believe that every road is an opportunity waiting to be discovered. While they faithfully embrace the uncompromising doctrines of Khamseen, the camels have long concluded that gold often reveals strength more reliably than steel." },
@@ -1184,7 +1247,7 @@ window.CONTENT = {
             slug: "giants-realm",
             code: "3.5",
             name: "Giants Realm",
-            image: "images/factions/GiantsRealm5.jpg",
+            image: "images/factions/GiantsRealm8.jpg",
             vox: {
               tab: "Workshop chatter",
               image: "", // e.g. "images/factions/vox/giants-realm.jpg" — falls back to the faction image until set
