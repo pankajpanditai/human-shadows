@@ -954,12 +954,32 @@ window.CONTENT = {
           image: "images/factions/CelestialEmpire1.jpg",
           vox: {
             tab: "Waystation murmurs",
-            image: "", // e.g. "images/factions/vox/celestial-empire.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/WayStation1.jpg", // e.g. "images/factions/vox/celestial-empire.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "The guide said we crossed the border yesterday. I asked where the gate was. He pointed at three trees and smiled.",
+                who: "confused traveler"
+              },
+              {
+                text: "Leopard rangers never announce themselves. Saves time, I suppose. Also saves arrows.",
+                who: "waystation keeper"
+              },
+              {
+                text: "Bought mountain tea from a village I could not find again ten steps later.",
+                who: "caravan merchant"
+              },
+              {
+                text: "My cousin says he saw a snow leopard scout blink from a cliffside. I told him that means the scout wanted to be seen.",
+                who: "mule driver"
+              },
+              {
+                text: "You know a leopard village trusts you when the sentries stop pretending they were never there.",
+                who: "silk trader"
+              },
+              {
+                text: "A Vanguard officer asked if ambushes were dishonorable. The ranger asked if dying politely had helped so far.",
+                who: "frontier interpreter"
+              }
             ]
           },
           meta: [
