@@ -511,13 +511,44 @@ window.CONTENT = {
           code: "1.1",
           name: "Golden Empire",
           image: "images/factions/ge1.jpg",
+          vox: {
+            tab: "Marketplace gossip",
+            image: "", // e.g. "images/factions/vox/golden-empire.jpg" — falls back to the faction image until set
+            quotes: [
+              {
+                text: "If cinnamon gets any dearer, I'll have to season my stew with compliments instead.",
+                who: "street cook"
+              },
+              {
+                text: "My cousin swears he saw Lady Seshara smile at the Emperor before they ever met. My cousin also swears fish can predict the rains.",
+                who: "tea house regular"
+              },
+              {
+                text: "The court says His Majesty is simply more contemplative these days. Funny how contemplation always begins after a royal wedding.",
+                who: "silk weaver"
+              },
+              {
+                text: "You can tell harvest season's near. Half the nobles suddenly remember the names of their farmers.",
+                who: "vineyard worker"
+              },
+              {
+                text: "They say every spice in the Garden ends up in a lion's kitchen. Shame none of it makes palace meetings any less bland.",
+                who: "caravan merchant"
+              },
+              {
+                text: "Love? Politics? Prophecy? Doesn't matter. The baker still wants paying before sunrise.",
+                who: "city laborer"
+              }
+            ]
+          },
           epithet: "Every luxury in the Garden eventually finds its way to a lion's court.",
           meta: [
             ["KIND", "Feline (Lions)"],
             ["CREED", "Zaoist Founders"],
-            ["TRAIT", "Deep social bonds; collective state strategy"]
+            ["TRAIT", "Deep social bonds; collective state strategy"],
+            ["LEADER", "Emperor Zaoren"]
           ],
-paragraphs: [
+          paragraphs: [
             { lead: true, text: "The Golden Empire sits at the heart of western civilization. It commands no single monopoly, yet quietly influences all three of the Garden's most valuable commodities: spice, silk, and venom. Lion emperors rarely conquer for territory alone; they conquer for balance." },
             "Their closest ally is the Celestial Empire, whose leopard merchants dominate many of the western trade routes. To the north lies Naga's Embrace, the great serpent kingdom whose venom has become one of the most valuable substances in the Garden. Though formally independent, the two realms have maintained unusually close relations for generations.",
             "That relationship changed dramatically during the reign of Emperor Zaoren.",
@@ -537,11 +568,42 @@ paragraphs: [
           code: "1.2",
           name: "Lunar Guardians",
           image: "images/factions/LunarGuardians4.jpg",
-          epithet: "The wolves have never ruled the Garden, yet no ruler ignores them.",
+          vox: {
+            tab: "Fireside conversations",
+            image: "", // e.g. "images/factions/vox/lunar-guardians.jpg" — falls back to the faction image until set
+            quotes: [
+              {
+                text: "My grandson asked where the Moon went. Told him it wandered off looking for warmer winters.",
+                who: "old woodcutter"
+              },
+              {
+                text: "Another caravan says amber prices are climbing. Good. Maybe my roof won't leak this winter.",
+                who: "timber merchant"
+              },
+              {
+                text: "Marshal says every soldier gets the same stew. Must be why they all complain the same.",
+                who: "cook, northern garrison"
+              },
+              {
+                text: "You can always tell spring's coming. The bears start shouting about the end of the world again.",
+                who: "shepherd"
+              },
+              {
+                text: "If Van had won the Serpent War, we'd still be arguing about it. Since he didn't, we're still arguing about it.",
+                who: "innkeeper"
+              },
+              {
+                text: "One day someone's going to sail far enough north and find the Moon hiding out there. You'll see.",
+                who: "fisherman"
+              }
+            ]
+          },
+          epithet: "The Empire's borders begin where the wolves decide to hold the line.",
           meta: [
             ["KIND", "Canine (All Wolves)"],
             ["CREED", "Zaoist Followers"],
-            ["TRAIT", "Unbreakable pack discipline; flawless teamwork"]
+            ["TRAIT", "Unbreakable pack discipline; flawless teamwork"],
+            ["LEADER", "First Marshal Alarick"]
           ],
            paragraphs: [
             { lead: true, text: "The Lunar Guardians occupy the harsh northwestern forests, far removed from the Garden's great commercial heartlands. They possess no vast spice fields, no silk workshops, and no lucrative caravan networks. Their wealth comes instead from dense northern timber, rich iron deposits, fine furs, amber, and generations of disciplined craftsmanship. Every crate bound for distant markets must first pass through Galeon Heights, whose harbors provide the Guardians their only reliable access to the Central Seas." },
@@ -561,10 +623,38 @@ paragraphs: [
             code: "1.3",
             name: "Stoneheart Kingdom",
             image: "images/factions/sh6.jpg",
+            vox: {
+              tab: "On the bridges",
+              image: "", // e.g. "images/factions/vox/stoneheart-kingdom.jpg" — falls back to the faction image until set
+              quotes: [
+                {
+                  text: "Every traveler says they're only staying one night. Funny how many forget to leave.",
+                  who: "innkeeper"
+                },
+                {
+                  text: "Bought a map yesterday. By morning the cartographer had already drawn a newer one.",
+                  who: "caravan merchant"
+                },
+                {
+                  text: "There's a scholar down the road who can name every kingdom in the Garden. Still gets lost walking home.",
+                  who: "fruit vendor"
+                },
+                {
+                  text: "My daughter says she's marrying an explorer. I asked if she'd like to know where he'll be living.",
+                  who: "potter"
+                },
+                {
+                  text: "Some collect gold. Around here we collect stories.",
+                  who: "bookbinder"
+                }
+              ]
+            },
+            epithet: "The longest journey begins where certainty ends.",
             meta: [
               ["KIND", "Apes (Chimps, Gorillas, Orangutans, Baboons, Mandrills)"],
               ["CREED", "Exodists Founders"],
-              ["TRAIT", "High cognitive awareness; pragmatic brokers of the bridge"]
+              ["TRAIT", "High cognitive awareness; pragmatic brokers of the bridge"],
+              ["LEADER", "High Chancellor Belor"]
             ],
             paragraphs: [
             { lead: true, text: "Situated upon the ancient bridge connecting the continents, the Stoneheart Kingdom occupies perhaps the most strategically valuable position in the Garden. Yet it seeks remarkably little territory. Rather than expanding, the ape kingdoms have spent generations building roads, bridges, workshops, observatories, and universities, transforming their homeland into the greatest crossroads of the known world. Every caravan eventually passes through Stoneheart, carrying not only goods, but news, languages, songs, arguments, and rumors from every corner of the Garden." },
@@ -584,17 +674,49 @@ paragraphs: [
           code: "1.4",
           name: "Mooncrest Matriarchy",
           image: "images/factions/MooncrestMatriarch1.jpg",
+          vox: {
+            tab: "Temple whispers",
+            image: "", // e.g. "images/factions/vox/mooncrest-matriarch.jpg" — falls back to the faction image until set
+            quotes: [
+              {
+                text: "The priest said doubt is the first step toward weakness. I spent the whole sermon wondering if he doubts that.",
+                who: "elderly worshipper"
+              },
+              {
+                text: "Poor Harek forgot the Matriarch's full title during prayer. Haven't seen him since.",
+                who: "woman leaving the temple"
+              },
+              {
+                text: "Every sermon ends with victory. Every caravan from the frontier says the war is still there.",
+                who: "camel driver"
+              },
+              {
+                text: "My son says the Vanguards never eat meat. Perhaps that's why they keep coming back.",
+                who: "butcher"
+              },
+              {
+                text: "The priests say suffering reveals truth. I suppose taxes must make saints of us all.",
+                who: "old merchant"
+              },
+              {
+                text: "Keep your voice down. These walls have carried prayers longer than they've carried secrets.",
+                who: "temple caretaker"
+              }
+            ]
+          },
           epithet: "Where hyenas rule, loyalty is measured in fear before blood.",
           meta: [
             ["KIND", "Hyaenidae (Hyenas & Wild Dogs)"],
             ["CREED", "Khamseen Follower (Patriarchal Enforcements)"],
-            ["TRAIT", "Total political control; enemies of the Vanguards"]
+            ["TRAIT", "Total political control; enemies of the Vanguards"],
+            ["LEADER", "Matriarch Xarha"]
           ],
           paragraphs: [
             { lead: true, text: "The Mooncrest Matriarchy is the uncompromising military engine of the Khamseen world. Long before Khamseen reached their borders, the hyenas had always been ruled by queens. The coming of the desert faith did not replace that tradition; it transformed it into something far more formidable. The Matriarchs saw in Khamseen not merely a religion, but the perfect instrument of statecraft. Its uncompromising doctrines, absolute hierarchy, and demand for unquestioning obedience became powerful tools for unifying an otherwise turbulent kingdom beneath a single sacred authority." },
             "The contradiction has never gone unnoticed. Several passages within the oldest Khamseen scriptures speak plainly of male authority and female submission. Mooncrest's priesthood answers these verses with elaborate interpretations, declaring the Matriarchs to be divinely appointed exceptions, chosen to embody the Iron Revelation itself. Any man bold enough to question this sacred reasoning rarely survives long enough to repeat the argument. Within Mooncrest, theological debate is not settled by scholars, but by public executions.",
             "Its queens maintain close ties with the Watcher's Dominions, whose ancient priesthood continues to preserve and interpret the oldest Khamseen scriptures. Their wars are financed in no small part by the immense caravan wealth of Midas' Realm, whose camel merchants profit from supplying armies marching beneath Khamseen banners.",
             "For the Matriarchs, war is not merely politics; it is revelation. Khamseen teaches that strength reveals truth and that suffering is the fire through which every worthy soul must pass. Every battlefield, famine, siege, and defeat is therefore interpreted as nature's judgment upon the weak. Mercy only delays that judgment. To conquer an unbeliever is righteous. To humiliate him until he abandons his falsehoods is holier still.",
+            "No figure embodies Mooncrest more completely than the current Iron Matriarch. During her reign, mercy has become almost synonymous with heresy. Generals who lose battles are rarely blamed for defeat itself, but for the weakness she believes made defeat possible. Ministers have disappeared for errors that other kingdoms would dismiss as misfortune. To her, failure is not an accident but a revelation of unworthiness. She is said to have rejected more peace envoys than any ruler in Mooncrest's history, insisting that a truth preserved by compromise was never truth at all. Admirers call her the purest servant of Khamseen since the Iron Revelation. Even among her own generals, some quietly wonder whether the kingdom now serves the faith, or the faith serves its queen.",
             "For centuries the Matriarchy has waged relentless campaigns against the Verdant Vanguards. On paper the wars should have ended long ago. The hyenas consistently inflict greater casualties. The Vanguards consistently replace them. The endless fertility of the southern plains, combined with immense spice revenues and religiously sanctioned labor, allows the Vanguards to replenish armies at a pace few kingdoms can match. Both civilizations have become prisoners of their own ideals. The Matriarchs wage every campaign as a sacred war against unbelief. The Vanguards glorify sacrifice so completely that defeat often inspires greater recruitment than victory.",
             "Mooncrest wages these wars without restraint. Decisive battles are celebrated, but so too are massacres, scorched-earth campaigns, and the public execution of captured nobles. Cities that resist are burned. Harvests are destroyed before winter. Every victory is meant to prove that Khamseen alone possesses the strength to rule.",
             "Their most infamous campaigns unfold as the Fungal Night approaches. Rather than merely pursuing retreating armies, Mooncrest commanders deliberately herd Vanguard forces toward the advancing Miasma, allowing the glowing tide to seal valleys and choke every avenue of escape. There they issue the same quiet challenge that has echoed across generations of holy wars.",
@@ -609,11 +731,42 @@ paragraphs: [
           code: "1.5",
           name: "Verdant Vanguards",
           image: "images/factions/vv10.jpg",
+          vox: {
+            tab: "Under the Banyan",
+            image: "", // e.g. "images/factions/vox/verdant-vanguards.jpg" — falls back to the faction image until set
+            quotes: [
+              {
+                text: "Grandfather says Suvartan gave every creature a duty. I just wish mine involved fewer weeds.",
+                who: "young farmer"
+              },
+              {
+                text: "The rains are late. Doesn't matter how wise the priests are if the clouds stop listening.",
+                who: "rice grower"
+              },
+              {
+                text: "We fed another caravan of refugees today. My wife says we'll need a bigger granary next year.",
+                who: "village elder"
+              },
+              {
+                text: "Funny how everyone's equal before a flooded river.",
+                who: "ferryman"
+              },
+              {
+                text: "The scriptures never planted a field. People did.",
+                who: "old shepherd"
+              },
+              {
+                text: "My son keeps asking why rats can't pray beside us. I still haven't found an answer that satisfies either of us.",
+                who: "potter"
+              }
+            ]
+          },
           epithet: "Their fields fed the Garden long before their laws divided it.",
           meta: [
             ["KIND", "Ungulates (Cows, Elks, Buffalos, Moose, Deer, Sheep, Rats)"],
             ["CREED", "Suvartan State Religion (Caste Hierarchy)"],
-            ["TRAIT", "Extreme bravery without strategy"]
+            ["TRAIT", "Extreme bravery without strategy"],
+            ["LEADER", "High Warden Somir"]
           ],
           paragraphs: [
             { lead: true, text: "Blessed with the most fertile plains on the planet, the Verdant Vanguards command the world's spice trade and possess agricultural wealth unmatched by any other Throne. Long before the great empires of the Garden emerged, Suvartan scholars transformed these plains into the cradle of organized agriculture, irrigation, astronomy, and medicine. Their libraries once housed the oldest collections of natural philosophy in the known world, where every river, season, beast, and medicinal herb was studied according to a single guiding belief: every place has a duty." },
@@ -645,6 +798,16 @@ paragraphs: [
           code: "2.1",
           name: "Watcher's Dominions",
           image: "images/factions/wd3.jpg",
+          vox: {
+            tab: "Pilgrim murmurs",
+            image: "", // e.g. "images/factions/vox/watchers-dominions.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Reptilian (Monitor Lizards & Komodo Dragons)"],
             ["CREED", "Khamseen Founders"],
@@ -665,6 +828,16 @@ paragraphs: [
           code: "2.2",
           name: "Naga's Embrace",
           image: "images/factions/NagasEmbrace4.jpg",
+          vox: {
+            tab: "Apothecary rumors",
+            image: "", // e.g. "images/factions/vox/nagas-embrace.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Reptilian (Pythons, Cobras, Anacondas, Black Mambas)"],
             ["CREED", "Khamseen Followers"],
@@ -686,6 +859,16 @@ paragraphs: [
           code: "2.3",
           name: "Midas' Realm",
           image: "images/factions/MidasTouch1.jpg",
+          vox: {
+            tab: "Caravan talk",
+            image: "", // e.g. "images/factions/vox/midas-realm.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Ungulates (Dromedary & Bactrian Camels)"],
             ["CREED", "Khamseen Followers"],
@@ -706,6 +889,16 @@ paragraphs: [
           code: "2.4",
           name: "Celestial Empire",
           image: "images/factions/CelestialEmpire1.jpg",
+          vox: {
+            tab: "Waystation murmurs",
+            image: "", // e.g. "images/factions/vox/celestial-empire.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Feline (Leopards & Snow Leopards)"],
             ["CREED", "Zaoist Followers"],
@@ -727,6 +920,16 @@ paragraphs: [
           code: "2.5",
           name: "Wetland's Pact",
           image: "images/factions/WetlandsPact3.jpg",
+          vox: {
+            tab: "River talk",
+            image: "", // e.g. "images/factions/vox/wetlands-pact.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Hybrids (Hippos, Crocodiles, Rhinos)"],
             ["CREED", "Hieromachy Followers (River Resistance)"],
@@ -745,6 +948,16 @@ paragraphs: [
           code: "2.6",
           name: "Galeon Heights",
           image: "images/factions/GaleonHeights2.jpg",
+          vox: {
+            tab: "Dockside banter",
+            image: "", // e.g. "images/factions/vox/galeon-heights.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Avian & Ungulates (Birds of Prey & Mountain Goats)"],
             ["CREED", "Khamseen Followers (Defensive Isolationists)"],
@@ -762,6 +975,16 @@ paragraphs: [
           code: "2.7",
           name: "Ursa Theocracy",
           image: "images/factions/UrsaTheocracy1.jpg",
+          vox: {
+            tab: "Monastery murmurs",
+            image: "", // e.g. "images/factions/vox/ursa-theocracy.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Ursidae (All Bears)"],
             ["CREED", "Khamseen Followers"],
@@ -782,6 +1005,16 @@ paragraphs: [
           code: "2.8",
           name: "Shadow's Teeth",
           image: "images/factions/ShadowsTeeth5.jpg",
+          vox: {
+            tab: "Miners talking",
+            image: "", // e.g. "images/factions/vox/shadows-teeth.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Rodents (Rats, Gophers, Squirrels, Porcupines)"],
             ["CREED", "Permutism Followers"],
@@ -799,6 +1032,16 @@ paragraphs: [
           code: "2.2",
           name: "Redsett Clans",
           image: "images/factions/Redsett1.jpg",
+          vox: {
+            tab: "Campfire stories",
+            image: "", // e.g. "images/factions/vox/redsett-clans.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Mustelidae & Mongoose (Weasels, Badgers, Otters, Mongooses)"],
             ["CREED", "Exodist Followers"],
@@ -832,6 +1075,16 @@ paragraphs: [
           code: "3.1",
           name: "Khanstan",
           image: "images/factions/Khanstan2.jpg",
+          vox: {
+            tab: "Tournament banter",
+            image: "", // e.g. "images/factions/vox/khanstan.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Feline (Bengal and Siberian Tigers)"],
             ["CREED", "Khamseen Followers"],
@@ -850,6 +1103,16 @@ paragraphs: [
           code: "3.2",
           name: "Nahaul's Domain",
           image: "images/factions/NahaulsDomain2.jpg",
+          vox: {
+            tab: "Bazaar bargaining",
+            image: "", // e.g. "images/factions/vox/nahauls-domain.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Feline (Jaguars)"],
             ["CREED", "Khamseen Followers"],
@@ -868,6 +1131,16 @@ paragraphs: [
           code: "3.3",
           name: "Boarheart Kingdom",
           image: "images/factions/Boarheart1.jpg",
+          vox: {
+            tab: "Mess-hall arguments",
+            image: "", // e.g. "images/factions/vox/boarheart-kingdom.jpg" — falls back to the faction image until set
+            quotes: [
+              { text: "Vox populi placeholder — overheard line one.", who: "" },
+              { text: "Vox populi placeholder — overheard line two.", who: "" },
+              { text: "Vox populi placeholder — overheard line three.", who: "" },
+              { text: "Vox populi placeholder — overheard line four.", who: "" }
+            ]
+          },
           meta: [
             ["KIND", "Ungulates (Giant Forest Hogs, Wild Boars, Warthogs)"],
             ["CREED", "Split Syncretic (55% Khamseen / 45% Permutism)"],
@@ -885,6 +1158,16 @@ paragraphs: [
             code: "3.4",
             name: "Steppe Guardians",
             image: "images/factions/sg1.jpg",
+            vox: {
+              tab: "Trail whispers",
+              image: "", // e.g. "images/factions/vox/steppe-guardians.jpg" — falls back to the faction image until set
+              quotes: [
+                { text: "Vox populi placeholder — overheard line one.", who: "" },
+                { text: "Vox populi placeholder — overheard line two.", who: "" },
+                { text: "Vox populi placeholder — overheard line three.", who: "" },
+                { text: "Vox populi placeholder — overheard line four.", who: "" }
+              ]
+            },
             meta: [
               ["KIND", "Ungulates (Horses, Zebras, Donkeys)"],
               ["CREED", "Permutism Followers (The Fluid Arteries)"],
@@ -902,6 +1185,16 @@ paragraphs: [
             code: "3.5",
             name: "Giants Realm",
             image: "images/factions/GiantsRealm5.jpg",
+            vox: {
+              tab: "Workshop chatter",
+              image: "", // e.g. "images/factions/vox/giants-realm.jpg" — falls back to the faction image until set
+              quotes: [
+                { text: "Vox populi placeholder — overheard line one.", who: "" },
+                { text: "Vox populi placeholder — overheard line two.", who: "" },
+                { text: "Vox populi placeholder — overheard line three.", who: "" },
+                { text: "Vox populi placeholder — overheard line four.", who: "" }
+              ]
+            },
             meta: [
               ["KIND", "Hybrid (Elephants and Giraffes)"],
               ["CREED", "Permutism Followers (The Intellectual Anchor)"],

@@ -157,8 +157,14 @@
     font-size:clamp(2.3rem,5.6vw,4.8rem); line-height:.98; letter-spacing:-.015em; max-width:18ch;
   }
   .epithet{
-    font-style:italic; color:var(--ink-dim); font-size:clamp(1rem,1.7vw,1.35rem);
-    margin-top:10px; max-width:36ch;
+    font-style:italic; color:#c6c0b5; font-size:clamp(1rem,1.7vw,1.35rem);
+    margin-top:14px; max-width:36ch;
+    align-self:flex-start;
+    background:rgba(4,5,8,.6);
+    backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    border-left:2px solid rgba(205,191,154,.45);
+    padding:8px 18px 8px 14px;
+    border-radius:0 3px 3px 0;
   }
   .meta{
     font-family:"Space Mono",monospace; font-size:10px; letter-spacing:.12em;
@@ -252,6 +258,36 @@
   }
   .fac-nav a.dim{ color:var(--ink-dim); border-bottom-color:rgba(236,230,220,.25); }
   .fac-nav a.dim:hover{ color:var(--ink); }
+
+  /* ── faction page tabs (dossier / vox populi) ─────────── */
+  .fac-tabs{ margin:30px 0 6px; display:flex; gap:10px; flex-wrap:wrap; }
+  .fac-tab{
+    background:rgba(6,7,10,.5); border:1px solid rgba(236,230,220,.18);
+    color:var(--ink-dim); font-family:"Space Mono",monospace; font-size:10px;
+    letter-spacing:.22em; text-transform:uppercase; padding:9px 16px; cursor:pointer;
+    backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    transition:color .35s ease, border-color .35s ease, background .35s ease;
+  }
+  .fac-tab:hover{ color:var(--ink); border-color:rgba(236,230,220,.4); }
+  .fac-tab.active{ color:var(--glow); border-color:var(--glow); background:rgba(6,7,10,.7); }
+  .fac-pane[hidden]{ display:none; }
+  .fac-pane.pane-in{ animation:paneIn .7s ease both; }
+  @keyframes paneIn{ from{ opacity:0; transform:translateY(16px); } to{ opacity:1; transform:none; } }
+
+  .vox-quote{
+    width:fit-content; max-width:46ch; margin:28px 0 0;
+    font-style:italic; font-size:clamp(1.05rem,1.5vw,1.3rem); color:#d8d2c8;
+    background:rgba(4,5,8,.6); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    border-left:2px solid rgba(205,191,154,.45);
+    padding:14px 20px; border-radius:0 3px 3px 0;
+  }
+  .vox-quote:nth-child(even){ margin-left:6ch; }
+  .vox-who{
+    display:block; margin-top:9px;
+    font-family:"Space Mono",monospace; font-style:normal; font-size:9.5px;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--ink-dim);
+  }
+  @media (max-width:760px){ .vox-quote:nth-child(even){ margin-left:0; } }
 
   /* ── inline cross-references (auto-linked lore terms) ──── */
   .xref{
@@ -512,20 +548,70 @@
     const all = allFactions();
     const idx = all.findIndex(x => x.faction.slug === faction.slug);
     const prev = all[idx - 1], next = all[idx + 1];
+    const vox = faction.vox;
+    const tabsHTML = vox ? `
+        <div class="fac-tabs reveal d1">
+          <button class="fac-tab active" data-pane="dossier">Chronicle</button>
+          <button class="fac-tab" data-pane="vox">${vox.tab}</button>
+        </div>` : '';
+    const voxPane = vox ? `
+        <div class="fac-pane" data-pane="vox" hidden>${vox.quotes.map(q => {
+          const text = typeof q === 'object' ? q.text : q;
+          const who = typeof q === 'object' && q.who ? `<span class="vox-who">— ${q.who}</span>` : '';
+          return `<blockquote class="vox-quote">“${linkify(text, faction.slug)}”${who}</blockquote>`;
+        }).join('')}</div>` : '';
     document.getElementById('view-faction').innerHTML = `
       <section class="fac" data-phase="0" aria-label="${faction.name}">
         <svg class="crest"><use href="#${region.crest}"/></svg>
         <div class="panel-tag reveal">${region.cohort}${faction.code ? ' · FILE ' + faction.code : ''}</div>
         <h2 class="reveal d1">${faction.name}</h2>
         ${faction.epithet ? `<div class="epithet reveal d1">${faction.epithet}</div>` : ''}
-        ${metaHTML(faction.meta)}
-        ${paragraphsHTML(faction.paragraphs, null, faction.slug)}
+        ${tabsHTML}
+        <div class="fac-pane" data-pane="dossier">
+          ${metaHTML(faction.meta)}
+          ${paragraphsHTML(faction.paragraphs, null, faction.slug)}
+        </div>
+        ${voxPane}
         <div class="fac-nav reveal d3">
           <a href="#factions">← All Clades</a>
           ${prev ? `<a class="dim" href="#faction/${prev.faction.slug}">← ${prev.faction.name}</a>` : ''}
           ${next ? `<a class="dim" href="#faction/${next.faction.slug}">${next.faction.name} →</a>` : ''}
         </div>
       </section>`;
+    if (vox) initFactionTabs(region, faction);
+  }
+
+  /* Tab switching on faction pages. Each tab has its own backdrop image:
+     the dossier keeps the faction image (layer 0, set by setPhase), the vox
+     tab crossfades to vox.image on layer 1 (falling back to the faction
+     image until one is provided). */
+  function initFactionTabs(region, faction){
+    const wrap = document.getElementById('view-faction');
+    const tabs = wrap.querySelectorAll('.fac-tab');
+    const panes = wrap.querySelectorAll('.fac-pane');
+    tabs.forEach(btn => btn.addEventListener('click', () => {
+      if (btn.classList.contains('active')) return;
+      const key = btn.dataset.pane;
+      tabs.forEach(b => b.classList.toggle('active', b === btn));
+      panes.forEach(p => {
+        const on = p.dataset.pane === key;
+        p.hidden = !on;
+        p.classList.remove('pane-in');
+        if (on){ void p.offsetWidth; p.classList.add('pane-in'); }
+      });
+      ensureLayers(2);
+      if (key === 'vox'){
+        const img = faction.vox.image || faction.image || region.visual.img;
+        layers[1].style.background = bgCSS(img);
+        layers[0].classList.remove('active');
+        layers[1].classList.add('active');
+      } else {
+        layers[0].classList.add('active');
+        layers[1].classList.remove('active');
+      }
+      panSection = null;
+      updatePan();
+    }));
   }
 
   function allFactions(){
@@ -590,6 +676,10 @@
   const tintEl = document.querySelector('.tint');
   let layers = [], viewConfigs = [], currentPhase = -1, fxMode = 'dust';
 
+  function bgCSS(img){
+    return `linear-gradient(0deg, rgba(0,0,0,.15), rgba(0,0,0,.15)), url("${img}") center top/cover no-repeat`;
+  }
+
   function ensureLayers(n){
     while (layers.length < n) {
       const el = document.createElement('div');
@@ -607,9 +697,7 @@
 
     layers.forEach((layer, idx) => {
       layer.classList.toggle('active', idx === phaseIdx);
-      layer.style.background = config.img
-        ? `linear-gradient(0deg, rgba(0,0,0,.15), rgba(0,0,0,.15)), url("${config.img}") center top/cover no-repeat`
-        : config.grad;
+      layer.style.background = config.img ? bgCSS(config.img) : config.grad;
     });
 
     tintEl.style.background = config.tint;
