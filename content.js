@@ -46,7 +46,7 @@ window.CONTENT = {
     hero: {
       kicker: "Human Shadows · The world before the story",
       title: "A year<br>that does<br>not <em>forgive</em>",
-      sub: "One turn of this world is twelve months long. The light comes in floods and the dark comes in famines. Nothing here is gentle, and nothing here is brief.",
+      sub: "One turn of this world is twelve months long. The light comes in floods and the dark comes in famines. Nothing here is gentle, and nothing here is brief — but nothing is ever late. The dawn returns to the very hour the oldest calendars promise, and the calendars have never needed correcting. The faithful call this proof of divine order, and they have never once been contradicted.",
       scrollcue: "SCROLL TO TURN THE YEAR",
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     },
