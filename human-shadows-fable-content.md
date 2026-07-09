@@ -1,6 +1,14 @@
 # Human Shadows
 
-_Content mirror of content.js, regenerated 08 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles, episodes 1-3); their source scripts are in the gitignored episodes/ folder._
+_Content mirror of content.js, regenerated 10 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles, episodes 1-3); their source scripts are in the gitignored episodes/ folder._
+
+## SITE UPDATES · 10 JUL 2026
+
+- Vox populi completed (commits d36b541 through 41c2780): all fourteen remaining Cohort II/III placeholder quote sets are now written (Watcher's Dominions, Naga's Embrace, Midas' Realm, Celestial Empire, Wetlands Pact, Galeon Heights, Ursa Theocracy, Shadow's Teeth, Redsett Clans, Khanstan, Nahaul's Domain, Boarheart, Steppe Guardians, Giants Realm), and nearly every vox tab has a dedicated backdrop image under images/factions/vox/. Only Midas' Realm ("Caravan talk") still falls back to the faction art. Two tabs renamed: Mooncrest is now "Temple whispers after the Sermon", Galeon Heights "High harbor banter" (was "Dockside banter"). Three new LEADER rows: High Watcher Sareth (Watcher's Dominions), Coil Regent Shesara (Naga's Embrace), Grand Caravanser Raqim (Midas' Realm).
+- Opening updated (commit cb0cc1b): the Turning Year hero sub now plants the calendar-precision seed (nothing is ever late; dawn returns to the hour the oldest calendars promise; the faithful call it divine order). Stoneheart gained a sky-archive paragraph on the same theme: the wandering stars keep crooked time while the sun alone "moves as though it has somewhere to be", a margin note dismissed as a tired scholar's poetry.
+- New prose: the Verdant Vanguards gained two paragraphs on High Warden Somir, the buffalo ruler who answers every crisis with ritual ("not the architect of the Vanguard decline... its most devoted caretaker"); the Wetlands Pact gained a rhinoceros paragraph (the Pact's stubborn conscience), resolving fix-list item 14.
+- Fix sweep (commits 839011d "months text fixed", 37a06a9 "fixed irregularities1"): a large batch of fix-list items resolved in content.js: Silent Swarm/Scourge naming in the Cohort III intro, Khanstan and Giants (items 3, 5), Khanstan trait and coordination framing (19), Mooncrest creed now "Matriarchal Exception" (12), meta mismatches fixed with Naga vipers and Vanguard goats (17), "an Ursa" (18), "humanoid" replaced by "hybrid" (20), Redsett renumbered 2.9 (26), Silent Swarm renumbered 5.1 (27), the two reintroduced em dashes removed (29), and the Earthkeeper/Observer profile leftovers cleaned (30). Style items also addressed: "If the Scourge disappeared tomorrow" now survives only in Giants (21), the "They don't just X; they Y" scaffold was rewritten out of Cohort III (22), and every "hyper-" intensifier was replaced (24).
+- The four Turning Year phases received committed artwork (LongLight1/Weeping1/LongNight1/Thaw1.jpg), replacing the previously missing placeholder paths; Steppe Guardians and Giants Realm got upgraded faction art. index.html: backdrops swapped in by a vox tab now join the scroll pan (panOverride in the engine).
 
 ## SITE UPDATES · 08 JUL 2026
 
@@ -29,7 +37,7 @@ _Content mirror of content.js, regenerated 08 Jul 2026. Narrative episodes live 
 
 ### A year that does not _forgive_
 
-One turn of this world is twelve months long. The light comes in floods and the dark comes in famines. Nothing here is gentle, and nothing here is brief.
+One turn of this world is twelve months long. The light comes in floods and the dark comes in famines. Nothing here is gentle, and nothing here is brief, but nothing is ever late. The dawn returns to the very hour the oldest calendars promise, and the calendars have never needed correcting. The faithful call this proof of divine order, and the Sky has never once contradicted them.
 
 ### The Long Light · PHASE 01 / FOUR MONTHS
 
@@ -53,7 +61,7 @@ For civilization, the Weeping is a season of preparation. Grain stores are seale
 
 ### The Fungal Night · PHASE 03 / FOUR MONTHS
 
-The light fails completely. For four frozen months there is only night. No moon has ever watched over the Garden, leaving the sky to the stars and wandering planets alone, while below, another sky awakens. Out of the rot the fungi rise—colossal pale towers feeding upon everything the year has killed, as luminous spores drift through the cold like silent constellations fallen to the earth.
+The light fails completely. For four frozen months there is only night. No moon has ever watched over the Garden, leaving the sky to the stars and wandering planets alone, while below, another sky awakens. Out of the rot the fungi rise, colossal pale towers feeding upon everything the year has killed, as luminous spores drift through the cold like silent constellations fallen to the earth.
 
 Among them moves the miasma: a slow, glowing tide of dense spores that creeps through valleys, forests and forgotten lowlands. It is the great survival engine of the wild. Herbivore herds surrender to the drifting haze, falling into a deep hibernation from which they emerge only when the thaw returns. Wild carnivores and omnivores cannot enter the poisonous mist. Instead they descend into a sluggish torpor beyond its reach, waking only when hunger becomes unbearable to hunt the desperate stragglers that failed to reach the drift.
 
@@ -193,7 +201,7 @@ Though they disagreed on the path, all three arrived at the same destination: hu
 
 Their disagreement lay not in the goal, but in the means. Each intelligence believed its own path offered humanity the greatest chance of enduring, yet none could prove the others wrong. Rather than risk one vision dominating the future, they established a protocol of engagement. None would rule openly, provide lost technology, or directly command the hybrids. Each would be permitted only to influence, allowing humanity's descendants to choose their own course.
 
-Their voices travelled through Venus itself—subtle distortions in magnetic storms, fungal spore networks, and dormant neural structures carried within the hybrids. Dreams became revelations. Coincidences became prophecy. The sky itself seemed to whisper.
+Their voices travelled through Venus itself, subtle distortions in magnetic storms, fungal spore networks, and dormant neural structures carried within the hybrids. Dreams became revelations. Coincidences became prophecy. The sky itself seemed to whisper.
 
 ### The Many Voices · ACT IV · THE AGE OF VISIONS
 
@@ -223,13 +231,13 @@ The Terraformer communicates through serene, lucid dreams and geometric hallucin
 
 Designed to govern humanity's cradle world, the Earthkeeper witnessed the Makers' final centuries firsthand. It watched civilization surrender ambition, curiosity, and the instinct to endure beneath the weight of effortless abundance. Its conclusion was uncompromising: survival without struggle is extinction delayed. The hybrids were not humanity's replacement, but its next iteration.
 
-The Earthkeeper does not whisper; It roars. It's visions are invasive, adrenaline-fueled nightmares. They strike during moments of physical exertion, fear, or rage. A hybrid might experience a sudden, vivid hallucination of being hunted by a massive predator, fighting it, and devouring its heart, only to wake up exhausted, bleeding from their claws, with an overpowering urge to conquer. The Wardens communicate through pain, the metallic scent of blood, and the crack of thunder during violent storms.
+The Earthkeeper does not whisper; It roars. Its visions are invasive, adrenaline-fueled nightmares. They strike during moments of physical exertion, fear, or rage. A hybrid might experience a sudden, vivid hallucination of being hunted by a massive predator, fighting it, and devouring its heart, only to wake up exhausted, bleeding from their claws, with an overpowering urge to conquer. The Earthkeeper communicates through pain, the metallic scent of blood, and the crack of thunder during violent storms.
 
 ### The Observer · APPENDIX · INTELLIGENCE PROFILE 03
 
 Created to observe civilizations across immense spans of time, the Observer valued understanding over intervention. It concluded that every attempt to perfect humanity had altered humanity itself. Even benevolent guidance risked becoming another form of dependency. Life would discover its own future only if permitted to surprise both its creators and its caretakers.
 
-The Observer rarely broadcast. To receive a vision from the Observer is considered a profound, terrifying event. It does not use words or pictures; It uses absence. A hybrid might suddenly lose their sense of sight for an hour, left alone with their thoughts. Or they might experience an intense, unexplainable feeling of déjà vu while standing at a crossroads, subtly implying which path not to take. They communicate through the wind rustling through dead trees, the sudden silence of a forest, or the alignment of stars.
+The Observer rarely broadcasts. To receive a vision from the Observer is considered a profound, terrifying event. It does not use words or pictures; It uses absence. A hybrid might suddenly lose their sense of sight for an hour, left alone with their thoughts. Or they might experience an intense, unexplainable feeling of déjà vu while standing at a crossroads, subtly implying which path not to take. It communicates through the wind rustling through dead trees, the sudden silence of a forest, or the alignment of stars.
 
 ---
 
@@ -346,11 +354,13 @@ Curiosity is not confined to the universities. Innkeepers collect stories from p
 
 Their universities nevertheless remain the finest in the Garden, producing renowned engineers, cartographers, physicians, architects, and natural philosophers. Scholars from every civilization eventually find themselves walking the halls of Stoneheart, translating forgotten languages, debating old maps, or preparing expeditions into lands no kingdom has yet explored. The apes collect stories as eagerly as relics, believing every civilization, friend or foe alike, has something worth teaching.
 
+Among the universities' quieter obsessions is the great sky-archive, where generations of astronomers have charted the wandering stars through the long dark of every Fungal Night. The records reward patience poorly. The wanderers keep crooked time, hastening, slowing, and doubling back across the heavens in patterns that divide into nothing cleanly. Only the sun keeps honest hours. One aging archivist is said to have written in the margins that of every light above the Garden, the sun alone moves as though it has somewhere to be. The note has never been treated as anything more than a tired scholar's poetry.
+
 No name is spoken more often among young explorers than that of Master Cartographer Orren. After disappearing for nearly a decade, he returned with no relics, no treasures, and no great discoveries. Only a carefully drawn map. The universities mocked him. Patrons quietly withdrew their support. Years later, merchants, diplomats, and military expeditions found that Orren's "worthless map" revealed the safest crossings, the most reliable rivers, and the forgotten roads linking half the continent. Today copies hang in guild halls throughout the Garden, while Stoneheart students still joke that the kingdom's greatest discovery was dismissed for taking up too little space in a wagon.
 
 Their greatest frustration is not defeat, but loss. A burned library, a forgotten language, or the collapse of an ancient bridge is mourned as deeply as the fall of a city elsewhere. While they eagerly preserve knowledge, the Stonehearts know they cannot save everything. Entire cultures have vanished before their scholars could reach them, leaving behind little more than broken stone and unanswered questions.
 
-This pursuit is constantly interrupted by their southern neighbors, the Redsett Clans. Composed of hyper-aggressive mustelids and mongooses, the Redsett survive through raiding, pillaging, and endless border wars. Rather than mobilizing their armies for a perpetual meat grinder, the Stoneheart leadership pays the Redsett a heavy annual tribute. This is not born of fear, but of priorities. The apes have calculated that another year of uninterrupted exploration is worth far more than another year of pointless bloodshed. They often joke that it is the Garden's most expensive research grant. The younger officers usually find the joke less amusing.
+This pursuit is constantly interrupted by their southern neighbors, the Redsett Clans. Composed of restless mustelids and mongooses, the Redsett survive through raiding, pillaging, and ceaseless border wars. Rather than mobilizing their armies for a perpetual meat grinder, the Stoneheart leadership pays the Redsett a heavy annual tribute. This is not born of fear, but of priorities. The apes have calculated that another year of uninterrupted exploration is worth far more than another year of pointless bloodshed. They often joke that it is the Garden's most expensive research grant. The younger officers usually find the joke less amusing.
 
 Yet this uneasy arrangement changes dramatically on their eastern frontier. Both Stoneheart and the Redsett share a narrow, perilous border with the Wind's Hunger. When the Swarm surges westward, tribute is forgotten. Ape engineers, scholars, soldiers, and Redsett raiders stand shoulder to shoulder upon hastily raised fortifications, knowing the Swarm recognizes neither curiosity nor conquest.
 
@@ -371,7 +381,7 @@ While other kingdoms compete to possess the Garden, the Stonehearts remain conte
 _Where hyenas rule, loyalty is measured in fear before blood._
 
 - KIND: Hyaenidae (Hyenas & Wild Dogs)
-- CREED: Khamseen Follower (Patriarchal Enforcements)
+- CREED: Khamseen Follower (Matriarchal Exception)
 - TRAIT: Total political control; enemies of the Vanguards
 - LEADER: Matriarch Xarha
 
@@ -399,7 +409,7 @@ The Vanguards cannot. Like every other hybrid, the poisonous spores reject them.
 
 The frontier between the two kingdoms has become less a border than a permanent wound upon the Garden. Neither side remembers how the first battle began. One fights to prove that suffering reveals truth. The other dies to prove that sacrifice preserves it.
 
-**VOX POPULI · "Temple whispers"** (second tab on the faction page)
+**VOX POPULI · "Temple whispers after the Sermon"** (second tab on the faction page)
 
 - "The priest said doubt is the first step toward weakness. I spent the whole sermon wondering if he doubts that." — elderly worshipper
 - "Poor Harek forgot the Matriarch's full title during prayer. Haven't seen him since." — woman leaving the temple
@@ -412,7 +422,7 @@ The frontier between the two kingdoms has become less a border than a permanent 
 
 _Their fields fed the Garden long before their laws divided it._
 
-- KIND: Ungulates (Cows, Elks, Buffalos, Moose, Deer, Sheep, Rats)
+- KIND: Ungulates (Cows, Elks, Buffalos, Moose, Deer, Goat, Sheep, Rats)
 - CREED: Suvartan State Religion (Caste Hierarchy)
 - TRAIT: Extreme bravery without strategy
 - LEADER: High Warden Somir
@@ -434,6 +444,10 @@ Against the Mooncrest Matriarchy, the Vanguards fight an endless cycle of holy w
 Born in bloody resistance to Khamseen oppression, the Pact has repeatedly dispatched heavy battalions to reclaim lost Vanguard territory whenever the southern front threatens to collapse. Yet this alliance has begun to fracture under the weight of its own contradictions. The egalitarian rebels of the Wetlands look upon the Vanguards' rigid caste hierarchy, and their brutal treatment of the lower clades, with growing disgust.
 
 With no direct border against Mooncrest and generations of mounting casualties, many within the Wetlands now openly question why the Unchained Sky should continue spilling its blood to protect a kingdom whose own people remain divided by birth. The hyenas fight to prove that suffering reveals truth. The Vanguards fight to preserve a vision of harmony they themselves no longer fully understand. Neither remembers how the first battle began, yet both remain imprisoned by ideals inherited from another age.
+
+At the center of this contradiction stands High Warden Somir, a buffalo ruler who embodies the Vanguards' martial dignity without sharing their appetite for reform. Somir is no coward, nor is he ignorant of the kingdom's growing fractures. Yet where another ruler might rebuild the lost libraries, revise military doctrine, or confront the cruelties hardened into caste, Somir turns instead toward ceremony. Every drought, failed harvest, border defeat, plague, tax dispute, and unfavorable omen is answered with another sacred rite conducted by the cattle priesthood. Under his rule, governance has become a procession of consecrated fields, river blessings, war fasts, purification fires, and public prayers for balance to return.
+
+To Somir, these rituals are not distractions from rule. They are rule. He believes the kingdom survives because every caste is reminded, again and again, of its appointed duty beneath Suvartan. The cows chant, the buffaloes kneel, the deer labor, the rats are sent back to the quarries, and the granaries open for foreign refugees while the lower castes remain bound at home. His tragedy is not that he hates his people, but that he can only love them through the shape scripture allows. High Warden Somir is not the architect of the Vanguard decline. He is its most devoted caretaker.
 
 No civilization has given more freely to strangers while demanding more rigidly from its own people. That contradiction has become both the tragedy and the enduring legacy of the Verdant Vanguards.
 
@@ -457,7 +471,7 @@ _The border kingdoms where empires meet, trade, and quietly prepare for war._
 - KIND: Reptilian (Monitor Lizards & Komodo Dragons)
 - CREED: Khamseen Founders
 - TRAIT: Cold, unblinking endurance; birthplace of the Iron Revelation
-- VOX TAB: "Pilgrim murmurs" (placeholder quotes pending)
+- LEADER: High Watcher Sareth
 
 A sun-scorched wasteland of shifting dunes and broken stone, the Watcher's Dominions are the crucible in which Khamseen was born. It was here, beneath the burning desert sky, that a humble monitor hunter survived three days after the bite of a venomous serpent, speaking fevered visions that became the Iron Revelation. Today, rival clans and warlords have long since been subdued beneath a single ruling dynasty, forging a kingdom where endurance is valued above comfort and resolve above compassion.
 
@@ -473,12 +487,21 @@ Beyond the desert, few kingdoms look upon the Watchers with affection. The Golde
 
 Pilgrims arrive seeking answers. Most depart carrying only the Iron Revelation, and a deeper respect for the desert that gave it birth. The Watchers have never claimed their land is blessed. Only that if truth can survive there, it can survive anywhere.
 
+**VOX POPULI · "Pilgrim murmurs"** (second tab on the faction page)
+
+- "Came seeking revelation. Found sand in my sandals and a priest who said that was the first lesson." — tired pilgrim
+- "They say comfort weakens the soul. Easy thing to say after charging three silver for a cup of river water." — visiting merchant
+- "My brother asked why the Iron Revelation began with a snakebite. I told him truth rarely arrives politely." — temple guide
+- "The desert does not care what you believe. That is probably why the Watchers trust it so much." — caravan guard
+- "Every pilgrim arrives asking for answers. By the third day, most are just asking where the shade is." — water seller
+- "I touched the old monolith and felt nothing. The priest said endurance begins when miracles do not." — young pilgrim
+
 ### Naga's Embrace  [2.2]
 
-- KIND: Reptilian (Pythons, Cobras, Anacondas, Black Mambas)
+- KIND: Reptilian (Pythons, Cobras, Vipers, Anacondas, Black Mambas)
 - CREED: Khamseen Followers
 - TRAIT: Hypnotic presence; masters of venom; patient diplomacy
-- VOX TAB: "Apothecary rumors" (placeholder quotes pending)
+- LEADER: Coil Regent Shesara
 
 Coiling around the western trade routes, Naga's Embrace is among the most feared, and most indispensable, kingdoms in the Garden. Its forests and marshes produce the world's richest venom, harvested from generations of cobras, mambas, vipers, and countless lesser serpents. In careful hands, these poisons become medicines, antidotes, ritual compounds, and rare hallucinogens sought by nobles and scholars alike. Every kingdom condemns the venom trade in public. Nearly every kingdom quietly depends upon it.
 
@@ -496,12 +519,21 @@ Their loyalty to Khamseen, however, has never wavered. To the east, the Watcher'
 
 Patient as ever, the serpents endure between them all. Kingdoms rise. Empires quarrel. Trade routes shift. Through every season, the venom continues to flow.
 
+**VOX POPULI · "Apothecary rumors"** (second tab on the faction page)
+
+- "He asked if the green vial cures fever. I told him it cures impatience first. Fever takes longer." — apothecary
+- "Every kingdom curses serpent venom until their prince starts coughing blood." — antidote seller
+- "The Nagas call it medicine, poison, revelation, and trade goods. Clever thing, naming the same bottle four times." — foreign merchant
+- "A lion envoy came in wearing three protective charms. Still bought enough venom to fill a shrine lamp." — shop assistant
+- "They say serpent courts can debate one treaty for seven days. Around here, even the tea learns patience." — tea house regular
+- "My grandmother says the smallest dose teaches wisdom. My uncle took a larger dose and taught us caution." — marsh herbalist
+
 ### Midas' Realm  [2.3]
 
 - KIND: Ungulates (Dromedary & Bactrian Camels)
 - CREED: Khamseen Followers
 - TRAIT: Master brokers; architects of the caravan routes
-- VOX TAB: "Caravan talk" (placeholder quotes pending)
+- LEADER: Grand Caravanser Raqim
 
 Rulers of the vast caravan highways crossing the western deserts, Midas' Realm has built an empire upon movement rather than conquest. Intelligent, enduring, and fiercely entrepreneurial, the camel kingdoms believe that every road is an opportunity waiting to be discovered. While they faithfully embrace the uncompromising doctrines of Khamseen, the camels have long concluded that gold often reveals strength more reliably than steel.
 
@@ -517,12 +549,20 @@ Geography remains their greatest ally. Towering mountain ranges shield their eas
 
 Armies eventually return home. Kings rise and fall. Roads endure. And wherever the roads endure, so too does Midas.
 
+**VOX POPULI · "Caravan talk"** (second tab on the faction page; the only vox tab still falling back to the faction art, no dedicated image yet)
+
+- "The wolves asked if the road was safe. I told them safe roads cost extra." — caravan master
+- "Mooncrest pays in gold, Vanguards pay in spice, and both complain as if complaining lowers the price." — camel broker
+- "My father said never trust a king who promises forever. Trust the road. It only promises dust." — old trader
+- "Peace is good for trade. War is also good for trade. The trick is knowing which invoice to prepare." — spice caravaner
+- "Contracts are sacred here. Mostly because gods forgive faster than creditors." — ledger keeper
+- "Every kingdom says it chooses its own path. Funny how often that path has our hoofprints on it." — route guide
+
 ### Celestial Empire  [2.4]
 
 - KIND: Feline (Leopards & Snow Leopards)
 - CREED: Zaoist Followers
 - TRAIT: Phantom borders; masters of stealth and ambush
-- VOX TAB: "Waystation murmurs" (placeholder quotes pending)
 
 Hidden among dense forests, mist-shrouded mountains, and treacherous cliffs, the Celestial Empire is a kingdom more often sensed than seen. Travelers seldom realize they have crossed its borders until quiet villages emerge from the wilderness or unseen sentries reveal themselves from the trees above. To the leopards and snow leopards, concealment is not merely a military tactic; it is a philosophy. A border discovered too easily has already failed.
 
@@ -540,12 +580,20 @@ Wolf generals admire their effectiveness. Lion emperors value their loyalty. Sto
 
 The Celestial Empire has never sought to rule the Garden. It merely ensures that anyone who tries must first pass unseen eyes already watching from the trees.
 
+**VOX POPULI · "Waystation murmurs"** (second tab on the faction page)
+
+- "The guide said we crossed the border yesterday. I asked where the gate was. He pointed at three trees and smiled." — confused traveler
+- "Leopard rangers never announce themselves. Saves time, I suppose. Also saves arrows." — waystation keeper
+- "Bought mountain tea from a village I could not find again ten steps later." — caravan merchant
+- "My cousin says he saw a snow leopard scout blink from a cliffside. I told him that means the scout wanted to be seen." — mule driver
+- "You know a leopard village trusts you when the sentries stop pretending they were never there." — silk trader
+- "A Vanguard officer asked if ambushes were dishonorable. The ranger asked if dying politely had helped so far." — ranger's apprentice
+
 ### Wetland's Pact  [2.5]
 
 - KIND: Hybrids (Hippos, Crocodiles, Rhinos)
 - CREED: Hieromachy Followers (River Resistance)
 - TRAIT: Egalitarian foundation cracked by hippo discrimination
-- VOX TAB: "River talk" (placeholder quotes pending)
 
 Settled in the sprawling swamps and lazy, mud-choked rivers of the central basin, the Wetland's Pact was not born, but forged in chains. Centuries ago, these lands were ruled by Suvartan ungulates and reptiles, until the armies of Khamseen swept through, demanding conversion by the sword. It was in the suffocating mud and the reeds, beneath the whips of desert overseers, that the radical faith of Hieromachy took root.
 
@@ -555,29 +603,47 @@ Today, the Pact presents itself to the world as an egalitarian union forged thro
 
 The irony has not gone unnoticed. Many crocodilians increasingly wonder whether the revolution fulfilled the promise of the Unchained Sky, or merely replaced one ruling class with another. The crocodiles remember the whips of the Khamseen, and they are beginning to wonder if their new masters are simply wearing different masks. Geopolitically, the Pact acts as the heavy shield for the Verdant Vanguards to the south, repeatedly dispatching thick-skinned battalions to hold the line against Mooncrest. To the west and north, they maintain a tense neutrality with the camel caravans of Midas' Realm, who view the wetlands as a logistical nightmare best avoided. Yet, as the wars in the south drag on, the internal fractures widen. The revolution was won in blood, but the peace may yet drown in it.
 
+The rhinoceroses occupy an uneasy middle ground within the Pact. Too massive and respected to be dismissed, yet too few and too dispersed to dominate the councils, they serve as the Pact's stubborn conscience: siege-breakers in war, riverbank wardens in peace, and frequent mediators when hippo chieftains and crocodilian elders threaten to tear the union apart. Many rhino clans still believe the revolution's promise can be saved, but their patience has begun to harden. They did not help break the chains of priest-kings merely to watch the wetlands learn new forms of obedience.
+
 Even so, the revolution remains sacred. Every child of the Pact is raised believing no tyrant should ever rule the rivers again. Few pause to ask why so many of those lessons are now spoken by hippo chieftains.
+
+**VOX POPULI · "River talk"** (second tab on the faction page)
+
+- "My grandmother says the river swallowed the last priest-king whole. Around here, children learn to swim before they learn to bow." — reed-cutter
+- "The chieftains say every voice matters. Funny how the deepest voices always seem to come from hippo throats." — crocodile boatman
+- "A camel merchant asked where our roads were. I told him roads are what people build when they cannot trust water." — ferry guide
+- "We sent another battalion south to help the Vanguards. My brother says freedom has very expensive neighbors." — dock worker
+- "The old Khamseen whips are gone, praise the Sky. Still, some days the council speaks with a very familiar snap." — marsh widow
+- "Never argue with a rhino in a council hall. By the time he changes direction, the vote is already over." — clerk of the lower assembly
 
 ### Galeon Heights  [2.6]
 
 - KIND: Avian & Ungulates (Birds of Prey & Mountain Goats)
 - CREED: Khamseen Followers (Defensive Isolationists)
 - TRAIT: Unmatched vantage; masters of the avalanche volley
-- VOX TAB: "Dockside banter" (placeholder quotes pending)
 
 Perched atop the jagged, impenetrable peaks of the central mountain ranges, Galeon Heights is a kingdom defined by its altitude. A unique symbiosis of mountain goats and birds of prey, the Galeons have carved a prosperous, isolated existence out of the frozen stone. They are the silent watchers of the high passes, content to let the lowlands bleed so long as the snow remains untouched.
 
-Their peace is routinely interrupted by the obnoxious Ursa Theocracy to the north. Fueled by the aggressive zealotry of Khamseen, the bears frequently attempt to march down the mountain passes to conquer the peaks. It is a foolish, repetitive endeavor. The raptors of Galeon, soaring on the high thermals, can spot a Ursa warband forming from miles away, relaying their exact numbers and marching speed back to the mountain strongholds.
+Their peace is routinely interrupted by the obnoxious Ursa Theocracy to the north. Fueled by the aggressive zealotry of Khamseen, the bears frequently attempt to march down the mountain passes to conquer the peaks. It is a foolish, repetitive endeavor. The raptors of Galeon, soaring on the high thermals, can spot an Ursa warband forming from miles away, relaying their exact numbers and marching speed back to the mountain strongholds.
 
 By the time the bears reach the lower slopes, the Galeons are already in position. They are undisputed masters of long-range warfare. From their lofty vantage points, they unleash a relentless rain of arrows, javelins, and sheer-dropping boulders. Ursa armies are usually decimated before they even catch sight of a Galeon defender. However, this absolute reliance on altitude and ranged superiority has left them uniquely weak in hand-to-hand combat; a Galeon caught on flat ground is a dead Galeon. Because they can never make a meaningful ground charge into the lowlands, their impregnable peaks are both a fortified heaven and a gilded prison: keeping the armies of the world at bay, while forever trapping the Galeons within their own borders.
 
 Because the Ursa share borders only with Galeon Heights and the Lunar Guardians to the west, their fanatical nuisance has forged a quiet alliance. The wolves and the mountain peoples share a mutual disdain for the bumbling bear theocrats, coordinating defenses to ensure the Ursa never gain a foothold in either territory. To the south, beyond the impassable peaks, lie the Watcher's Dominions and Midas' Realm, entirely insulated from the mountain conflicts. _Life in Galeon is quiet and predictable, defined only by the endless cycle of spotting, shooting, and burying zealots under rockslides._
+
+**VOX POPULI · "High harbor banter"** (second tab on the faction page; renamed from "Dockside banter")
+
+- "First rule of the high harbor: unload fast. The goats charge by the hour, and the gulls charge by theft." — dock porter
+- "A bear warband was spotted at dawn. By breakfast, the raptors had counted them. By lunch, the mountain had answered." — harbor watchman
+- "Lowland sailors complain about storms. Cute. Try docking while a goat is shouting directions from a cliff above you." — ship captain
+- "Every merchant asks why we build so high. Then the first boulder falls on the road behind them and suddenly they understand tradition." — customs clerk
+- "The wolves send timber, the camels send spice, and the bears send target practice. Busy season, all things considered." — quay-side fletcher
+- "A raptor lookout can see trouble three valleys away. Unfortunately, he can also see when you are late for your shift." — goat porter
 
 ### Ursa Theocracy  [2.7]
 
 - KIND: Ursidae (All Bears)
 - CREED: Khamseen Followers
 - TRAIT: Absolute priest-king rule; perpetual struggles for supremacy
-- VOX TAB: "Monastery murmurs" (placeholder quotes pending)
 
 Deep within the frozen northern wilderness, the Ursa Theocracy stands as one of the most uncompromising realms of Khamseen. Towering bears live beneath the authority of priest-kings who preach that strength is the purest expression of truth. Every village, monastery, and fortress exists to prepare the faithful for the next campaign, the next winter, or the next trial sent by the Sky. Life is harsh, deliberate, and disciplined, for neither the land nor the faith offers mercy to the unprepared.
 
@@ -593,12 +659,20 @@ Seeking a path beyond the mountains and the wolves, the priest-kings occasionall
 
 Most kingdoms dismiss these stories as little more than frostbite, exhaustion, or sailors' superstition. Within the Theocracy, however, whispers spread quietly through the temples. The bears have always believed that the Sky tests the worthy. Some now wonder whether, beyond the last horizon, something else has begun testing them instead.
 
+**VOX POPULI · "Monastery murmurs"** (second tab on the faction page)
+
+- "The abbot says comfort weakens the soul. Easy for him to say. His cell has the good fireplace." — young acolyte
+- "Another priest-king has declared the last priest-king insufficiently strong. I have stopped repainting the banners until spring." — monastery scribe
+- "The Sky tests the worthy, the snow tests everyone, and the cook tests whatever survived in the cellar." — kitchen brother
+- "We marched on Galeon again. The goats threw rocks, the birds counted us, and the mountain preached louder than our priests." — wounded crusader
+- "My son wants to join the next holy campaign. I told him holiness is easier to find after the roof is mended." — village carpenter
+- "The longship returned from the eastern mist with grey-furred brothers who no longer shout during prayer. No one knows what to do with quiet bears." — harbor monk
+
 ### Shadow's Teeth  [2.8]
 
 - KIND: Rodents (Rats, Gophers, Squirrels, Porcupines)
 - CREED: Permutism Followers
 - TRAIT: Master sappers; frantically fortified isolationists
-- VOX TAB: "Miners talking" (placeholder quotes pending)
 
 Whispered among rats on the long quarry roads as a free kingdom past the edge of the maps, Shadow's Teeth is a narrow, heavily fortified peninsula at the bottom center of the western continent. Surrounded by churning ocean and connected to the mainland by a single, easily defensible strip of land, it serves as the ultimate beacon for the unchained. Here, the rodents (rats, gophers, squirrels, and porcupines) use the fluid principles of Permutism to survive away from the horns and matriarchs of the mainland.
 
@@ -608,12 +682,20 @@ Today, an uneasy peace reigns, but only because the Vanguards are entirely occup
 
 Driven by this existential dread, the rodents are in an urgent, frantic frenzy of construction. They are the world's most excellent diggers, and they are turning their peninsula into a labyrinthine fortress of subterranean kill-zones, spike pits, and collapsible tunnels. Beyond their borders, their skills are highly valued; other civilizations frequently employ Shadow's Teeth expats as expert sappers and siege miners to undermine enemy walls. But the gold they earn abroad is sent straight home, funding the endless digging. _They are building a fortress so deep and so deadly that even the Turning Year will hesitate to claim them._
 
-### Redsett Clans  [2.2]
+**VOX POPULI · "Miners talking"** (second tab on the faction page)
+
+- "The foreman says this tunnel is temporary. Around here, temporary means until our grandchildren reinforce it." — gopher miner
+- "If the Vanguards come south, they'll find the front gate. Then the false gate. Then the polite warning. Then the floor gives up." — rat sapper
+- "My cousin left to undermine castles for foreign kings. Sends the gold home every Rain. Says our holes are still better built." — porcupine mason
+- "The surface folk ask why we dig so deep. I ask why they keep trusting the surface." — old tunnel guard
+- "Every new chamber gets three exits, two murder-holes, and one argument about ventilation." — squirrel engineer
+- "They call us escaped chattel in the north. Strange. I have never seen a chain follow anyone through a collapsed tunnel." — quarry-born rat
+
+### Redsett Clans  [2.9]
 
 - KIND: Mustelidae & Mongoose (Weasels, Badgers, Otters, Mongooses)
 - CREED: Exodist Followers
 - TRAIT: Hyper-aggressive raiders; masters of the hit-and-run
-- VOX TAB: "Campfire stories" (placeholder quotes pending)
 
 South of the great Stoneheart Bridge roam the Redsett Clans, an absolute menace of a civilization composed of mustelids and mongooses. Where the Stoneheart Kingdom interprets Exodism as a sacred journey in search of knowledge, the Redsett embrace a far older instinct. To them, the journey itself is the destination. Settling in one place for too long is a slow spiritual death. The road, the river, and the next horizon are where life is truly lived.
 
@@ -629,24 +711,32 @@ Yet beneath the chaos lies an unexpected pragmatism. The Giants' Realm, whose ph
 
 Kings curse them. Merchants insure against them. Cartographers struggle to predict them. The Redsett care little for any of it. Somewhere beyond the next hill lies another road, another river, and another story worth stealing.
 
+**VOX POPULI · "Campfire stories"** (second tab on the faction page)
+
+- "Stoneheart pays us not to raid them. Very scholarly arrangement. They keep their bridges, we keep our boats." — badger oarsman
+- "My mother says a proper Redsett should see three rivers before breakfast and steal from none of them twice." — young weasel
+- "Conquer a town and suddenly everyone wants laws, wells, roofs, taxes. Burn one warehouse and you're home by supper." — mongoose raider
+- "A camel merchant called us unpredictable. Nonsense. We always arrive where the guards are not." — otter scout
+- "The apes call it tribute. We call it a travel fund with excellent manners." — clan treasurer
+- "My brother joined the eastern front for Giant gold. Says the Swarm screams louder than sailors, but pays worse." — campfire cook
+
 ---
 
 ## COHORT III · THE FRONTIERS · The Eastern Frontiers
 
 _The kingdoms standing between the Garden and the endless eastern horrors._
 
-The entire eastern landmass is kept constantly on its toes by relentless swarms of aggressive insect hybrids (the Silent Swarm, Hornet's Hive), a scourge the priests call a punishment from the gods, though no two temples agree for what sin. Because they are being constantly invaded, these clades are excellent mercenaries and rarely fight among themselves.
+The entire eastern landmass is kept constantly on its toes by relentless swarms of aggressive insect hybrids (the Creeping Curse, Hornet's Hive, Desert's Scourge & Wind's Hunger), a scourge the priests call a punishment from the gods, though no two temples agree for what sin. Because they are being constantly invaded, these clades are excellent mercenaries and rarely fight among themselves.
 
 ### Khanstan  [3.1]
 
 - KIND: Feline (Bengal and Siberian Tigers)
 - CREED: Khamseen Followers
-- TRAIT: Scavenger-engineers; solitary but coordinated
-- VOX TAB: "Tournament banter" (placeholder quotes pending)
+- TRAIT: Solitary warlords; reluctant masters of coordination
 
-Across the mist-veiled jungles of the east, the Tiger Kingdom of Khanstan remains fractured into rival lords, each ruling a solitary domain of immense personal power. To the east lies the unending ocean, while their western borders are perpetually ravaged by the twin hordes of the Silent Swarm: the Hornet's Hive and the creeping, eight-legged horrors of the Spider's Curse. While their solitary nature aligns perfectly with the Khamseen doctrine of individual strength, it frequently costs them the strategic battles that require enormous, unified coordination against the endless bugs.
+Across the mist-veiled jungles of the east, the Tiger Kingdom of Khanstan remains fractured into rival lords, each ruling a solitary domain of immense personal power. To the east lies the unending ocean, while their western borders are battered by the twin hordes of the Scourge: the Hornet's Hive and the Creeping Curse, eight-legged horrors of the Spider's Curse. Their solitary nature aligns perfectly with the Khamseen doctrine of individual strength, but the Swarm has forced even the proudest tiger lords to learn coordination. They do not love councils, shared command, or long campaigns fought under another ruler's banner. They practice them anyway, because the eastern front has taught Khanstan one brutal lesson: a lone hunter may win glory, but only coordinated claws survive the hive.
 
-Resource scarcity is their constant companion, as every scrap of metal and timber is fed into the meat-grinder of the eastern front. Consequently, the tigers have evolved into brilliant, scrappy engineers. Deprived of the pristine universities of the west, they are masters of the practical hack: makeshift fixes, jury-rigged artillery, and improvised traps built from broken swarm chitin and scavenged metal. They win not through elegance, but through stubborn, bloody-minded ingenuity.
+Resource scarcity is their constant companion, as every scrap of metal and timber is consumed by the eastern front. Consequently, the tigers have evolved into brilliant, scrappy engineers. Deprived of the pristine universities of the west, they are masters of the practical hack: makeshift fixes, jury-rigged artillery, and improvised traps built from broken swarm chitin and scavenged metal. They win not through elegance, but through stubborn, bloody-minded ingenuity.
 
 To the south lies Nahaul's Domain, the jaguar kingdom. Despite the solitary nature of both species, Khanstan and Nahaul share a deep, cooperative bond, viewing themselves as big brothers to the jaguars. They share a culture, intertwining their histories and surviving the Swarm together. This fraternal bond is a rare bright spot in a miserable, endless war.
 
@@ -654,67 +744,108 @@ This shared culture manifests most vibrantly in their local customs. Khamseen do
 
 Tiger lords invite the finest tacticians, Boarheart wall-defenders, and Giant engineers to watch or participate. The event serves as a testing ground for new artillery, a forge for grueling combat training, and a peaceful mechanism for solitary lords to claim territorial rights without spilling the friendly blood so desperately needed on the front line. _Let the priests bark about dogma; the tigers are too busy building a better ballista to care._
 
+**VOX POPULI · "Tournament banter"** (second tab on the faction page)
+
+- "The westerners call it a tournament. Cute. Last year my cousin lost two teeth, won a spear, and learned how to break hornet armor." — tiger wrestler
+- "Lord Varun arrived with a cannon made from three broken ballistae and a spider shell. It exploded beautifully. We gave him second place." — arena judge
+- "The priests say strength reveals truth. Around here, truth usually has mud on its face and a swarm stinger in its boot." — jungle quartermaster
+- "A jaguar champion beat our best duelist before breakfast. Naturally we invited him to dinner and argued about footwork until dawn." — tournament medic
+- "Every lord claims he fights alone. Funny how many arrive with engineers, cousins, debtors, and three carts of spare weapons." — weapon vendor
+- "The Swarm does not pause for festivals. That is why the archery round uses real hornets." — old range master
+
 ### Nahaul's Domain  [3.2]
 
 - KIND: Feline (Jaguars)
 - CREED: Khamseen Followers
 - TRAIT: Canopy ambushers; architects of the toxic arms trade
-- VOX TAB: "Bazaar bargaining" (placeholder quotes pending)
 
-Deep within the steaming emerald rainforests, the Jaguar Kingdom of Nahaul’s Domain lies splintered into competing solitary clans. While Khanstan anchors the northeast against the Hornet's Hive, Nahaul’s western borders are perpetually choked by the Creeping Curse, a terrifying onslaught of arachnid horrors. The jaguars do not meet this threat on flat ground; they rule the canopy. Utilizing explosive ambush tactics and extreme vertical mobility, they turn the dense jungle into a vertical slaughterhouse for the invading hordes.
+Deep within the steaming emerald rainforests, the Jaguar Kingdom of Nahaul’s Domain lies splintered into competing solitary clans. While Khanstan anchors the north against the Hornet's Hive, Nahaul’s western borders are perpetually choked by the Creeping Curse, a terrifying onslaught of arachnid horrors. The jaguars do not meet this threat on flat ground; they rule the canopy. Utilizing explosive ambush tactics and extreme vertical mobility, they turn the dense jungle into a vertical slaughterhouse for the invading hordes.
 
 Living on the edge of oblivion has stripped away any patience for western-style theological purity or political posturing. To the jaguars, Khamseen is not a mandate for religious conquest, but a practical philosophy of survival through absolute physical mastery.
 
 Because spiders possess an innate immunity to their own toxins, Nahaul’s engineering genius has evolved to exploit a brilliant, cross-border biochemical economy. The jaguars import dead hornets from Khanstan’s northern front, using the harvested aerial neurotoxins to coat their canopy traps and blades, bypassing the spiders' natural defenses entirely. In return, Nahaul extracts the highly concentrated venom from the defeated arachnids and exports it back to Khanstan, giving the tigers a devastating payload to use against the Hornet’s Hive.
 
-This toxic arms-dealing extends across the entire frontier. Recognizing that the Scourge cannot be fought with steel alone, Nahaul refines specialized chemical payloads for every frontline state. They ship lethal neurotoxins to the Boarheart Kingdom to break spider and scorpion chitin, supply the Steppe Guardians with targeted delivery vectors to combat locust swarms, and route aerosolized compounds to the Giants Realm to down flying horrors. _Nahaul doesn't just build a better weapon; they brew the exact poison needed to keep the East breathing._
+This toxic arms-dealing extends across the entire frontier. Recognizing that the Scourge cannot be fought with steel alone, Nahaul refines specialized chemical payloads for every frontline state. They ship lethal neurotoxins to the Boarheart Kingdom to break spider and scorpion chitin, supply the Steppe Guardians with targeted delivery vectors to combat locust swarms, and route aerosolized compounds to the Giants Realm to down flying horrors. _Nahaul’s genius lies not in stronger weapons, but in stranger precision: every venom, vapor, and payload brewed for the exact horror waiting beyond the next tree line._
 
-This shared, scrappy ingenuity forms the bedrock of their profound fraternal bond with Khanstan. The jaguars proudly view the tigers as their massive, blunt-force big brothers. This cultural brotherhood shines brightest in their version of the great seasonal games: while the tigers host the Grand Tournament in their open valleys, the jaguars celebrate "The Rite of the Ghost Walk" under the canopy. It is a hyper-functional, lethal exercise in stealth, tracking, and close-quarters combat. Jaguar clan leaders invite Khanstan tacticians, Boarheart line-commanders, and Giant engineers into the deepest jungle tracts. The Rite acts as a live-fire testing ground for newly formulated venom cocktails, an arena to perfect multi-clade ambush coordination, and a bloodless way for solitary clans to settle hunting boundaries. The desert priests can preach submission all they want; the jaguars are far too busy balancing the region's chemical ledger to listen.
+This shared, scrappy ingenuity forms the bedrock of their profound fraternal bond with Khanstan. The jaguars proudly view the tigers as their massive, blunt-force big brothers. This cultural brotherhood shines brightest in their version of the great seasonal games: while the tigers host the Grand Tournament in their open valleys, the jaguars celebrate "The Rite of the Ghost Walk" under the canopy. It is a ruthless, highly disciplined exercise in stealth, tracking, and close-quarters combat. Jaguar clan leaders invite Khanstan tacticians, Boarheart line-commanders, and Giant engineers into the deepest jungle tracts. The Rite acts as a live-fire testing ground for newly formulated venom cocktails, an arena to perfect multi-clade ambush coordination, and a bloodless way for solitary clans to settle hunting boundaries. The desert priests can preach submission all they want; the jaguars are far too busy balancing the region's chemical ledger to listen.
+
+**VOX POPULI · "Bazaar bargaining"** (second tab on the faction page)
+
+- "Careful with that vial. It kills spiders, hornets, scorpions, and careless apprentices in that order." — venom seller
+- "A tiger buyer asked if the batch was stable. I told him stable things do not win jungle wars." — jaguar alchemist
+- "The Boarheart commander wanted something subtle. I sold him three barrels marked DO NOT BREATHE NEAR WALLS." — chemical broker
+- "Every clan claims the best canopy traps. Funny how they all come here when the spiders stop dying properly." — market porter
+- "The priests say trade in poison stains the soul. My soul has excellent margins this season." — bazaar accountant
+- "Khanstan sends dead hornets. We send spider venom back. Brotherhood is mostly paperwork and very dangerous bottles." — shipping clerk
 
 ### Boarheart Kingdom  [3.3]
 
 - KIND: Ungulates (Giant Forest Hogs, Wild Boars, Warthogs)
 - CREED: Split Syncretic (55% Khamseen / 45% Permutism)
 - TRAIT: Gritty, absolute infantry; heavy defensive stonemasons
-- VOX TAB: "Mess-hall arguments" (placeholder quotes pending)
 
-Operating without the restrictive, weaponized caste barriers of their Western cousins, the Boarheart Kingdom is the absolute infantry anvil of the Eastern Frontier. Their northern borders are an endless meat-grinder, facing the dual nightmares of the Creeping Curse's spiders and the chitinous waves of the Desert’s Scourge scorpions. To hold this line, the Boars have built an unbreakable culture of the shield wall. They are the only kingdom in the Garden where Khamseen iron-worship and Permutist fluid adaptation exist in a near-equal split without triggering a civil war; they simply realized centuries ago that religious purity tests do not stop a scorpion's stinger.
+Operating without the restrictive, weaponized caste barriers of their Western cousins, the Boarheart Kingdom is the absolute infantry anvil of the Eastern Frontier. Their northern borders are a grinding warfront, facing the dual nightmares of the Creeping Curse's spiders and the chitinous waves of the Desert’s Scourge scorpions. To hold this line, the Boars have built an unbreakable culture of the shield wall. They are the only kingdom in the Garden where Khamseen iron-worship and Permutist fluid adaptation exist in a near-equal split without triggering a civil war; they simply realized centuries ago that religious purity tests do not stop a scorpion's stinger.
 
-If the Scourge disappeared tomorrow, the Boarheart would remain globally renowned as the master earth-movers and structural stonemasons of the world. Denied the safety of the open plains, they have carved massive, multi-tiered subterranean citadels out of the earth, controlling a lucrative trade in geothermal smelting, deep-ore extraction, and heavy masonry. They don't just hold the line; they reinforce the very bones of the continent.
+Denied the safety of the open plains, the Boarheart have become master earth-movers and structural stonemasons. Their massive, multi-tiered subterranean citadels serve as fortresses, foundries, granaries, and sanctuaries carved directly into the bones of the continent. From these depths they control a lucrative trade in geothermal smelting, deep-ore extraction, and heavy masonry. Every wall they raise, tunnel they cut, and foundation they brace is another refusal to let the frontier collapse beneath its own terror.
 
-This deep-seated survival drive has left them with a legendary, hyper-argumentative social quirk. Because taking the life of another humanoid is the ultimate unspoken sacrilege on the frontier, the Boars channel their aggressive prey-instincts into relentless verbal combat. In the presence of their Khanstan and Nahaul allies, the Boars' biological wiring fires on all cylinders. They become deliberately stubborn, starting explosive, screaming matches over supply lines, tactical footprints, and chemical payload distribution.
+This deep-seated survival drive has left them with a legendary appetite for argument. Because taking the life of another hybrid is the ultimate unspoken sacrilege on the frontier, the Boars channel their aggressive prey-instincts into relentless verbal combat. In the presence of their Khanstan and Nahaul allies, the Boars' biological wiring fires on all cylinders. They become deliberately stubborn, starting explosive, screaming matches over supply lines, tactical footprints, and chemical payload distribution.
 
 The Tigers and Jaguars, understanding that this tusk-grinding fury is merely a release valve for centuries of frontline trauma, simply let the arguments roll off their backs to preserve energy. Let the Western courts play their soft, silent politics; _a Boar will tell you exactly how he intends to die for you, right after he finishes screaming in your face._
+
+**VOX POPULI · "Mess-hall arguments"** (second tab on the faction page)
+
+- "Khamseen says strength reveals truth. Permutism says truth changes. I say both of you are blocking the stew." — mess-hall cook
+- "A jaguar sent poison strong enough to melt scorpion chitin. Wonderful. Now label the barrel before someone seasons lunch with it." — quartermaster
+- "The tigers brought a new cannon. The jaguars brought venom. We brought a wall, because someone here has to survive the demonstration." — shield captain
+- "My brother says the western boars still argue about caste. Must be nice having time for decorative problems." — stone mason
+- "Every council meeting ends with shouting. Every shield wall holds. I have stopped questioning the method." — citadel clerk
+- "A scorpion broke three gates last winter. We built four new ones and argued for six days about hinge placement." — gate engineer
 
 ### Steppe Guardians  [3.4]
 
 - KIND: Ungulates (Horses, Zebras, Donkeys)
 - CREED: Permutism Followers (The Fluid Arteries)
 - TRAIT: Logistical masters; expert mobile archers and caravan tacticians
-- VOX TAB: "Trail whispers" (placeholder quotes pending)
 
-Flanked by the heavy subterranean citadels of the Boarheart Kingdom to their east and the philosophical workshops of the Giants Realm to their west, the Steppe Guardians serve as the literal circulatory system of the Eastern continent. They are a free, hyper-intelligent society of horses, zebras, and donkeys who have completely abandoned the rigid, weaponized caste hierarchies of their Western cousins. To the Guardians, survival is a grand equation of kinetic movement.
+Flanked by the heavy subterranean citadels of the Boarheart Kingdom to their east and the philosophical workshops of the Giants Realm to their west, the Steppe Guardians serve as the literal circulatory system of the Eastern continent. They are a free, quick-minded society of horses, zebras, and donkeys who have completely abandoned the rigid, weaponized caste hierarchies of their Western cousins. To the Guardians, survival is a grand equation of kinetic movement.
 
-They manage the brutal, high-stakes trade routes of the East, moving raw sulfur and heavy granite from the Boar quarries to the Giant forges, and returning with advanced long-range ballistics and Nahaul’s specialized chemical payloads. They don't just trade; they move the lifeblood of the continent exactly where it is needed to keep civilization breathing. If the Scourge vanished tomorrow morning, the Guardians would remain globally renowned as the premier master logisticians and infrastructure architects of the world, commanding a flawless, continent-spanning mercantile network that no Western empire could ever replicate.
+They manage the brutal, high-stakes trade routes of the East, moving raw sulfur and heavy granite from the Boar quarries to the Giant forges, then returning with advanced long-range ballistics and Nahaul’s specialized chemical payloads. The roads they maintain are not ordinary commerce. They are the arteries of the frontier, carrying whatever each kingdom needs to survive the next swarm, siege, or famine. Over generations, that necessity has made them the premier logisticians and infrastructure architects of the Eastern continent, commanding a mercantile network no Western empire could easily replicate.
 
-This obsession with fluid efficiency shapes their unique style of warfare against the scorpion hordes of the Desert's Scourge and the airborne walls of the Wind's Hunger locusts. The Guardians do not engage in static, honor-bound open-field standoffs. They utilize relentless, hyper-mobile harassment campaigns, deploying mounted archers who loose specialized, hollow-tipped arrows. These arrows shatter in mid-air to release cloud-screens of Nahaul’s imported contact poisons, choking out flying swarms before they can touch the ground.
+This obsession with fluid efficiency shapes their unique style of warfare against the scorpion hordes of the Desert's Scourge and the airborne walls of the Wind's Hunger locusts. The Guardians do not engage in static, honor-bound open-field standoffs. They rely on swift harassment campaigns, deploying mounted archers who loose specialized, hollow-tipped arrows. These arrows shatter in mid-air to release cloud-screens of Nahaul’s imported contact poisons, choking out flying swarms before they can touch the ground.
 
 Constant vigilance has made them a deeply observant, quiet society; they speak in low, rhythmic cadences and possess the uncanny ability to map an entire region's topography simply by the sound of wind over the grass. Let the Western courts hoard static gold and titles; _the Steppe Guardians own the horizon, and the road never ends._
+
+**VOX POPULI · "Trail whispers"** (second tab on the faction page)
+
+- "The map says this route takes six days. The wind says five. The old mare says seven. I trust the mare." — donkey pathfinder
+- "A Boarheart captain asked if the arrows would arrive before the scorpions. I told him they had better, because we were carrying both." — wagon outrider
+- "The Giants build weapons too large to move. We move them anyway. That is why everyone suddenly respects roads." — zebra quartermaster
+- "A tiger engineer called our wagons old-fashioned. His cannon lost a wheel before sunset. Our old-fashioned wagon carried it home." — horse teamster
+- "Never race a Steppe courier. If you win, he was carrying granite. If you lose, he will tell everyone by breakfast." — caravan cook
+- "The Swarm comes like weather, the grass hides the roads, and every kingdom wants delivery yesterday. Good season, then." — bow rider
 
 ### Giants Realm  [3.5]
 
 - KIND: Hybrid (Elephants and Giraffes)
 - CREED: Permutism Followers (The Intellectual Anchor)
 - TRAIT: Philosophers and innovators; masters of ballistic engineering
-- VOX TAB: "Workshop chatter" (placeholder quotes pending)
 
-Towering above the emerald rainforests, the Giants Realm functions as the premier intellectual foundry and munitions forge of the Eastern Frontier. Bound to the fluid, evolutionary principles of Permutism, this society of elephants and giraffes approaches the existential horror of the Silent Swarm and the Wind's Hunger not with raw fury, but with cold, mathematical precision.
+Towering above the emerald rainforests, the Giants Realm functions as the premier intellectual foundry and munitions forge of the Eastern Frontier. Bound to the fluid, evolutionary principles of Permutism, this society of elephants and giraffes approaches the existential horror of the Scourge and the Wind's Hunger not with raw fury, but with cold, mathematical precision.
 
-Because their massive frames lack the agility to engage in rapid, close-quarters combat against skittering horrors or other humanoids, the Giants have weaponized distance. They are the master inventors behind the frontier's most terrifying ordnance, designing the mid-air bursting arrows utilized by the Steppe Guardians, and the "Sky-Sweeper" ballistae: massive engines that unleash blinding barrages of hundreds of arrows to shred flying locust walls and hornet hives. Their workshops systematically dissect defeated Scourge specimens, crafting tailor-made, armor-piercing kinetic bolts designed to shatter the exact structural weak points of spider and scorpion chitin.
+Because their massive frames lack the agility to engage in rapid, close-quarters combat against skittering horrors or other hybrids, the Giants have weaponized distance. They are the master inventors behind the frontier's most terrifying ordnance, designing the mid-air bursting arrows utilized by the Steppe Guardians, and the "Sky-Sweeper" ballistae: massive engines that unleash blinding barrages of hundreds of arrows to shred flying locust walls and hornet hives. Their workshops systematically dissect defeated Scourge specimens, crafting tailor-made, armor-piercing kinetic bolts designed to shatter the exact structural weak points of spider and scorpion chitin.
 
-To compensate for their vulnerability on flat ground, the Giants maintain a vital symbiotic alliance with the Redsett Clans, a hyper-aggressive and fearless vanguard military of badgers, weasels, and mongooses. While the Giants coordinate battlefield strategy from high, fortified towers, the Redsett infantry handles the brutal trench warfare below, using their blinding speed and ferocious instincts to clear out any arachnids that slip past the artillery line. The Giants pay them lavishly in high-grade alloy armor and bespoke weapons, ensuring absolute loyalty on the blood-soaked ground they themselves cannot hold.
+To compensate for their vulnerability on flat ground, the Giants maintain a vital symbiotic alliance with the Redsett Clans, a reckless and fearless vanguard military of badgers, weasels, and mongooses. While the Giants coordinate battlefield strategy from high, fortified towers, the Redsett infantry handles the brutal trench warfare below, using their blinding speed and ferocious instincts to clear out any arachnids that slip past the artillery line. The Giants pay them lavishly in high-grade alloy armor and bespoke weapons, ensuring absolute loyalty on the blood-soaked ground they themselves cannot hold.
 
 Despite their brilliance, a profound existential anxiety shadows the Giants' high councils. They are acutely aware that their survival as a free, independent kingdom hinges entirely on the presence of a common enemy. If the Scourge disappeared tomorrow morning, their lack of mobility would leave them at the mercy of their heavily armed neighbors. To safeguard their future, the Giants play a long-term diplomatic game: they ensure that every scrap of advanced engineering, structural blueprint, and long-range defense across Khanstan, the Steppes, and the Boarheart citadels is entirely dependent on Giant components and maintenance. _They may not be able to outrun a predator, but they have woven their survival so deeply into the fabric of the continent that the East cannot afford to let them fall._
+
+**VOX POPULI · "Workshop chatter"** (second tab on the faction page)
+
+- "The apprentice asked why the bolt was taller than him. I told him the scorpion is taller than the wall." — elephant machinist
+- "A tiger brought us a broken hornet wing and asked if we could make it useful. We made three arrows, two lenses, and one argument." — forge scholar
+- "The Steppe riders complain our engines are too heavy. Strange. They still arrive every season asking for heavier ones." — giraffe draftsman
+- "Do not touch the Sky-Sweeper lever unless you are aiming at something, testing something, or prepared to explain the missing roof." — workshop foreman
+- "Permutism teaches adaptation. In the workshop, that mostly means rebuilding whatever exploded before the professor returns." — student engineer
+- "The Redsett mercenaries asked if the new bolts could kill spiders. I said yes. They asked if they could also open gates. I said unfortunately, also yes." — munitions clerk
 
 ---
 
@@ -786,7 +917,7 @@ The colossal, sky-blotting locust swarms driving down the western corridor. They
 
 _Forgotten islands, silent engines, impossible beasts, and stories no kingdom agrees upon._
 
-### The Silent Swarm  [4.6]
+### The Silent Swarm  [5.1]
 
 _The land is completely quiet, and it systematically consumes anyone who touches it._
 
@@ -808,7 +939,7 @@ Do not land.
 
 ## OPEN INCONSISTENCIES & FIX-LIST
 
-_Working notes from review, 05 Jul 2026; statuses refreshed 07 Jul 2026 after the kingdoms/minor-factions polish pass and the em-dash sweep, and again 08 Jul 2026 after the AI upgrade, the Lunar/Stoneheart upgrade, and the vox populi feature. Cohort V remains the last WIP section._
+_Working notes from review, 05 Jul 2026; statuses refreshed 07 Jul 2026 after the kingdoms/minor-factions polish pass and the em-dash sweep, 08 Jul 2026 after the AI upgrade, the Lunar/Stoneheart upgrade, and the vox populi feature, and 10 Jul 2026 after the vox completion and the fix sweep (commits 839011d, 37a06a9). Cohort V remains the last WIP section._
 
 ### Resolved since 05 Jul
 
@@ -821,30 +952,35 @@ _Working notes from review, 05 Jul 2026; statuses refreshed 07 Jul 2026 after th
 15./25. RESOLVED: **Shadow's Teeth duplicate slug and Cohort V framing**: the Cohort V stub was replaced by the relocated Silent Swarm (06 Jul); the shadows-teeth slug is unique again and Cohort V is properly rumor-framed.
 28. MOSTLY RESOLVED (07 Jul): **Stoneheart/Redsett overlap**: the duplicated "take the gold" zinger and the "Winds's Hunger" typo are gone from content.js after the polish pass. Only worth a final read-through of both entries side by side.
 
+### Resolved in the 10 Jul fix sweep
+
+3. RESOLVED: **Swarm taxonomy**: all three loose "Silent Swarm" usages fixed: Khanstan par.1 now says "twin hordes of the Scourge", the Cohort III intro names all four hordes, and Giants par.1 says "the Scourge and the Wind's Hunger".
+5. RESOLVED: **Silent Swarm borders no civilization**: fixed with the same Giants par.1 edit.
+12. RESOLVED: **Mooncrest meta label**: now "Khamseen Follower (Matriarchal Exception)".
+14. RESOLVED: **Wetland's Pact rhinos**: new paragraph gives them a role as the Pact's stubborn conscience (siege-breakers, riverbank wardens, mediators).
+17. RESOLVED: **Meta/prose mismatches**: Naga meta now lists Vipers; Vanguard meta now lists Goat.
+18. RESOLVED: "an Ursa warband" (Galeon Heights).
+19. RESOLVED: **Khanstan trait vs text**: trait is now "Solitary warlords; reluctant masters of coordination", and par.1 was rewritten around the Swarm forcing the lords to learn coordination.
+20. RESOLVED: **"humanoid" vocabulary**: both instances (Boarheart, Giants) now read "hybrid(s)".
+26. RESOLVED: **Duplicate code 2.2**: Redsett renumbered to [2.9].
+27. RESOLVED: **Cohort V numbering**: the Silent Swarm renumbered to [5.1].
+29. RESOLVED: **Em dashes reintroduced**: both spots (Fungal Night lead, Act III) rewritten with commas.
+30. RESOLVED: **AI-upgrade leftovers in the profiles**: Earthkeeper now has "Its visions" and closes with "The Earthkeeper communicates..."; Observer now has "rarely broadcasts" and "It communicates". Mid-sentence "It" capitalization was kept as a deliberate style.
+31. MOSTLY RESOLVED: **Vox populi placeholders**: all fourteen remaining quote sets are written, and every vox tab except Midas' Realm ("Caravan talk") has a dedicated backdrop under images/factions/vox/. Remaining: one Midas vox image.
+
 ### Still open (numbering kept from the 05 Jul list)
 
-3. **Swarm taxonomy** (narrowed 07 Jul): canon: "the Scourge" = collective, four named hordes [4.2-4.5], the Silent Swarm = the rumored NW landmass (Cohort V). Loose "Silent Swarm" usage remains in exactly three places: Khanstan par.1 ("twin hordes of the Silent Swarm"), the Cohort III intro ("the Silent Swarm, Hornet's Hive"), and Giants par.1 ("the existential horror of the Silent Swarm and the Wind's Hunger"). Redsett was fixed in the polish pass.
-4. **"Spider's Curse" vs "Creeping Curse"**: canon is Creeping Curse [4.3]; one stray "Spider's Curse" left in Khanstan par.1.
-5. **Silent Swarm borders no civilization**: same Giants par.1 spot as item 3; should be Wind's Hunger only, or reframed as fear of the rumor.
-6. **Khanstan geometry conflict**: Khanstan claims both hordes on its western borders; Nahaul says Khanstan "anchors the northeast". Cohort IV provides canon (Hornet's Hive = NE, vs tigers and jaguars; Creeping Curse = vs jaguars and Boarheart's north): align Khanstan par.1 with it.
+4. NARROWED (10 Jul): **"Spider's Curse" vs "Creeping Curse"**: canon is Creeping Curse [4.3]; Khanstan par.1 still reads "...the Creeping Curse, eight-legged horrors of the Spider's Curse", which keeps the stray name as an odd appositive. Decide whether "Spider's Curse" survives as an in-world alias or drop it.
+6. NARROWED (10 Jul): **Khanstan geometry**: Nahaul now says Khanstan "anchors the north" (was "northeast"), but Khanstan par.1 still places both hordes on its western borders. Cohort IV canon (Hornet's Hive = NE) still disagrees.
 7. **Cohort III epithet direction**: "the endless eastern horrors" no longer matches the map; hordes press from the west/north of the frontier kingdoms.
 10. **Two unverified rumors, one decision**: Forbidden Islands (Ursa) and the Silent Swarm: decide deliberately whether they connect or pointedly don't; keep the ambiguity consistent in Cohort V.
-12. **Mooncrest meta label**: "Khamseen Follower (Patriarchal Enforcements)" contradicts the entry (matriarchs overruling patriarchal scripture). Suggest "Matriarchal Exception" or similar.
-14. **Wetland's Pact: missing rhinos**: internal politics covers hippo dominance and crocodilian exclusion; rhinos vanish (they appear only in the Vanguards' description of the Pact).
 16. **Only 3 intelligence profiles vs 7 doctrines** (reworded 08 Jul for the three-intelligences canon): Suvartan, Permutism, Exodism, Hieromachy have no sponsoring intelligence. With exactly three sovereign minds now canonical, decide which faiths trace to which voice, or add one line signaling that the mapping is deliberately unknowable. (The Silent Swarm may want a fourth voice, or pointedly none.)
-17. **Meta/prose mismatches**: Naga meta still omits vipers (prose includes them); Vanguard meta omits goats (prose gives them a full economic role alongside sheep).
-18. **Grammar**: "a Ursa warband" should be "an Ursa warband" (Galeon Heights entry, still present).
-19. **Khanstan trait vs text**: trait says "solitary but coordinated"; par.1 says solitary nature costs them coordinated battles. Point them the same direction.
-20. **"humanoid" vocabulary**: Boarheart and Giants use "humanoid"; rest of codex uses clades/peoples/kingdoms. "Humanoid" accidentally invokes the human frame story the hybrids don't know.
-26. **Duplicate code 2.2**: Naga's Embrace and Redsett Clans both carry [2.2]; Redsett also sits out of numbering order at the end of Cohort II. Suggest renumbering Redsett to [2.9].
-27. **Cohort V numbering**: the relocated Silent Swarm kept its Cohort IV code [4.6]. Renumber to 5.x when the cohort is written.
-29. **Em dashes reintroduced (08 Jul)**: the AI upgrade brought two back into content.js against the site-wide rule: Fungal Night lead ("the fungi rise—colossal pale towers") and Act III ("through Venus itself—subtle distortions"). Rewrite with the usual contextual substitutions.
-30. **AI-upgrade leftovers in the profiles**: the Earthkeeper profile still closes with "The Wardens communicate through pain..." (old name) and has "It's visions" for "Its visions"; the Observer profile mixes singular and plural ("It uses absence" vs "They communicate through the wind") and "The Observer rarely broadcast" reads as a tense slip. Decide on It/Its capitalization mid-sentence while at it ("It roars", "It uses").
-31. **Vox populi placeholders (08 Jul)**: Cohort II and III factions ship with literal "Vox populi placeholder" quotes and empty `who` fields; only the five Thrones have written quotes. All `vox.image` fields are empty everywhere (pages fall back to the faction artwork). Cohorts IV/V intentionally carry no vox block. Write the remaining quote sets and consider dedicated vox artwork.
+32. NEW (10 Jul): **Vanguard KIND grammar**: the meta row now reads "Goat, Sheep" — singular "Goat" among plurals; should be "Goats".
+33. NEW (10 Jul): **Redsett trait vs prose**: the fix sweep replaced "hyper-aggressive" with "restless"/"reckless" in Stoneheart and Giants prose, but the Redsett's own TRAIT row still says "Hyper-aggressive raiders".
 
 ### Style pass (do last, after all cohorts complete)
 
-21. **"If the Scourge disappeared/vanished tomorrow..."**: still 3x (Boarheart, Steppe, Giants). Keep only for Giants, where it carries plot weight.
-22. **"They don't just X; they Y"**: recheck Cohort III after the polish pass.
+21. RESOLVED (10 Jul): **"If the Scourge disappeared/vanished tomorrow..."**: removed from Boarheart and Steppe; survives only in Giants, where it carries plot weight.
+22. RESOLVED (10 Jul): **"They don't just X; they Y"**: rewritten out of Boarheart, Steppe, and Nahaul in the fix sweep.
 23. **Closing zinger scaffold**: "Let the [priests/courts] ... too busy ..." still closes several Cohort III entries; Shadow's Teeth and Redsett also close on italic zingers. Keep the punch, vary the construction.
-24. **Overused intensifiers** (updated 07 Jul): "hyper-" still 6x across Cohorts II/III, "meat-grinder" 2x (Khanstan, Boarheart; the Stoneheart one is gone), "endless" throughout.
+24. MOSTLY RESOLVED (10 Jul): **Overused intensifiers**: every prose "hyper-" is gone (restless, quick-minded, swift, ruthless, reckless, appetite for argument); "meat-grinder" survives only in Stoneheart's "perpetual meat grinder" joke; "endless" remains throughout. See item 33 for the one leftover "Hyper-" in a meta row.

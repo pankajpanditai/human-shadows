@@ -988,7 +988,8 @@ window.CONTENT = {
           meta: [
             ["KIND", "Feline (Leopards & Snow Leopards)"],
             ["CREED", "Zaoist Followers"],
-            ["TRAIT", "Phantom borders; masters of stealth and ambush"]
+            ["TRAIT", "Phantom borders; masters of stealth and ambush"],
+            ["LEADER", "Veiled Regent Shiran"]
           ],
           paragraphs: [
             { lead: true, text: "Hidden among dense forests, mist-shrouded mountains, and treacherous cliffs, the Celestial Empire is a kingdom more often sensed than seen. Travelers seldom realize they have crossed its borders until quiet villages emerge from the wilderness or unseen sentries reveal themselves from the trees above. To the leopards and snow leopards, concealment is not merely a military tactic; it is a philosophy. A border discovered too easily has already failed." },
@@ -1039,7 +1040,8 @@ window.CONTENT = {
           meta: [
             ["KIND", "Hybrids (Hippos, Crocodiles, Rhinos)"],
             ["CREED", "Hieromachy Followers (River Resistance)"],
-            ["TRAIT", "Egalitarian foundation cracked by hippo discrimination"]
+            ["TRAIT", "Egalitarian foundation cracked by hippo discrimination"],
+            ["LEADER", "Speaker-Marshal Oboro"]
           ],
           paragraphs: [
             { lead: true, text: "Settled in the sprawling swamps and lazy, mud-choked rivers of the central basin, the Wetland's Pact was not born, but forged in chains. Centuries ago, these lands were ruled by Suvartan ungulates and reptiles, until the armies of Khamseen swept through, demanding conversion by the sword. It was in the suffocating mud and the reeds, beneath the whips of desert overseers, that the radical faith of Hieromachy took root." },
@@ -1088,7 +1090,8 @@ window.CONTENT = {
           meta: [
             ["KIND", "Avian & Ungulates (Birds of Prey & Mountain Goats)"],
             ["CREED", "Khamseen Followers (Defensive Isolationists)"],
-            ["TRAIT", "Unmatched vantage; masters of the avalanche volley"]
+            ["TRAIT", "Unmatched vantage; masters of the avalanche volley"],
+            ["LEADER", "High Eyrie Warden Kaelith"]
           ],
           paragraphs: [
             { lead: true, text: "Perched atop the jagged, impenetrable peaks of the central mountain ranges, Galeon Heights is a kingdom defined by its altitude. A unique symbiosis of mountain goats and birds of prey, the Galeons have carved a prosperous, isolated existence out of the frozen stone. They are the silent watchers of the high passes, content to let the lowlands bleed so long as the snow remains untouched." },
@@ -1135,7 +1138,8 @@ window.CONTENT = {
           meta: [
             ["KIND", "Ursidae (All Bears)"],
             ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Absolute priest-king rule; perpetual struggles for supremacy"]
+            ["TRAIT", "Absolute priest-king rule; perpetual struggles for supremacy"],
+            ["LEADER", "Bear-Priest Korvath"]
           ],
           paragraphs: [
             { lead: true, text: "Deep within the frozen northern wilderness, the Ursa Theocracy stands as one of the most uncompromising realms of Khamseen. Towering bears live beneath the authority of priest-kings who preach that strength is the purest expression of truth. Every village, monastery, and fortress exists to prepare the faithful for the next campaign, the next winter, or the next trial sent by the Sky. Life is harsh, deliberate, and disciplined, for neither the land nor the faith offers mercy to the unprepared." },
@@ -1185,7 +1189,8 @@ window.CONTENT = {
           meta: [
             ["KIND", "Rodents (Rats, Gophers, Squirrels, Porcupines)"],
             ["CREED", "Permutism Followers"],
-            ["TRAIT", "Master sappers; frantically fortified isolationists"]
+            ["TRAIT", "Master sappers; frantically fortified isolationists"],
+            ["LEADER", "First Burrower Nerrik"]
           ],
           paragraphs: [
             { lead: true, text: "Whispered among rats on the long quarry roads as a free kingdom past the edge of the maps, Shadow's Teeth is a narrow, heavily fortified peninsula at the bottom center of the western continent. Surrounded by churning ocean and connected to the mainland by a single, easily defensible strip of land, it serves as the ultimate beacon for the unchained. Here, the rodents (rats, gophers, squirrels, and porcupines) use the fluid principles of Permutism to survive away from the horns and matriarchs of the mainland." },
@@ -1232,7 +1237,8 @@ window.CONTENT = {
           meta: [
             ["KIND", "Mustelidae & Mongoose (Weasels, Badgers, Otters, Mongooses)"],
             ["CREED", "Exodist Followers"],
-            ["TRAIT", "Hyper-aggressive raiders; masters of the hit-and-run"]
+            ["TRAIT", "Hyper-aggressive raiders; masters of the hit-and-run"],
+            ["LEADER", "Road-Chief Brakka Redtooth"]
           ],
           paragraphs: [
             { lead: true, text: "South of the great Stoneheart Bridge roam the Redsett Clans, an absolute menace of a civilization composed of mustelids and mongooses. Where the Stoneheart Kingdom interprets Exodism as a sacred journey in search of knowledge, the Redsett embrace a far older instinct. To them, the journey itself is the destination. Settling in one place for too long is a slow spiritual death. The road, the river, and the next horizon are where life is truly lived." },
@@ -1295,7 +1301,8 @@ window.CONTENT = {
           meta: [
             ["KIND", "Feline (Bengal and Siberian Tigers)"],
             ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Solitary warlords; reluctant masters of coordination"]
+            ["TRAIT", "Solitary warlords; reluctant masters of coordination"],
+            ["LEADER", "Warlord Tarkhan"]
           ],
           paragraphs: [
               { lead: true, text: "Across the mist-veiled jungles of the east, the Tiger Kingdom of Khanstan remains fractured into rival lords, each ruling a solitary domain of immense personal power. To the east lies the unending ocean, while their western borders are battered by the twin hordes of the Scourge: the Hornet's Hive and the Creeping Curse, eight-legged horrors of the Spider's Curse. Their solitary nature aligns perfectly with the Khamseen doctrine of individual strength, but the Swarm has forced even the proudest tiger lords to learn coordination. They do not love councils, shared command, or long campaigns fought under another ruler’s banner. They practice them anyway, because the eastern front has taught Khanstan one brutal lesson: a lone hunter may win glory, but only coordinated claws survive the hive." },
@@ -1343,7 +1350,8 @@ window.CONTENT = {
           meta: [
             ["KIND", "Feline (Jaguars)"],
             ["CREED", "Khamseen Followers"],
-            ["TRAIT", "Canopy ambushers; architects of the toxic arms trade"]
+            ["TRAIT", "Canopy ambushers; architects of the toxic arms trade"],
+            ["LEADER", "Silent Matron Ixchel"]
           ],
           paragraphs: [
             { lead: true, text: "Deep within the steaming emerald rainforests, the Jaguar Kingdom of Nahaul’s Domain lies splintered into competing solitary clans. While Khanstan anchors the north against the Hornet's Hive, Nahaul’s western borders are perpetually choked by the Creeping Curse, a terrifying onslaught of arachnid horrors. The jaguars do not meet this threat on flat ground; they rule the canopy. Utilizing explosive ambush tactics and extreme vertical mobility, they turn the dense jungle into a vertical slaughterhouse for the invading hordes." },
@@ -1391,7 +1399,8 @@ window.CONTENT = {
           meta: [
             ["KIND", "Ungulates (Giant Forest Hogs, Wild Boars, Warthogs)"],
             ["CREED", "Split Syncretic (55% Khamseen / 45% Permutism)"],
-            ["TRAIT", "Gritty, absolute infantry; heavy defensive stonemasons"]
+            ["TRAIT", "Gritty, absolute infantry; heavy defensive stonemasons"],
+            ["LEADER", "Shield-King Borun"]
           ],
           paragraphs: [
             { lead: true, text: "Operating without the restrictive, weaponized caste barriers of their Western cousins, the Boarheart Kingdom is the absolute infantry anvil of the Eastern Frontier. Their northern borders are a grinding warfront, facing the dual nightmares of the Creeping Curse's spiders and the chitinous waves of the Desert’s Scourge scorpions. To hold this line, the Boars have built an unbreakable culture of the shield wall. They are the only kingdom in the Garden where Khamseen iron-worship and Permutist fluid adaptation exist in a near-equal split without triggering a civil war; they simply realized centuries ago that religious purity tests do not stop a scorpion's stinger." },
@@ -1438,7 +1447,8 @@ window.CONTENT = {
             meta: [
               ["KIND", "Ungulates (Horses, Zebras, Donkeys)"],
               ["CREED", "Permutism Followers (The Fluid Arteries)"],
-              ["TRAIT", "Logistical masters; expert mobile archers and caravan tacticians"]
+              ["TRAIT", "Logistical masters; expert mobile archers and caravan tacticians"],
+              ["LEADER", "Pathmaster Aruun"]
             ],
             paragraphs: [
               { lead: true, text: "Flanked by the heavy subterranean citadels of the Boarheart Kingdom to their east and the philosophical workshops of the Giants Realm to their west, the Steppe Guardians serve as the literal circulatory system of the Eastern continent. They are a free, quick-minded society of horses, zebras, and donkeys who have completely abandoned the rigid, weaponized caste hierarchies of their Western cousins. To the Guardians, survival is a grand equation of kinetic movement." },
@@ -1485,7 +1495,8 @@ window.CONTENT = {
             meta: [
               ["KIND", "Hybrid (Elephants and Giraffes)"],
               ["CREED", "Permutism Followers (The Intellectual Anchor)"],
-              ["TRAIT", "Philosophers and innovators; masters of ballistic engineering"]
+              ["TRAIT", "Philosophers and innovators; masters of ballistic engineering"],
+              ["LEADER", "Grand Artificer Ombar"]
             ],
             paragraphs: [
               { lead: true, text: "Towering above the emerald rainforests, the Giants Realm functions as the premier intellectual foundry and munitions forge of the Eastern Frontier. Bound to the fluid, evolutionary principles of Permutism, this society of elephants and giraffes approaches the existential horror of the Scourge and the Wind's Hunger not with raw fury, but with cold, mathematical precision." },
