@@ -69,7 +69,7 @@ window.CONTENT = {
           "Yet even an endless day cannot conquer exhaustion. Across the wilds, every creature still follows its own <em>Daily Turn</em>. When the body demands rest, the beasts simply make their own night. The jungles swallow sleeping herds beneath layers of tangled canopy, burrowing creatures vanish beneath the earth, and desert animals disappear into deep shade until strength returns. Life keeps its ancient rhythm, even when the heavens refuse to.",
           "The speaking kingdoms have learned the same lesson. Without sunrise or sunset to govern them, every settlement keeps its own Daily Turn. Bells, drums, water clocks and tradition decide when a city wakes and when it sleeps. A traveler may leave one kingdom at the beginning of its working day and arrive at another whose gates are already closed for the night. During the Long Light, the world's granaries are filled, roads remain busiest, and nearly every civilization races to gather enough food to survive the darkness still months away."
         ],
-        visual: { img: "images/long-light.jpg", grad: "radial-gradient(130% 100% at 60% 28%, #fff8e6 0%, #ecd99f 30%, #c79a55 60%, #6b4f2c 100%)", tint: "rgba(255,236,180,.30)", glow: "#f0d488", fx: "heat" }
+        visual: { img: "images/LongLight1.jpg", grad: "radial-gradient(130% 100% at 60% 28%, #fff8e6 0%, #ecd99f 30%, #c79a55 60%, #6b4f2c 100%)", tint: "rgba(255,236,180,.30)", glow: "#f0d488", fx: "heat" }
       },
       {
         id: "p2",
@@ -87,7 +87,7 @@ window.CONTENT = {
           "Across the wilds, old migrations begin. Rivers become highways for countless creatures seeking higher ground before the darkness arrives. Predators lose the scent of their prey beneath endless rain, while marshes and flooded forests briefly belong to creatures that thrive in water.",
           "For civilization, the Weeping is a season of preparation. Grain stores are sealed against moisture. Bridges become more valuable than fortresses. Trade slows, armies disperse, and every kingdom begins quietly counting the provisions that must last through the coming night."
         ],
-        visual: { img: "images/weeping.jpg", grad: "linear-gradient(160deg, #2a2740 0%, #34304e 35%, #1e2236 70%, #0f111d 100%)", tint: "rgba(70,60,110,.26)", glow: "#9d92d6", fx: "rain" }
+        visual: { img: "images/Weeping1.jpg", grad: "linear-gradient(160deg, #2a2740 0%, #34304e 35%, #1e2236 70%, #0f111d 100%)", tint: "rgba(70,60,110,.26)", glow: "#9d92d6", fx: "rain" }
       },
       {
         id: "p3",
@@ -105,7 +105,7 @@ window.CONTENT = {
           "The speaking peoples cannot share this ancient refuge. Every hybrid carries the human appetite and the same fatal vulnerability to the miasma. Their cities endure the darkness through careful stores gathered during the Long Light and by cultivating edible fungi beneath cellars, caves and sheltered terraces where the deadly spores cannot reach. Most settlements simply avoid the drifting bands, abandoning low villages for a few weeks whenever the glowing tide approaches.",
           "Only the greatest cities stand their ground. When scouts report an advancing miasma front, ancient fire trenches are reopened, beacon towers lit, and immense bellows awaken after months of silence. Walls of heat push the heavy spores aside until the drifting cloud finally passes, allowing the city to breathe once more."
         ],
-        visual: { img: "images/fungal-night.jpg", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.20)", glow: "#79e8cf", fx: "spore" }
+        visual: { img: "images/LongNight1.jpg", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.20)", glow: "#79e8cf", fx: "spore" }
       },
       {
         id: "p4",
@@ -122,7 +122,7 @@ window.CONTENT = {
           "The sleeping herds awaken together, filling the plains almost overnight. Carnivores emerge lean and desperate, while forests echo once again with movement after the stillness of the long dark.",
           "For civilization, the Thaw is a season of reckoning. Caravans return to forgotten roads, villages reclaim homes abandoned before the drifting miasma, and merchants reopen trade routes buried beneath snow and fungus. Granaries stand nearly empty, waiting for the next Long Light to fill them again. Whatever the night concealed is slowly revealed by the returning dawn, and beyond the horizon the endless sun is already beginning its climb."
         ],
-        visual: { img: "images/thaw.jpg", grad: "linear-gradient(165deg, #cfe0e6 0%, #9fb9c2 32%, #6f8d97 60%, #2c3a44 100%)", tint: "rgba(150,190,205,.24)", glow: "#bcd6df", fx: "thaw" }
+        visual: { img: "images/Thaw1.jpg", grad: "linear-gradient(165deg, #cfe0e6 0%, #9fb9c2 32%, #6f8d97 60%, #2c3a44 100%)", tint: "rgba(150,190,205,.24)", glow: "#bcd6df", fx: "thaw" }
       }
     ],
     end: {
@@ -778,6 +778,8 @@ window.CONTENT = {
             "Against the Mooncrest Matriarchy, the Vanguards fight an endless cycle of holy wars. Though often portrayed as standing alone against the predators, they are not entirely without friends. To their north lies the Wetlands Pact, a loose alliance of hippos, rhinoceroses, and crocodilians united beneath the radical, anti-authoritarian ideals of Hieromachy.",
             "Born in bloody resistance to Khamseen oppression, the Pact has repeatedly dispatched heavy battalions to reclaim lost Vanguard territory whenever the southern front threatens to collapse. Yet this alliance has begun to fracture under the weight of its own contradictions. The egalitarian rebels of the Wetlands look upon the Vanguards' rigid caste hierarchy, and their brutal treatment of the lower clades, with growing disgust.",
             "With no direct border against Mooncrest and generations of mounting casualties, many within the Wetlands now openly question why the Unchained Sky should continue spilling its blood to protect a kingdom whose own people remain divided by birth. The hyenas fight to prove that suffering reveals truth. The Vanguards fight to preserve a vision of harmony they themselves no longer fully understand. Neither remembers how the first battle began, yet both remain imprisoned by ideals inherited from another age.",
+            "At the center of this contradiction stands High Warden Somir, a buffalo ruler who embodies the Vanguards' martial dignity without sharing their appetite for reform. Somir is no coward, nor is he ignorant of the kingdom's growing fractures. Yet where another ruler might rebuild the lost libraries, revise military doctrine, or confront the cruelties hardened into caste, Somir turns instead toward ceremony. Every drought, failed harvest, border defeat, plague, tax dispute, and unfavorable omen is answered with another sacred rite conducted by the cattle priesthood. Under his rule, governance has become a procession of consecrated fields, river blessings, war fasts, purification fires, and public prayers for balance to return.",
+            "To Somir, these rituals are not distractions from rule. They are rule. He believes the kingdom survives because every caste is reminded, again and again, of its appointed duty beneath Suvartan. The cows chant, the buffaloes kneel, the deer labor, the rats are sent back to the quarries, and the granaries open for foreign refugees while the lower castes remain bound at home. His tragedy is not that he hates his people, but that he can only love them through the shape scripture allows. High Warden Somir is not the architect of the Vanguard decline. He is its most devoted caretaker.",
             "No civilization has given more freely to strangers while demanding more rigidly from its own people. That contradiction has become both the tragedy and the enduring legacy of the Verdant Vanguards."
           ]
         }
@@ -978,7 +980,7 @@ window.CONTENT = {
               },
               {
                 text: "A Vanguard officer asked if ambushes were dishonorable. The ranger asked if dying politely had helped so far.",
-                who: "frontier interpreter"
+                who: "ranger's apprentice"
               }
             ]
           },
@@ -1005,12 +1007,32 @@ window.CONTENT = {
           image: "images/factions/WetlandsPact3.jpg",
           vox: {
             tab: "River talk",
-            image: "", // e.g. "images/factions/vox/wetlands-pact.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/RiverTalk1.jpg", // e.g. "images/factions/vox/wetlands-pact.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "My grandmother says the river swallowed the last priest-king whole. Around here, children learn to swim before they learn to bow.",
+                who: "reed-cutter"
+              },
+              {
+                text: "The chieftains say every voice matters. Funny how the deepest voices always seem to come from hippo throats.",
+                who: "crocodile boatman"
+              },
+              {
+                text: "A camel merchant asked where our roads were. I told him roads are what people build when they cannot trust water.",
+                who: "ferry guide"
+              },
+              {
+                text: "We sent another battalion south to help the Vanguards. My brother says freedom has very expensive neighbors.",
+                who: "dock worker"
+              },
+              {
+                text: "The old Khamseen whips are gone, praise the Sky. Still, some days the council speaks with a very familiar snap.",
+                who: "marsh widow"
+              },
+              {
+                text: "Never argue with a rhino in a council hall. By the time he changes direction, the vote is already over.",
+                who: "clerk of the lower assembly"
+              }
             ]
           },
           meta: [
@@ -1032,13 +1054,33 @@ window.CONTENT = {
           name: "Galeon Heights",
           image: "images/factions/GaleonHeights2.jpg",
           vox: {
-            tab: "Dockside banter",
-            image: "", // e.g. "images/factions/vox/galeon-heights.jpg" — falls back to the faction image until set
+            tab: "High harbor banter",
+            image: "images/factions/vox/HighDockBanter1.jpg", // e.g. "images/factions/vox/galeon-heights.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "First rule of the high harbor: unload fast. The goats charge by the hour, and the gulls charge by theft.",
+                who: "dock porter"
+              },
+              {
+                text: "A bear warband was spotted at dawn. By breakfast, the raptors had counted them. By lunch, the mountain had answered.",
+                who: "harbor watchman"
+              },
+              {
+                text: "Lowland sailors complain about storms. Cute. Try docking while a goat is shouting directions from a cliff above you.",
+                who: "ship captain"
+              },
+              {
+                text: "Every merchant asks why we build so high. Then the first boulder falls on the road behind them and suddenly they understand tradition.",
+                who: "customs clerk"
+              },
+              {
+                text: "The wolves send timber, the camels send spice, and the bears send target practice. Busy season, all things considered.",
+                who: "quay-side fletcher"
+              },
+              {
+                text: "A raptor lookout can see trouble three valleys away. Unfortunately, he can also see when you are late for your shift.",
+                who: "goat porter"
+              }
             ]
           },
           meta: [
@@ -1060,12 +1102,32 @@ window.CONTENT = {
           image: "images/factions/UrsaTheocracy1.jpg",
           vox: {
             tab: "Monastery murmurs",
-            image: "", // e.g. "images/factions/vox/ursa-theocracy.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/MonastaryMurmurs1.jpg", // e.g. "images/factions/vox/ursa-theocracy.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "The abbot says comfort weakens the soul. Easy for him to say. His cell has the good fireplace.",
+                who: "young acolyte"
+              },
+              {
+                text: "Another priest-king has declared the last priest-king insufficiently strong. I have stopped repainting the banners until spring.",
+                who: "monastery scribe"
+              },
+              {
+                text: "The Sky tests the worthy, the snow tests everyone, and the cook tests whatever survived in the cellar.",
+                who: "kitchen brother"
+              },
+              {
+                text: "We marched on Galeon again. The goats threw rocks, the birds counted us, and the mountain preached louder than our priests.",
+                who: "wounded crusader"
+              },
+              {
+                text: "My son wants to join the next holy campaign. I told him holiness is easier to find after the roof is mended.",
+                who: "village carpenter"
+              },
+              {
+                text: "The longship returned from the eastern mist with grey-furred brothers who no longer shout during prayer. No one knows what to do with quiet bears.",
+                who: "harbor monk"
+              }
             ]
           },
           meta: [
@@ -1090,12 +1152,32 @@ window.CONTENT = {
           image: "images/factions/ShadowsTeeth5.jpg",
           vox: {
             tab: "Miners talking",
-            image: "", // e.g. "images/factions/vox/shadows-teeth.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/MinersTalk1.jpg", // e.g. "images/factions/vox/shadows-teeth.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "The foreman says this tunnel is temporary. Around here, temporary means until our grandchildren reinforce it.",
+                who: "gopher miner"
+              },
+              {
+                text: "If the Vanguards come south, they'll find the front gate. Then the false gate. Then the polite warning. Then the floor gives up.",
+                who: "rat sapper"
+              },
+              {
+                text: "My cousin left to undermine castles for foreign kings. Sends the gold home every Rain. Says our holes are still better built.",
+                who: "porcupine mason"
+              },
+              {
+                text: "The surface folk ask why we dig so deep. I ask why they keep trusting the surface.",
+                who: "old tunnel guard"
+              },
+              {
+                text: "Every new chamber gets three exits, two murder-holes, and one argument about ventilation.",
+                who: "squirrel engineer"
+              },
+              {
+                text: "They call us escaped chattel in the north. Strange. I have never seen a chain follow anyone through a collapsed tunnel.",
+                who: "quarry-born rat"
+              }
             ]
           },
           meta: [
@@ -1117,12 +1199,32 @@ window.CONTENT = {
           image: "images/factions/Redsett1.jpg",
           vox: {
             tab: "Campfire stories",
-            image: "", // e.g. "images/factions/vox/redsett-clans.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/Campfire stories1.jpg", // e.g. "images/factions/vox/redsett-clans.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "Stoneheart pays us not to raid them. Very scholarly arrangement. They keep their bridges, we keep our boats.",
+                who: "badger oarsman"
+              },
+              {
+                text: "My mother says a proper Redsett should see three rivers before breakfast and steal from none of them twice.",
+                who: "young weasel"
+              },
+              {
+                text: "Conquer a town and suddenly everyone wants laws, wells, roofs, taxes. Burn one warehouse and you're home by supper.",
+                who: "mongoose raider"
+              },
+              {
+                text: "A camel merchant called us unpredictable. Nonsense. We always arrive where the guards are not.",
+                who: "otter scout"
+              },
+              {
+                text: "The apes call it tribute. We call it a travel fund with excellent manners.",
+                who: "clan treasurer"
+              },
+              {
+                text: "My brother joined the eastern front for Giant gold. Says the Swarm screams louder than sailors, but pays worse.",
+                who: "campfire cook"
+              }
             ]
           },
           meta: [
@@ -1160,12 +1262,32 @@ window.CONTENT = {
           image: "images/factions/Khanstan2.jpg",
           vox: {
             tab: "Tournament banter",
-            image: "", // e.g. "images/factions/vox/khanstan.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/TournamentBanter1.jpg", // e.g. "images/factions/vox/khanstan.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "The westerners call it a tournament. Cute. Last year my cousin lost two teeth, won a spear, and learned how to break hornet armor.",
+                who: "tiger wrestler"
+              },
+              {
+                text: "Lord Varun arrived with a cannon made from three broken ballistae and a spider shell. It exploded beautifully. We gave him second place.",
+                who: "arena judge"
+              },
+              {
+                text: "The priests say strength reveals truth. Around here, truth usually has mud on its face and a swarm stinger in its boot.",
+                who: "jungle quartermaster"
+              },
+              {
+                text: "A jaguar champion beat our best duelist before breakfast. Naturally we invited him to dinner and argued about footwork until dawn.",
+                who: "tournament medic"
+              },
+              {
+                text: "Every lord claims he fights alone. Funny how many arrive with engineers, cousins, debtors, and three carts of spare weapons.",
+                who: "weapon vendor"
+              },
+              {
+                text: "The Swarm does not pause for festivals. That is why the archery round uses real hornets.",
+                who: "old range master"
+              }
             ]
           },
           meta: [
@@ -1188,12 +1310,32 @@ window.CONTENT = {
           image: "images/factions/NahaulsDomain2.jpg",
           vox: {
             tab: "Bazaar bargaining",
-            image: "", // e.g. "images/factions/vox/nahauls-domain.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/Bazaar bargaining1.jpg", // e.g. "images/factions/vox/nahauls-domain.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "Careful with that vial. It kills spiders, hornets, scorpions, and careless apprentices in that order.",
+                who: "venom seller"
+              },
+              {
+                text: "A tiger buyer asked if the batch was stable. I told him stable things do not win jungle wars.",
+                who: "jaguar alchemist"
+              },
+              {
+                text: "The Boarheart commander wanted something subtle. I sold him three barrels marked DO NOT BREATHE NEAR WALLS.",
+                who: "chemical broker"
+              },
+              {
+                text: "Every clan claims the best canopy traps. Funny how they all come here when the spiders stop dying properly.",
+                who: "market porter"
+              },
+              {
+                text: "The priests say trade in poison stains the soul. My soul has excellent margins this season.",
+                who: "bazaar accountant"
+              },
+              {
+                text: "Khanstan sends dead hornets. We send spider venom back. Brotherhood is mostly paperwork and very dangerous bottles.",
+                who: "shipping clerk"
+              }
             ]
           },
           meta: [
@@ -1216,12 +1358,32 @@ window.CONTENT = {
           image: "images/factions/Boarheart1.jpg",
           vox: {
             tab: "Mess-hall arguments",
-            image: "", // e.g. "images/factions/vox/boarheart-kingdom.jpg" — falls back to the faction image until set
+            image: "images/factions/vox/MessArguements1.jpg", // e.g. "images/factions/vox/boarheart-kingdom.jpg" — falls back to the faction image until set
             quotes: [
-              { text: "Vox populi placeholder — overheard line one.", who: "" },
-              { text: "Vox populi placeholder — overheard line two.", who: "" },
-              { text: "Vox populi placeholder — overheard line three.", who: "" },
-              { text: "Vox populi placeholder — overheard line four.", who: "" }
+              {
+                text: "Khamseen says strength reveals truth. Permutism says truth changes. I say both of you are blocking the stew.",
+                who: "mess-hall cook"
+              },
+              {
+                text: "A jaguar sent poison strong enough to melt scorpion chitin. Wonderful. Now label the barrel before someone seasons lunch with it.",
+                who: "quartermaster"
+              },
+              {
+                text: "The tigers brought a new cannon. The jaguars brought venom. We brought a wall, because someone here has to survive the demonstration.",
+                who: "shield captain"
+              },
+              {
+                text: "My brother says the western boars still argue about caste. Must be nice having time for decorative problems.",
+                who: "stone mason"
+              },
+              {
+                text: "Every council meeting ends with shouting. Every shield wall holds. I have stopped questioning the method.",
+                who: "citadel clerk"
+              },
+              {
+                text: "A scorpion broke three gates last winter. We built four new ones and argued for six days about hinge placement.",
+                who: "gate engineer"
+              }
             ]
           },
           meta: [
@@ -1240,15 +1402,35 @@ window.CONTENT = {
             slug: "steppe-guardians",
             code: "3.4",
             name: "Steppe Guardians",
-            image: "images/factions/sg1.jpg",
+            image: "images/factions/SteppeGuardians11.jpg",
             vox: {
               tab: "Trail whispers",
-              image: "", // e.g. "images/factions/vox/steppe-guardians.jpg" — falls back to the faction image until set
+              image: "images/factions/vox/TrailHalt1.jpg", // e.g. "images/factions/vox/steppe-guardians.jpg" — falls back to the faction image until set
               quotes: [
-                { text: "Vox populi placeholder — overheard line one.", who: "" },
-                { text: "Vox populi placeholder — overheard line two.", who: "" },
-                { text: "Vox populi placeholder — overheard line three.", who: "" },
-                { text: "Vox populi placeholder — overheard line four.", who: "" }
+                {
+                  text: "The map says this route takes six days. The wind says five. The old mare says seven. I trust the mare.",
+                  who: "donkey pathfinder"
+                },
+                {
+                  text: "A Boarheart captain asked if the arrows would arrive before the scorpions. I told him they had better, because we were carrying both.",
+                  who: "wagon outrider"
+                },
+                {
+                  text: "The Giants build weapons too large to move. We move them anyway. That is why everyone suddenly respects roads.",
+                  who: "zebra quartermaster"
+                },
+                {
+                  text: "A tiger engineer called our wagons old-fashioned. His cannon lost a wheel before sunset. Our old-fashioned wagon carried it home.",
+                  who: "horse teamster"
+                },
+                {
+                  text: "Never race a Steppe courier. If you win, he was carrying granite. If you lose, he will tell everyone by breakfast.",
+                  who: "caravan cook"
+                },
+                {
+                  text: "The Swarm comes like weather, the grass hides the roads, and every kingdom wants delivery yesterday. Good season, then.",
+                  who: "bow rider"
+                }
               ]
             },
             meta: [
@@ -1270,12 +1452,32 @@ window.CONTENT = {
             image: "images/factions/GiantsRealm8.jpg",
             vox: {
               tab: "Workshop chatter",
-              image: "", // e.g. "images/factions/vox/giants-realm.jpg" — falls back to the faction image until set
+              image: "images/factions/vox/WorkshopChatter1.jpg", // e.g. "images/factions/vox/giants-realm.jpg" — falls back to the faction image until set
               quotes: [
-                { text: "Vox populi placeholder — overheard line one.", who: "" },
-                { text: "Vox populi placeholder — overheard line two.", who: "" },
-                { text: "Vox populi placeholder — overheard line three.", who: "" },
-                { text: "Vox populi placeholder — overheard line four.", who: "" }
+                {
+                  text: "The apprentice asked why the bolt was taller than him. I told him the scorpion is taller than the wall.",
+                  who: "elephant machinist"
+                },
+                {
+                  text: "A tiger brought us a broken hornet wing and asked if we could make it useful. We made three arrows, two lenses, and one argument.",
+                  who: "forge scholar"
+                },
+                {
+                  text: "The Steppe riders complain our engines are too heavy. Strange. They still arrive every season asking for heavier ones.",
+                  who: "giraffe draftsman"
+                },
+                {
+                  text: "Do not touch the Sky-Sweeper lever unless you are aiming at something, testing something, or prepared to explain the missing roof.",
+                  who: "workshop foreman"
+                },
+                {
+                  text: "Permutism teaches adaptation. In the workshop, that mostly means rebuilding whatever exploded before the professor returns.",
+                  who: "student engineer"
+                },
+                {
+                  text: "The Redsett mercenaries asked if the new bolts could kill spiders. I said yes. They asked if they could also open gates. I said unfortunately, also yes.",
+                  who: "munitions clerk"
+                }
               ]
             },
             meta: [

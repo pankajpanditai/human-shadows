@@ -605,9 +605,11 @@
         layers[1].style.background = bgCSS(img);
         layers[0].classList.remove('active');
         layers[1].classList.add('active');
+        panOverride = { layer: layers[1], img };
       } else {
         layers[0].classList.add('active');
         layers[1].classList.remove('active');
+        panOverride = null;
       }
       panSection = null;
       updatePan();
@@ -705,6 +707,7 @@
     activeSegments.forEach(seg => seg.classList.toggle('on', +seg.dataset.jump === phaseIdx));
     fxMode = config.fx;
     panSection = null;
+    panOverride = null;
     updatePan();
   }
 
@@ -714,10 +717,11 @@
      Long sections (faction pages) pan across their own scroll span; short
      100vh phases pan while passing through the viewport. */
   let panSection = null;
+  let panOverride = null; // { layer, img } — set when a tab swaps the backdrop
 
   function updatePan(){
-    const layer = layers[currentPhase];
-    const config = viewConfigs[currentPhase];
+    const layer = panOverride ? panOverride.layer : layers[currentPhase];
+    const config = panOverride || viewConfigs[currentPhase];
     if (!layer || !config || !config.img) return;
     if (reduce) { layer.style.backgroundPosition = 'center 50%'; return; }
     if (!panSection || !panSection.isConnected) {
