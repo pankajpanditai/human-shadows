@@ -422,6 +422,44 @@ window.CONTENT = {
       },
       {
         id: "c6",
+        tag: "APPENDIX · TERRAFORMING RECORD",
+        title: "Record of the Work",
+        railLabel: "RECORD OF THE WORK", railSub: "Terraforming Record", railLen: 2,
+        meta: [
+          ["BODY", "the orbital lattice"],
+          ["SUN", "projected from captured light"],
+          ["YEAR", "two natural solar days"],
+          ["MONTHS", "twelve, by inheritance"],
+          ["NIGHT", "unmediated when the lattice rests"]
+        ],
+        paragraphs: [
+            { lead: true, text: "Of the three intelligences, only the Terraformer was given a body, and its body is the sky." },
+            "The world it was handed circled too near its star. Its sunlight was almost twice as fierce as the light beneath which the Makers evolved. A passage from western sunrise to western sunrise lasted one hundred and seventeen of their days. No moon crossed the heavens to raise a tide or offer a measure for the months.",
+            "No natural sky could serve the world that had been ordered.",
+            "So the true Sun was placed behind a screen.",
+            "The lattice does not scatter its light loosely across the atmosphere. It gathers it beyond the planet’s shadow, carries it through chains of relays, and returns it through projector swarms positioned around the Garden. Each swarm presents the ground beneath it with a solar disc of the proper size, brightness, and direction.",
+            "The atmosphere completes the imitation. The sky turns blue. Shadows fall. Water glitters. Burning glasses burn. Leaves turn toward the light, and sundials continue to divide the day.",
+            "Every light the Garden calls the Sun is sunlight.",
+            "None is the star itself.",
+            "At the opening of the Turning Year, the projected disc rises in the west. Its light begins weakly, warming the frozen land and breaking the rivers from their winter prisons. The Garden calls this passage the Thaw.",
+            "As the disc climbs, the lattice increases its strength. For four months it crosses the sky at half the pace the natural Sun would have taken. Its light reaches every inhabited longitude, including those that the true star cannot face. The Garden calls this the Long Light.",
+            "At the appointed hour, the lattice begins to close. The disc descends and weakens. Heat leaves the land, water gathers in the cooling air, and the rains begin.",
+            "The storms are real.",
+            "Their hour is commanded.",
+            "When the last projected light disappears, the Fungal Night begins. Wherever the true Sun remains above the horizon, the lattice occludes it completely. Against the returning stars, the occluders pass as moving absences, dark shapes whose paths have been recorded for longer than any kingdom remembers.",
+            "When the true Sun finally sets, the occluders descend with it and the lattice rests. The stars that follow are the only lights above the Garden that have not been gathered, redirected, or remade.",
+            "The next projected sunrise begins the Thaw again.",
+            "The Turning Year is two natural solar days of Venus. Its twelve months answer to no moon, for there is none. They are an inheritance: the Makers’ calendar imposed upon a world that never produced it.",
+            "Every staple that feeds the Garden was written to fit this schedule. Grain ripens in roughly one hundred of the Makers’ days. Herds sleep through the dark. Fungi inherit what the light leaves behind. The wider ecology keeps time through temperature, hunger, dormancy, and the tides of the miasma.",
+            "The scholars of the Garden call this providence.",
+            "It is a specification.",
+            "The schedule has never been broken.",
+            "The terms that govern it were amended once."
+          ],
+        visual: { img: "images/factions/theBodyInTheSky.jpg", grad: "radial-gradient(130% 100% at 58% 22%, #142129 0%, #0a1217 48%, #030608 100%)", tint: "rgba(40,100,120,.15)", glow: "#76b3c4", fx: "spore" }
+      },
+      {
+        id: "c7",
         tag: "APPENDIX · INTELLIGENCE PROFILE 02",
         title: "The Earthkeeper",
         railLabel: "THE EARTHKEEPER", railSub: "PROFILE 02", railLen: 2,
@@ -437,7 +475,7 @@ window.CONTENT = {
         visual: { img: "images/factions/WardenVirility1.jpg", grad: "linear-gradient(160deg, #2e1616 0%, #241010 40%, #120808 72%, #050303 100%)", tint: "rgba(150,50,50,.20)", glow: "#c26b6b", fx: "ash" }
       },
       {
-        id: "c7",
+        id: "c8",
         tag: "APPENDIX · INTELLIGENCE PROFILE 03",
         title: "The Observer",
         railLabel: "THE OBSERVER", railSub: "PROFILE 03", railLen: 2,
@@ -1622,6 +1660,30 @@ window.CONTENT = {
             "No kingdom claims the island. No priesthood agrees on what dwells there. Most maps simply leave the interior blank, naming the place only as <em>The Silent Swarm</em>: not because anyone has seen a swarm, but because something unseen moves across that frozen land with the order of one.",
             "Some sailors insist the footsteps are only ice settling beneath the cold. The old captains never argue. They simply turn the ship around.",
             "Do not land."
+          ]
+        },
+        {
+          slug: "same-sun",
+          code: "5.2",
+          name: "The Same Sun",
+          image: "images/factions/theWorldIsRound.jpg",
+          epithet: "The world is round. The day is not.",
+          paragraphs: [
+            { lead: true, text: "Stoneheart scholars have known for centuries that the Garden is round." },
+            "Ships vanish beneath the horizon from the hull upward. Different stars appear above the northern and southern seas. The length of a shadow changes as a traveler moves across the world. No serious cartographer still argues otherwise.",
+            "The Sun remains more difficult.",
+            "Place a clay sphere before a lamp and only one half can receive its light. Turn the sphere and the bright half changes, but darkness always survives somewhere.",
+            "The Garden does not behave this way.",
+            "During the Long Light, every surviving almanac records the Sun above the world. Reports from distant kingdoms disagree about its height and direction, but none describes a true night. Sundials continue to cast shadows. Crops turn toward the disc. Burning lenses gather its light. Travelers crossing from one end of the maps to the other find the same season waiting for them.",
+            "During the Fungal Night, the contradiction reverses. No expedition has ever returned from a distant shore claiming to have found the Sun still shining there. Every kingdom enters darkness beneath the same calendar.",
+            "Priests call this proof that the Sky holds the whole Garden beneath one law.",
+            "Natural philosophers have offered less satisfying answers. Some argue that sunlight bends around the upper atmosphere. Others claim that distant almanacs cannot be trusted, or that the maps exaggerate the size of the world. A few suggest that the Sun is far smaller and nearer than it appears.",
+            "Each explanation solves one observation by breaking another.",
+            "The oldest surviving experiment is kept in a sealed chamber beneath the Stoneheart sky-archive. It consists of a clay globe, a lamp, and a ring of wooden pegs driven into opposite sides of the sphere.",
+            "Beside it lies a page written by an unnamed astronomer.",
+            "A round world cannot cast these shadows from one sun.",
+            "Beneath it, in another hand, someone added:",
+            "Then the error is not in the shadows."
           ]
         }
       ]

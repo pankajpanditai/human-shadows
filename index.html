@@ -755,7 +755,7 @@
 
     const phaseObs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) setPhase(+e.target.dataset.phase); });
-    }, { threshold: .3 });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
 
     document.querySelectorAll(`#view-${viewKey} section[data-phase]`).forEach(sec => phaseObs.observe(sec));
     observerInstances.push(phaseObs);
