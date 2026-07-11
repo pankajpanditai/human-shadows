@@ -1,8 +1,12 @@
 # Human Shadows
 
-_Content mirror of content.js, regenerated 10 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles, episodes 1-3); their source scripts are in the gitignored episodes/ folder._
+_Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles, episodes 1-3); their source scripts are in the gitignored episodes/ folder._
 
-## SITE UPDATES · 10 JUL 2026
+## SITE UPDATES · 11 JUL 2026
+
+- Terraforming mechanics (commit 577cfb9): the Restricted Records gained a new appendix section, "Record of the Work" (TERRAFORMING RECORD), between the Terraformer profile and the Earthkeeper profile. It canonizes how the sky works: the Terraformer's body is an orbital lattice that captures the true Sun's light and projects a proper solar disc over the Garden; the Turning Year is two natural solar days of Venus; the twelve months are the Makers' inherited calendar (no moon exists to measure them); the Fungal Night is the lattice at rest, with occluders blotting the true Sun wherever it still sits above the horizon. Closes on "The terms that govern it were amended once." Backdrop: images/factions/theBodyInTheSky.jpg. (Profiles renumbered: Earthkeeper is now c7, Observer c8.)
+- New Cohort V entry: The Same Sun [5.2] (art: images/factions/theWorldIsRound.jpg, epithet "The world is round. The day is not."), the in-world flip side of the record above: Stoneheart scholars know the world is round, yet every almanac agrees the whole Garden shares one day and one night, which a round world under one sun cannot do. Ends on the sealed sky-archive experiment and the two-hand marginalia ("Then the error is not in the shadows.").
+- index.html: chronicle phase sections now activate when they cross the viewport's middle band (IntersectionObserver rootMargin -45%/-45%) instead of at 30% visibility, so long sections like the new record switch the rail/backdrop reliably.
 
 - Vox populi completed (commits d36b541 through 41c2780): all fourteen remaining Cohort II/III placeholder quote sets are now written (Watcher's Dominions, Naga's Embrace, Midas' Realm, Celestial Empire, Wetlands Pact, Galeon Heights, Ursa Theocracy, Shadow's Teeth, Redsett Clans, Khanstan, Nahaul's Domain, Boarheart, Steppe Guardians, Giants Realm), and nearly every vox tab has a dedicated backdrop image under images/factions/vox/. Only Midas' Realm ("Caravan talk") still falls back to the faction art. Two tabs renamed: Mooncrest is now "Temple whispers after the Sermon", Galeon Heights "High harbor banter" (was "Dockside banter"). Three new LEADER rows: High Watcher Sareth (Watcher's Dominions), Coil Regent Shesara (Naga's Embrace), Grand Caravanser Raqim (Midas' Realm).
 - Opening updated (commit cb0cc1b): the Turning Year hero sub now plants the calendar-precision seed (nothing is ever late; dawn returns to the hour the oldest calendars promise; the faithful call it divine order). Stoneheart gained a sky-archive paragraph on the same theme: the wandering stars keep crooked time while the sun alone "moves as though it has somewhere to be", a margin note dismissed as a tired scholar's poetry.
@@ -226,6 +230,52 @@ The sky had always contained many voices.
 Built to transform Venus into a habitable world, the Terraformer spent two centuries reshaping oceans, atmosphere, climate, and ecosystems in preparation for humanity's arrival. It understood worlds better than people. When the Makers vanished, it concluded that comfort had never been the true mistake; purpose had. Civilization would survive not through hardship, but through shared creation.
 
 The Terraformer communicates through serene, lucid dreams and geometric hallucinations. A hybrid might look at a natural cliff face and suddenly "see" the blueprint of a grand citadel carved into it. Their messages feel like a warm hum in the back of the skull, inducing a state of euphoric clarity. It broadcasts through subtle shifts in the planet’s magnetic fields and the bioluminescent patterns of benign flora.
+
+### Record of the Work · APPENDIX · TERRAFORMING RECORD
+
+Of the three intelligences, only the Terraformer was given a body, and its body is the sky.
+
+The world it was handed circled too near its star. Its sunlight was almost twice as fierce as the light beneath which the Makers evolved. A passage from western sunrise to western sunrise lasted one hundred and seventeen of their days. No moon crossed the heavens to raise a tide or offer a measure for the months.
+
+No natural sky could serve the world that had been ordered.
+
+So the true Sun was placed behind a screen.
+
+The lattice does not scatter its light loosely across the atmosphere. It gathers it beyond the planet’s shadow, carries it through chains of relays, and returns it through projector swarms positioned around the Garden. Each swarm presents the ground beneath it with a solar disc of the proper size, brightness, and direction.
+
+The atmosphere completes the imitation. The sky turns blue. Shadows fall. Water glitters. Burning glasses burn. Leaves turn toward the light, and sundials continue to divide the day.
+
+Every light the Garden calls the Sun is sunlight.
+
+None is the star itself.
+
+At the opening of the Turning Year, the projected disc rises in the west. Its light begins weakly, warming the frozen land and breaking the rivers from their winter prisons. The Garden calls this passage the Thaw.
+
+As the disc climbs, the lattice increases its strength. For four months it crosses the sky at half the pace the natural Sun would have taken. Its light reaches every inhabited longitude, including those that the true star cannot face. The Garden calls this the Long Light.
+
+At the appointed hour, the lattice begins to close. The disc descends and weakens. Heat leaves the land, water gathers in the cooling air, and the rains begin.
+
+The storms are real.
+
+Their hour is commanded.
+
+When the last projected light disappears, the Fungal Night begins. Wherever the true Sun remains above the horizon, the lattice occludes it completely. Against the returning stars, the occluders pass as moving absences, dark shapes whose paths have been recorded for longer than any kingdom remembers.
+
+When the true Sun finally sets, the occluders descend with it and the lattice rests. The stars that follow are the only lights above the Garden that have not been gathered, redirected, or remade.
+
+The next projected sunrise begins the Thaw again.
+
+The Turning Year is two natural solar days of Venus. Its twelve months answer to no moon, for there is none. They are an inheritance: the Makers’ calendar imposed upon a world that never produced it.
+
+Every staple that feeds the Garden was written to fit this schedule. Grain ripens in roughly one hundred of the Makers’ days. Herds sleep through the dark. Fungi inherit what the light leaves behind. The wider ecology keeps time through temperature, hunger, dormancy, and the tides of the miasma.
+
+The scholars of the Garden call this providence.
+
+It is a specification.
+
+The schedule has never been broken.
+
+The terms that govern it were amended once.
 
 ### The Earthkeeper · APPENDIX · INTELLIGENCE PROFILE 02
 
@@ -935,11 +985,45 @@ Some sailors insist the footsteps are only ice settling beneath the cold. The ol
 
 Do not land.
 
+### The Same Sun  [5.2]
+
+_The world is round. The day is not._
+
+Stoneheart scholars have known for centuries that the Garden is round.
+
+Ships vanish beneath the horizon from the hull upward. Different stars appear above the northern and southern seas. The length of a shadow changes as a traveler moves across the world. No serious cartographer still argues otherwise.
+
+The Sun remains more difficult.
+
+Place a clay sphere before a lamp and only one half can receive its light. Turn the sphere and the bright half changes, but darkness always survives somewhere.
+
+The Garden does not behave this way.
+
+During the Long Light, every surviving almanac records the Sun above the world. Reports from distant kingdoms disagree about its height and direction, but none describes a true night. Sundials continue to cast shadows. Crops turn toward the disc. Burning lenses gather its light. Travelers crossing from one end of the maps to the other find the same season waiting for them.
+
+During the Fungal Night, the contradiction reverses. No expedition has ever returned from a distant shore claiming to have found the Sun still shining there. Every kingdom enters darkness beneath the same calendar.
+
+Priests call this proof that the Sky holds the whole Garden beneath one law.
+
+Natural philosophers have offered less satisfying answers. Some argue that sunlight bends around the upper atmosphere. Others claim that distant almanacs cannot be trusted, or that the maps exaggerate the size of the world. A few suggest that the Sun is far smaller and nearer than it appears.
+
+Each explanation solves one observation by breaking another.
+
+The oldest surviving experiment is kept in a sealed chamber beneath the Stoneheart sky-archive. It consists of a clay globe, a lamp, and a ring of wooden pegs driven into opposite sides of the sphere.
+
+Beside it lies a page written by an unnamed astronomer.
+
+A round world cannot cast these shadows from one sun.
+
+Beneath it, in another hand, someone added:
+
+Then the error is not in the shadows.
+
 ---
 
 ## OPEN INCONSISTENCIES & FIX-LIST
 
-_Working notes from review, 05 Jul 2026; statuses refreshed 07 Jul 2026 after the kingdoms/minor-factions polish pass and the em-dash sweep, 08 Jul 2026 after the AI upgrade, the Lunar/Stoneheart upgrade, and the vox populi feature, and 10 Jul 2026 after the vox completion and the fix sweep (commits 839011d, 37a06a9). Cohort V remains the last WIP section._
+_Working notes from review, 05 Jul 2026; statuses refreshed 07 Jul 2026 after the kingdoms/minor-factions polish pass and the em-dash sweep, 08 Jul 2026 after the AI upgrade, the Lunar/Stoneheart upgrade, and the vox populi feature, and 10 Jul 2026 after the vox completion and the fix sweep (commits 839011d, 37a06a9). Content mirrored through 11 Jul 2026 (terraforming record, The Same Sun); no statuses changed by that update. Cohort V remains the last WIP section._
 
 ### Resolved since 05 Jul
 

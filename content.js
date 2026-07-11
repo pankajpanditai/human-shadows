@@ -712,7 +712,7 @@ window.CONTENT = {
           slug: "mooncrest-matriarch",
           code: "1.4",
           name: "Mooncrest Matriarchy",
-          image: "images/factions/MooncrestMatriarch1.jpg",
+          image: "images/factions/MooncrestMatriarchy3.jpg",
           vox: {
             tab: "Temple whispers after the Sermon",
             image: "images/factions/vox/TempleWhispers1.jpg", // e.g. "images/factions/vox/mooncrest-matriarch.jpg" — falls back to the faction image until set
@@ -929,6 +929,7 @@ window.CONTENT = {
           paragraphs: [
             { lead: true, text: "Coiling around the western trade routes, Naga's Embrace is among the most feared, and most indispensable, kingdoms in the Garden. Its forests and marshes produce the world's richest venom, harvested from generations of cobras, mambas, vipers, and countless lesser serpents. In careful hands, these poisons become medicines, antidotes, ritual compounds, and rare hallucinogens sought by nobles and scholars alike. Every kingdom condemns the venom trade in public. Nearly every kingdom quietly depends upon it." },
             "Within serpent society, pythons and constrictors provide the kingdom's military strength, while the venomous lineages occupy the highest ranks of government, scholarship, and religion. To the Nagas, venom is neither curse nor blessing, but knowledge. The same drop that kills can heal. The same toxin that brings death can reveal hidden truths when measured with care. Their greatest physicians and poisoners are often the very same individuals.",
+            "That belief was strengthened during the event now remembered as the Venom Dawn. In the depths of one Fungal Night, an impossible light appeared above a miasma-choked basin, clearing the poisonous drift from one Naga city and three surrounding villages. The serpents regard it as the clearest divine intervention in their recorded history. Most of the Garden dismisses the account as a mass hallucination caused by their own venom, a mockery the Nagas receive with their customary silence.",
             "Unlike the thunderous courts of lions or the disciplined assemblies of wolves, the serpent courts are renowned for their silence. Decisions are rarely rushed. Negotiations often unfold over days rather than hours, testing the patience of foreign ambassadors long before any agreement is reached. Among the Nagas, haste is regarded as the companion of poor judgment.",
             "Not long ago, the kingdom was nearly destroyed during the Serpent War. The Lunar Guardians marched south after a series of mysterious deaths among northern wolves, each attributed to venom poisoning. The Nagas denied responsibility, insisting the incidents had been manipulated to justify an invasion and seize control of the world's most valuable venom trade. Whether the accusations were justified, fabricated, or simply exploited by those seeking war remains one of the Garden's enduring controversies.",
             "By the time the invasion began, relations between Naga's Embrace and the Golden Empire had already entered an uncertain chapter. Only one Rain earlier, Emperor Zaoren had stunned both kingdoms by taking Lady Seshara, a noblewoman of Naga's Embrace, as his newest consort, igniting controversy across the Zaoist world. When the Wolves refused his demand to withdraw, the Golden Empire entered the war. Four rains of bitter campaigning finally forced the invaders back, drawing Naga's Embrace firmly into the Golden sphere of influence.",
@@ -1649,7 +1650,7 @@ window.CONTENT = {
         {
           slug: "silent-swarm",
           code: "5.1",
-          name: "The Silent Swarm",
+          name: "The Silent Swarm?",
           image: "images/factions/SilentSwarm1.jpg",
           epithet: "The land is completely quiet, and it systematically consumes anyone who touches it.",
           paragraphs: [
@@ -1684,6 +1685,24 @@ window.CONTENT = {
             "A round world cannot cast these shadows from one sun.",
             "Beneath it, in another hand, someone added:",
             "Then the error is not in the shadows."
+          ]
+        },
+        {
+          slug: "venom-dawn",
+          code: "5.3",
+          name: "The Venom Dawn",
+          image: "images/factions/VenomDawn1.jpg",
+          epithet: "The light came only where no one would believe it.",
+          paragraphs: [
+            { lead: true, text: "During one Fungal Night, in the central basin of Naga's Embrace, the stars disappeared." },
+            "A pale disc rose above the marshes where no dawn was due. It brightened until shadows formed beneath the trees, fungal towers blackened, and the glowing miasma began retreating from the valley floor. The light remained for two complete Daily Turns, touching one serpent city, three villages, and the surrounding wilderness.",
+            "Then it narrowed, faded, and was never seen again.",
+            "Naga chronicles claim the basin had filled beyond its natural limits. Wild carnivores and omnivores, unable to cross the poisonous tide, had been trapped upon shrinking islands of high ground. The Sky opened above them, burned a path through the miasma, and allowed the animals to escape.",
+            "Two lion envoys were present within the city. Both returned to the Golden Empire swearing that the account was true.",
+            "Few beyond the western kingdoms believed them.",
+            "Naga apothecaries produce some of the strongest hallucinogens in the Garden. Stoneheart scholars therefore dismissed the incident as collective poisoning. Lunar chroniclers called it an embarrassment to lion diplomacy. Across the caravan roads, the story became a tavern joke about an entire serpent province drinking from the wrong vial and persuading two lions to join them.",
+            "The Nagas seldom argue with those who mock the tale.",
+            "They only ask why the miasma fled too."
           ]
         }
       ]
