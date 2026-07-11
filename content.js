@@ -37,7 +37,15 @@ window.CONTENT = {
 
   site: {
     brand: "Human Shadows",
-    credit: "HUMAN SHADOWS · ETERNAL-SPINS · WORLD CODEX"
+    credit: "HUMAN SHADOWS · ETERNAL-SPINS · WORLD CODEX",
+    /* Out-of-world footer strip, rendered on every view (see index.html). */
+    footer: {
+      line: "Human Shadows · a worldbuilding project by Pankaj",
+      links: [
+        { label: "About the Project", href: "#about" },
+        { label: "Join the Discord ↗", href: "https://discord.gg/4fQUzgQcyC", external: true }
+      ]
+    }
   },
 
   /* ── VIEW A · THE TURNING YEAR ─────────────────────────────────── */
@@ -498,6 +506,108 @@ window.CONTENT = {
       links: [
         { label: "↑ Read the records again", action: "top" },
         { label: "Return to the kingdoms →", action: "goto:factions" }
+      ],
+      visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
+    }
+  },
+
+  /* ── VIEW E · ABOUT THE PROJECT (colophon) ─────────────────────── */
+  /* The only out-of-world page on the site. Deliberately NOT in the
+     top menu; reachable through the footer strip on every view. */
+  about: {
+    nav: "About the Project",
+    hero: {
+      kicker: "Human Shadows · Behind the record",
+      title: "The hands<br>behind the<br><em>shadows</em>",
+      sub: "Everything else on this site speaks from inside the world. This page does not. It is the colophon: who makes Human Shadows, how it is made, and where to find the people making it.",
+      scrollcue: "SCROLL FOR THE COLOPHON",
+      visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
+    },
+    railHead: "Colophon<br>// behind the record",
+    railFoot: "GATE STATUS<br>OPEN",
+    phases: [
+      {
+        id: "a1",
+        tag: "COLOPHON · 01",
+        title: "Concept & Creative Direction",
+        railLabel: "CONCEPT", railSub: "DIRECTION", railLen: 2,
+        meta: [
+          ["CREDIT", "Pankaj"],
+          ["SCOPE", "world · story · direction"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Human Shadows is conceived, directed, and written by Pankaj. The world, its clades, its faiths, and the shape of its hidden history are his design." },
+          "Every cohort, doctrine, and restricted record begins the same way: as a question about what this world would actually do, argued out until the answer holds. What survives that argument becomes canon."
+        ],
+        visual: { img: "", grad: "radial-gradient(130% 100% at 55% 25%, #efe6d2 0%, #cbbd9d 34%, #7d7460 62%, #23211c 100%)", tint: "rgba(230,215,180,.22)", glow: "#e3d3a8", fx: "dust" }
+      },
+      {
+        id: "a2",
+        tag: "COLOPHON · 02",
+        title: "Design & Implementation",
+        railLabel: "DESIGN", railSub: "IMPLEMENTATION", railLen: 2,
+        meta: [
+          ["STACK", "HTML · CSS · JS"],
+          ["WEIGHT", "no frameworks · no trackers"]
+        ],
+        paragraphs: [
+          { lead: true, text: "The site is hand-built and deliberately small: one page, one content file, no frameworks, no trackers." },
+          "Design and implementation are by Pankaj. The scrolling chronicle engine, the shifting atmospheres, and the cross-linked codex were written for this project and nothing else."
+        ],
+        visual: { img: "", grad: "linear-gradient(165deg, #1e2026 0%, #16181e 42%, #0b0c10 76%, #040507 100%)", tint: "rgba(90,95,115,.18)", glow: "#8a92a3", fx: "dust" }
+      },
+      {
+        id: "a3",
+        tag: "COLOPHON · 03",
+        title: "Visual Production & Editorial Iteration",
+        railLabel: "PRODUCTION", railSub: "ITERATION", railLen: 2,
+        meta: [
+          ["METHOD", "AI-assisted"],
+          ["DIRECTION", "human"]
+        ],
+        paragraphs: [
+          { lead: true, text: "The artwork and prose are developed with AI assistance under close human direction." },
+          "Images are generated, culled, and regenerated across many passes until one matches the world; text is drafted, argued with, and rewritten the same way. Nothing enters the site because a machine produced it. It enters because it earned its place."
+        ],
+        visual: { img: "", grad: "linear-gradient(160deg, #2a2740 0%, #34304e 35%, #1e2236 70%, #0f111d 100%)", tint: "rgba(70,60,110,.22)", glow: "#9d92d6", fx: "dust" }
+      },
+      {
+        id: "a4",
+        tag: "COLOPHON · 04",
+        title: "Canon & Continuity",
+        railLabel: "CANON", railSub: "CONTINUITY", railLen: 2,
+        meta: [
+          ["PROCESS", "manual review"],
+          ["CONTRADICTIONS", "hunted"]
+        ],
+        paragraphs: [
+          { lead: true, text: "The canon is maintained by hand." },
+          "Every addition is read against the existing record before it is admitted: names, seasons, wars, doctrines, and the things the Sky is not yet ready to admit. When a new idea and the record disagree, one of them is rewritten, and it is usually the idea."
+        ],
+        visual: { img: "", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.18)", glow: "#79e8cf", fx: "dust" }
+      },
+      {
+        id: "a5",
+        tag: "COLOPHON · 05",
+        title: "Project Status",
+        railLabel: "STATUS", railSub: "GROWING", railLen: 2,
+        meta: [
+          ["STATUS", "actively growing"],
+          ["NEXT", "more records · more chronicles"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Human Shadows is a living project, actively growing." },
+          "New chronicles, cohorts, and records are added as they are finished. The story of the long walk north is still being told, and the codex is still filling in. If a page feels unfinished, it probably is; come back after the next thaw."
+        ],
+        visual: { img: "", grad: "linear-gradient(165deg, #cfe0e6 0%, #9fb9c2 32%, #6f8d97 60%, #2c3a44 100%)", tint: "rgba(150,190,205,.24)", glow: "#bcd6df", fx: "thaw" }
+      }
+    ],
+    end: {
+      title: "That is the whole crew. A world this size is tended by very few hands, and the gate is open: come argue about it with us.",
+      links: [
+        { label: "Join the Discord ↗", href: "https://discord.gg/4fQUzgQcyC" },
+        { label: "← Return to the world", action: "goto:ambience" },
+        { label: "↑ Back to the top", action: "top" }
       ],
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     }

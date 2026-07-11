@@ -99,6 +99,7 @@ window.EPISODES = {
       title: "The record is incomplete. The long light has only begun.",
       links: [
         { label: "Begin · Episode 01 →", action: "goto:episode/1" },
+        { label: "Discuss the episodes on Discord ↗", href: "https://discord.gg/4fQUzgQcyC" },
         { label: "← The Kingdoms", action: "goto:factions" },
         { label: "↑ Back to the top", action: "top" }
       ],

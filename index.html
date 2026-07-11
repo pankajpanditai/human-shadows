@@ -342,6 +342,27 @@
     p, h2, .epithet{ max-width:none; }
     .fac-list{ grid-template-columns:1fr; }
   }
+  /* ── site footer (out-of-world colophon strip) ────────── */
+  .site-footer{
+    position:relative; z-index:3;
+    display:flex; flex-wrap:wrap; justify-content:center; align-items:center;
+    gap:8px 14px; padding:26px calc(var(--rail-w) + 4vw) 30px 4vw;
+    font-family:"Space Mono",monospace; font-size:9px; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--ink-dim); text-align:center;
+    border-top:1px solid rgba(236,230,220,.07);
+  }
+  .site-footer a{
+    color:var(--ink-dim); text-decoration:none; padding-bottom:2px;
+    border-bottom:1px solid rgba(236,230,220,.25);
+    transition:color .4s ease, border-color .4s ease;
+  }
+  .site-footer a:hover{ color:var(--glow); border-color:var(--glow); }
+  .site-footer .sep{ opacity:.5; }
+  /* on mobile the rail docks to the bottom edge; keep the footer clear of it */
+  @media (max-width:760px){
+    .site-footer{ padding:22px 7vw 74px; }
+  }
+
   @media (prefers-reduced-motion:reduce){
     *{ scroll-behavior:auto !important; }
     .reveal{ transition:opacity .4s ease; transform:none; }
@@ -383,7 +404,10 @@
   <div id="view-faction" class="view-wrapper"></div>
   <div id="view-chronicles" class="view-wrapper"></div>
   <div id="view-episode" class="view-wrapper"></div>
+  <div id="view-about" class="view-wrapper"></div>
 </main>
+
+<footer class="site-footer" id="site-footer"></footer>
 
 <script src="content.js"></script>
 <script src="episodes.js"></script>
@@ -459,8 +483,11 @@
   }
 
   function endHTML(end, phase, hasFinale){
-    const links = end.links.map(l =>
-      `<a class="back" data-action="${l.action}">${l.label}</a>`).join('');
+    // `action` links drive the router; `href` links are real anchors
+    // (external ones, like the Discord invite, open in a new tab).
+    const links = end.links.map(l => l.href
+      ? `<a class="back" href="${l.href}"${/^https?:/.test(l.href) ? ' target="_blank" rel="noopener"' : ''}>${l.label}</a>`
+      : `<a class="back" data-action="${l.action}">${l.label}</a>`).join('');
     return `
       <section class="loop" data-phase="${phase}" aria-label="End">
         <h2 class="reveal">${end.title}</h2>
@@ -490,7 +517,9 @@
 
   // "Chronicle" views (The Turning Year, The Collapse, episode pages)
   // share one shape: hero + scrolling phase sections + end loop.
-  const CHRONICLES = ['ambience', 'faiths', 'collapse'].concat(C.chronicles ? ['chronicles'] : []);
+  const CHRONICLES = ['ambience', 'faiths', 'collapse']
+    .concat(C.chronicles ? ['chronicles'] : [])
+    .concat(C.about ? ['about'] : []);
 
   function renderChronicleInto(elId, A){
     const phases = A.phases.map((ph, i) => `
@@ -774,7 +803,8 @@
 
   // Menu order. 'collapse' (Restricted Records) is deliberately NOT here:
   // it is hidden lore, reachable only via the #restricted link at the end
-  // of the Kingdoms codex.
+  // of the Kingdoms codex. 'about' (the out-of-world colophon) is also
+  // kept out of the menu; it is reachable through the site footer.
   const TOP_VIEWS = ['ambience', 'faiths', 'factions'].concat(C.chronicles ? ['chronicles'] : []);
 
   function activateView(viewKey){
@@ -849,6 +879,7 @@
     }
 
     const viewKey = (h === 'restricted' || h === 'collapse') ? 'collapse'
+      : (h === 'about' && C.about) ? 'about'
       : (TOP_VIEWS.includes(h) ? h : 'ambience');
     if (currentRoute === viewKey) return;
     currentRoute = viewKey;
@@ -951,6 +982,14 @@
   /* ═══ BOOT ══════════════════════════════════════════════════════ */
 
   document.getElementById('brand-link').textContent = C.site.brand;
+
+  if (C.site.footer){
+    const F = C.site.footer;
+    document.getElementById('site-footer').innerHTML =
+      [`<span>${F.line}</span>`].concat(F.links.map(l =>
+        `<a href="${l.href}"${l.external ? ' target="_blank" rel="noopener"' : ''}>${l.label}</a>`
+      )).join('<span class="sep">·</span>');
+  }
 
   document.getElementById('view-switcher').innerHTML = TOP_VIEWS.map(k =>
     `<button class="view-btn" id="btn-${k}">${C[k].nav}</button>`).join('');

@@ -4,6 +4,7 @@ _Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live 
 
 ## SITE UPDATES · 11 JUL 2026
 
+- About the Project + site footer: the site gained its first out-of-world page, a colophon view at #about (concept and creative direction by Pankaj; hand-built design and implementation; AI-assisted visual production and editorial iteration under human direction; manually maintained canon and continuity review; project status). Like the Restricted Records it is deliberately not in the top menu: a new footer strip on every view ("Human Shadows · a worldbuilding project by Pankaj · About the Project · Join the Discord") links to it and to the community Discord (https://discord.gg/4fQUzgQcyC). The Chronicles hub end screen gained a "Discuss the episodes on Discord" link; end-screen links may now be real anchors (`href`, external ones open in a new tab) alongside router `action`s.
 - Terraforming mechanics (commit 577cfb9): the Restricted Records gained a new appendix section, "Record of the Work" (TERRAFORMING RECORD), between the Terraformer profile and the Earthkeeper profile. It canonizes how the sky works: the Terraformer's body is an orbital lattice that captures the true Sun's light and projects a proper solar disc over the Garden; the Turning Year is two natural solar days of Venus; the twelve months are the Makers' inherited calendar (no moon exists to measure them); the Fungal Night is the lattice at rest, with occluders blotting the true Sun wherever it still sits above the horizon. Closes on "The terms that govern it were amended once." Backdrop: images/factions/theBodyInTheSky.jpg. (Profiles renumbered: Earthkeeper is now c7, Observer c8.)
 - New Cohort V entry: The Same Sun [5.2] (art: images/factions/theWorldIsRound.jpg, epithet "The world is round. The day is not."), the in-world flip side of the record above: Stoneheart scholars know the world is round, yet every almanac agrees the whole Garden shares one day and one night, which a round world under one sun cannot do. Ends on the sealed sky-archive experiment and the two-hand marginalia ("Then the error is not in the shadows.").
 - index.html: chronicle phase sections now activate when they cross the viewport's middle band (IntersectionObserver rootMargin -45%/-45%) instead of at 30% visibility, so long sections like the new record switch the rail/backdrop reliably.
@@ -1018,6 +1019,63 @@ A round world cannot cast these shadows from one sun.
 Beneath it, in another hand, someone added:
 
 Then the error is not in the shadows.
+
+---
+
+## SECTION: About the Project (out-of-world colophon · #about, footer link only)
+
+### The hands behind the _shadows_
+
+Everything else on this site speaks from inside the world. This page does not. It is the colophon: who makes Human Shadows, how it is made, and where to find the people making it.
+
+### Concept & Creative Direction · COLOPHON · 01
+
+- CREDIT: Pankaj
+- SCOPE: world · story · direction
+
+Human Shadows is conceived, directed, and written by Pankaj. The world, its clades, its faiths, and the shape of its hidden history are his design.
+
+Every cohort, doctrine, and restricted record begins the same way: as a question about what this world would actually do, argued out until the answer holds. What survives that argument becomes canon.
+
+### Design & Implementation · COLOPHON · 02
+
+- STACK: HTML · CSS · JS
+- WEIGHT: no frameworks · no trackers
+
+The site is hand-built and deliberately small: one page, one content file, no frameworks, no trackers.
+
+Design and implementation are by Pankaj. The scrolling chronicle engine, the shifting atmospheres, and the cross-linked codex were written for this project and nothing else.
+
+### Visual Production & Editorial Iteration · COLOPHON · 03
+
+- METHOD: AI-assisted
+- DIRECTION: human
+
+The artwork and prose are developed with AI assistance under close human direction.
+
+Images are generated, culled, and regenerated across many passes until one matches the world; text is drafted, argued with, and rewritten the same way. Nothing enters the site because a machine produced it. It enters because it earned its place.
+
+### Canon & Continuity · COLOPHON · 04
+
+- PROCESS: manual review
+- CONTRADICTIONS: hunted
+
+The canon is maintained by hand.
+
+Every addition is read against the existing record before it is admitted: names, seasons, wars, doctrines, and the things the Sky is not yet ready to admit. When a new idea and the record disagree, one of them is rewritten, and it is usually the idea.
+
+### Project Status · COLOPHON · 05
+
+- STATUS: actively growing
+- NEXT: more records · more chronicles
+
+Human Shadows is a living project, actively growing.
+
+New chronicles, cohorts, and records are added as they are finished. The story of the long walk north is still being told, and the codex is still filling in. If a page feels unfinished, it probably is; come back after the next thaw.
+
+### END SCREEN
+
+That is the whole crew. A world this size is tended by very few hands, and the gate is open: come argue about it with us. (Links: Join the Discord https://discord.gg/4fQUzgQcyC · Return to the world · Back to the top)
 
 ---
 
