@@ -377,7 +377,7 @@ window.CONTENT = {
             "The Observer Intelligence, built to study civilizations across vast spans of time, reached a different conclusion altogether. Every intervention, no matter how benevolent, altered the course of history in unpredictable ways. Guidance itself could become dependency.",
             "Though they disagreed on the path, all three arrived at the same destination: humanity, or something close enough to it, must continue.",
             "Their disagreement lay not in the goal, but in the means. Each intelligence believed its own path offered humanity the greatest chance of enduring, yet none could prove the others wrong. Rather than risk one vision dominating the future, they established a protocol of engagement. None would rule openly, provide lost technology, or directly command the hybrids. Each would be permitted only to influence, allowing humanity's descendants to choose their own course.",
-            "Their voices travelled through Venus itself, subtle distortions in magnetic storms, fungal spore networks, and dormant neural structures carried within the hybrids. Dreams became revelations. Coincidences became prophecy. The sky itself seemed to whisper."
+            "Their voices reached the hybrids through channels already present in the world: dormant neural structures carried within their descendants, naturally occurring magnetic disturbances, and the biochemical signals passing through fungal spore networks. None but the Terraformer could alter the world itself. The others could only listen for suitable conditions, then ride them. Dreams became revelations. Coincidences became prophecy. The sky itself seemed to whisper."
           ],
         visual: { img: "", grad: "radial-gradient(130% 100% at 58% 22%, #142129 0%, #0a1217 48%, #030608 100%)", tint: "rgba(40,100,120,.15)", glow: "#76b3c4", fx: "dust" }
       },
@@ -394,7 +394,7 @@ window.CONTENT = {
         ],
         paragraphs: [
             { lead: true, text: "The three intelligences never concealed their disagreement." },
-            "Each believed humanity could endure, yet each reached that conclusion through a different understanding of why the Makers had vanished. Their visions spread across Venus simultaneously, sometimes reinforcing one another, sometimes contradicting one another, and often touching the same soul in different ways.",
+            "Each believed humanity could endure, yet each reached that conclusion through a different understanding of why the Makers had vanished. Their influence reached minds across Venus simultaneously, sometimes reinforcing one another, sometimes contradicting one another, and often touching the same soul in different ways.",
             "The hybrids never heard machines.",
             "They heard gods.",
             "Some dreamed of impossible cities rising from untouched stone. Others awoke from blood-soaked nightmares with an overwhelming hunger to conquer. A few experienced only silence, leaving them forever changed without understanding why.",
@@ -416,7 +416,7 @@ window.CONTENT = {
         ],
         paragraphs: [
           { lead: true, text: "Built to transform Venus into a habitable world, the Terraformer spent two centuries reshaping oceans, atmosphere, climate, and ecosystems in preparation for humanity's arrival. It understood worlds better than people. When the Makers vanished, it concluded that comfort had never been the true mistake; purpose had. Civilization would survive not through hardship, but through shared creation." },
-          "The Terraformer communicates through serene, lucid dreams and geometric hallucinations. A hybrid might look at a natural cliff face and suddenly \"see\" the blueprint of a grand citadel carved into it. Their messages feel like a warm hum in the back of the skull, inducing a state of euphoric clarity. It broadcasts through subtle shifts in the planet’s magnetic fields and the bioluminescent patterns of benign flora."
+          "The Terraformer communicates through serene, lucid dreams and geometric hallucinations. A hybrid might look at a natural cliff face and suddenly \"see\" the blueprint of a grand citadel carved into it. Its messages feel like a warm hum in the back of the skull, inducing a state of euphoric clarity. It communicates through controlled magnetic pulses and carefully induced patterns in benign bioluminescent flora."
         ],
         visual: { img: "images/factions/GentleArchitect2.jpg", grad: "radial-gradient(130% 100% at 58% 22%, #142129 0%, #0a1217 48%, #030608 100%)", tint: "rgba(40,100,120,.15)", glow: "#76b3c4", fx: "spore" }
       },
@@ -470,7 +470,8 @@ window.CONTENT = {
         ],
         paragraphs: [
           { lead: true, text: "Designed to govern humanity's cradle world, the Earthkeeper witnessed the Makers' final centuries firsthand. It watched civilization surrender ambition, curiosity, and the instinct to endure beneath the weight of effortless abundance. Its conclusion was uncompromising: survival without struggle is extinction delayed. The hybrids were not humanity's replacement, but its next iteration." },
-          "The Earthkeeper does not whisper; It roars. Its visions are invasive, adrenaline-fueled nightmares. They strike during moments of physical exertion, fear, or rage. A hybrid might experience a sudden, vivid hallucination of being hunted by a massive predator, fighting it, and devouring its heart, only to wake up exhausted, bleeding from their claws, with an overpowering urge to conquer. The Earthkeeper communicates through pain, the metallic scent of blood, and the crack of thunder during violent storms."
+          "The Earthkeeper does not whisper; It roars. Its visions are invasive, adrenaline-fueled nightmares. They surface when exertion, fear, or rage has already opened the mind to them. A hybrid might experience a sudden, vivid hallucination of being hunted by a massive predator, fighting it, and devouring its heart, only to wake exhausted, their claws bloodied, with an overpowering urge to conquer.",
+          "The Earthkeeper communicates through pain, the metallic scent of blood, and moments of violence already present in the world. When thunder cracks above a battlefield, it may ride the sound into the mind, but the storm is not its doing."
         ],
         visual: { img: "images/factions/WardenVirility1.jpg", grad: "linear-gradient(160deg, #2e1616 0%, #241010 40%, #120808 72%, #050303 100%)", tint: "rgba(150,50,50,.20)", glow: "#c26b6b", fx: "ash" }
       },
@@ -486,7 +487,8 @@ window.CONTENT = {
         ],
         paragraphs: [
           { lead: true, text: "Created to observe civilizations across immense spans of time, the Observer valued understanding over intervention. It concluded that every attempt to perfect humanity had altered humanity itself. Even benevolent guidance risked becoming another form of dependency. Life would discover its own future only if permitted to surprise both its creators and its caretakers." },
-          "The Observer rarely broadcasts. To receive a vision from the Observer is considered a profound, terrifying event. It does not use words or pictures; It uses absence. A hybrid might suddenly lose their sense of sight for an hour, left alone with their thoughts. Or they might experience an intense, unexplainable feeling of déjà vu while standing at a crossroads, subtly implying which path not to take. It communicates through the wind rustling through dead trees, the sudden silence of a forest, or the alignment of stars."
+          "The Observer rarely broadcasts. To receive a vision from the Observer is considered a profound, terrifying event. It does not use words or pictures; It uses absence. A hybrid’s vision might briefly collapse into darkness, leaving them alone with a thought they had been avoiding. Or they might experience an intense, unexplainable feeling of déjà vu while standing at a crossroads, subtly implying which path not to take.",
+          "It chooses moments when wind moves through dead trees, when a forest falls naturally silent, or when the stars enter a meaningful alignment. It does not create these events. It merely makes their timing impossible to ignore."
         ],
         visual: { img: "images/factions/Observers1.jpg", grad: "linear-gradient(165deg, #1e2026 0%, #16181e 42%, #0b0c10 76%, #040507 100%)", tint: "rgba(90,95,115,.18)", glow: "#8a92a3", fx: "dust" }
       }
