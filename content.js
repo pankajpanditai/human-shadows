@@ -822,7 +822,11 @@ window.CONTENT = {
             "Yet this uneasy arrangement changes dramatically on their eastern frontier. Both Stoneheart and the Redsett share a narrow, perilous border with the Wind's Hunger. When the Swarm surges westward, tribute is forgotten. Ape engineers, scholars, soldiers, and Redsett raiders stand shoulder to shoulder upon hastily raised fortifications, knowing the Swarm recognizes neither curiosity nor conquest.",
             "Kings come seeking silk. Priests come seeking answers. Merchants come seeking roads. Explorers come seeking maps. Stoneheart welcomes them all, believing every traveler carries a question the world has not yet asked.",
             "While other kingdoms compete to possess the Garden, the Stonehearts remain content to understand it. Whether that quiet pursuit will preserve the future, or merely record its passing, remains a question even they cannot answer."
-          ]
+          ],
+          audience: {
+            href: "/archive/",
+            label: "Climb to the Sky-Archive →"
+          }
         },
         {
           slug: "mooncrest-matriarch",

@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>An Audience with the Emperor</title>
+<title>The Sky-Archive of Stoneheart</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@500;600&display=swap" rel="stylesheet" />
 <style>
-  /* ---- Retheme here to match your codex site ---- */
+  /* ---- Stoneheart theme: cool slate, lichen-bronze, traveler's blue ---- */
   :root {
-    --ink: #17130e;          /* page ground: lamp-black */
-    --ink-raised: #221c14;   /* panels */
-    --parchment: #e6d9c0;    /* primary text */
-    --parchment-dim: #a4937a;
-    --gold: #c9a35c;         /* imperial accent */
-    --crimson: #8e3b2f;      /* visitor accent */
-    --rule: #3a2f21;
+    --ink: #12151a;          /* page ground: slate-black */
+    --ink-raised: #1a2027;   /* panels */
+    --parchment: #dcd8ca;    /* primary text */
+    --parchment-dim: #94917f;
+    --accent: #a8b07c;       /* lichen on old stone */
+    --visitor: #7d97ad;      /* traveler's blue */
+    --rule: #2c3138;
     --display: "Cinzel", serif;
     --body: "Cormorant Garamond", Georgia, serif;
-    /* Swap the throne-room image here: */
-    --portrait: url("/images/factions/ge2.jpg");
-    --portrait-focus: 70% center; /* which part of the image stays in frame */
+    /* Swap the archive image here: */
+    --portrait: url("/images/factions/theWorldIsRound.jpg");
+    --portrait-focus: 50% 38%; /* which part of the image stays in frame */
   }
   * { box-sizing: border-box; margin: 0; }
   html, body { height: 100%; }
@@ -33,7 +33,7 @@
     display: flex;
   }
 
-  /* ---- left pane: throne-room portrait ---- */
+  /* ---- left pane: the archivist at his globe ---- */
   .portrait {
     flex: 1;
     min-width: 0;
@@ -46,8 +46,8 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(to right,
-      rgba(23, 19, 14, 0.12) 0%,
-      rgba(23, 19, 14, 0.35) 62%,
+      rgba(18, 21, 26, 0.12) 0%,
+      rgba(18, 21, 26, 0.35) 62%,
       var(--ink) 100%);
   }
 
@@ -88,7 +88,7 @@
     font-family: var(--display);
     font-weight: 600;
     font-size: clamp(1.4rem, 4vw, 1.9rem);
-    color: var(--gold);
+    color: var(--accent);
     margin-top: 0.4rem;
     letter-spacing: 0.06em;
   }
@@ -110,7 +110,7 @@
     border-bottom: 1px solid var(--rule);
     padding-bottom: 2px;
   }
-  header .return:hover { color: var(--gold); border-bottom-color: var(--gold); }
+  header .return:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
   .scroll {
     flex: 1;
@@ -128,10 +128,10 @@
     text-transform: uppercase;
     margin-bottom: 0.3rem;
   }
-  .msg.emperor .speaker { color: var(--gold); }
-  .msg.emperor .speaker::before { content: "❧ "; }
+  .msg.archivist .speaker { color: var(--accent); }
+  .msg.archivist .speaker::before { content: "✶ "; }
   .msg.visitor { margin-left: auto; text-align: right; }
-  .msg.visitor .speaker { color: var(--crimson); }
+  .msg.visitor .speaker { color: var(--visitor); }
   .msg .text { white-space: pre-wrap; }
   .msg.visitor .text { color: var(--parchment-dim); }
 
@@ -140,7 +140,7 @@
   }
   .candle i {
     width: 5px; height: 5px; border-radius: 50%;
-    background: var(--gold); opacity: 0.25;
+    background: var(--accent); opacity: 0.25;
     animation: flicker 1.2s infinite;
   }
   .candle i:nth-child(2) { animation-delay: 0.2s; }
@@ -167,20 +167,20 @@
     padding: 0.65rem 0.8rem;
     height: 3.1rem;
   }
-  textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+  textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
   button {
     font-family: var(--display);
     font-size: 0.75rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     background: transparent;
-    color: var(--gold);
-    border: 1px solid var(--gold);
+    color: var(--accent);
+    border: 1px solid var(--accent);
     border-radius: 3px;
     padding: 0 1.2rem;
     cursor: pointer;
   }
-  button:hover, button:focus-visible { background: var(--gold); color: var(--ink); }
+  button:hover, button:focus-visible { background: var(--accent); color: var(--ink); }
   button:disabled { opacity: 0.4; cursor: default; }
   textarea:disabled { opacity: 0.5; }
 
@@ -189,7 +189,7 @@
     font-family: var(--display);
     font-size: 0.65rem;
     letter-spacing: 0.3em;
-    color: var(--crimson);
+    color: var(--visitor);
     margin: 1.6rem 0;
   }
 </style>
@@ -198,25 +198,23 @@
 <div class="portrait" aria-hidden="true"></div>
 <div class="court">
   <header>
-    <div class="eyebrow">The Golden Empire · Hall of Audiences</div>
-    <h1>Emperor Zaoren</h1>
-    <p class="decree">Speak plainly. The Emperor's patience is a courtesy, not a right.</p>
-    <a class="return" href="/#faction/golden-empire">← Withdraw from court</a>
+    <div class="eyebrow">The Stoneheart Kingdom · The Sky-Archive</div>
+    <h1>The Archivist</h1>
+    <p class="decree">Ask freely. In Stoneheart, a question is a gift — even a foolish one.</p>
+    <a class="return" href="/#faction/stoneheart-kingdom">← Descend the stairs</a>
   </header>
 
   <div class="scroll" id="scroll" aria-live="polite"></div>
 
   <form id="form">
-    <textarea id="input" placeholder="Address the throne…" maxlength="1000" required></textarea>
-    <button id="send" type="submit">Speak</button>
+    <textarea id="input" placeholder="Ask the archive…" maxlength="1000" required></textarea>
+    <button id="send" type="submit">Ask</button>
   </form>
 </div>
 
 <script>
-  // TODO: after deploying worker.js on Cloudflare, paste the Worker URL here
-  // (it looks like https://<worker-name>.<account-name>.workers.dev):
   const WORKER_URL = "https://zaoren.pankaj-pandit-java.workers.dev";
-  const CHARACTER = "zaoren";
+  const CHARACTER = "archivist";
 
   const scroll = document.getElementById("scroll");
   const form = document.getElementById("form");
@@ -227,7 +225,7 @@
   const messages = [];
   let audienceOver = false;
 
-  addMsg("emperor", "You stand before the throne. Few are granted this. Fewer still use it wisely — speak.");
+  addMsg("archivist", "Four hundred steps, and still they climb. Sit, traveler — the kettle is warm and the star-charts can wait. What question have you carried up here?");
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -251,15 +249,15 @@
       pending.remove();
 
       if (!res.ok) {
-        addMsg("emperor", data.error || "The court is in recess.");
+        addMsg("archivist", data.error || "The archive is closed for cataloguing.");
       } else {
-        addMsg("emperor", data.reply);
+        addMsg("archivist", data.reply);
         messages.push({ role: "assistant", content: data.reply });
         if (data.ended) endAudience();
       }
     } catch {
       pending.remove();
-      addMsg("emperor", "The messenger did not return. Try again.");
+      addMsg("archivist", "The courier returned empty-handed. Ask again.");
     } finally {
       send.disabled = audienceOver;
       input.disabled = audienceOver;
@@ -267,14 +265,14 @@
     }
   });
 
-  // The character can end the audience (abusive visitors are thrown out).
+  // The character can end the audience (abusive visitors are shown out).
   function endAudience() {
     audienceOver = true;
     input.value = "";
-    input.placeholder = "You have been escorted from the Hall of Audiences.";
+    input.placeholder = "The bridge-wardens have shown you out.";
     const div = document.createElement("div");
     div.className = "ended";
-    div.textContent = "— T H E   A U D I E N C E   H A S   E N D E D —";
+    div.textContent = "— T H E   A R C H I V E   I S   C L O S E D   T O   Y O U —";
     scroll.appendChild(div);
     scroll.scrollTop = scroll.scrollHeight;
   }
@@ -290,7 +288,7 @@
   function addMsg(who, text) {
     const div = document.createElement("div");
     div.className = "msg " + who;
-    const speaker = who === "emperor" ? "The Emperor" : "You";
+    const speaker = who === "archivist" ? "The Archivist" : "You";
     div.innerHTML = `<div class="speaker"></div><div class="text"></div>`;
     div.querySelector(".speaker").textContent = speaker;
     div.querySelector(".text").textContent = text; // textContent = no injection
@@ -301,8 +299,8 @@
 
   function addPending() {
     const div = document.createElement("div");
-    div.className = "msg emperor";
-    div.innerHTML = `<div class="speaker">The Emperor</div>
+    div.className = "msg archivist";
+    div.innerHTML = `<div class="speaker">The Archivist</div>
       <div class="candle"><i></i><i></i><i></i></div>`;
     scroll.appendChild(div);
     scroll.scrollTop = scroll.scrollHeight;
