@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>An Audience with the Emperor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  /* ---- Retheme here to match your codex site ---- */
+  :root {
+    --ink: #17130e;          /* page ground: lamp-black */
+    --ink-raised: #221c14;   /* panels */
+    --parchment: #e6d9c0;    /* primary text */
+    --parchment-dim: #a4937a;
+    --gold: #c9a35c;         /* imperial accent */
+    --crimson: #8e3b2f;      /* visitor accent */
+    --rule: #3a2f21;
+    --display: "Cinzel", serif;
+    --body: "Cormorant Garamond", Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--ink);
+    color: var(--parchment);
+    font-family: var(--body);
+    font-size: 1.125rem;
+    line-height: 1.55;
+    display: flex;
+    justify-content: center;
+  }
+  .court {
+    width: min(720px, 100%);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  header {
+    text-align: center;
+    padding: 1.75rem 0 1.25rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  header .eyebrow {
+    font-family: var(--display);
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--parchment-dim);
+  }
+  header h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    color: var(--gold);
+    margin-top: 0.4rem;
+    letter-spacing: 0.06em;
+  }
+  header .decree {
+    font-style: italic;
+    color: var(--parchment-dim);
+    font-size: 1rem;
+    margin-top: 0.35rem;
+  }
+  header .return {
+    display: inline-block;
+    margin-top: 0.7rem;
+    font-family: var(--display);
+    font-size: 0.62rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--parchment-dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+  }
+  header .return:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+  .scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem 0.25rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) transparent;
+  }
+
+  .msg { margin-bottom: 1.4rem; max-width: 92%; }
+  .msg .speaker {
+    font-family: var(--display);
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .msg.emperor .speaker { color: var(--gold); }
+  .msg.emperor .speaker::before { content: "❧ "; }
+  .msg.visitor { margin-left: auto; text-align: right; }
+  .msg.visitor .speaker { color: var(--crimson); }
+  .msg .text { white-space: pre-wrap; }
+  .msg.visitor .text { color: var(--parchment-dim); }
+
+  .candle {
+    display: inline-flex; gap: 6px; padding: 0.2rem 0;
+  }
+  .candle i {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--gold); opacity: 0.25;
+    animation: flicker 1.2s infinite;
+  }
+  .candle i:nth-child(2) { animation-delay: 0.2s; }
+  .candle i:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes flicker { 40% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .candle i { animation: none; opacity: 0.7; }
+  }
+
+  form {
+    display: flex;
+    gap: 0.6rem;
+    padding: 1rem 0 1.4rem;
+    border-top: 1px solid var(--rule);
+  }
+  textarea {
+    flex: 1;
+    resize: none;
+    background: var(--ink-raised);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    color: var(--parchment);
+    font: inherit;
+    padding: 0.65rem 0.8rem;
+    height: 3.1rem;
+  }
+  textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+  button {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    padding: 0 1.2rem;
+    cursor: pointer;
+  }
+  button:hover, button:focus-visible { background: var(--gold); color: var(--ink); }
+  button:disabled { opacity: 0.4; cursor: default; }
+</style>
+</head>
+<body>
+<div class="court">
+  <header>
+    <div class="eyebrow">The Golden Empire · Hall of Audiences</div>
+    <h1>Emperor Zaoren</h1>
+    <p class="decree">Speak plainly. The Emperor's patience is a courtesy, not a right.</p>
+    <a class="return" href="/#faction/golden-empire">← Withdraw from court</a>
+  </header>
+
+  <div class="scroll" id="scroll" aria-live="polite"></div>
+
+  <form id="form">
+    <textarea id="input" placeholder="Address the throne…" maxlength="1000" required></textarea>
+    <button id="send" type="submit">Speak</button>
+  </form>
+</div>
+
+<script>
+  // TODO: after deploying worker.js on Cloudflare, paste the Worker URL here
+  // (it looks like https://<worker-name>.<account-name>.workers.dev):
+  const WORKER_URL = "https://zaoren.pankaj-pandit-java.workers.dev";
+
+  const scroll = document.getElementById("scroll");
+  const form = document.getElementById("form");
+  const input = document.getElementById("input");
+  const send = document.getElementById("send");
+
+  // Session-only history (kept in memory; nothing stored).
+  const messages = [];
+
+  addMsg("emperor", "You stand before the throne. Few are granted this. Fewer still use it wisely — speak.");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
+
+    addMsg("visitor", text);
+    messages.push({ role: "user", content: text });
+    input.value = "";
+    send.disabled = true;
+
+    const pending = addPending();
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages }),
+      });
+      const data = await res.json();
+      pending.remove();
+
+      if (!res.ok) {
+        addMsg("emperor", data.error || "The court is in recess.");
+      } else {
+        addMsg("emperor", data.reply);
+        messages.push({ role: "assistant", content: data.reply });
+      }
+    } catch {
+      pending.remove();
+      addMsg("emperor", "The messenger did not return. Try again.");
+    } finally {
+      send.disabled = false;
+      input.focus();
+    }
+  });
+
+  // Enter sends; Shift+Enter for a newline.
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      form.requestSubmit();
+    }
+  });
+
+  function addMsg(who, text) {
+    const div = document.createElement("div");
+    div.className = "msg " + who;
+    const speaker = who === "emperor" ? "The Emperor" : "You";
+    div.innerHTML = `<div class="speaker"></div><div class="text"></div>`;
+    div.querySelector(".speaker").textContent = speaker;
+    div.querySelector(".text").textContent = text; // textContent = no injection
+    scroll.appendChild(div);
+    scroll.scrollTop = scroll.scrollHeight;
+    return div;
+  }
+
+  function addPending() {
+    const div = document.createElement("div");
+    div.className = "msg emperor";
+    div.innerHTML = `<div class="speaker">The Emperor</div>
+      <div class="candle"><i></i><i></i><i></i></div>`;
+    scroll.appendChild(div);
+    scroll.scrollTop = scroll.scrollHeight;
+    return div;
+  }
+</script>
+</body>
+</html>

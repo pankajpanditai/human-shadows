@@ -711,7 +711,11 @@ window.CONTENT = {
             "Yet the war settled little beyond the battlefield.",
             "Many across the Garden remain convinced that Emperor Zaoren secretly embraced Khamseen to legitimize his marriage. Others dismiss the accusation as Mooncrest propaganda intended to fracture the Zaoist world. The imperial court has never addressed the rumors, and the Emperor continues to preside over every Zaoist ceremony without exception.",
             "Whether Zaoren's actions sprang from love, political calculation, religious conviction, or some combination of all three has become one of the Garden's greatest unanswered questions."
-          ]
+          ],
+          audience: {
+            href: "/zaoren/",
+            label: "Request an audience with the Emperor →"
+          }
         },
         {
           slug: "lunar-guardians",

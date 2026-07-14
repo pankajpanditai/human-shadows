@@ -259,6 +259,17 @@
   .fac-nav a.dim{ color:var(--ink-dim); border-bottom-color:rgba(236,230,220,.25); }
   .fac-nav a.dim:hover{ color:var(--ink); }
 
+  /* ── character audience link (live chat pages) ────────── */
+  .fac-audience{
+    display:inline-block; margin-top:38px;
+    font-family:"Space Mono",monospace; font-size:10.5px; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--glow); text-decoration:none;
+    border:1px solid var(--glow); padding:11px 18px;
+    background:rgba(6,7,10,.5); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    transition:background .35s ease, color .35s ease;
+  }
+  .fac-audience:hover{ background:var(--glow); color:#06070a; }
+
   /* ── faction page tabs (dossier / vox populi) ─────────── */
   .fac-tabs{ margin:30px 0 6px; display:flex; gap:10px; flex-wrap:wrap; }
   .fac-tab{
@@ -599,6 +610,7 @@
         <div class="fac-pane" data-pane="dossier">
           ${metaHTML(faction.meta)}
           ${paragraphsHTML(faction.paragraphs, null, faction.slug)}
+          ${faction.audience ? `<a class="fac-audience reveal d3" href="${faction.audience.href}">${faction.audience.label}</a>` : ''}
         </div>
         ${voxPane}
         <div class="fac-nav reveal d3">
