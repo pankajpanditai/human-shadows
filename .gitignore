@@ -12,3 +12,9 @@ episodes/
 
 # unused image variants parked for eventual deletion
 backup-images/
+
+# chatbot source (deployed copy lives in Cloudflare; keeps system prompt out of the public repo)
+ChatFiles/
+
+# game prototype, not ready to publish
+game/
