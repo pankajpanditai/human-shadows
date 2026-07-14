@@ -18,6 +18,9 @@
     --rule: #3a2f21;
     --display: "Cinzel", serif;
     --body: "Cormorant Garamond", Georgia, serif;
+    /* Swap the throne-room image here: */
+    --portrait: url("/images/factions/ge2.jpg");
+    --portrait-focus: 70% center; /* which part of the image stays in frame */
   }
   * { box-sizing: border-box; margin: 0; }
   html, body { height: 100%; }
@@ -28,14 +31,45 @@
     font-size: 1.125rem;
     line-height: 1.55;
     display: flex;
-    justify-content: center;
   }
+
+  /* ---- left pane: throne-room portrait ---- */
+  .portrait {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    background: var(--portrait) var(--portrait-focus) / cover no-repeat var(--ink);
+  }
+  .portrait::after {
+    /* dissolve the image into the chat pane instead of a hard edge */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+      rgba(23, 19, 14, 0.12) 0%,
+      rgba(23, 19, 14, 0.35) 62%,
+      var(--ink) 100%);
+  }
+
   .court {
-    width: min(720px, 100%);
+    flex: 0 1 720px;
     height: 100dvh;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
+  }
+
+  /* Narrow screens: no room for a split — the portrait becomes a
+     faint full-screen backdrop behind the chat instead. */
+  @media (max-width: 860px) {
+    .portrait {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.16;
+    }
+    .portrait::after { background: none; }
+    .court { flex: 1; }
   }
 
   header {
@@ -151,6 +185,7 @@
 </style>
 </head>
 <body>
+<div class="portrait" aria-hidden="true"></div>
 <div class="court">
   <header>
     <div class="eyebrow">The Golden Empire · Hall of Audiences</div>
