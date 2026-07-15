@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Sky-Archive of Stoneheart</title>
+<title>A Meeting on the Road</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@500;600&display=swap" rel="stylesheet" />
 <style>
@@ -18,9 +18,9 @@
     --rule: #2c3138;
     --display: "Cinzel", serif;
     --body: "Cormorant Garamond", Georgia, serif;
-    /* Swap the archive image here: */
-    --portrait: url("/images/factions/theWorldIsRound.jpg");
-    --portrait-focus: 50% 38%; /* which part of the image stays in frame */
+    /* Swap the roadside image here: */
+    --portrait: url("/images/factions/Concierge.jpg");
+    --portrait-focus: 22% center; /* which part of the image stays in frame */
   }
   * { box-sizing: border-box; margin: 0; }
   html, body { height: 100%; }
@@ -41,13 +41,15 @@
     background: var(--portrait) var(--portrait-focus) / cover no-repeat var(--ink);
   }
   .portrait::after {
-    /* dissolve the image into the chat pane instead of a hard edge */
+    /* dissolve the image into the chat pane instead of a hard edge —
+       this image is bright daylight, so the seam is heavier than usual */
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(to right,
-      rgba(18, 21, 26, 0.12) 0%,
-      rgba(18, 21, 26, 0.35) 62%,
+      rgba(18, 21, 26, 0.15) 0%,
+      rgba(18, 21, 26, 0.45) 55%,
+      rgba(18, 21, 26, 0.82) 82%,
       var(--ink) 100%);
   }
 
@@ -192,16 +194,62 @@
     color: var(--visitor);
     margin: 1.6rem 0;
   }
+
+  /* ---- diegetic intro: shown once per session before the chat ---- */
+  .intro {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    background: rgba(14, 17, 21, 0.88);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    transition: opacity 0.9s ease;
+  }
+  .intro.gone { opacity: 0; pointer-events: none; }
+  .intro-inner { max-width: 34rem; }
+  .intro p {
+    font-size: 1.2rem;
+    color: var(--parchment);
+    margin-bottom: 1.3rem;
+    opacity: 0;
+    animation: introIn 1.4s ease forwards;
+  }
+  .intro p:nth-child(1) { animation-delay: 0.4s; }
+  .intro p:nth-child(2) { animation-delay: 1.9s; }
+  .intro p:nth-child(3) { animation-delay: 3.4s; }
+  .intro button {
+    margin-top: 0.4rem;
+    padding: 0.8rem 1.6rem;
+    opacity: 0;
+    animation: introIn 1.4s ease 4.7s forwards;
+  }
+  @keyframes introIn { to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .intro p, .intro button { animation: none; opacity: 1; }
+    .intro { transition: none; }
+  }
 </style>
 </head>
 <body>
+<div class="intro" id="intro">
+  <div class="intro-inner">
+    <p>The sun has not moved since you arrived. No one else on the road seems to find this strange — though you have gathered that night, when it finally comes, will last four months.</p>
+    <p>Ahead, in the shade of an old tree, sits a broad-shouldered figure — grey-whiskered, ape-like, robed, a lap full of scrolls and a kettle warming beside him.</p>
+    <p>He watches you approach with the patience of someone who was expecting no one, and is pleased anyway. He gestures to the stone beside him.</p>
+    <button id="sit" type="button">Sit awhile</button>
+  </div>
+</div>
 <div class="portrait" aria-hidden="true"></div>
 <div class="court">
   <header>
-    <div class="eyebrow">The Stoneheart Kingdom · The Sky-Archive</div>
+    <div class="eyebrow">Somewhere on the Old Road</div>
     <h1>The Archivist</h1>
-    <p class="decree">Ask freely. In Stoneheart, a question is a gift — even a foolish one.</p>
-    <a class="return" href="/#faction/stoneheart-kingdom">← Descend the stairs</a>
+    <p class="decree">Every road is longer than it looks. Company shortens it.</p>
+    <a class="return" href="/">← Leave the road</a>
   </header>
 
   <div class="scroll" id="scroll" aria-live="polite"></div>
@@ -225,7 +273,30 @@
   const messages = [];
   let audienceOver = false;
 
-  addMsg("archivist", "A new face on the stairs — welcome, traveler. You have found the sky-archive of Stoneheart, where we keep what is known of the Garden: its turning year, its faiths, its kingdoms and their wars. Ask whatever you carry. Or, if you are newly arrived and the shelves overwhelm, simply ask where to begin — the kettle is warm either way.");
+  // Deliberately noun-free: names are earned by questions, not announced.
+  const GREETING = "Mind the kettle — it spits. You're far from anything you know; I can see it in how you carry your shoulders. Sit, rest your feet. Ask me whatever you're carrying — or if you don't yet know what to ask, say that, and we'll find your first question together.";
+
+  const intro = document.getElementById("intro");
+  const sit = document.getElementById("sit");
+
+  function beginChat() {
+    addMsg("archivist", GREETING);
+    // The greeting goes into history too, so the model knows what it said.
+    messages.push({ role: "assistant", content: GREETING });
+    input.focus();
+  }
+
+  if (sessionStorage.getItem("met-archivist")) {
+    intro.remove();
+    beginChat();
+  } else {
+    sit.addEventListener("click", () => {
+      sessionStorage.setItem("met-archivist", "1");
+      intro.classList.add("gone");
+      setTimeout(() => intro.remove(), 1000);
+      beginChat();
+    });
+  }
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -249,7 +320,7 @@
       pending.remove();
 
       if (!res.ok) {
-        addMsg("archivist", data.error || "The archive is closed for cataloguing.");
+        addMsg("archivist", data.error || "The old fellow has dozed off mid-sentence. Give him a moment.");
       } else {
         addMsg("archivist", data.reply);
         messages.push({ role: "assistant", content: data.reply });
@@ -257,7 +328,7 @@
       }
     } catch {
       pending.remove();
-      addMsg("archivist", "The courier returned empty-handed. Ask again.");
+      addMsg("archivist", "The wind took your words before they reached him. Ask again.");
     } finally {
       send.disabled = audienceOver;
       input.disabled = audienceOver;
@@ -265,14 +336,14 @@
     }
   });
 
-  // The character can end the audience (abusive visitors are shown out).
+  // The character can end the conversation (abusive visitors lose him).
   function endAudience() {
     audienceOver = true;
     input.value = "";
-    input.placeholder = "The bridge-wardens have shown you out.";
+    input.placeholder = "He has gathered his scrolls and walked on.";
     const div = document.createElement("div");
     div.className = "ended";
-    div.textContent = "— T H E   A R C H I V E   I S   C L O S E D   T O   Y O U —";
+    div.textContent = "— H E   H A S   T A K E N   H I S   L E A V E —";
     scroll.appendChild(div);
     scroll.scrollTop = scroll.scrollHeight;
   }
