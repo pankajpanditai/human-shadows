@@ -67,7 +67,7 @@
     font-family: "Space Mono", monospace; font-size: 11px; letter-spacing: .3em;
     text-transform: uppercase; color: var(--ink); text-decoration: none;
   }
-  .view-switcher { display: flex; gap: 32px; }
+  .view-switcher { display: flex; gap: 32px; align-items: baseline; }
   .view-btn {
     background: none; border: none; color: var(--ink-dim);
     font-family: "Space Mono", monospace; font-size: 11px; letter-spacing: .2em;
@@ -81,6 +81,8 @@
     background: var(--glow); transform: scaleX(0); transition: transform .4s ease;
   }
   .view-btn.active::after { transform: scaleX(1); }
+  a.view-btn { text-decoration: none; line-height: 1; }
+  .ask-archivist::before { content: '✶ '; opacity: .7; }
 
   /* ── index dynamic rail ───────────────────────────────── */
   .rail{
@@ -332,6 +334,8 @@
     :root{ --rail-w:0px; }
     .global-header { height: 50px; padding: 0 16px; }
     .view-switcher { gap: 16px; }
+    /* header is full at four items on phones; the footer link covers this */
+    .ask-archivist { display: none; }
 
     .stage { top: 50px; }
     #fx { top: 50px; }
@@ -1004,7 +1008,8 @@
   }
 
   document.getElementById('view-switcher').innerHTML = TOP_VIEWS.map(k =>
-    `<button class="view-btn" id="btn-${k}">${C[k].nav}</button>`).join('');
+    `<button class="view-btn" id="btn-${k}">${C[k].nav}</button>`).join('')
+    + `<a class="view-btn ask-archivist" href="/archive/">Ask the Archivist</a>`;
   TOP_VIEWS.forEach(k => {
     document.getElementById(`btn-${k}`).addEventListener('click', () => location.hash = k);
   });

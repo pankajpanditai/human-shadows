@@ -43,6 +43,7 @@ window.CONTENT = {
       line: "Human Shadows · a worldbuilding project by Pankaj",
       links: [
         { label: "About the Project", href: "#about" },
+        { label: "Ask the Archivist", href: "/archive/" },
         { label: "Join the Discord ↗", href: "https://discord.gg/4fQUzgQcyC", external: true }
       ]
     }
