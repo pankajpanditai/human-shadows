@@ -1,6 +1,13 @@
 # Human Shadows
 
-_Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles, episodes 1-3); their source scripts are in the gitignored episodes/ folder._
+_Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles, episodes 1-5); their source scripts are in the gitignored episodes/ folder._
+
+## SITE UPDATES · 19 JUL 2026
+
+- Two new episodes (commit fa50913): Episode 04, What the Whip Taught ("Some cages have bars. Others have ladders.") and Episode 05, The Commission ("Some walls keep the world out. Others only keep the proof in."). Rik's cohort drills under the Khamseen catechism, takes the Whitehorn tasking from the quartermaster's book, and learns at the border crossing that there has never been a third column. Hub teaser cards ch4/ch5 added; end links rewired so Episode 03 now points forward to 04 and 04 to 05.
+- Retro-edits to Episodes 1-3 (same commit): the camel trader now sells routes and grain-prices with the war's tides; Jack's hut shows one bedroll and a cold hearth; the bull's roadside lie is spoken aloud as "Whitehorn"; the border woman's eldest walked with the hyenas; the sigil carries a name cut along its rim; the killing-stone scene gains the "you kneel to be noticed" doctrine and the forest-forgets-itself stillness; Ruby is awake when Rik returns from the stone.
+- Seasonal fix: Episode 3 happens in the tearing thaw, not the long light (the border arrival falls 15 days past the four-month night by the episodes' own day-count; the long light now begins during Episode 4's training cycles). Scene 6 retagged THE TEARING THAW / The First Light, all long-light references in Episode 3 re-labeled, Episode 3 rail foot now THE THAW BEGINS, and the Chronicles hub tagline is now season-proof: "The record is incomplete. The year is still turning."
+- Housekeeping (commit 40e58ab): 11 unused images moved out of images/ into the gitignored backup-images/ (root-level fungal-night, long-light, thaw, weeping and one stray ChatGPT export, plus factions GiantsRealm1/5/7, MooncrestMatriarch1, ShadowsTeeth1/4).
 
 ## SITE UPDATES · 11 JUL 2026
 
