@@ -44,10 +44,10 @@ window.EPISODES = {
         railLabel: "PROLOGUE", railSub: "THE TURNING YEAR", railLen: 2,
         meta: [
           ["FILE", "PROLOGUE"],
-          ["STATUS", "required reading"]
+          ["STATUS", "optional · rewarding"]
         ],
         paragraphs: [
-          { lead: true, text: "One turn of this world is twelve months: four of merciless light, two of rain, four of fungal night, two of tearing thaw. Every step of the story below is timed against that clock. If you have not yet turned the year, begin there." },
+          { lead: true, text: "One turn of this world is twelve months: four of merciless light, two of rain, four of fungal night, two of tearing thaw. Every step of the story below is timed against that clock. The episodes explain what they must as they go; the full year waits here for the curious." },
           "<a class=\"ep-open\" href=\"#ambience\">ENTER THE TURNING YEAR →</a>"
         ],
         visual: { img: "", grad: "radial-gradient(130% 100% at 60% 28%, #3a3424 0%, #241f14 55%, #0b0906 100%)", tint: "rgba(200,170,100,.14)", glow: "#f0d488", fx: "heat" }
