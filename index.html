@@ -817,11 +817,12 @@
 
   let currentRoute = null;
 
-  // Menu order. 'collapse' (Restricted Records) is deliberately NOT here:
-  // it is hidden lore, reachable only via the #restricted link at the end
-  // of the Kingdoms codex. 'about' (the out-of-world colophon) is also
-  // kept out of the menu; it is reachable through the site footer.
-  const TOP_VIEWS = ['ambience', 'faiths', 'factions'].concat(C.chronicles ? ['chronicles'] : []);
+  // Menu order: story first, codex after. 'collapse' (Restricted Records)
+  // is deliberately NOT here: it is hidden lore, reachable only via the
+  // #restricted link at the end of the Kingdoms codex. 'about' (the
+  // out-of-world colophon) is also kept out of the menu; it is reachable
+  // through the site footer.
+  const TOP_VIEWS = (C.chronicles ? ['chronicles'] : []).concat(['ambience', 'faiths', 'factions']);
 
   function activateView(viewKey){
     document.querySelectorAll('.view-wrapper').forEach(el => el.classList.remove('active'));
@@ -896,7 +897,7 @@
 
     const viewKey = (h === 'restricted' || h === 'collapse') ? 'collapse'
       : (h === 'about' && C.about) ? 'about'
-      : (TOP_VIEWS.includes(h) ? h : 'ambience');
+      : (TOP_VIEWS.includes(h) ? h : TOP_VIEWS[0]);
     if (currentRoute === viewKey) return;
     currentRoute = viewKey;
 
