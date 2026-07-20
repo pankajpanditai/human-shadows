@@ -151,6 +151,7 @@ window.CONTENT = {
       alt: "Full biome map of the Garden",
       caption: "Every season you have just survived is happening here, somewhere, all at once.",
       links: [
+        { label: "Meet the ones surviving it · Episode 01 →", action: "goto:episode/1" },
         { label: "Trace the Faiths →", action: "goto:faiths" }
       ],
       visual: { img: "", grad: "radial-gradient(120% 90% at 50% 0%, #101a16 0%, #090e0d 55%, #050708 100%)", tint: "rgba(60,110,80,.14)", glow: "#a9d8b4", fx: "dust" }

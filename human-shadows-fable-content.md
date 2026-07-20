@@ -2,6 +2,12 @@
 
 _Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles, episodes 1-5); their source scripts are in the gitignored episodes/ folder._
 
+## SITE UPDATES · 20 JUL 2026
+
+- Story first (commits 69f49a7, 7f6cc29): The Chronicles now leads the main menu and is the landing view for visitors arriving without a hash (fallback is the first menu entry, so the site degrades to the Turning Year if episodes.js fails to load). The Chronicles prologue card was reframed from gate to invitation: STATUS is now "optional · rewarding" and the lead ends "The episodes explain what they must as they go; the full year waits here for the curious." Episode 1's seasons paragraph carries the one hardcoded story-to-codex link ("no gentle seasons" → #ambience); by decision, season terms are not auto-linked in episode prose.
+- The Turning Year finale reveal gained a story link ahead of Trace the Faiths: "Meet the ones surviving it · Episode 01".
+- Deploy fix (commit fbc386b): the unanchored episodes/ gitignore rule also matched images/episodes/, so Episode 1's five artworks had never been committed; the rule is now anchored to the root source-scripts folder and the images are live.
+
 ## SITE UPDATES · 19 JUL 2026
 
 - Two new episodes (commit fa50913): Episode 04, What the Whip Taught ("Some cages have bars. Others have ladders.") and Episode 05, The Commission ("Some walls keep the world out. Others only keep the proof in."). Rik's cohort drills under the Khamseen catechism, takes the Whitehorn tasking from the quartermaster's book, and learns at the border crossing that there has never been a third column. Hub teaser cards ch4/ch5 added; end links rewired so Episode 03 now points forward to 04 and 04 to 05.
@@ -98,6 +104,8 @@ And then the cycle repeats. The world keeps turning, vast and indifferent, as if
 **THE GARDEN** (full-width map: images/TheWorld1.jpg)
 
 _Every season you have just survived is happening here, somewhere, all at once._
+
+Links: "Meet the ones surviving it · Episode 01" (goto:episode/1) · "Trace the Faiths" (goto:faiths)
 
 ---
 
