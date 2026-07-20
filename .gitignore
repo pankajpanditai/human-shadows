@@ -7,8 +7,8 @@ Factions.txt
 Updated cohorts.txt
 *.docx
 
-# source scripts for episodes.js
-episodes/
+# source scripts for episodes.js (root folder only; images/episodes/ must deploy)
+/episodes/
 
 # unused image variants parked for eventual deletion
 backup-images/
