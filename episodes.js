@@ -121,6 +121,20 @@ window.EPISODES = {
           "<a class=\"ep-open\" href=\"#episode/5\">OPEN EPISODE 05 →</a>"
         ],
         visual: { img: "", grad: "linear-gradient(160deg, #3a1c14 0%, #2a140e 45%, #0f0605 100%)", tint: "rgba(220,110,60,.18)", glow: "#f0916a", fx: "ash" }
+      },
+      {
+        id: "ch6",
+        tag: "FILE 06 · VOICE-OVER RECORD",
+        title: "The Ladder",
+        railLabel: "EPISODE 06", railSub: "THE LADDER", railLen: 2,
+        meta: [
+          ["EPIGRAPH", "Some are freed. Others are only promoted."]
+        ],
+        paragraphs: [
+          { lead: true, text: "Cohort nine buys its way free and walks through a gate that opens inward, into a village with a well for everyone and a hearth that draws. It is the first place any of them has ever been given rather than made to take. Rik cannot stop pricing the walls, and the ladder that bought him here keeps climbing higher than he can see." },
+          "<a class=\"ep-open\" href=\"#episode/6\">OPEN EPISODE 06 →</a>"
+        ],
+        visual: { img: "", grad: "linear-gradient(160deg, #202838 0%, #161c28 45%, #0a0d12 100%)", tint: "rgba(100,130,160,.16)", glow: "#a8c2dc", fx: "rain" }
       }
     ],
     end: {
@@ -1117,11 +1131,215 @@ window.EPISODES = {
       end: {
         title: "The record continues. The salvage is spent. The debt is not.",
         links: [
-          { label: "⟁ All Chronicles", action: "goto:chronicles" },
+          { label: "Next · Episode 06 →", action: "goto:episode/6" },
           { label: "← Episode 04", action: "goto:episode/4" },
-          { label: "↑ Back to the top", action: "top" }
+          { label: "⟁ All Chronicles", action: "goto:chronicles" }
         ],
         visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #241812 0%, #100a08 55%, #060404 100%)", tint: "rgba(200,120,80,.16)", glow: "#f0916a", fx: "ash" }
+      }
+    },
+
+    /* ═══ EPISODE 06 · THE LADDER ════════════════════════════════════ */
+    {
+      slug: "6",
+      title: "Episode 06 · The Ladder",
+      hero: {
+        kicker: "The Chronicles · Episode 06",
+        title: "The<br><em>Ladder</em>",
+        sub: "Some are freed. Others are only promoted.",
+        scrollcue: "SCROLL TO TAKE THE RUNG",
+        visual: { img: "", grad: "linear-gradient(160deg, #202838 0%, #161c28 45%, #0a0d12 100%)", tint: "rgba(100,130,160,.18)", glow: "#a8c2dc", fx: "rain" }
+      },
+      railHead: "Episode 06<br>// The Ladder",
+      railFoot: "RECORD 06 SECURE<br>THE WEEPING BEGINS",
+      phases: [
+        {
+          id: "e6-1",
+          tag: "SCENE 01 · THE BUY-IN",
+          title: "The Gate That Opens Inward",
+          railLabel: "THE GATE", railSub: "SCENE 01", railLen: 2,
+          paragraphs: [
+            { lead: true, text: "The second tasking was a granary on the Vanguard supply road, and Rik kept from it only one image: sacks of grain going up like lamps, one after another, orderly, and a Vanguard tally-house burning with its ledgers inside, thirty years of rat-quotas turning to ash that drifted west on the flat wind. Brye had laughed at that. Nobody else had." },
+            "The third was a bridge, and he kept nothing from it at all. He had decided beforehand that he would keep nothing, and for once the deciding worked.",
+            "Both entered. Both cleared. The wild dog quartermaster ruled a line under nine columns with the same pen that had opened them, turned the book so they could see the writing none of them could read, and said the only ceremonial words the Matriarchy ever wasted on rats.",
+            "\"Paid out. Cohort nine stands settled.\"",
+            "Settled. Rik carried the word back to shed row like a coin in the cheek, testing it all the way. In the quarry tongue it meant what happened to dust.",
+            "They left the camp at the waking bell of the next cycle, and the camp did not watch them go. That was its own lesson, though Rik declined to study it just then: the gate detail checked a paper, not their faces, and the shed they had lived in a full season stood behind them exactly as it had stood before them, already entered against some other name.",
+            "Three days north and east, past the garrison line, on a road that improved as it went. That was the thing Rik noticed first and could not stop noticing: the road got better. Packed stone gave way to dressed stone. Culverts appeared, maintained ones, their mouths clear of thaw-wrack. Mile-posts in the hyenas' angular script, freshly cut. In the south the roads had always worsened toward the rat villages, worsened deliberately, the way a house lets the path to the midden go to mud. Here the road ran toward the hamlets like it was proud of them.",
+            "\"It's for the wagons,\" Jack said on the second day, reading his face. \"Good roads move goods.\" He nodded ahead, to where a caravan raised its dust: long, well-mastered, swaying with weight. \"Don't go thinking the road loves you.\"",
+            "Rik said nothing. But the caravan, when it passed them, was the westbound kind, and he kept his eyes on the stones until the sound of it was gone, and so did Jack, and neither of them said the word salvage, and Ruby, who did not know the word's new meaning and knew everything else, put her paw on Ian's shoulder and pointed him at a kestrel hanging over the fields until the wagons were well by.",
+            "On the third day the sky changed.",
+            "It had been changing for a cycle, the long light thickening at its edges, the flat glare going brassy, and every creature on the road feeling the turn coming in their joints the way quarry-folk feel weather in old breaks. Now, ahead of them, over the folded country where Tesk's walls were supposed to stand, clouds were building for the first time in four months. Real clouds, gray-bellied, enormous, dragging their shadows across the land like the first furniture of a returning house.",
+            "Ian walked staring up at them. He had been small the last time the sky had a ceiling. He kept his voice low, the new habit, but the words escaped him anyway.",
+            "\"Papa. The light's going out.\"",
+            "\"It's allowed to now,\" Rik said. \"It's done its turn.\"",
+            "And then the road bent around a shoulder of grazed hill, and the village stood in the fold below them, and the first thing Rik understood about it was that it was loved.",
+            "He heard the sentence arrive in his own head, word for word, and went cold in the warm wind. The same sentence. Whitehorn's sentence. He stood on the rise and watched his eyes do to this place exactly what they had done from the broom and thornbush two cycles gone: walls, old but pointed with fresh mortar. Roofs repaired more than once, which was how you knew a place expected to last. A well in a little square. His gaze ran the wall's base looking for the shadow-line, found the corner where old water had been, measured the footing, priced the breach. Quarry-born hands know worked stone. So do arsonists.",
+            "He made himself stop. He could not make himself unknow it. That was the toll the book took that it never entered anywhere: he would read every loved wall for the rest of his life from both sides at once.",
+            "The village was rat-built and rat-sized and it was the first such place any of them had seen that was not myth, ruin, or pen. Low doorways cut wide. Lanes that branched and rejoined, burrow-logic in daylight. Smoke standing up from six, seven, nine roofs, unhidden, unafraid, cookfires burning in the open evening as if fire belonged to everyone. Rats moved in the lanes. Upright, some of them. Slow, some of them. Slow because they were old, and Rik marked that from the rise without yet knowing why his eye had snagged on it: gray muzzles in the square, sunning on a bench by the well. He filed it under mercy and walked on. He would remember the filing later, in a lit room, with Jack's hand on his shoulder, and understand that even his mercies now arrived pre-counted.",
+            "The gate was timber, oiled this season, and it stood open.",
+            "They came down the last of the road in the first thunder any of them had heard in four months, a long soft roll away to the south, the sky clearing its throat. At the gate stood a warden, a rat, old, heavy in a good coat, with a stave of office he plainly never used and a ledger-board he plainly did. Behind him the village went about its evening and did not stop to watch them come, and that, more than the walls, more than the smoke, was the strangeness Rik had no shelf for: their arrival was not an event. Rats arriving somewhere was simply a thing that happened here. Ordinary as water.",
+            "\"Cohort nine,\" the warden said, finding the line on his board. \"Four souls. Settlement rights, paid standing.\" He looked up, and his face did nothing remarkable, which was itself remarkable: no filing, no sorting, no assessment of what they were for. Or none that showed. \"Homestead's the third lane, east side, past the shrine. Hearth's swept. Well's for everyone.\"",
+            "He stood aside.",
+            "And the gate, which had been standing open the whole time, seemed nonetheless to open then: because gates, Rik understood at the threshold, had faced him his entire life as things that worked in one direction, keeping in or keeping out, quarry gates, camp gates, Whitehorn's gate barred from without by his own paws. This one swung inward on its oiled hinges when the warden pushed it wider for the mules, inward, toward the hearths, and no one wrote down their names as they passed under it, because their names were already written, because they had been bought and the buying was done.",
+            "Ruby crossed first, Ian's paw in hers. Jack came last, and paused under the timbers, and looked up at them the way a man checks the underside of a bridge he must trust.",
+            "Overhead the clouds shut over the long light at last, and the first rain in four months came down the lanes of the village to meet them: fat, slow, spore-sweet, hissing in the open cookfires, and the rats in the lanes lifted their faces to it, laughing, and Ian, forgetting his new shape entirely, ran three whole steps in the open street with his mouth open to the sky.",
+            "Rik stood in the rain inside the walls and let the water find his scars.",
+            "They had walked in on their own feet. He was almost sure of it."
+          ],
+          visual: { img: "", grad: "linear-gradient(165deg, #202838 0%, #161c28 45%, #0a0d12 100%)", tint: "rgba(100,130,160,.18)", glow: "#a8c2dc", fx: "rain" }
+        },
+        {
+          id: "e6-2",
+          tag: "SCENE 02 · THE WELL",
+          title: "What It Was For",
+          railLabel: "THE WELL", railSub: "SCENE 02", railLen: 2,
+          paragraphs: [
+            { lead: true, text: "The homestead was two rooms and a hearth, and the hearth drew." },
+            "That was the first thing Ruby tested, before the bedrolls were off the mules, before anyone had said the word home out loud or decided whether they were allowed to. She knelt at the swept stone, built a small fire from the dry stack left by whoever swept it, and watched the smoke rise and go where smoke should go, up and out, not curling back to sting the eyes the way it had in every dwelling she had ever tended. She stayed kneeling there a while after it caught. Rik did not interrupt her. He understood, roughly, that she was having a conversation with the chimney, and that it was private.",
+            "The door barred from the inside.",
+            "Rik found the bar the first evening, a good oak length in iron keeps, and stood holding it longer than a man holds a piece of wood. Every door of his life had locked the other way. The quarry barracks barred from without at the sleep-horn. The shed at the camp's edge had not barred at all, because nothing inside it had been worth keeping in or out. He set the bar in its keeps that night, and lifted it out again, and set it once more, like a boy working a new joint, and Ruby watched him from the hearth and said nothing, and her saying nothing was the roomiest silence he had ever stood in.",
+            "The rains organized the days.",
+            "They came each cycle in long gray shifts, and between them the sky stood bruised and low, and for the first hour of every dry spell the whole village went out into the lanes to do what needed sky: airing, mending, hauling. Then the water came back and the doors closed and the hearths breathed, and the world shrank to firelight and the drum of it on the roof, and Rik learned, at first with something close to panic, the shape of an hour that asked nothing of him. He would stand in the middle of the room mid-afternoon with his paws opening and closing on the absence of a load. Ruby broke him of it by degrees. She was gentler with him, that season, than she had needed to be since the wilds: she gave him tasks the way you feed a fire kindling, split wood, a leak over the second room, a rack for the picks he would not sell. The picks stayed. Neither of them discussed why.",
+            "Ian went to the well on the ninth day.",
+            "It was not planned and it was not permitted; it simply occurred, the way thaw occurs. Ruby was at the hearth and Rik was on the roof about the leak, and the bucket stood empty by the door, and Ian looked at it for a long time, and took it, and went. Rik saw him from the roof: a small shape in the wet lane, bucket in both paws, walking the hundred paces to the square at the careful outer edge of not-running. Rik's whole body moved to go after him and Rik's whole mind held it on the roof, one paw gripping the wet thatch, and he made himself watch the thing he had bought at the price he had paid, and it looked like this:",
+            "A boy reaches the well. Two old rats are on the bench beside it, taking the dry hour, gray muzzles lifted to the light like it was owed them. The boy hesitates: the old shape falling over him, the folding, the arithmetic. One of the elders says something. The boy answers, barely. The elder says something else, and points at the rope, and mimes a thing with both old paws: a hitch, a trick of the wrist for a bucket too big for the hauler. The boy tries it. Water comes up. The old rats nod the way judges nod, and the boy stands there a moment with his ears at an angle Rik had not seen since before the camp, the angle of a kit who has done a thing in the world and had the world say: yes, that's how it's done.",
+            "Ian carried the water back the whole hundred paces without stopping, arms shaking, refusing the stops, and arrived at the door soaked to the elbows and lit like a lamp.",
+            "\"Papa. The well has a trick. Marn showed me. He's old as anything. He said I hauled like a stone-line rat and I said my papa was stone-line and he said, tell your papa the bench is for everyone too.\"",
+            "That night, Rik heard a small sound in the dark of the second room, wood on packed earth, and knew it before he raised his head: the toy. Out from under whatever fold of bedding it had crossed the border in, standing now on the little shelf Ian could reach, in the open, where loved things stand when loving things has stopped being dangerous. Ian slept with one paw hanging off the bedroll in its direction. Not holding it. Just knowing where it was.",
+            "Rik lay on his back and listened to the rain and did not sleep for a long time, and for once the not-sleeping was a kind of feast.",
+            "Jack took a room in the cohort row by the east wall, with Brye and two others who had no families, and came to the hearth every third or fourth evening, by an instinct all of them obeyed without naming: often enough to belong, seldom enough to prove he didn't have to. He brought things. River fish once, bought in the square with commission coin, and he made a show of complaining about the price, and Ruby made a show of finding fault with the fish, and Ian hummed through the whole meal, and it was, Rik thought, watching Jack laugh with his head back at something Ian said, the closest thing to the far side of all of it that either of them had ever stood in.",
+            "\"There are women here,\" Rik said to him at the door, quietly, when he left that night. The rain had eased to mist. \"Settled ones. Sensible ones. I made you a promise on a rock in the scrub.\"",
+            "Jack looked out into the wet lane, and his face did a thing it never did on watch: it hesitated.",
+            "\"There's a widow does the fletching by the north gate,\" he said at last. \"Sharp tongue. Bad taste, evidently, because she'll talk to me.\" He put his hood up. \"Don't stand for me yet, Rik. Let me look at this place a while longer first.\"",
+            "Rik let it go, that evening, as a bachelor's flinch.",
+            "On the last dry hour of the cycle, the family walked the village end to end, because they could, because walking with nowhere to haul was a thing that needed practicing. Lanes, kitchen gardens sodden and singing with frogs, the cohort row, the little market square where a woman sold needles and salt and dye and no one checked what rats did with their coin. And at the turn of the third lane, the shrine: new-built, hyena-neat, its doorway cut tall for visitors who did not stoop, the iron bowl of ash on its post outside. From within, at the appointed hour, voices in the catechism's cadence, and among them, unmistakable, voices that were rat.",
+            "Ian slowed to look. Ruby did not.",
+            "Rik glanced through the tall doorway in passing: clean benches, full benches, and on the wall where scripture goes, the angular script none of them could read. He found himself, absurdly, checking the base of the walls, the corners, the yard: for a slab, a stain, a socket, for the shape of the old absence. There was nothing. Swept stone. It was the only building he had ever entered or passed in his life that had no place in it at all where a rat would go to bleed and be noticed.",
+            "He filed that too, under progress, and walked on in the rain with his son's paw in his, and the file, like all his files now, kept its own second column, in a script he had not chosen to learn and could not stop reading.",
+            "The rains hold. The hearth draws. Three lanes over, the benches are full."
+          ],
+          visual: { img: "", grad: "linear-gradient(170deg, #2a2018 0%, #1c150f 45%, #0a0705 100%)", tint: "rgba(200,150,90,.16)", glow: "#e0b26e", fx: "rain" }
+        },
+        {
+          id: "e6-3",
+          tag: "SCENE 03 · THE FINE COATS",
+          title: "One Rung Up",
+          railLabel: "THE COATS", railSub: "SCENE 03", railLen: 2,
+          paragraphs: [
+            { lead: true, text: "Tesk found them in the market square in the second cycle of the rains, and Rik did not know him for a full three heartbeats." },
+            "It was the posture first. The fold was gone: not eased, gone, unlearned or overwritten, and in its place a way of standing that Rik's body catalogued before his mind did: weight back, chin level, the stance of creatures who expect the lane to go around them. Then the coat. Deep gray wool, southern cloth, cut to a rat's frame by someone paid to cut it, and worth more than everything on the market woman's table together.",
+            "\"Cohort nine,\" Tesk said, and laughed at their faces, and for a moment he was the young rat at the water trough again, laying out the hamlets like cloth. \"You made it in. I heard. I've been meaning to come down.\"",
+            "Down. The word did its small work and moved on.",
+            "He would not hear a refusal: supper, his household, the next dry evening, all of them, the kit too. \"You've seen where the village keeps its floor,\" he said, easy, warm, a host already. \"Come see what it keeps upstairs.\"",
+            "The upstairs was real. The converted row stood along the village's north rise, and the houses there were not rat-built; they were hyena-built for rats, tall-doored, iron-hinged, lamp-oil bright in the blue evening. Sound came down the rise ahead of them: voices unlowered, laughter unrationed, somewhere a stringed thing being played with more confidence than skill.",
+            "The door was opened before they reached it, and Rik's body understood before his mind would: the shape holding it was wrong. Too tall. Too broad. Horned.",
+            "A cow. Young, in a collar of good leather worked with the household's mark, holding a door. Holding it for rats.",
+            "Thirty years of Rik's spine fired at once. The lane tilted. Every law he had ever been beaten under said the next thing that happened would be the sky tearing open, and the sky did nothing, and Tesk walked past her the way a man walks past a hinge.",
+            "\"In, in. Mind the step.\"",
+            "Ian had stopped at the threshold. Rik felt the small paw go rigid in his, and looked down, and watched his son do the thing he did now: check his father's face for the rule. There had always been a rule. A rat did not look at cattle, did not precede cattle, did not stand while cattle served: the rule was the oldest architecture either of their bodies knew. Ian searched Rik's face for it, found nothing there but his father's own vertigo, and, finding no rule, proceeded. Walked in past the cow at the door like walking past a hinge. Eight years old, and the inversion filed as normal between one step and the next, because the only law a kit truly reads is his father's face, and his father's face had gone blank.",
+            "That was the product. Rik understood it in the doorway, in one vertiginous swallow, before a single dish was served: not the service, which any mule could do cheaper, but the inversion. The hyenas had not sold Tesk a servant. They had sold him the overlord's own caste, collared, at eye level with his boots: blasphemy on a leather lead, and the price of it was whatever the hyenas said it was, and it would never once be coin.",
+            "Rik minded the step. Behind him he heard Ruby's tread change, nothing anyone else would hear, a half-beat added to her rhythm, the sound of someone carrying a thing suddenly heavier, and then they were in, and the room took over.",
+            "Warmth in iron braziers. Real chairs. A table laid with river fish and southern spice and bread of actual grain, and cushions with tassels, and on the wall a hyena banner Tesk had been given, given, he said the word twice, after the spring column. Two more converted rats were already at the table with their wives, coats across their chair-backs, and the talk was loud and generous and Rik was pulled into it like warm water. Missions, promotions, the column forming for the far southern push and the shares being offered. Names of hyena officers spoken familiarly, almost fondly. A toast, actual alcohol, date-spirit from the western caravans, to cohort nine, the wall-breakers, the argument that walked.",
+            "Rik drank, and the spirit went through him like a lit fuse, and he heard himself laughing at a story about the quartermaster, and it was, God help him, funny.",
+            "The fish was served by the cow at the door and a second one, older, who moved between the table and the hearth with the economy of long service. Ian ate with his ears up. Ruby ate little, and passed dishes, and watched the room the way she had once watched the walls of a shed for gaps.",
+            "It was during the second toast that Rik saw the coat.",
+            "One of the guests, a broad rat called Vess, mission-scarred along one forearm, had hung his over the chair-back, and the lamplight fell across the shoulder, and there, worked in matching thread by a careful hand, ran a mended tear. Long. Angled. The kind of tear cloth takes at the shoulder-seam when the wearer is pulled backward, hard, by someone standing behind him.",
+            "The coat had been cut for someone broader than Vess. The mend was older than his owning it.",
+            "Rik looked away, and found Tesk watching him look away, and Tesk's face did something quick and complicated and smoothed itself, and he refilled Rik's cup.",
+            "\"Shares in the southern column,\" Tesk said, to the table, but at Rik. \"Triple credit, first pick of salvage. They're asking for rats who've done wall-work. I put your cohort's name in. Nothing owed: just a door, standing open, if you want more than a hearth and a leak in the roof.\" He smiled the trough-side smile, and it had new teeth in it now, or the old ones better lit. \"Everything good, brother. You know where it always is.\"",
+            "<em>A little further.</em>",
+            "Rik heard the sentence complete itself in the trader's cadence, in the camel-drover's cadence, in his own voice on a rock in the scrub, and drank instead of answering.",
+            "It was Ruby who ended the evening, and no one at the table ever knew it.",
+            "The older cow had come to clear the fish, and in the reaching and the passing her eyes came up, a servant's slip, a half-second's failure of training, and met Ruby's, and stopped.",
+            "Rik saw it only because he was looking at Ruby to signal about the hour. He saw the whole of it and it took no time at all: the cow's eyes, and his wife's, and between them the passing of something that was not sympathy and was not accusation and was far worse than either: recognition, the border woman's currency, the flat exchange between two creatures who each know exactly what the other is standing in. The cow saw a rat woman warm at a table her people served. Ruby saw a woman holding a stack of dishes in a house where the doors barred from a side she would never stand on.",
+            "Neither face moved. The dishes were cleared. The moment closed over itself like water.",
+            "Ruby set down her cup and said, in her level voice, that the kit was past his hour, and thanked Tesk for a generous table, and had Ian's coat on him with the efficiency of a decision already old. Tesk protested warmly and walked them out warmly and pressed dates into Ian's paws at the door, and the door was held for them, eyes at the trained level, and the rain took them back.",
+            "They walked down the rise in the dark. Below, the village floor: low roofs, dim hearths, the well, Marn's empty bench shining wet in the lane-light. Ian, drowsy with fish and honey-dates, hummed three notes and trailed off against Rik's shoulder.",
+            "\"He put our name in,\" Rik said. \"The column. Triple credit.\"",
+            "Ruby walked eleven steps before she answered. He counted. He counted everything now.",
+            "\"The one at the hearth,\" she said. \"The older one. Her horns are sawn flat.\" A pause, three steps long. \"Temple cows wear them capped. White, like the shrine towers. Somebody cut hers off at the root.\" Three more steps. \"That's where the caravans go.\"",
+            "Nothing else. She did not say and you were laughing when I saw it. She did not say so that is where the caravans end. She took Ian's weight off Rik's shoulder onto her own at the turn of the third lane, the way she did every night the boy fell asleep in the open air, and carried him in, and barred the door behind them, from the inside, the good oak length in its iron keeps, and Rik stood a moment in the room's warmth listening to the rain, and could not, for the first time since the gate had opened inward, hear the difference between shelter and a lid.",
+            "The rise stays lit past every sleep-bell. The floor sleeps dark. Between them, a door is held open, and a name is already in."
+          ],
+          visual: { img: "", grad: "radial-gradient(130% 100% at 60% 30%, #4a3820 0%, #2e2213 40%, #140e08 70%, #050302 100%)", tint: "rgba(230,190,110,.22)", glow: "#f0c878", fx: "heat" }
+        },
+        {
+          id: "e6-4",
+          tag: "SCENE 04 · THE CONCLAVE",
+          title: "The Promised After",
+          railLabel: "THE CONCLAVE", railSub: "SCENE 04", railLen: 2,
+          paragraphs: [
+            { lead: true, text: "The conclave met on the last dry evening of every cycle, in the long hall behind the shrine, and Tesk came down to the third lane himself to walk them up." },
+            "\"Not the wives, not the kits,\" he said at the door, apologetic and not. \"Column men. You'll see why.\" Ruby looked at Rik once, level, a whole conversation in it, and shut the door, and Rik heard the oak bar go into its keeps behind him before he and Jack had taken three steps up the lane.",
+            "The hall had benches.",
+            "That was the first thing, and Rik was ashamed of how it took him. Ranked rows, worn shiny, a speaking floor at the far end, and rats on the benches. All of them. No dirt patch at the back, no filing downhill like water, because there was no downhill: the whole room was rat, forty, fifty of them, coats over the seat-backs, and when Tesk led them in, rats slid along the planks to make room the way the seated make room for their own. Rik sat down on a bench in a speaking house for the first time in his life, and the plank was just wood, and it went through him like the date-spirit had: warmth arriving along a channel he had not known was cut.",
+            "Braziers. Drink going along the rows, hand to hand, everyone's. Somewhere behind them a rat was retuning the stringed thing from the north rise, and then the singing started, and Rik knew the song. Knew it in his spine. It was the hauling lament from the quarries, the oldest song any of them owned, the one you sang so the line would pull as one body, and the room sang the verses every rat's mother had sung, and then kept going, into verses Rik had never heard, new ones, made in the hyena cadence: the line that pulls the whip down, the load that comes back as fire, the last verse where the hauliers set the stone on the masters' own house. The room roared it. Men around him were weeping and grinning at once. Jack, beside him, did not sing, and his stillness sat inside the roar like a stone in bread.",
+            "Then the preacher took the floor, and the hall banked its noise like a hearth.",
+            "He was a rat. Prime of life, mission-scarred, in an undyed gray robe cut in the field-priest fashion, and he carried the iron ash-bowl of the Khamseen rite, and he spoke the opening the whole room knew.",
+            "\"Strength reveals truth.\"",
+            "\"Weakness creates lies,\" the benches answered, Rik with them, the response arriving from twelve days of camp drill without consulting him.",
+            "\"But,\" the preacher said, and lifted the bowl, \"the catechists of the camps tell you half. They tell the hyena's half, because the hyena needs no more. Strong-born, garden-born, their whole reward is here. What does the fire promise the wood?\" He looked along the benches. \"Brothers. I have read further in. And I tell you what the deep doctrine holds: the fire does not destroy. The fire releases.\"",
+            "Rik felt the room lean, and leaned with it.",
+            "What followed came in the cadence of the camp catechist, stone on stone, every course level, and Rik, who had sat on dirt and admired the mason-work of the first sermon, sat on a bench and felt this one built around him, fitted to rat-shaped absences with a joiner's care. The Garden Beyond the Fire. Everything the long light burned off the world, kept green there. Shade without rationing. Rivers. Rest that no bell declares and no horn ends. And service, the preacher's voice dropped warm and sure, the order of things righted, the last made first, tall doors and low bows, the proud of the earth waiting at table in the after, forever, for every rat who feeds the fire in the columns.",
+            "And then the sentence the whole sermon existed to deliver, and it was aimed, Rik understood later, at every rat in that room at once, and it found him like an arrow finds the eye:",
+            "\"And the ones the whip broke before the fire could find them, your fathers, brothers, your kits taken small, the doctrine holds they were the fire's first harvest. Not kindling. First-fruits. They are in the Garden now. They are looking at you across the water. And the only bridge to them is built of what you give the fire here.\"",
+            "The hall made a sound Rik had never heard from rats: low, vast, hungry, grief and appetite in one note.",
+            "His father. Broken at forty in the third gallery, buried in the spoil-heap with the tally still owed against his name, whose entire theology had been <em>every wall is honest at the bottom</em>. In the Garden. Waiting at the water. It was a lie. Rik knew it was a lie with the same quarry-certainty that knew bad stone by its ring: the camp catechist's doctrine had no garden in it, be worth the burning was the whole of the promise, and no scripture grows a paradise in two years except where a paymaster needs one. He knew it, and the knowing did nothing, absolutely nothing, against the picture of the old rat standing in green shade with the tally forgiven, and Rik sat on his first bench with his eyes burning and his cup being refilled and understood at last, from the inside, what the stone in the jungle had never once offered him, and why men would march south in columns to buy it: not luxury. Not even the cow at the door. Meaning, backdated. The whole screaming quarry of it redeemed at a stroke, every death entered retroactively in a ledger where deaths finally counted for the dead and not just against them.",
+            "He wanted it to be true the way starving men want bread. And this time the wanting did not frighten him, and that frightened him, one thin cold wire of fright buried in all that warmth, and the warmth was winning.",
+            "It was in looking away from the preacher, to breathe, to find the wire again, that Rik saw the old priest.",
+            "He stood at the hall's edge by the door, in from the rains that evening with a supply column, gray-robed, blind in one eye: the same field-priest who had pressed ash to nine brows at the camp's western gate. The true rite's keeper. He was watching the rat preacher work the floor, and his face was doing nothing at all, and Rik, fluent now, ruinously fluent, in the reading of faces that do nothing, read it whole. It was the quartermaster's face pricing salvage. It was the commander's face saying there's no third column. Contempt without heat, contempt too settled to be anger: the face of a man hearing his own scripture cooked down cheap for troops who are being spent, who could stop it with a word, and whose whole judgment was that the counterfeit was sound coin for its market.",
+            "The one seeing eye moved, and crossed Rik's, and stopped.",
+            "For the space of a breath the old priest looked at him, the only rat in the hall looking back instead of forward, and something passed between them that was almost the border woman's currency, recognition, one reader to another across a room of the read. Then the priest turned, unhurried, and went out into the rain, and did not stay for the blessing, and the door swung to behind him on oiled hinges, and no one else had seen him at all.",
+            "At the floor, the preacher had the ash-bowl raised. Men were coming forward by benches to take the mark and put their names to the southern column, and the singing had started again under it, the old lament with the new teeth, and Tesk was on his feet with his paw out to Rik, bright-eyed, home.",
+            "\"Cohort nine,\" Tesk said. \"Come up, brother. Come be counted.\"",
+            "Rik stood. The bench, the warmth, the water with the dead on the far side of it: the whole hall gathered at his back like a wave, and his foot went forward.",
+            "A hand closed on his shoulder.",
+            "The bowl is raised. The names go in. At the edge of the light, a door swings shut on the rain."
+          ],
+          visual: { img: "", grad: "linear-gradient(165deg, #3a1c14 0%, #241209 45%, #0d0704 100%)", tint: "rgba(220,120,70,.18)", glow: "#e89a5e", fx: "ash" }
+        },
+        {
+          id: "e6-5",
+          tag: "SCENE 05 · THE HAND",
+          title: "Count the Old Ones",
+          railLabel: "THE HAND", railSub: "SCENE 05", railLen: 2,
+          paragraphs: [
+            { lead: true, text: "The hand closed on Rik's shoulder and the hall went far away." },
+            "It did not pull. That was the thing about it. The quarry pulled, the patrol pulled, the tear in Vess's coat was the shape of pulling. Jack's hand only rested, the full weight of it, the way it had rested on a mule's flank in the spore-mist, on a bow-stave on watch, on Rik's arm on a bruised road with a whip already rising. A weight that asked. Rik stood with one foot forward, the ash-bowl bright at the floor's end, Tesk's paw out, the singing under everything like a tide, and turned his head.",
+            "Jack was not looking at the floor, or the bowl, or Tesk. He was looking at Rik, and his face was the one from the doorway of his old hut: deep-set, shadowed, done wasting breath.",
+            "\"You made me a promise on a rock,\" Jack said. Quietly. Under the singing, for no one else ever. \"Does it still stand?\"",
+            "Rik's mouth was dry. The hall waited at his back, warm as a body.",
+            "\"It stands.\"",
+            "\"Then look around,\" Jack said. \"Count the old ones.\"",
+            "That was all.",
+            "Rik looked.",
+            "Benches, forty rats, fifty. Coats and scars and cups and the ash going brow to brow, and he ran the room the way he ran a rock face, the way he priced a wall, the way he counted everything now, and the count came back before he could brace for it.",
+            "None.",
+            "Not one gray muzzle. Not one bent back, one clouded eye, one set of the folded old shoulders that the quarry stamped on every rat it failed to kill. Marn's bench by the well held more years on any wet afternoon than this whole singing hall. Mission-scarred, all of them, prime-of-life, all of them, coats cut this year or last, and Rik's eye, ruined for one-column reading, supplied the rest unbidden: the mended shoulder-seams. The new faces Tesk kept greeting. The rooms in the cohort row that changed names between cycles. The hall was full and it was always full and it was never the same hall twice, and the doctrine had an answer for that too, didn't it: the Garden fills, the benches refill, everything accounted, and Rik stood in the middle of the arithmetic with his foot still pointed at the ash-bowl and understood that he was standing in Whitehorn.",
+            "Inside the loved walls. At the lit table. Sound, unbranded, walked in on his own feet. The tasking already entered against the room in a book none of them would ever be shown, and the wall rated only against what the owners intended to keep out, never against the caravan gate it was built to feed.",
+            "Tesk's paw was still out. Bright-eyed. Two years further up the ladder, and below him the rungs went down into the dark, and above him, Rik saw now, they went nowhere at all: they went into the refilling.",
+            "\"Rik,\" Tesk said. \"Brother.\"",
+            "\"Not tonight,\" Rik said. His voice came out level. Ruby's level. The floor swept flat over everything under it. \"The kit's poorly. We'll come again.\"",
+            "He never knew, after, which part had turned him: the promise, or the count, or only the hand, the last thing in his life that had never once been priced. He turned. Jack's hand left his shoulder in the turning, its work done, and the two of them went up the aisle between the benches, through the singing, past the braziers, and the hall closed behind them over the sound of names being given.",
+            "The rain had come back. They walked down the rise through it, and neither spoke, and the count kept working in Rik like swallowed spirit. Below: the floor's low roofs, dark at the sleep-hour, hearth-smoke beaten flat by the wet. He counted gray muzzles behind those doors and lost the tally past a dozen. He counted the lit windows on the rise behind him and could not find one old enough to need a bench by a well.",
+            "The village grew old. The ladder didn't. That was the whole ledger, and it had been posted in plain sight the day they arrived, and he had filed it under mercy.",
+            "At the turn of the third lane Jack stopped, hood up, rain running off him, and looked back once at the light on the rise.",
+            "\"The fletcher's widow,\" he said. \"By the north gate.\" A pause, rain-long. \"When you stand for me, it'll be down here. On the floor.\"",
+            "Then he was gone toward the cohort row, and Rik stood alone in the lane a moment, and then knocked, and heard the good oak bar lift from the inside, and Ruby opened the door with her level eyes, and looked at his brow, and found no ash on it, and stood aside to let him in.",
+            "The names are given. The column forms. On the floor, an old rat's bench waits out the rain."
+          ],
+          visual: { img: "", grad: "linear-gradient(175deg, #1a2028 0%, #10141a 45%, #05070a 100%)", tint: "rgba(120,140,160,.14)", glow: "#9fb4c7", fx: "rain" }
+        }
+      ],
+      end: {
+        title: "The record continues. The ladder has no old rats on it. Nobody has asked why.",
+        links: [
+          { label: "⟁ All Chronicles", action: "goto:chronicles" },
+          { label: "← Episode 05", action: "goto:episode/5" },
+          { label: "↑ Back to the top", action: "top" }
+        ],
+        visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a2028 0%, #0c1014 55%, #05070a 100%)", tint: "rgba(110,130,155,.16)", glow: "#9fb4c7", fx: "rain" }
       }
     }
   ]
