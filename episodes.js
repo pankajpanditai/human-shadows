@@ -139,7 +139,7 @@ window.EPISODES = {
       {
         id: "ch7",
         tag: "FILE 07 · VOICE-OVER RECORD",
-        title: "The Ladder",
+        title: "The Ebb",
         railLabel: "EPISODE 07", railSub: "THE EBB", railLen: 2,
         meta: [
           ["EPIGRAPH", "Some wars end in defeat. Others end in audits."]
