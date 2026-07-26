@@ -135,20 +135,6 @@ window.EPISODES = {
           "<a class=\"ep-open\" href=\"#episode/6\">OPEN EPISODE 06 →</a>"
         ],
         visual: { img: "", grad: "linear-gradient(160deg, #202838 0%, #161c28 45%, #0a0d12 100%)", tint: "rgba(100,130,160,.16)", glow: "#a8c2dc", fx: "rain" }
-      },
-      {
-        id: "ch7",
-        tag: "FILE 07 · VOICE-OVER RECORD",
-        title: "The Ebb",
-        railLabel: "EPISODE 07", railSub: "THE EBB", railLen: 2,
-        meta: [
-          ["EPIGRAPH", "Some wars end in defeat. Others end in audits."]
-        ],
-        paragraphs: [
-          { lead: true, text: "The war reaches the village first as dear salt, empty rooms, and names the ledger cannot strike. When the Matriarchy calls Rik back, it does not ask for his faith, only his skill, and turns Whitehorn into a lesson for levied boys. As the ladder begins returning what it has consumed, Rik opens a second book beneath his floor." },
-          "<a class=\"ep-open\" href=\"#episode/7\">OPEN EPISODE 07 →</a>"
-        ],
-        visual: { img: "", grad: "linear-gradient(160deg, #202838 0%, #161c28 45%, #0a0d12 100%)", tint: "rgba(100,130,160,.16)", glow: "#a8c2dc", fx: "rain" }
       }
     ],
     end: {
