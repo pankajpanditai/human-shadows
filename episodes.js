@@ -30,7 +30,7 @@ window.EPISODES = {
     hero: {
       kicker: "Human Shadows · The stories the kingdoms leave out",
       title: "The<br><em>Chronicles</em>",
-      sub: "The codex records the kingdoms. The Chronicles record the people crushed between them. Two sagas so far: Rik, a quarry rat who breaks his family's chain and walks north — and Zev, a wolf captain who stopped at the edge of his own map and never forgave himself.",
+      sub: "The codex records the kingdoms. The Chronicles record the people crushed between them. Two sagas so far: Zev, a wolf captain who stopped at the edge of his own map and never forgave himself — and Rik, a quarry rat who breaks his family's chain and walks north. Either one is a place to start.",
       scrollcue: "SCROLL THROUGH THE RECORD",
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     },
@@ -54,15 +54,43 @@ window.EPISODES = {
       },
       {
         id: "saga1",
-        tag: "SAGA I · SIX RECORDS",
+        tag: "SAGA I · THREE PARTS",
+        title: "Search for the Moon",
+        railLabel: "SAGA I", railSub: "SEARCH FOR THE MOON", railLen: 2,
+        meta: [
+          ["STORY", "ZEV · A WOLF CAPTAIN"],
+          ["STATUS", "part i of iii"]
+        ],
+        paragraphs: [
+          { lead: true, text: "The shorter saga. In the wolf kingdom of the Lunar Guardians, under the Long Light, a former ship captain named Zev has spent years making other creatures' furniture stand straight. His map of the Vastis Ocean still ends at a blank western edge — and his people's oldest songs say Father Moon waits beyond it. Three parts. Start here." }
+        ],
+        visual: { img: "", grad: "radial-gradient(120% 90% at 65% 15%, #1b2a3a 0%, #0e1722 55%, #060a10 100%)", tint: "rgba(120,160,200,.18)", glow: "#dbe8f5", fx: "dust" }
+      },
+      {
+        id: "chm1",
+        tag: "PART I · VOICE-OVER RECORD",
+        title: "Part I",
+        railLabel: "PART I", railSub: "THE BLANK EDGE", railLen: 2,
+        meta: [
+          ["EPIGRAPH", "Some are chained to quarries. Others to the blank edge of a map."]
+        ],
+        paragraphs: [
+          { lead: true, text: "A bench that stands perfectly level, six copper coins, and a town where they still call him Captain. One festival, one old friend's offer, and one dose of cobra later, Zev decides the blank edge of his map is a road." },
+          "<a class=\"ep-open\" href=\"#episode/moon-1\">OPEN PART I →</a>"
+        ],
+        visual: { img: "", grad: "linear-gradient(160deg, #1c2836 0%, #121b26 45%, #070b10 100%)", tint: "rgba(120,160,200,.16)", glow: "#dbe8f5", fx: "dust" }
+      },
+      {
+        id: "saga2",
+        tag: "SAGA II · SIX RECORDS",
         title: "The Long Walk North",
-        railLabel: "SAGA I", railSub: "THE LONG WALK NORTH", railLen: 2,
+        railLabel: "SAGA II", railSub: "THE LONG WALK NORTH", railLen: 2,
         meta: [
           ["STORY", "RIK · A QUARRY RAT"],
           ["STATUS", "six records · ongoing"]
         ],
         paragraphs: [
-          { lead: true, text: "The first saga follows Rik, a quarry rat of the Verdant Vanguards, who breaks his family's chain one month before the thaw and walks north into the hyena kingdom — thirty days that were supposed to buy his son a life without chains. Six records so far. The walk is not over." }
+          { lead: true, text: "The long one. Rik, a quarry rat of the Verdant Vanguards, breaks his family's chain one month before the thaw and walks north into the hyena kingdom — thirty days that were supposed to buy his son a life without chains. Six records so far. The walk is not over." }
         ],
         visual: { img: "", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.20)", glow: "#79e8cf", fx: "spore" }
       },
@@ -149,41 +177,13 @@ window.EPISODES = {
           "<a class=\"ep-open\" href=\"#episode/6\">OPEN EPISODE 06 →</a>"
         ],
         visual: { img: "", grad: "linear-gradient(160deg, #202838 0%, #161c28 45%, #0a0d12 100%)", tint: "rgba(100,130,160,.16)", glow: "#a8c2dc", fx: "rain" }
-      },
-      {
-        id: "saga2",
-        tag: "SAGA II · THREE PARTS",
-        title: "Search for the Moon",
-        railLabel: "SAGA II", railSub: "SEARCH FOR THE MOON", railLen: 2,
-        meta: [
-          ["STORY", "ZEV · A WOLF CAPTAIN"],
-          ["STATUS", "part i of iii"]
-        ],
-        paragraphs: [
-          { lead: true, text: "The second saga leaves the quarries entirely. In the wolf kingdom of the Lunar Guardians, under the Long Light, a former ship captain named Zev has spent years making other creatures' furniture stand straight. His map of the Vastis Ocean still ends at a blank western edge — and his people's oldest songs say Father Moon waits beyond it." }
-        ],
-        visual: { img: "", grad: "radial-gradient(120% 90% at 65% 15%, #1b2a3a 0%, #0e1722 55%, #060a10 100%)", tint: "rgba(120,160,200,.18)", glow: "#dbe8f5", fx: "dust" }
-      },
-      {
-        id: "chm1",
-        tag: "PART I · VOICE-OVER RECORD",
-        title: "Part I",
-        railLabel: "PART I", railSub: "THE BLANK EDGE", railLen: 2,
-        meta: [
-          ["EPIGRAPH", "Some are chained to quarries. Others to the blank edge of a map."]
-        ],
-        paragraphs: [
-          { lead: true, text: "A bench that stands perfectly level, six copper coins, and a town where they still call him Captain. One festival, one old friend's offer, and one dose of cobra later, Zev decides the blank edge of his map is a road." },
-          "<a class=\"ep-open\" href=\"#episode/moon-1\">OPEN PART I →</a>"
-        ],
-        visual: { img: "", grad: "linear-gradient(160deg, #1c2836 0%, #121b26 45%, #070b10 100%)", tint: "rgba(120,160,200,.16)", glow: "#dbe8f5", fx: "dust" }
       }
     ],
     end: {
       title: "The record is incomplete. The year is still turning.",
       links: [
-        { label: "Saga I · Begin at Episode 01 →", action: "goto:episode/1" },
-        { label: "Saga II · Search for the Moon →", action: "goto:episode/moon-1" },
+        { label: "Saga I · Search for the Moon →", action: "goto:episode/moon-1" },
+        { label: "Saga II · Begin at Episode 01 →", action: "goto:episode/1" },
         { label: "Discuss the episodes on Discord ↗", href: "https://discord.gg/4fQUzgQcyC" },
         { label: "← The Kingdoms", action: "goto:factions" },
         { label: "↑ Back to the top", action: "top" }
@@ -1385,12 +1385,12 @@ window.EPISODES = {
         visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a2028 0%, #0c1014 55%, #05070a 100%)", tint: "rgba(110,130,155,.16)", glow: "#9fb4c7", fx: "rain" }
       }
     },
-    /* ═══ SAGA II · SEARCH FOR THE MOON · PART I ════════════════════ */
+    /* ═══ SAGA I · SEARCH FOR THE MOON · PART I ═════════════════════ */
     {
       slug: "moon-1",
       title: "Search for the Moon · Part I",
       hero: {
-        kicker: "The Chronicles · Saga II · Search for the Moon",
+        kicker: "The Chronicles · Saga I · Search for the Moon",
         title: "Search for<br>the <em>Moon</em>",
         sub: "Part I · Some are chained to quarries. Others to the blank edge of a map.",
         scrollcue: "SCROLL TO OPEN THE MAP",
