@@ -21,3 +21,7 @@ game/
 
 # structure planning notes, kept local
 Chronicles_Structure_Ep7_to_Finale.md
+
+# Salesforce VS Code extension org cache, not part of this site
+.sf/
+.sfdx/
