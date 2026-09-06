@@ -64,7 +64,7 @@ window.EPISODES = {
         paragraphs: [
           { lead: true, text: "The shorter saga. In the wolf kingdom of the Lunar Guardians, under the Long Light, a former ship captain named Zev has spent years making other creatures' furniture stand straight. His map of the Vastis Ocean still ends at a blank western edge — and his people's oldest songs say Father Moon waits beyond it. Three parts. Start here." }
         ],
-        visual: { img: "images/episodes/ep1-hero.jpg", grad: "radial-gradient(120% 90% at 65% 15%, #1b2a3a 0%, #0e1722 55%, #060a10 100%)", tint: "rgba(120,160,200,.18)", glow: "#dbe8f5", fx: "dust" }
+        visual: { img: "images/episodes/SearchMoonPoster.jpg", grad: "radial-gradient(120% 90% at 65% 15%, #1b2a3a 0%, #0e1722 55%, #060a10 100%)", tint: "rgba(120,160,200,.18)", glow: "#dbe8f5", fx: "dust" }
       },
       {
         id: "chm1",
