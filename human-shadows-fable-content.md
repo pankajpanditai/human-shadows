@@ -107,7 +107,7 @@ And then the cycle repeats. The world keeps turning, vast and indifferent, as if
 
 _Every season you have just survived is happening here, somewhere, all at once._
 
-Links: "Meet the ones surviving it · Episode 01" (goto:episode/1) · "Trace the Faiths" (goto:faiths)
+Links: "Meet the ones surviving it · Search for the Moon" (goto:episode/moon-1) · "Or take the long walk north · Episode 01" (goto:episode/1) · "Trace the Faiths" (goto:faiths)
 
 ---
 
