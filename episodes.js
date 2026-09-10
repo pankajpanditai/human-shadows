@@ -78,7 +78,21 @@ window.EPISODES = {
           { lead: true, text: "A bench that stands perfectly level, six copper coins, and a town where they still call him Captain. One festival, one old friend's offer, and one dose of cobra later, Zev decides the blank edge of his map is a road." },
           "<a class=\"ep-open\" href=\"#episode/moon-1\">OPEN PART I →</a>"
         ],
-        visual: { img: "", grad: "linear-gradient(160deg, #1c2836 0%, #121b26 45%, #070b10 100%)", tint: "rgba(120,160,200,.16)", glow: "#dbe8f5", fx: "dust" }
+        visual: { img: "images/episodes/SFTMPoster.jpg", grad: "linear-gradient(160deg, #1c2836 0%, #121b26 45%, #070b10 100%)", tint: "rgba(120,160,200,.16)", glow: "#dbe8f5", fx: "dust" }
+      },
+      {
+        id: "chm2",
+        tag: "PART II · NOT YET RECORDED",
+        title: "Part II",
+        railLabel: "PART II", railSub: "COMING SOON", railLen: 2,
+        meta: [
+          ["STATUS", "coming soon"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Zev left the Marshal's hall with every answer he had prepared still behind his teeth. The plan was never refused — it was never asked for. What a captain does with a blank edge nobody will fund him to reach is the second part of the record. Being written now." },
+          "<span class=\"ep-soon\">COMING SOON</span>"
+        ],
+        visual: { img: "", grad: "linear-gradient(160deg, #161f2a 0%, #0e151d 45%, #06090d 100%)", tint: "rgba(120,160,200,.10)", glow: "#a9c0d6", fx: "dust" }
       },
       {
         id: "saga2",
@@ -177,6 +191,20 @@ window.EPISODES = {
           "<a class=\"ep-open\" href=\"#episode/6\">OPEN EPISODE 06 →</a>"
         ],
         visual: { img: "", grad: "linear-gradient(160deg, #202838 0%, #161c28 45%, #0a0d12 100%)", tint: "rgba(100,130,160,.16)", glow: "#a8c2dc", fx: "rain" }
+      },
+      {
+        id: "ch7",
+        tag: "FILE 07 · NOT YET RECORDED",
+        title: "Episode 07",
+        railLabel: "EPISODE 07", railSub: "COMING SOON", railLen: 2,
+        meta: [
+          ["STATUS", "coming soon"]
+        ],
+        paragraphs: [
+          { lead: true, text: "The village has a well for everyone, a gate that opens inward, and no old rats anywhere on the ladder. Rik has finally counted. The seventh record is being written." },
+          "<span class=\"ep-soon\">COMING SOON</span>"
+        ],
+        visual: { img: "", grad: "linear-gradient(160deg, #171c24 0%, #10141b 45%, #07090d 100%)", tint: "rgba(100,130,160,.10)", glow: "#8fa6bd", fx: "rain" }
       }
     ],
     end: {
@@ -1378,6 +1406,7 @@ window.EPISODES = {
       end: {
         title: "The record continues. The ladder has no old rats on it. Nobody has asked why.",
         links: [
+          { label: "Episode 07 · coming soon", soon: true },
           { label: "⟁ All Chronicles", action: "goto:chronicles" },
           { label: "← Episode 05", action: "goto:episode/5" },
           { label: "↑ Back to the top", action: "top" }
@@ -1821,6 +1850,7 @@ window.EPISODES = {
       end: {
         title: "The plan was sound. The purpose was dismissed. The western edge is still blank.",
         links: [
+          { label: "Part II · coming soon", soon: true },
           { label: "⟁ All Chronicles", action: "goto:chronicles" },
           { label: "↑ Back to the top", action: "top" }
         ],

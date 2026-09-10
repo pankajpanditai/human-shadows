@@ -317,6 +317,17 @@
     text-transform:uppercase; color:var(--glow); text-decoration:none;
     border-bottom:1px solid var(--glow); padding-bottom:4px;
   }
+  /* ── "coming soon" markers (unwritten episodes) ───────── */
+  /* Same shape as .ep-open / .loop a, but inert: dimmed ink,
+     dashed rule, default cursor. Used by hub teaser cards and by
+     end-screen links carrying `soon: true` (see endHTML). */
+  .ep-soon, .loop .soon, .finale .links .soon{
+    display:inline-block; font-family:"Space Mono",monospace; font-size:11px;
+    letter-spacing:.24em; text-transform:uppercase; color:var(--ink-dim);
+    border-bottom:1px dashed rgba(236,230,220,.28); padding-bottom:4px;
+    cursor:default; opacity:.85;
+  }
+  .ep-soon{ margin-top:10px; }
 
   /* dynamic adjustments for views code engines */
   body[data-active-view="ambience"] .seg .bar,
@@ -499,8 +510,11 @@
 
   function endHTML(end, phase, hasFinale){
     // `action` links drive the router; `href` links are real anchors
-    // (external ones, like the Discord invite, open in a new tab).
-    const links = end.links.map(l => l.href
+    // (external ones, like the Discord invite, open in a new tab);
+    // `soon: true` entries are inert markers for unwritten episodes.
+    const links = end.links.map(l => l.soon
+      ? `<span class="soon">${l.label}</span>`
+      : l.href
       ? `<a class="back" href="${l.href}"${/^https?:/.test(l.href) ? ' target="_blank" rel="noopener"' : ''}>${l.label}</a>`
       : `<a class="back" data-action="${l.action}">${l.label}</a>`).join('');
     return `

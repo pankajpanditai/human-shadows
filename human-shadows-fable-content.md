@@ -2,6 +2,12 @@
 
 _Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles, episodes 1-6); their source scripts are in the gitignored episodes/ folder._
 
+## SITE UPDATES · 10 SEP 2026
+
+- "Coming soon" markers for the two open threads. Saga I gained hub card chm2 (Part II · NOT YET RECORDED) after the Part I card, and Saga II gained ch7 (Episode 07 · FILE 07 · NOT YET RECORDED) after The Ladder; both carry STATUS "coming soon" and an inert `<span class="ep-soon">COMING SOON</span>` where written episodes carry an `ep-open` link. The end screens of Part I and Episode 06 lead with a matching inert marker. Engine support: a new `.ep-soon` / `.soon` CSS rule (dimmed ink, dashed rule, default cursor) and an `endHTML` branch that renders `end.links` entries carrying `soon: true` as a span instead of an anchor.
+- The Turning Year finale reveal now offers both sagas instead of only Rik: "Meet the ones surviving it · Search for the Moon" (goto:episode/moon-1), then "Or take the long walk north · Episode 01", then Trace the Faiths. Because the finale's full-width map follows links[0], clicking THE GARDEN now opens Zev's Part I.
+- Hub card chm1 (Part I) gained poster art: images/episodes/SFTMPoster.jpg.
+
 ## SITE UPDATES · 20 JUL 2026
 
 - Episode 06, The Ladder ("Some are freed. Others are only promoted."): cohort nine buys out with two more taskings and settles in a rat-built village under hyena law, where the gate opens inward and the well is for everyone. Rik cannot stop pricing the loved walls (Whitehorn's sentence, from both sides now); Tesk reappears rich, with a collared temple-cow holding his door; the conclave preaches a Garden Beyond the Fire that backdates meaning onto every quarry death, and Jack's hand on Rik's shoulder buys him one question ("count the old ones") that reveals the village grows old while the ladder never does. Hub teaser card ch6 added; Episode 05 end now links forward to 06. Fx note: Episode 6 introduces the "rain" particle mode (the Weeping season) to the Chronicles.
