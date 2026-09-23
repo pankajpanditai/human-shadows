@@ -2,6 +2,13 @@
 
 _Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles, episodes 1-6); their source scripts are in the gitignored episodes/ folder._
 
+## SITE UPDATES · 23 SEP 2026
+
+- Search for the Moon, Part II (`#episode/moon-2`, "Nobody funds a dream. They fund what it might carry home."): fifteen scenes from the Fungal Night to the Weeping. Oren reframes the Marshal refusal ("What room did you walk into?"); Zev sells the western blank to five merchant houses against the price of eastern iron and the Western Vastis Survey is signed; the Long Reach sails at the Thaw with nineteen crew and pilot Kellan (Varric stays ashore). West of the last mark: an inhabited island chain of bounding, metal-less islanders; no iron, no market, no mainland. Zev overstays the agreed turn by ten wakings, a fifteen-waking calm eats the margin, the Weeping catches them, and the Long Reach breaks on the farthest island. Three survive (Zev, Kellan, Brann); seventeen are lost. Ends with a starving Zev mistaking the wolf in the rain for Father Moon: it is Torin.
+- Hub card chm2 is now live (PART II · VOICE-OVER RECORD, epigraph instead of coming-soon status, OPEN PART II link); Saga I status reads "part ii of iii"; Part I end screen leads to Part II; Part II end screen carries "Part III · coming soon".
+- Part I text revised (commit f634ba5): day/evening/night wording replaced with waking/sleep-bell terminology, plus three revised lines.
+- New `.ep-break` style in index.html: a paragraph holding only `<span class="ep-break">· · ·</span>` renders as a centered scene-break marker inside an episode scene.
+
 ## SITE UPDATES · 10 SEP 2026
 
 - "Coming soon" markers for the two open threads. Saga I gained hub card chm2 (Part II · NOT YET RECORDED) after the Part I card, and Saga II gained ch7 (Episode 07 · FILE 07 · NOT YET RECORDED) after The Ladder; both carry STATUS "coming soon" and an inert `<span class="ep-soon">COMING SOON</span>` where written episodes carry an `ep-open` link. The end screens of Part I and Episode 06 lead with a matching inert marker. Engine support: a new `.ep-soon` / `.soon` CSS rule (dimmed ink, dashed rule, default cursor) and an `endHTML` branch that renders `end.links` entries carrying `soon: true` as a span instead of an anchor.
