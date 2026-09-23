@@ -92,7 +92,21 @@ window.EPISODES = {
           { lead: true, text: "The Marshal would not spend a Guardian ship on an old song. So Zev stops selling Father Moon and starts selling the blank: to five cautious merchants, against the price of eastern iron. The Long Reach finds a world west of the last mark. The margin is another matter." },
           "<a class=\"ep-open\" href=\"#episode/moon-2\">OPEN PART II →</a>"
         ],
-        visual: { img: "", grad: "radial-gradient(120% 90% at 35% 20%, #14303a 0%, #0c1a24 55%, #05080d 100%)", tint: "rgba(110,190,180,.16)", glow: "#9fe0d2", fx: "spore" }
+        visual: { img: "images/episodes/SFTMPart2.jpg", grad: "radial-gradient(120% 90% at 35% 20%, #14303a 0%, #0c1a24 55%, #05080d 100%)", tint: "rgba(110,190,180,.16)", glow: "#9fe0d2", fx: "spore" }
+      },
+      {
+        id: "chm3",
+        tag: "PART III · NOT YET RECORDED",
+        title: "Part III",
+        railLabel: "PART III", railSub: "COMING SOON", railLen: 2,
+        meta: [
+          ["STATUS", "coming soon"]
+        ],
+        paragraphs: [
+          { lead: true, text: "Torin came for him when nobody respectable would. Zev comes home alive, owing his life to the wolf he trusted least, and finds the workbench exactly where he left it. Seventeen households have been paid. The chart is real, and nobody wants it. A captain who cannot face the bench a third time begins to wonder what else a peaceful island chain could be called. Being written now." },
+          "<span class=\"ep-soon\">COMING SOON</span>"
+        ],
+        visual: { img: "", grad: "linear-gradient(160deg, #1a1e24 0%, #111419 45%, #06070a 100%)", tint: "rgba(140,160,185,.10)", glow: "#b4c2d2", fx: "rain" }
       },
       {
         id: "saga2",
