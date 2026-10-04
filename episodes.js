@@ -3360,7 +3360,7 @@ window.EPISODES = {
             "He pulled the handle down again.",
             "“We were meant to be under roofs by this.”",
             "The wolf across from him bared his teeth.",
-            "“You think the captain called the calm?”",
+            "“You think the captain could have seen the doldrums coming?”",
             "“I think I am pumping seawater in the Weeping.”",
             "The other wolf shoved the handle back hard enough to knock his paws loose.",
             "“Enough,” Harl said.",
