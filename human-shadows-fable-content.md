@@ -1,6 +1,11 @@
 # Human Shadows
 
-_Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles, episodes 1-6); their source scripts are in the gitignored episodes/ folder._
+_Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles: Saga I Parts I-II, Saga II episodes 1-3); their source scripts are in the gitignored episodes/ folder._
+
+## SITE UPDATES · 08 OCT 2026
+
+- Saga II pulled back to its first three episodes because the later ones revealed too much. Episodes 04-06 (What the Whip Taught, The Commission, The Ladder) are removed from episodes.js; their scripts stay in the gitignored episodes/ folder, and the published versions are in git history up to commit 37ccd60. Old `#episode/4` to `#episode/6` links fall back to the Chronicles hub.
+- Hub: cards ch4-ch6 removed, and the Episode 07 coming-soon card is replaced by a spoiler-free ch4 (Episode 04 · FILE 04 · NOT YET RECORDED). The Saga II card now reads THREE RECORDS / "three records · ongoing". Episode 03's end screen leads with the inert "Episode 04 · coming soon" marker instead of a forward link.
 
 ## SITE UPDATES · 23 SEP 2026
 
