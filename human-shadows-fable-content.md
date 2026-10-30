@@ -1,6 +1,12 @@
 # Human Shadows
 
-_Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles: Saga I Parts I-II, Saga II episodes 1-3); their source scripts are in the gitignored episodes/ folder._
+_Content mirror of content.js, regenerated 11 Jul 2026. Narrative episodes live separately in episodes.js (The Chronicles: Saga I Parts I-II plus Part III Scenes 01-03, Saga II episodes 1-3); their source scripts are in the gitignored episodes/ folder._
+
+## SITE UPDATES · 30 OCT 2026
+
+- Search for the Moon, Part III (`#episode/moon-3`, "Some charts are finished at sea. Others at a kitchen table."), first three scenes, from SFTM-Chapter3-Revised.txt. Scene 01 Three Came Back (Nobody Else Came): the rescue vessel docks in the Weeping, the quay counts three, Harl's wife hears it from Zev, Torin clears the crowd, and Zev tells the Chandlers' clerk only "Islands" and has Kellan and Brann keep numbers and routes quiet for two wakings. Scene 02 The Ship That Left (Because I Asked): supper at home; Lyra tells how she went to Torin, how Varric suggested Zev's island, and how Torin bought a ship into the Weeping and sailed on it uninvited. Scene 03 Another Use (They Stay With Me): the harbor office names the twenty; at Torin's table Zev admits he cannot go back to the bench and confesses the ten extra wakings; Torin sees a western station for Alarick, and they agree to show four of the twelve islands and claim the islanders made further survey unsafe without an escort. Zev rolls the other eight into the case.
+- Hub card chm3 is now live (PART III · VOICE-OVER RECORD, railSub THE HOMECOMING, epigraph, OPEN PART III link; no card art yet). Saga I status reads "part iii of iii · ongoing". Part II's end screen leads to Part III; Part III's end screen carries "Scene 04 · coming soon".
+- New scene art in images/episodes/ for the Royal Road edition, not yet used on the site: homecoming.jpg, Rainy Hearthside Wolf Couple.jpg, Rain Over Unfinished Charts.jpg.
 
 ## SITE UPDATES · 08 OCT 2026
 
