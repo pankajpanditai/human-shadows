@@ -30,7 +30,7 @@ window.EPISODES = {
     hero: {
       kicker: "Human Shadows · The stories the kingdoms leave out",
       title: "The<br><em>Chronicles</em>",
-      sub: "The codex records the kingdoms. The Chronicles record the people crushed between them. Two sagas so far: Zev, a wolf captain who stopped at the edge of his own map and never forgave himself — and Rik, a quarry rat who breaks his family's chain and walks north. Either one is a place to start.",
+      sub: "The codex records the kingdoms. The Chronicles record the people crushed between them. Two sagas so far: Zev, a wolf captain who stopped at the edge of his own map and never forgave himself; and Rik, a quarry rat who breaks his family's chain and walks north. Either one is a place to start.",
       scrollcue: "SCROLL THROUGH THE RECORD",
       visual: { img: "", grad: "radial-gradient(120% 90% at 70% 10%, #1a1c24 0%, #0a0b10 55%, #060709 100%)", tint: "rgba(40,44,60,.18)", glow: "#cdbf9a", fx: "dust" }
     },
@@ -62,7 +62,7 @@ window.EPISODES = {
           ["STATUS", "part iii of iii · ongoing"]
         ],
         paragraphs: [
-          { lead: true, text: "The shorter saga. In the wolf kingdom of the Lunar Guardians, under the Long Light, a former ship captain named Zev has spent years making other creatures' furniture stand straight. His map of the Vastis Ocean still ends at a blank western edge — and his people's oldest songs say Father Moon waits beyond it. Three parts. Start here." }
+          { lead: true, text: "The shorter saga. In the wolf kingdom of the Lunar Guardians, under the Long Light, a former ship captain named Zev has spent years making other creatures' furniture stand straight. His map of the Vastis Ocean still ends at a blank western edge. His people's oldest songs say Father Moon waits beyond it. Three parts. Start here." }
         ],
         visual: { img: "images/episodes/SearchMoonPoster.jpg", grad: "radial-gradient(120% 90% at 65% 15%, #1b2a3a 0%, #0e1722 55%, #060a10 100%)", tint: "rgba(120,160,200,.18)", glow: "#dbe8f5", fx: "dust" }
       },
@@ -106,7 +106,7 @@ window.EPISODES = {
           { lead: true, text: "Torin came for him when nobody respectable would. Zev comes home alive, owing his life to the wolf he trusted least, and finds the workbench exactly where he left it. Seventeen households have been paid. The chart is real, and nobody wants it. A captain who cannot face the bench a third time begins to wonder what else a peaceful island chain could be called. Scenes 01 to 03 recorded; more to follow." },
           "<a class=\"ep-open\" href=\"#episode/moon-3\">OPEN PART III →</a>"
         ],
-        visual: { img: "", grad: "linear-gradient(160deg, #1a1e24 0%, #111419 45%, #06070a 100%)", tint: "rgba(140,160,185,.10)", glow: "#b4c2d2", fx: "rain" }
+        visual: { img: "images/episodes/Rain Over Unfinished Charts.jpg", grad: "linear-gradient(160deg, #22201c 0%, #16150f 48%, #08070a 100%)", tint: "rgba(180,160,120,.14)", glow: "#d6c39a", fx: "rain" }
       },
       {
         id: "saga2",
@@ -118,7 +118,7 @@ window.EPISODES = {
           ["STATUS", "three records · ongoing"]
         ],
         paragraphs: [
-          { lead: true, text: "The long one. Rik, a quarry rat of the Verdant Vanguards, breaks his family's chain one month before the thaw and walks north into the hyena kingdom — thirty days that were supposed to buy his son a life without chains. Three records so far. The walk is not over." }
+          { lead: true, text: "The long one. Rik, a quarry rat of the Verdant Vanguards, breaks his family's chain one month before the thaw and walks north into the hyena kingdom: thirty days that were supposed to buy his son a life without chains. Three records so far. The walk is not over." }
         ],
         visual: { img: "", grad: "radial-gradient(120% 100% at 40% 70%, #0c2622 0%, #081417 45%, #04060a 100%)", tint: "rgba(40,120,110,.20)", glow: "#79e8cf", fx: "spore" }
       },
@@ -981,7 +981,7 @@ window.EPISODES = {
             "“And his work ethic? Ask anyone. The man would finish rebuilding a roof while the house was still burning.”",
             "“Torin,” Zev said.",
             "But the older wolf was already addressing Rowan as though negotiating Zev’s purchase.",
-            "“He mapped half the Vastis Ocean before most captains learned to read a tide table. Timber, ships, routes, labor—he can do all of it. You would be fortunate to have him.”",
+            "“He mapped half the Vastis Ocean before most captains learned to read a tide table. Timber, ships, routes, labor. He can do all of it. You would be fortunate to have him.”",
             "“I know,” Rowan said quietly.",
             "That silenced Torin.",
             "Rowan looked at Zev.",
@@ -1152,7 +1152,7 @@ window.EPISODES = {
             "Zev untied the map and opened it across the nearest clear space.",
             "“The old pack songs all place him beyond the western sea. Those stories existed before the present shrines, perhaps before the kingdom itself. I have sailed farther west than any charted Guardian vessel, and the currents continue beyond the island.”",
             "He pointed to the route.",
-            "“I need only one ship and a small crew. We would leave after the final Weeping storms, take fresh water at the island and continue west for a fixed number of wakings. I have calculated the stores, the return current and the—”",
+            "“I need only one ship and a small crew. We would leave after the final Weeping storms, take fresh water at the island and continue west for a fixed number of wakings. I have calculated the stores, the return current and the…”",
             "Alarick raised one paw.",
             "Zev stopped.",
             "“I do not doubt that you could plan the voyage, Captain.”",
